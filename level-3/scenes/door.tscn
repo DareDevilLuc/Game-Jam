@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://d2fbsqsas54nx"]
+
+[ext_resource type="Texture2D" uid="uid://c8jdjgn402d1n" path="res://textures/Door.atlastex" id="1_83dcw"]
+[ext_resource type="Texture2D" uid="uid://cfxxh8eicjjhi" path="res://textures/Door3.atlastex" id="2_la1wf"]
+[ext_resource type="Texture2D" uid="uid://b4ql6gbwbutfl" path="res://textures/Door2.atlastex" id="3_18pbm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q5w8r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t58dd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_83dcw")
+}],
+"loop": true,
+"name": &"closed door",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_83dcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_la1wf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_18pbm")
+}],
+"loop": true,
+"name": &"opened",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ju5n0"]
+size = Vector2(40, 74.5)
+
+[node name="Door" type="StaticBody2D"]
+physics_material_override = SubResource("PhysicsMaterial_q5w8r")
+
+[node name="Open Door" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-8, -14.5)
+scale = Vector2(1.6153846, 1.6304348)
+sprite_frames = SubResource("SpriteFrames_t58dd")
+animation = &"closed door"
+autoplay = "closed door"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -14.75)
+shape = SubResource("RectangleShape2D_ju5n0")
