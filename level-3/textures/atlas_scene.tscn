@@ -1,37 +1,13 @@
 [gd_scene load_steps=4 format=3 uid="uid://cuvhrvx25if34"]
 
 [ext_resource type="Script" uid="uid://bdxnivhmcx64d" path="res://addons/sprite_cutter/AtlasScene.gd" id="1_v3m8f"]
-[ext_resource type="Texture2D" uid="uid://dc1xjcammj7wp" path="res://assets/TopDownHouse_DoorsAndWindows.png" id="2_xc138"]
+[ext_resource type="Texture2D" uid="uid://ck6almrw727ks" path="res://assets/TopDownHouse_SmallItems.png" id="3_saqeb"]
 [ext_resource type="Texture2D" uid="uid://dhajnqcb357bl" path="res://assets/TopDownHouse_FurnitureState1.png" id="3_xc138"]
 
 [node name="AtlasScene" type="Node"]
 script = ExtResource("1_v3m8f")
 destination_path = "res://textures"
 metadata/_custom_type_script = "uid://bdxnivhmcx64d"
-
-[node name="Door" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(-11.330729, -15.46875)
-scale = Vector2(2.1284053, 1.849185)
-texture = ExtResource("2_xc138")
-region_enabled = true
-region_rect = Rect2(227, 2, 26, 46)
-
-[node name="Door2" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(68.00001, -17)
-scale = Vector2(2.1284053, 1.849185)
-texture = ExtResource("2_xc138")
-region_enabled = true
-region_rect = Rect2(193, 0, 30, 48)
-
-[node name="Door3" type="Sprite2D" parent="."]
-texture_filter = 1
-position = Vector2(152, -16)
-scale = Vector2(2.1284053, 1.849185)
-texture = ExtResource("2_xc138")
-region_enabled = true
-region_rect = Rect2(259, 2, 22, 49)
 
 [node name="clock" type="Sprite2D" parent="."]
 position = Vector2(337, 107)
@@ -56,3 +32,10 @@ position = Vector2(375, 105)
 texture = ExtResource("3_xc138")
 region_enabled = true
 region_rect = Rect2(-0.24285126, 62.989643, 31.919235, 49.292995)
+
+[node name="TopDownHouseSmallItems" type="Sprite2D" parent="."]
+position = Vector2(344, 46.000008)
+scale = Vector2(2.666665, 2.3571427)
+texture = ExtResource("3_saqeb")
+region_enabled = true
+region_rect = Rect2(2, 17, 12, 14)
