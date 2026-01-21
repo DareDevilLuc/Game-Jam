@@ -1,20 +1,22 @@
 extends Node2D
 
 const x = 32
-const FRAME_1 = Rect2(0, 0, 32, 46)
-const FRAME_2 = Rect2(x, 0, 32, 46)
-const FRAME_3 = Rect2(x*2, 0, 32, 46)
-const FRAME_4= Rect2(x*3, 0, 32, 46)
+const y = 46
+const FRAMES = [
+	Rect2(0, 0, x, y),
+	Rect2(x, 0, x, y),
+	Rect2(x*2, 0, x, y),
+	Rect2(x*3, 0, x, y)
+]
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var instance1 = $DiffTables_01
-	var instance2 = $DiffTables_02
-
-	instance1.get_node("Sprite2D").region_rect = FRAME_1
-	instance2.get_node("Sprite2D").region_rect = FRAME_2
+	var instances = get_children()  # get all 9 instances
+	for i in instances.size():
+		var instance = instances[i]
+		# Loop frames if there are fewer than instances
+		var frame_index = i % FRAMES.size()  
+		instance.get_node("Sprite2D").region_rect = FRAMES[frame_index]
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	pass

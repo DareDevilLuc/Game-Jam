@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cad5hlvstduti"]
 
 [ext_resource type="Script" uid="uid://1tklqd2rj6n5" path="res://scripts/diff_tables.gd" id="1_cffv5"]
-[ext_resource type="Texture2D" uid="uid://bf8p4fnfmn17o" path="res://assets/sprites/Duplicate - Copy.png" id="1_f6gun"]
+[ext_resource type="Texture2D" uid="uid://bf8p4fnfmn17o" path="res://assets/sprites/DiffTables.png" id="1_f6gun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cffv5"]
 size = Vector2(32, 32)
@@ -15,6 +15,7 @@ region_enabled = true
 region_rect = Rect2(31.354969, -0.10213852, 32.209106, 46.10214)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
 collision_layer = 4
 collision_mask = 0
 

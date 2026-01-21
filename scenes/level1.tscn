@@ -3,9 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/Room_Builder_free_32x32.png" id="1_g2h75"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/sprites/Interiors_free_32x32.png" id="2_wwpf4"]
 [ext_resource type="Script" uid="uid://ces4dmixr1m2y" path="res://scripts/tables.gd" id="3_ejswk"]
-[ext_resource type="PackedScene" uid="uid://rl6y1jdlgct2" path="res://scenes/Table.tscn" id="3_m7ahb"]
 [ext_resource type="PackedScene" uid="uid://cad5hlvstduti" path="res://scenes/diffTables.tscn" id="4_6sh32"]
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/ChairDown.tscn" id="4_dwgg1"]
+[ext_resource type="Texture2D" uid="uid://by8c8mryqagt4" path="res://assets/sprites/TeachersTable.png" id="4_ejswk"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/ChairUp.tscn" id="5_ru4tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2h75"]
@@ -115,13 +115,13 @@ texture_region_size = Vector2i(32, 32)
 15:7/0 = 0
 16:7/0 = 0
 0:8/0 = 0
-0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+0:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 1:8/0 = 0
-1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+1:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 2:8/0 = 0
-2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+2:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 3:8/0 = 0
-3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 0, -16, 0)
+3:8/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:8/0 = 0
 8:8/0 = 0
 9:8/0 = 0
@@ -730,7 +730,9 @@ texture_region_size = Vector2i(32, 32)
 3:14/0 = 0
 4:14/0 = 0
 5:14/0 = 0
+5:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:14/0 = 0
+6:14/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:14/0 = 0
 8:14/0 = 0
 9:14/0 = 0
@@ -745,7 +747,9 @@ texture_region_size = Vector2i(32, 32)
 2:15/0 = 0
 3:15/0 = 0
 5:15/0 = 0
+5:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 6:15/0 = 0
+6:15/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 7:15/0 = 0
 8:15/0 = 0
 9:15/0 = 0
@@ -1069,6 +1073,7 @@ texture_region_size = Vector2i(32, 32)
 10:40/0 = 0
 11:40/0 = 0
 12:40/0 = 0
+12:40/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 13:40/0 = 0
 14:40/0 = 0
 15:40/0 = 0
@@ -1085,6 +1090,7 @@ texture_region_size = Vector2i(32, 32)
 10:41/0 = 0
 11:41/0 = 0
 12:41/0 = 0
+12:41/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 13:41/0 = 0
 14:41/0 = 0
 15:41/0 = 0
@@ -1670,6 +1676,8 @@ texture_region_size = Vector2i(32, 32)
 
 [sub_resource type="TileSet" id="TileSet_ru4tf"]
 tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 4
+physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_dwgg1")
 
 [node name="Level1" type="TileMap"]
@@ -1679,15 +1687,15 @@ format = 2
 
 [node name="Walls" type="TileMapLayer" parent="."]
 use_parent_material = true
-tile_map_data = PackedByteArray("AAD//wAAAAALAAEAAAD//wEAAAALAAIAAAD//wIAAAALAAIAAAD//wMAAAALAAIAAAD//wQAAAALAAIAAAD//wUAAAALAAIAAAD//wYAAAALAAIAAAD//wcAAAALAAIAAAD//wgAAAALAAIAAAD//wkAAAALAAIAAAD//woAAAALAAIAAAD//wsAAAALAAIAAAD//wwAAAALAAIAAAAAAAAAAAABAAcAAAABAAAAAAABAAcAAAACAAAAAAABAAcAAAADAAAAAAABAAcAAAAEAAAAAAABAAcAAAAFAAAAAAABAAcAAAAAAAEAAAABAAgAAAABAAEAAAABAAgAAAACAAEAAAABAAgAAAADAAEAAAABAAgAAAAEAAEAAAABAAgAAAAFAAEAAAABAAgAAAAGAAAAAAABAAcAAAAGAAEAAAABAAgAAAAHAAAAAAABAAcAAAAHAAEAAAABAAgAAAAJAAAAAAABAAcAAAAJAAEAAAABAAgAAAAKAAAAAAABAAcAAAAKAAEAAAABAAgAAAALAAAAAAANAAEAAAALAAEAAAANAAIAAAAIAAAAAAABAAcAAAAIAAEAAAABAAgAAAALAAIAAAANAAIAAAALAAMAAAANAAIAAAALAAQAAAANAAIAAAALAAUAAAANAAIAAAALAAYAAAANAAIAAAALAAcAAAANAAIAAAALAAgAAAANAAIAAAALAAkAAAANAAIAAAALAAoAAAANAAIAAAALAAsAAAANAAIAAAALAAwAAAANAAIAAAA=")
+tile_map_data = PackedByteArray("AAD//wYAAAALAAIAAAD//wcAAAALAAIAAAD//wgAAAALAAIAAAD//wkAAAALAAIAAAD//woAAAALAAIAAAD//wsAAAALAAIAAAD//wwAAAALAAIAAAALAAYAAAANAAIAAAALAAcAAAANAAIAAAALAAgAAAANAAIAAAALAAkAAAANAAIAAAALAAoAAAANAAIAAAALAAsAAAANAAIAAAALAAwAAAANAAIAAAD//wEAAAALAAEAAAD//wIAAAALAAIAAAD//wMAAAALAAIAAAD//wQAAAALAAIAAAAAAAEAAAABAAcAAAABAAEAAAABAAcAAAACAAEAAAABAAcAAAADAAEAAAABAAcAAAAEAAEAAAABAAcAAAAFAAEAAAABAAcAAAAGAAEAAAABAAcAAAAHAAEAAAABAAcAAAAIAAEAAAABAAcAAAAJAAEAAAABAAcAAAAKAAEAAAABAAcAAAALAAEAAAANAAEAAAALAAIAAAANAAIAAAALAAMAAAANAAIAAAALAAQAAAANAAIAAAD//wUAAAALAAIAAAAAAAIAAAABAAgAAAABAAIAAAABAAgAAAACAAIAAAABAAgAAAADAAIAAAABAAgAAAAEAAIAAAABAAgAAAAFAAIAAAABAAgAAAAGAAIAAAABAAgAAAAHAAIAAAABAAgAAAAIAAIAAAABAAgAAAAJAAIAAAABAAgAAAAKAAIAAAABAAgAAAALAAUAAAANAAIAAAA=")
 tile_set = SubResource("TileSet_wwpf4")
 
 [node name="Floor" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAAAAIAAAALAAcAAAAAAAMAAAALAAgAAAAAAAQAAAALAAgAAAAAAAUAAAALAAgAAAAAAAYAAAALAAgAAAAAAAcAAAALAAgAAAAAAAgAAAALAAgAAAAAAAkAAAALAAgAAAAAAAoAAAALAAgAAAAAAAsAAAALAAgAAAAAAAwAAAALAAgAAAABAAIAAAAMAAcAAAACAAIAAAAMAAcAAAADAAIAAAAMAAcAAAAEAAIAAAAMAAcAAAAFAAIAAAAMAAcAAAAFAAwAAAAMAAgAAAAEAAwAAAAMAAgAAAADAAwAAAAMAAgAAAACAAwAAAAMAAgAAAABAAwAAAAMAAgAAAABAAsAAAAMAAgAAAABAAMAAAAMAAgAAAACAAQAAAAMAAgAAAADAAQAAAAMAAgAAAAEAAUAAAAMAAgAAAAFAAUAAAAMAAgAAAACAAMAAAAMAAgAAAADAAMAAAAMAAgAAAAEAAMAAAAMAAgAAAAFAAMAAAAMAAgAAAAEAAQAAAAMAAgAAAAFAAQAAAAMAAgAAAAFAAYAAAAMAAgAAAADAAUAAAAMAAgAAAABAAQAAAAMAAgAAAACAAUAAAAMAAgAAAABAAUAAAAMAAgAAAABAAYAAAAMAAgAAAABAAcAAAAMAAgAAAABAAgAAAAMAAgAAAABAAkAAAAMAAgAAAABAAoAAAAMAAgAAAACAAsAAAAMAAgAAAADAAsAAAAMAAgAAAAEAAsAAAAMAAgAAAAFAAsAAAAMAAgAAAAFAAoAAAAMAAgAAAAEAAoAAAAMAAgAAAADAAoAAAAMAAgAAAACAAoAAAAMAAgAAAACAAkAAAAMAAgAAAACAAgAAAAMAAgAAAACAAcAAAAMAAgAAAACAAYAAAAMAAgAAAADAAYAAAAMAAgAAAAEAAYAAAAMAAgAAAAEAAcAAAAMAAgAAAADAAcAAAAMAAgAAAADAAgAAAAMAAgAAAADAAkAAAAMAAgAAAAEAAkAAAAMAAgAAAAFAAkAAAAMAAgAAAAFAAgAAAAMAAgAAAAEAAgAAAAMAAgAAAAFAAcAAAAMAAgAAAAGAAIAAAAMAAcAAAAGAAMAAAAMAAgAAAAGAAQAAAAMAAgAAAAGAAUAAAAMAAgAAAAGAAYAAAAMAAgAAAAGAAcAAAAMAAgAAAAGAAgAAAAMAAgAAAAGAAkAAAAMAAgAAAAGAAoAAAAMAAgAAAAGAAsAAAAMAAgAAAAGAAwAAAAMAAgAAAAHAAIAAAAMAAcAAAAHAAMAAAAMAAgAAAAHAAQAAAAMAAgAAAAHAAUAAAAMAAgAAAAHAAYAAAAMAAgAAAAHAAcAAAAMAAgAAAAHAAgAAAAMAAgAAAAHAAkAAAAMAAgAAAAHAAoAAAAMAAgAAAAHAAsAAAAMAAgAAAAHAAwAAAAMAAgAAAAJAAIAAAAMAAcAAAAJAAMAAAAMAAgAAAAJAAQAAAAMAAgAAAAJAAUAAAAMAAgAAAAJAAYAAAAMAAgAAAAJAAcAAAAMAAgAAAAJAAgAAAAMAAgAAAAJAAkAAAAMAAgAAAAJAAoAAAAMAAgAAAAJAAsAAAAMAAgAAAAJAAwAAAAMAAgAAAAKAAIAAAAMAAcAAAAKAAMAAAAMAAgAAAAKAAQAAAAMAAgAAAAKAAUAAAAMAAgAAAAKAAYAAAAMAAgAAAAKAAcAAAAMAAgAAAAKAAgAAAAMAAgAAAAKAAkAAAAMAAgAAAAKAAoAAAAMAAgAAAAKAAsAAAAMAAgAAAAKAAwAAAAMAAgAAAAIAAIAAAAMAAcAAAAIAAMAAAAMAAgAAAAIAAQAAAAMAAgAAAAIAAUAAAAMAAgAAAAIAAYAAAAMAAgAAAAIAAcAAAAMAAgAAAAIAAgAAAAMAAgAAAAIAAkAAAAMAAgAAAAIAAoAAAAMAAgAAAAIAAsAAAAMAAgAAAAIAAwAAAAMAAgAAAA=")
+tile_map_data = PackedByteArray("AAAAAAcAAAALAAgAAAAAAAgAAAALAAgAAAAAAAkAAAALAAgAAAAAAAoAAAALAAgAAAAAAAsAAAALAAgAAAAAAAwAAAALAAgAAAAFAAwAAAAMAAgAAAAEAAwAAAAMAAgAAAADAAwAAAAMAAgAAAACAAwAAAAMAAgAAAABAAwAAAAMAAgAAAABAAsAAAAMAAgAAAABAAcAAAAMAAgAAAABAAgAAAAMAAgAAAABAAkAAAAMAAgAAAABAAoAAAAMAAgAAAACAAsAAAAMAAgAAAADAAsAAAAMAAgAAAAEAAsAAAAMAAgAAAAFAAsAAAAMAAgAAAAFAAoAAAAMAAgAAAAEAAoAAAAMAAgAAAADAAoAAAAMAAgAAAACAAoAAAAMAAgAAAACAAkAAAAMAAgAAAACAAgAAAAMAAgAAAACAAcAAAAMAAgAAAAEAAcAAAAMAAgAAAADAAcAAAAMAAgAAAADAAgAAAAMAAgAAAADAAkAAAAMAAgAAAAEAAkAAAAMAAgAAAAFAAkAAAAMAAgAAAAFAAgAAAAMAAgAAAAEAAgAAAAMAAgAAAAFAAcAAAAMAAgAAAAGAAcAAAAMAAgAAAAGAAgAAAAMAAgAAAAGAAkAAAAMAAgAAAAGAAoAAAAMAAgAAAAGAAsAAAAMAAgAAAAGAAwAAAAMAAgAAAAHAAcAAAAMAAgAAAAHAAgAAAAMAAgAAAAHAAkAAAAMAAgAAAAHAAoAAAAMAAgAAAAHAAsAAAAMAAgAAAAHAAwAAAAMAAgAAAAJAAcAAAAMAAgAAAAJAAgAAAAMAAgAAAAJAAkAAAAMAAgAAAAJAAoAAAAMAAgAAAAJAAsAAAAMAAgAAAAJAAwAAAAMAAgAAAAKAAcAAAAMAAgAAAAKAAgAAAAMAAgAAAAKAAkAAAAMAAgAAAAKAAoAAAAMAAgAAAAKAAsAAAAMAAgAAAAKAAwAAAAMAAgAAAAIAAcAAAAMAAgAAAAIAAgAAAAMAAgAAAAIAAkAAAAMAAgAAAAIAAoAAAAMAAgAAAAIAAsAAAAMAAgAAAAIAAwAAAAMAAgAAAAAAAYAAAALAAgAAAABAAYAAAAMAAgAAAACAAYAAAAMAAgAAAADAAYAAAAMAAgAAAAEAAYAAAAMAAgAAAAFAAYAAAAMAAgAAAAGAAYAAAAMAAgAAAAHAAYAAAAMAAgAAAAIAAYAAAAMAAgAAAAJAAYAAAAMAAgAAAAKAAYAAAAMAAgAAAAAAAMAAAALAAcAAAAAAAQAAAALAAgAAAABAAMAAAAMAAcAAAABAAQAAAAMAAgAAAACAAMAAAAMAAcAAAACAAQAAAAMAAgAAAADAAMAAAAMAAcAAAADAAQAAAAMAAgAAAAEAAMAAAAMAAcAAAAEAAQAAAAMAAgAAAAFAAMAAAAMAAcAAAAFAAQAAAAMAAgAAAAGAAMAAAAMAAcAAAAGAAQAAAAMAAgAAAAHAAMAAAAMAAcAAAAHAAQAAAAMAAgAAAAIAAMAAAAMAAcAAAAIAAQAAAAMAAgAAAAJAAMAAAAMAAcAAAAJAAQAAAAMAAgAAAAKAAMAAAAMAAcAAAAKAAQAAAAMAAgAAAAAAAUAAAALAAgAAAABAAUAAAAMAAgAAAACAAUAAAAMAAgAAAADAAUAAAAMAAgAAAAEAAUAAAAMAAgAAAAFAAUAAAAMAAgAAAAGAAUAAAAMAAgAAAAHAAUAAAAMAAgAAAAIAAUAAAAMAAgAAAAJAAUAAAAMAAgAAAAKAAUAAAAMAAgAAAA=")
 tile_set = SubResource("TileSet_m7ahb")
 
 [node name="WallFurniture" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAEAAAAAAANACgAAAAEAAEAAAANACkAAAAFAAAAAAAOACgAAAAFAAEAAAAOACkAAAAGAAEAAAAAACkAAAAHAAEAAAABACkAAAAJAAAAAAAFABgAAAAJAAEAAAAFABkAAAAKAAAAAAAGABgAAAAKAAEAAAAGABkAAAAIAAAAAAAEABgAAAAIAAEAAAAEABkAAAA=")
+tile_map_data = PackedByteArray("AAAEAAEAAAANACgAAAAFAAEAAAAOACgAAAAIAAEAAAAEABgAAAAJAAEAAAAFABgAAAAKAAEAAAAGABgAAAAEAAIAAAANACkAAAAFAAIAAAAOACkAAAAGAAIAAAAAACkAAAAHAAIAAAABACkAAAAIAAIAAAAEABkAAAAJAAIAAAAFABkAAAAKAAIAAAAGABkAAAAAAAIAAAAFAA4AAAAAAAMAAAAFAA8AAAABAAIAAAAGAA4AAAABAAMAAAAGAA8AAAACAAIAAAAMACgAAAACAAMAAAAMACkAAAA=")
 tile_set = SubResource("TileSet_ru4tf")
 
 [node name="Furniture" type="Node2D" parent="."]
@@ -1695,35 +1703,51 @@ tile_set = SubResource("TileSet_ru4tf")
 [node name="Tables" type="Node2D" parent="Furniture"]
 script = ExtResource("3_ejswk")
 
-[node name="Table_01" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(16, 272)
-
-[node name="Table_02" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(16, 304)
-
-[node name="Table_03" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(16, 336)
-
-[node name="Table_05" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(144, 240)
-
-[node name="Table_07" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(144, 320)
-
-[node name="Table_08" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(176, 320)
-
-[node name="Table_09" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(208, 320)
-
-[node name="Table_10" parent="Furniture/Tables" instance=ExtResource("3_m7ahb")]
-position = Vector2(328, 360)
+[node name="TeachersTable" type="Sprite2D" parent="Furniture/Tables"]
+position = Vector2(224, 152)
+texture = ExtResource("4_ejswk")
 
 [node name="DiffTables_01" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(112, 236)
 
 [node name="DiffTables_02" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(176, 236)
+frame = 1
+
+[node name="DiffTables_03" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(16, 268)
+frame = 1
+
+[node name="DiffTables_04" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(16, 299)
+frame = 1
+
+[node name="DiffTables_05" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(16, 333)
+frame = 1
+
+[node name="DiffTables_06" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(144, 316)
+frame = 1
+
+[node name="DiffTables_07" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(176, 316)
+frame = 1
+
+[node name="DiffTables_08" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(208, 316)
+frame = 1
+
+[node name="DiffTables_09" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(327, 356)
+frame = 1
+
+[node name="DiffTables_10" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(144, 236)
+frame = 1
+
+[node name="DiffTables_11" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
+position = Vector2(240, 236)
 frame = 1
 
 [node name="Chairs" type="Node2D" parent="Furniture"]
@@ -1733,3 +1757,15 @@ position = Vector2(328, 104)
 
 [node name="ChairUp_01" parent="Furniture/Chairs" instance=ExtResource("5_ru4tf")]
 position = Vector2(112, 264)
+
+[node name="ChairUp_02" parent="Furniture/Chairs" instance=ExtResource("5_ru4tf")]
+position = Vector2(208, 360)
+
+[node name="ChairUp_03" parent="Furniture/Chairs" instance=ExtResource("5_ru4tf")]
+position = Vector2(176, 360)
+
+[node name="ChairUp_04" parent="Furniture/Chairs" instance=ExtResource("5_ru4tf")]
+position = Vector2(144, 360)
+
+[node name="ChairUp_05" parent="Furniture/Chairs" instance=ExtResource("5_ru4tf")]
+position = Vector2(239, 276)
