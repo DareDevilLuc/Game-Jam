@@ -3,25 +3,8 @@
 [ext_resource type="Script" uid="uid://dwu34ha4d5mab" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://btgns8oa8652v" path="res://assets/sprites/ExamplePlayerSprite.png" id="2_g2els"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_t53lx"]
-radius = 11.0
-
-[sub_resource type="Animation" id="Animation_g2els"]
-resource_name = "idle_down"
-length = 0.4
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [0, 1, 2]
-}
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(19, 46)
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -38,8 +21,8 @@ tracks/0/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "idle_up"
+[sub_resource type="Animation" id="Animation_g2els"]
+resource_name = "idle_down"
 length = 0.4
 loop_mode = 2
 tracks/0/type = "value"
@@ -52,7 +35,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.2, 0.4),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [7, 8, 9]
+"values": [0, 1, 2]
 }
 
 [sub_resource type="Animation" id="Animation_qlg0r"]
@@ -72,6 +55,23 @@ tracks/0/keys = {
 "values": [14, 15, 16]
 }
 
+[sub_resource type="Animation" id="Animation_dqkch"]
+resource_name = "idle_up"
+length = 0.4
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [7, 8, 9]
+}
+
 [sub_resource type="Animation" id="Animation_tuyoq"]
 resource_name = "walk_down"
 length = 0.3
@@ -87,23 +87,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [3, 4, 5, 6]
-}
-
-[sub_resource type="Animation" id="Animation_fjrip"]
-resource_name = "walk_up"
-length = 0.3
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
-"transitions": PackedFloat32Array(1, 1, 1, 1),
-"update": 1,
-"values": [10, 11, 12, 13]
 }
 
 [sub_resource type="Animation" id="Animation_smehm"]
@@ -123,6 +106,23 @@ tracks/0/keys = {
 "values": [17, 18, 19, 20]
 }
 
+[sub_resource type="Animation" id="Animation_fjrip"]
+resource_name = "walk_up"
+length = 0.3
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [10, 11, 12, 13]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qhqgy"]
 _data = {
 &"RESET": SubResource("Animation_qhqgy"),
@@ -135,13 +135,15 @@ _data = {
 }
 
 [node name="Player" type="CharacterBody2D"]
+collision_mask = 2
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_t53lx")
+position = Vector2(0.5, -14)
+shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -22)
+position = Vector2(0, -14)
 texture = ExtResource("2_g2els")
 hframes = 21
 
