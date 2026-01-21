@@ -1712,43 +1712,33 @@ position = Vector2(112, 236)
 
 [node name="DiffTables_02" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(176, 236)
-frame = 1
 
 [node name="DiffTables_03" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(16, 268)
-frame = 1
 
 [node name="DiffTables_04" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(16, 299)
-frame = 1
 
 [node name="DiffTables_05" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(16, 333)
-frame = 1
 
 [node name="DiffTables_06" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(144, 316)
-frame = 1
 
 [node name="DiffTables_07" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(176, 316)
-frame = 1
 
 [node name="DiffTables_08" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(208, 316)
-frame = 1
 
 [node name="DiffTables_09" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(327, 356)
-frame = 1
 
 [node name="DiffTables_10" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(144, 236)
-frame = 1
 
 [node name="DiffTables_11" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(240, 236)
-frame = 1
 
 [node name="Chairs" type="Node2D" parent="Furniture"]
 
