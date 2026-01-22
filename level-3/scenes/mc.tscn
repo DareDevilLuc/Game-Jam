@@ -75,9 +75,9 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4rxjt"]
-size = Vector2(12.5, 54.5)
+size = Vector2(8.5625, 25.625)
 
-[node name="MC" type="CharacterBody2D"]
+[node name="MC" type="CharacterBody2D" groups=["player"]]
 z_index = 5
 collision_layer = 3
 script = ExtResource("1_i6vl1")
@@ -85,12 +85,12 @@ script = ExtResource("1_i6vl1")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 visibility_layer = 3
 texture_filter = 1
-position = Vector2(14.499998, 17.999998)
-scale = Vector2(0.8046875, 0.875)
+position = Vector2(22.5, 26.5)
+scale = Vector2(0.6796875, 0.7421875)
 sprite_frames = SubResource("SpriteFrames_2vtfs")
 autoplay = "default"
 frame_progress = 0.14846677
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(15, 42.75)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
+position = Vector2(23.71875, 52)
 shape = SubResource("RectangleShape2D_4rxjt")
