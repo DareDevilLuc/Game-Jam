@@ -12,4 +12,4 @@ position = Vector2(236, 202)
 position = Vector2(236, 187)
 zoom = Vector2(1.5, 1.5)
 
-[node name="Level1" parent="." instance=ExtResource("2_yqjtg")]
+[node name="Level2" parent="." instance=ExtResource("2_yqjtg")]

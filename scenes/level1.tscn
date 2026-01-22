@@ -4327,10 +4327,8 @@ texture_region_size = Vector2i(32, 32)
 tile_size = Vector2i(32, 32)
 sources/0 = SubResource("TileSetAtlasSource_m7ahb")
 
-[node name="Level1" type="TileMap"]
+[node name="Level1" type="Node2D"]
 z_index = -1
-tile_set = SubResource("TileSet_wwpf4")
-format = 2
 
 [node name="Walls" type="TileMapLayer" parent="."]
 use_parent_material = true
