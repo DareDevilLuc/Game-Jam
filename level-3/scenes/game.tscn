@@ -17,7 +17,6 @@
 [ext_resource type="Texture2D" uid="uid://dsorbhko22tqx" path="res://assets/textures/Plant2.atlastex" id="10_qnb83"]
 [ext_resource type="Texture2D" uid="uid://c347offtguiln" path="res://assets/textures/SmallDesk.atlastex" id="11_q8j3a"]
 [ext_resource type="Texture2D" uid="uid://ejeyxr41tq03" path="res://assets/textures/Vanity.atlastex" id="11_sww3w"]
-[ext_resource type="Texture2D" uid="uid://dapa6cpht88q0" path="res://assets/textures/Plant.atlastex" id="12_ms3bu"]
 [ext_resource type="Texture2D" uid="uid://cqf7rb7q6oc74" path="res://assets/textures/VanityChair.atlastex" id="12_suyxu"]
 [ext_resource type="Texture2D" uid="uid://f1j20libw73j" path="res://assets/textures/SideShelf.atlastex" id="13_7ixpq"]
 [ext_resource type="Texture2D" uid="uid://daimjd47fjxg0" path="res://assets/textures/Window.atlastex" id="13_sgl2t"]
@@ -36,6 +35,7 @@
 [ext_resource type="Texture2D" uid="uid://bbl2udvmp3y30" path="res://assets/textures/Tecup.atlastex" id="21_xbak0"]
 [ext_resource type="Texture2D" uid="uid://dfcllbjdtgqrg" path="res://assets/textures/WineGlass.atlastex" id="23_3x28f"]
 [ext_resource type="Texture2D" uid="uid://xfcwxpob4biu" path="res://assets/textures/Lamp.atlastex" id="23_suyxu"]
+[ext_resource type="Texture2D" uid="uid://cdv23mnddlhkb" path="res://assets/textures/Curtain.atlastex" id="24_8qswn"]
 [ext_resource type="Texture2D" uid="uid://dynjt6grtu6l7" path="res://assets/textures/Books.atlastex" id="24_qnb83"]
 [ext_resource type="Texture2D" uid="uid://dawfbmx13a8n8" path="res://assets/textures/Fridge.atlastex" id="35_l6q63"]
 [ext_resource type="Texture2D" uid="uid://dp5ca0rf87nai" path="res://assets/textures/TV.atlastex" id="36_mmvbu"]
@@ -273,7 +273,7 @@ tile_map_data = PackedByteArray("AAD5/wEAAAABAAEAAAD5/wIAAAABAAIAAAD6/wEAAAACAAE
 tile_set = SubResource("TileSet_0tnpc")
 
 [node name="Plant3" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(195, 275)
+position = Vector2(178, 272)
 texture = ExtResource("10_qnb83")
 
 [node name="Plant2" type="Sprite2D" parent="Maps & UnInteractables"]
@@ -281,7 +281,7 @@ position = Vector2(0, 273)
 texture = ExtResource("10_qnb83")
 
 [node name="Painting" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(106, 258)
+position = Vector2(92, 259)
 texture = ExtResource("9_bhx41")
 
 [node name="SideIsle" type="Sprite2D" parent="Maps & UnInteractables"]
@@ -304,11 +304,11 @@ scale = Vector2(0.7916667, 0.7812501)
 texture = ExtResource("7_i4re6")
 
 [node name="GreenCouchBack" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-175, 143)
+position = Vector2(-170, 205)
 texture = ExtResource("8_pf7vy")
 
 [node name="GreenCouchSide" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-211, 106)
+position = Vector2(-207, 165)
 texture = ExtResource("9_o8ni1")
 
 [node name="Hanger" type="Sprite2D" parent="Maps & UnInteractables"]
@@ -316,13 +316,8 @@ position = Vector2(-208, 275)
 texture = ExtResource("10_3hbvx")
 
 [node name="SmallDesk" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-177, 116)
+position = Vector2(-170, 169)
 texture = ExtResource("11_q8j3a")
-
-[node name="Plant" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-76, 78)
-scale = Vector2(0.8333333, 0.875)
-texture = ExtResource("12_ms3bu")
 
 [node name="SideShelf" type="Sprite2D" parent="Maps & UnInteractables"]
 position = Vector2(232, 194)
@@ -345,7 +340,7 @@ position = Vector2(255, 255)
 texture = ExtResource("16_n8ral")
 
 [node name="MiniPlant" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-175.00002, 108)
+position = Vector2(-169.00002, 161)
 scale = Vector2(0.625, 0.7)
 texture = ExtResource("17_yd4ix")
 
@@ -359,7 +354,7 @@ position = Vector2(36, 58)
 texture = ExtResource("19_bnuda")
 
 [node name="DrawerSide" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-208, 136)
+position = Vector2(-207, 202)
 scale = Vector2(1, 0.84375)
 texture = ExtResource("20_0rmfi")
 
@@ -372,17 +367,27 @@ position = Vector2(355.25, 282.5)
 scale = Vector2(0.82031214, 0.77083266)
 texture = ExtResource("17_js0lu")
 
-[node name="WineGlass" type="Sprite2D" parent="."]
+[node name="WineGlass" type="Sprite2D" parent="Maps & UnInteractables"]
 z_index = 1
 position = Vector2(291.75, 82.5)
 scale = Vector2(0.9, 0.9375)
 texture = ExtResource("23_3x28f")
 
-[node name="WineGlass2" type="Sprite2D" parent="."]
+[node name="WineGlass2" type="Sprite2D" parent="Maps & UnInteractables"]
 z_index = 1
 position = Vector2(298, 83)
 scale = Vector2(0.9, 0.9375)
 texture = ExtResource("23_3x28f")
+
+[node name="Table" type="Sprite2D" parent="Maps & UnInteractables"]
+position = Vector2(-171, 133)
+scale = Vector2(0.65, 0.47916666)
+texture = ExtResource("8_pl11u")
+
+[node name="Curtain" type="Sprite2D" parent="Maps & UnInteractables"]
+position = Vector2(-172, 69)
+scale = Vector2(1, 1.0833334)
+texture = ExtResource("24_8qswn")
 
 [node name="Interactables" type="Node" parent="."]
 
@@ -452,7 +457,7 @@ position = Vector2(11, 90)
 texture = ExtResource("35_l6q63")
 
 [node name="Tv" type="Sprite2D" parent="Interactables"]
-position = Vector2(-176, 68)
+position = Vector2(-172, 117)
 texture = ExtResource("36_mmvbu")
 
 [node name="Wine" type="Sprite2D" parent="Interactables"]
@@ -513,7 +518,7 @@ position = Vector2(76, 86)
 texture = ExtResource("45_753oq")
 
 [node name="Coffee" type="Sprite2D" parent="Interactables"]
-position = Vector2(-210, 125)
+position = Vector2(-210, 193)
 texture = ExtResource("46_3x338")
 
 [node name="DogBed" type="Sprite2D" parent="Interactables"]
