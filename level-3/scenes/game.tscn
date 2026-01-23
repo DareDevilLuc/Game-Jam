@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://ccfic6rw0fxjh"]
+[gd_scene load_steps=55 format=4 uid="uid://ccfic6rw0fxjh"]
 
 [ext_resource type="PackedScene" uid="uid://5q1g2fbomj0n" path="res://scenes/mc.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://d2fbsqsas54nx" path="res://scenes/door.tscn" id="2_lnu2h"]
@@ -49,6 +49,7 @@
 [ext_resource type="Texture2D" uid="uid://df4lq03yfdkw2" path="res://assets/textures/Meal.atlastex" id="45_753oq"]
 [ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/textures/Coffee.atlastex" id="46_3x338"]
 [ext_resource type="Texture2D" uid="uid://c68e5n5qjy02l" path="res://assets/textures/DogBed.atlastex" id="47_1yg85"]
+[ext_resource type="PackedScene" uid="uid://mt3lotj7nrev" path="res://scenes/partner.tscn" id="47_rm0al"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
 texture = ExtResource("5_iywne")
@@ -264,24 +265,24 @@ sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="ground" type="TileMapLayer" parent="Maps & UnInteractables"]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAD5/wkAAAABAAQAAAD6/wkAAAACAAQAAAD7/wkAAAABAAQAAAD8/wkAAAACAAQAAAD9/wkAAAABAAMAAAD+/wkAAAACAAMAAAD//wkAAAABAAMAAAAAAAkAAAACAAMAAAABAAkAAAABAAQAAAACAAkAAAACAAQAAAADAAkAAAABAAQAAAAEAAkAAAACAAQAAAAFAAkAAAABAAQAAAAGAAkAAAACAAQAAAAHAAkAAAABAAQAAAAIAAkAAAACAAQAAAAJAAkAAAABAAQAAAAKAAkAAAACAAQAAAALAAkAAAABAAQAAAD6/wYAAAACAAQAAAD7/wYAAAACAAQAAAD6/wUAAAACAAMAAAD7/wUAAAACAAMAAAD5/wUAAAABAAMAAAD5/wYAAAABAAQAAAD8/wUAAAABAAMAAAD8/wYAAAABAAQAAAD9/wUAAAABAAMAAAD9/wYAAAABAAQAAAD+/wUAAAACAAMAAAD+/wYAAAACAAQAAAD//wUAAAABAAMAAAD//wYAAAABAAQAAAD5/wMAAAABAAMAAAD5/wQAAAABAAQAAAD6/wMAAAABAAMAAAD7/wMAAAABAAMAAAD7/wQAAAABAAQAAAD8/wMAAAACAAMAAAD8/wQAAAACAAQAAAD9/wMAAAABAAMAAAD9/wQAAAABAAQAAAD+/wMAAAAFAAMAAAD+/wQAAAACAAQAAAD//wMAAAABAAMAAAD//wQAAAABAAQAAAAAAAQAAAAFAAQAAAAAAAUAAAABAAMAAAAAAAYAAAABAAQAAAAAAAMAAAABAAMAAAABAAUAAAABAAMAAAABAAYAAAABAAQAAAABAAQAAAABAAQAAAACAAQAAAABAAQAAAACAAUAAAABAAMAAAABAAMAAAABAAMAAAACAAMAAAABAAMAAAACAAYAAAABAAQAAAADAAUAAAACAAMAAAADAAYAAAACAAQAAAADAAMAAAACAAMAAAADAAQAAAACAAQAAAAHAAUAAAABAAMAAAAHAAYAAAABAAQAAAAIAAUAAAACAAMAAAAIAAYAAAACAAQAAAAJAAUAAAABAAMAAAAJAAYAAAABAAQAAAAKAAUAAAABAAMAAAAKAAYAAAABAAQAAAALAAUAAAACAAMAAAALAAYAAAACAAQAAAD8/wcAAAABAAMAAAAJAAcAAAABAAMAAAAHAAMAAAABAAMAAAAIAAMAAAACAAMAAAAJAAMAAAABAAMAAAAKAAMAAAABAAMAAAALAAMAAAACAAMAAAAHAAQAAAABAAQAAAAIAAQAAAACAAQAAAAJAAQAAAABAAQAAAAKAAQAAAABAAQAAAALAAQAAAACAAQAAAD5/woAAAABAAMAAAD6/woAAAACAAMAAAD7/woAAAABAAMAAAD8/woAAAACAAMAAAD9/woAAAABAAMAAAD+/woAAAACAAMAAAD//woAAAABAAMAAAAAAAoAAAACAAMAAAABAAoAAAABAAMAAAACAAoAAAACAAMAAAADAAoAAAABAAMAAAAEAAoAAAACAAMAAAAFAAoAAAABAAMAAAAGAAoAAAACAAMAAAAHAAoAAAABAAMAAAAIAAoAAAACAAMAAAAJAAoAAAABAAMAAAAKAAoAAAABAAMAAAALAAoAAAACAAMAAAD6/wQAAAABAAQAAAD5/wsAAAABAAMAAAD6/wsAAAACAAMAAAD7/wsAAAABAAMAAAD8/wsAAAACAAMAAAD9/wsAAAABAAMAAAD+/wsAAAACAAMAAAD//wsAAAABAAMAAAAAAAsAAAACAAMAAAABAAsAAAABAAMAAAACAAsAAAACAAMAAAADAAsAAAABAAMAAAAEAAsAAAACAAMAAAAGAAsAAAACAAMAAAAHAAsAAAABAAMAAAAFAAsAAAABAAMAAAAIAAsAAAACAAMAAAAJAAsAAAABAAMAAAAKAAsAAAABAAMAAAALAAsAAAACAAMAAAA=")
+tile_map_data = PackedByteArray("AAD5/wkAAAABAAQAAAD6/wkAAAACAAQAAAD7/wkAAAABAAQAAAD8/wkAAAACAAQAAAD9/wkAAAABAAMAAAD+/wkAAAACAAMAAAD//wkAAAABAAMAAAAAAAkAAAACAAMAAAABAAkAAAABAAQAAAACAAkAAAACAAQAAAADAAkAAAABAAQAAAAEAAkAAAACAAQAAAAFAAkAAAABAAQAAAAGAAkAAAACAAQAAAAHAAkAAAABAAQAAAAIAAkAAAACAAQAAAAJAAkAAAABAAQAAAAKAAkAAAACAAQAAAD6/wYAAAACAAQAAAD7/wYAAAACAAQAAAD6/wUAAAACAAMAAAD7/wUAAAACAAMAAAD5/wUAAAABAAMAAAD5/wYAAAABAAQAAAD8/wUAAAABAAMAAAD8/wYAAAABAAQAAAD9/wUAAAABAAMAAAD9/wYAAAABAAQAAAD+/wUAAAACAAMAAAD+/wYAAAACAAQAAAD//wUAAAABAAMAAAD//wYAAAABAAQAAAD5/wMAAAABAAMAAAD5/wQAAAABAAQAAAD6/wMAAAABAAMAAAD7/wMAAAABAAMAAAD7/wQAAAABAAQAAAD8/wMAAAACAAMAAAD8/wQAAAACAAQAAAD9/wMAAAABAAMAAAD9/wQAAAABAAQAAAD+/wMAAAAFAAMAAAD+/wQAAAACAAQAAAD//wMAAAABAAMAAAD//wQAAAABAAQAAAAAAAQAAAAFAAQAAAAAAAUAAAABAAMAAAAAAAYAAAABAAQAAAAAAAMAAAABAAMAAAABAAUAAAABAAMAAAABAAYAAAABAAQAAAABAAQAAAABAAQAAAACAAQAAAABAAQAAAACAAUAAAABAAMAAAABAAMAAAABAAMAAAACAAMAAAABAAMAAAACAAYAAAABAAQAAAADAAUAAAACAAMAAAADAAYAAAACAAQAAAADAAMAAAACAAMAAAADAAQAAAACAAQAAAD5/woAAAABAAMAAAD6/woAAAACAAMAAAD7/woAAAABAAMAAAD8/woAAAACAAMAAAD9/woAAAABAAMAAAD+/woAAAACAAMAAAD//woAAAABAAMAAAAAAAoAAAACAAMAAAABAAoAAAABAAMAAAACAAoAAAACAAMAAAADAAoAAAABAAMAAAAEAAoAAAACAAMAAAAFAAoAAAABAAMAAAAGAAoAAAACAAMAAAAHAAoAAAABAAMAAAAIAAoAAAACAAMAAAAJAAoAAAABAAMAAAAKAAoAAAABAAMAAAD6/wQAAAABAAQAAAAHAAMAAAACAAMAAAAHAAQAAAACAAQAAAAHAAUAAAACAAMAAAAHAAYAAAACAAQAAAAIAAMAAAABAAMAAAAIAAQAAAABAAQAAAAIAAUAAAABAAMAAAAIAAYAAAABAAQAAAAJAAMAAAABAAMAAAAJAAQAAAABAAQAAAAJAAUAAAABAAMAAAAJAAYAAAABAAQAAAAKAAMAAAACAAMAAAAKAAQAAAACAAQAAAAKAAUAAAACAAMAAAAKAAYAAAACAAQAAAAGAAMAAAABAAMAAAAGAAQAAAABAAQAAAAGAAUAAAABAAMAAAAGAAYAAAABAAQAAAAHAAcAAAABAAMAAAD7/wcAAAABAAMAAAA=")
 tile_set = SubResource("TileSet_u5sy4")
 
 [node name="wall" type="TileMapLayer" parent="Maps & UnInteractables"]
 texture_filter = 1
-tile_map_data = PackedByteArray("AAD5/wEAAAABAAEAAAD5/wIAAAABAAIAAAD6/wEAAAACAAEAAAD6/wIAAAACAAIAAAD7/wEAAAABAAEAAAD7/wIAAAABAAIAAAD8/wEAAAACAAEAAAD8/wIAAAACAAIAAAD9/wEAAAABAAEAAAD9/wIAAAABAAIAAAD+/wEAAAAFAAEAAAD+/wIAAAAFAAIAAAABAAIAAAABAAIAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAD//wEAAAABAAEAAAD//wIAAAABAAIAAAADAAEAAAABAAEAAAADAAIAAAABAAIAAAD5/wcAAAABAAEAAAD5/wgAAAABAAIAAAD7/wcAAAABAAEAAAD7/wgAAAABAAIAAAD9/wcAAAABAAEAAAD9/wgAAAABAAIAAAD//wcAAAABAAEAAAD//wgAAAABAAIAAAABAAcAAAABAAEAAAABAAgAAAABAAIAAAADAAcAAAABAAEAAAADAAgAAAABAAIAAAAFAAcAAAABAAEAAAAFAAgAAAABAAIAAAAHAAcAAAABAAEAAAAHAAgAAAABAAIAAAALAAcAAAABAAEAAAALAAgAAAABAAIAAAD6/wcAAAACAAEAAAD6/wgAAAACAAIAAAD+/wcAAAACAAEAAAD+/wgAAAACAAIAAAAAAAcAAAACAAEAAAAAAAgAAAACAAIAAAACAAcAAAACAAEAAAACAAgAAAACAAIAAAAEAAcAAAACAAEAAAAEAAgAAAACAAIAAAAGAAcAAAACAAEAAAAGAAgAAAACAAIAAAAIAAcAAAACAAEAAAAIAAgAAAACAAIAAAAKAAcAAAACAAEAAAAKAAgAAAACAAIAAAD4/wEAAAAAAAEAAAD4/wIAAAAAAAIAAAD4/wMAAAAAAAMAAAD4/wQAAAAAAAQAAAD4/wUAAAAAAAIAAAD4/wYAAAAAAAMAAAD4/wcAAAAAAAIAAAD4/wgAAAAAAAMAAAD4/wkAAAAAAAQAAAAMAAcAAAADAAIAAAAMAAgAAAADAAMAAAAMAAkAAAADAAQAAAAMAAQAAAADAAIAAAAMAAUAAAADAAMAAAAMAAYAAAADAAQAAAAGAAQAAAAAAAIAAAAGAAUAAAAAAAMAAAAGAAYAAAAAAAQAAAAEAAQAAAADAAQAAAAEAAUAAAADAAQAAAAEAAYAAAADAAQAAAAEAAMAAAADAAMAAAAEAAIAAAADAAIAAAAEAAEAAAADAAEAAAAAAAEAAAACAAEAAAAAAAIAAAACAAIAAAAGAAEAAAAAAAEAAAAHAAEAAAABAAEAAAAIAAEAAAACAAEAAAAJAAEAAAABAAEAAAAKAAEAAAACAAEAAAALAAEAAAABAAEAAAAMAAEAAAADAAEAAAAGAAIAAAAAAAIAAAAGAAMAAAAAAAMAAAAMAAIAAAADAAIAAAAMAAMAAAADAAMAAAAHAAIAAAABAAIAAAAIAAIAAAACAAIAAAAJAAIAAAABAAIAAAAKAAIAAAACAAIAAAALAAIAAAABAAIAAAD4/woAAAAAAAQAAAAMAAoAAAADAAQAAAD4/wwAAAAAAAUAAAD5/wwAAAABAAUAAAD6/wwAAAACAAUAAAD7/wwAAAABAAUAAAD8/wwAAAACAAUAAAD9/wwAAAABAAUAAAD+/wwAAAACAAUAAAD//wwAAAABAAUAAAAAAAwAAAACAAUAAAABAAwAAAABAAUAAAACAAwAAAACAAUAAAADAAwAAAABAAUAAAAEAAwAAAACAAUAAAAFAAwAAAABAAUAAAAGAAwAAAACAAUAAAAHAAwAAAABAAUAAAAIAAwAAAACAAUAAAAJAAwAAAABAAUAAAAKAAwAAAABAAUAAAALAAwAAAACAAUAAAAMAAwAAAADAAUAAAD4/wsAAAAAAAQAAAAMAAsAAAADAAQAAAABAAEAAAABAAEAAAA=")
+tile_map_data = PackedByteArray("AAD5/wEAAAABAAEAAAD5/wIAAAABAAIAAAD6/wEAAAACAAEAAAD6/wIAAAACAAIAAAD7/wEAAAABAAEAAAD7/wIAAAABAAIAAAD8/wEAAAACAAEAAAD8/wIAAAACAAIAAAD9/wEAAAABAAEAAAD9/wIAAAABAAIAAAD+/wEAAAAFAAEAAAD+/wIAAAAFAAIAAAABAAIAAAABAAIAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAD//wEAAAABAAEAAAD//wIAAAABAAIAAAADAAEAAAABAAEAAAADAAIAAAABAAIAAAD5/wcAAAABAAEAAAD5/wgAAAABAAIAAAD9/wcAAAABAAEAAAD9/wgAAAABAAIAAAD//wcAAAABAAEAAAD//wgAAAABAAIAAAABAAcAAAABAAEAAAABAAgAAAABAAIAAAADAAcAAAABAAEAAAADAAgAAAABAAIAAAAFAAcAAAACAAEAAAAFAAgAAAACAAIAAAD6/wcAAAABAAEAAAD6/wgAAAABAAIAAAD+/wcAAAACAAEAAAD+/wgAAAACAAIAAAAAAAcAAAACAAEAAAAAAAgAAAACAAIAAAACAAcAAAACAAEAAAACAAgAAAACAAIAAAAEAAcAAAACAAEAAAAEAAgAAAACAAIAAAD4/wEAAAAAAAEAAAD4/wIAAAAAAAIAAAD4/wMAAAAAAAMAAAD4/wQAAAAAAAQAAAD4/wUAAAAAAAIAAAD4/wYAAAAAAAMAAAD4/wcAAAAAAAIAAAD4/wgAAAAAAAMAAAD4/wkAAAAAAAQAAAAEAAQAAAADAAQAAAAEAAUAAAADAAQAAAAEAAYAAAADAAQAAAAEAAMAAAADAAMAAAAEAAIAAAADAAIAAAAEAAEAAAADAAEAAAAAAAEAAAACAAEAAAAAAAIAAAACAAIAAAD4/woAAAAAAAQAAAABAAEAAAABAAEAAAAGAAcAAAACAAEAAAAGAAgAAAACAAIAAAAFAAMAAAAAAAIAAAAFAAQAAAAAAAIAAAAFAAUAAAAAAAMAAAAFAAYAAAAAAAQAAAALAAMAAAADAAIAAAALAAQAAAADAAIAAAALAAUAAAADAAMAAAALAAYAAAADAAQAAAALAAcAAAADAAIAAAALAAgAAAADAAMAAAALAAkAAAADAAQAAAALAAoAAAADAAQAAAAFAAIAAAAAAAEAAAAGAAIAAAABAAEAAAAHAAIAAAACAAEAAAAIAAIAAAABAAEAAAAJAAIAAAACAAEAAAAKAAIAAAABAAEAAAALAAIAAAADAAEAAAAGAAMAAAABAAIAAAAHAAMAAAACAAIAAAAIAAMAAAABAAIAAAAJAAMAAAACAAIAAAAKAAMAAAABAAIAAAD4/wsAAAAAAAUAAAALAAsAAAADAAUAAAD5/wsAAAABAAUAAAD6/wsAAAACAAUAAAD7/wsAAAABAAUAAAD8/wsAAAACAAUAAAD9/wsAAAABAAUAAAD+/wsAAAACAAUAAAD//wsAAAABAAUAAAAAAAsAAAACAAUAAAABAAsAAAABAAUAAAACAAsAAAACAAUAAAADAAsAAAABAAUAAAAEAAsAAAACAAUAAAAFAAsAAAABAAUAAAAGAAsAAAACAAUAAAAHAAsAAAABAAUAAAAIAAsAAAACAAUAAAAJAAsAAAABAAUAAAAKAAsAAAABAAUAAAAIAAcAAAACAAEAAAAIAAgAAAACAAIAAAAJAAcAAAABAAEAAAAJAAgAAAABAAIAAAAKAAcAAAACAAEAAAAKAAgAAAACAAIAAAD8/wcAAAACAAEAAAD8/wgAAAACAAIAAAA=")
 tile_set = SubResource("TileSet_0tnpc")
 
 [node name="Plant3" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(178, 272)
+position = Vector2(105, 272)
 texture = ExtResource("10_qnb83")
 
 [node name="Plant2" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(0, 273)
+position = Vector2(-54, 271)
 texture = ExtResource("10_qnb83")
 
 [node name="Painting" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(92, 259)
+position = Vector2(14, 258)
 texture = ExtResource("9_bhx41")
 
 [node name="SideIsle" type="Sprite2D" parent="Maps & UnInteractables"]
@@ -304,11 +305,11 @@ scale = Vector2(0.7916667, 0.7812501)
 texture = ExtResource("7_i4re6")
 
 [node name="GreenCouchBack" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-170, 205)
+position = Vector2(-171, 178)
 texture = ExtResource("8_pf7vy")
 
 [node name="GreenCouchSide" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-207, 165)
+position = Vector2(-206, 142)
 texture = ExtResource("9_o8ni1")
 
 [node name="Hanger" type="Sprite2D" parent="Maps & UnInteractables"]
@@ -316,31 +317,25 @@ position = Vector2(-208, 275)
 texture = ExtResource("10_3hbvx")
 
 [node name="SmallDesk" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-170, 169)
+position = Vector2(-171, 148)
 texture = ExtResource("11_q8j3a")
 
 [node name="SideShelf" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(232, 194)
+position = Vector2(199, 195)
 scale = Vector2(1, 1.125)
 texture = ExtResource("13_7ixpq")
 
 [node name="FrameRed" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-53.5, 259.5)
+position = Vector2(-173, 257)
 scale = Vector2(1.25, 1.3125)
 texture = ExtResource("14_bk1p3")
 
-[node name="Books" type="Sprite2D" parent="Maps & UnInteractables"]
-z_index = 1
-position = Vector2(345.75003, 89.00001)
-scale = Vector2(0.22916616, 0.28571418)
-texture = ExtResource("24_qnb83")
-
 [node name="Clock" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(255, 255)
+position = Vector2(166, 253)
 texture = ExtResource("16_n8ral")
 
 [node name="MiniPlant" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-169.00002, 161)
+position = Vector2(-170, 139)
 scale = Vector2(0.625, 0.7)
 texture = ExtResource("17_yd4ix")
 
@@ -354,7 +349,7 @@ position = Vector2(36, 58)
 texture = ExtResource("19_bnuda")
 
 [node name="DrawerSide" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-207, 202)
+position = Vector2(-204, 172)
 scale = Vector2(1, 0.84375)
 texture = ExtResource("20_0rmfi")
 
@@ -362,25 +357,29 @@ texture = ExtResource("20_0rmfi")
 position = Vector2(52, 58)
 texture = ExtResource("21_xbak0")
 
+[node name="Vanity" type="Sprite2D" parent="Maps & UnInteractables"]
+position = Vector2(271, 118)
+texture = ExtResource("11_sww3w")
+
 [node name="Cabinet2" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(355.25, 282.5)
-scale = Vector2(0.82031214, 0.77083266)
+position = Vector2(328, 280)
+scale = Vector2(0.6874999, 0.77083266)
 texture = ExtResource("17_js0lu")
 
 [node name="WineGlass" type="Sprite2D" parent="Maps & UnInteractables"]
 z_index = 1
-position = Vector2(291.75, 82.5)
+position = Vector2(265, 112)
 scale = Vector2(0.9, 0.9375)
 texture = ExtResource("23_3x28f")
 
 [node name="WineGlass2" type="Sprite2D" parent="Maps & UnInteractables"]
 z_index = 1
-position = Vector2(298, 83)
+position = Vector2(258, 113)
 scale = Vector2(0.9, 0.9375)
 texture = ExtResource("23_3x28f")
 
 [node name="Table" type="Sprite2D" parent="Maps & UnInteractables"]
-position = Vector2(-171, 133)
+position = Vector2(-171, 112.000015)
 scale = Vector2(0.65, 0.47916666)
 texture = ExtResource("8_pl11u")
 
@@ -389,7 +388,17 @@ position = Vector2(-172, 69)
 scale = Vector2(1, 1.0833334)
 texture = ExtResource("24_8qswn")
 
+[node name="Books" type="Sprite2D" parent="Maps & UnInteractables"]
+position = Vector2(284.00003, 118)
+scale = Vector2(0.22916616, 0.28571418)
+texture = ExtResource("24_qnb83")
+
 [node name="Interactables" type="Node" parent="."]
+
+[node name="VanityChair" type="Sprite2D" parent="Interactables"]
+position = Vector2(290, 135)
+scale = Vector2(0.75, 0.8541667)
+texture = ExtResource("12_suyxu")
 
 [node name="ChariLeft" type="Sprite2D" parent="Interactables"]
 position = Vector2(-49, 179)
@@ -403,32 +412,18 @@ texture = ExtResource("6_bt5mj")
 position = Vector2(-3, 189)
 texture = ExtResource("8_pl11u")
 
-[node name="Vanity" type="Sprite2D" parent="Interactables"]
-position = Vector2(305, 88)
-texture = ExtResource("11_sww3w")
-
-[node name="VanityChair" type="Sprite2D" parent="Interactables"]
-position = Vector2(320, 99)
-texture = ExtResource("12_suyxu")
-
 [node name="Window" type="Sprite2D" parent="Interactables"]
 position = Vector2(100, 62.000004)
 scale = Vector2(1.1458334, 0.875)
 texture = ExtResource("13_sgl2t")
 
 [node name="Cabinet" type="Sprite2D" parent="Interactables"]
-position = Vector2(250, 81.99999)
+position = Vector2(217.99998, 112)
 scale = Vector2(0.859375, 0.7875)
 texture = ExtResource("14_qouja")
 
-[node name="Cabinet2" type="Sprite2D" parent="Interactables"]
-position = Vector2(357, 96.99999)
-rotation = -0.0065365746
-scale = Vector2(0.6875, 0.7083333)
-texture = ExtResource("17_js0lu")
-
 [node name="Corkboard" type="Sprite2D" parent="Interactables"]
-position = Vector2(359.00003, 68)
+position = Vector2(325, 98)
 scale = Vector2(0.875, 0.8125)
 texture = ExtResource("18_gxtfn")
 
@@ -448,7 +443,7 @@ scale = Vector2(0.64062494, 0.734375)
 texture = ExtResource("20_02fa5")
 
 [node name="Cupboard" type="Sprite2D" parent="Interactables"]
-position = Vector2(355.75, 248.75)
+position = Vector2(327, 252.00002)
 scale = Vector2(0.5546875, 0.4625001)
 texture = ExtResource("20_bhx41")
 
@@ -457,11 +452,11 @@ position = Vector2(11, 90)
 texture = ExtResource("35_l6q63")
 
 [node name="Tv" type="Sprite2D" parent="Interactables"]
-position = Vector2(-172, 117)
+position = Vector2(-173, 93)
 texture = ExtResource("36_mmvbu")
 
 [node name="Wine" type="Sprite2D" parent="Interactables"]
-position = Vector2(286, 83)
+position = Vector2(252, 113)
 texture = ExtResource("37_weeiq")
 
 [node name="Fisbowl" type="Sprite2D" parent="Interactables"]
@@ -469,11 +464,11 @@ position = Vector2(113, 85)
 texture = ExtResource("38_uxocx")
 
 [node name="MusicPlayer" type="Sprite2D" parent="Interactables"]
-position = Vector2(346, 204)
+position = Vector2(309, 207)
 texture = ExtResource("39_7nv0b")
 
 [node name="Lamp" type="Sprite2D" parent="Interactables"]
-position = Vector2(372, 194)
+position = Vector2(340, 197)
 scale = Vector2(0.8125, 0.8194444)
 texture = ExtResource("23_suyxu")
 
@@ -494,15 +489,15 @@ scale = Vector2(0.7447119, 0.6221967)
 texture = ExtResource("41_o8oq8")
 
 [node name="Parcel" type="Sprite2D" parent="Interactables"]
-position = Vector2(371, 137)
+position = Vector2(321, 130)
 texture = ExtResource("42_sxt1d")
 
 [node name="Parcel2" type="Sprite2D" parent="Interactables"]
-position = Vector2(375, 129)
+position = Vector2(328, 122)
 texture = ExtResource("42_sxt1d")
 
 [node name="Parcel3" type="Sprite2D" parent="Interactables"]
-position = Vector2(376, 143)
+position = Vector2(341, 130)
 texture = ExtResource("43_2iuns")
 
 [node name="Plate" type="Sprite2D" parent="Interactables"]
@@ -518,7 +513,7 @@ position = Vector2(76, 86)
 texture = ExtResource("45_753oq")
 
 [node name="Coffee" type="Sprite2D" parent="Interactables"]
-position = Vector2(-210, 193)
+position = Vector2(-206, 162)
 texture = ExtResource("46_3x338")
 
 [node name="DogBed" type="Sprite2D" parent="Interactables"]
@@ -528,20 +523,20 @@ texture = ExtResource("47_1yg85")
 [node name="Doors" type="Node" parent="."]
 
 [node name="DoorRight" parent="Doors" instance=ExtResource("2_lnu2h")]
-position = Vector2(311, 274)
+position = Vector2(247, 273)
 
 [node name="DoorLeft" parent="Doors" instance=ExtResource("2_lnu2h")]
-position = Vector2(-106, 274)
+position = Vector2(-138, 273)
+
+[node name="Partner" parent="." instance=ExtResource("47_rm0al")]
+z_index = 5
+position = Vector2(43, 124)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-17, 70)
+position = Vector2(7, 117)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(25, 43)
+position = Vector2(10, 2)
 zoom = Vector2(8, 8)
 position_smoothing_enabled = true
-
-[node name="Parcel" type="Sprite2D" parent="."]
-position = Vector2(-110, 375)
-texture = ExtResource("42_sxt1d")
