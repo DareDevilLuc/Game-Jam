@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://csik5pyyn7iuu"
-path="res://.godot/imported/DinoBones.png-52a28d08305c040606fbdd36bc5a7cf6.ctex"
+uid="uid://e0e6bvvh1bwc"
+path="res://.godot/imported/asset_noborder.png-83e01f2d6211f75e5c134bc2c84e4b02.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/DinoBones.png"
-dest_files=["res://.godot/imported/DinoBones.png-52a28d08305c040606fbdd36bc5a7cf6.ctex"]
+source_file="res://assets/sprites/asset_noborder.png"
+dest_files=["res://.godot/imported/asset_noborder.png-83e01f2d6211f75e5c134bc2c84e4b02.ctex"]
 
 [params]
 
