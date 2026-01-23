@@ -151,6 +151,7 @@ animations = [{
 }]
 
 [node name="Partner" type="CharacterBody2D" groups=["player"]]
+collision_mask = 3
 script = ExtResource("1_5j83e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -164,4 +165,4 @@ scale = Vector2(0.153125, 0.1623125)
 sprite_frames = SubResource("SpriteFrames_cy2by")
 animation = &"idleSide"
 autoplay = "idleSide"
-frame_progress = 0.5970516
+frame_progress = 0.47932732
