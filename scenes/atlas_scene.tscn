@@ -8,8 +8,8 @@ script = ExtResource("1_7q61n")
 destination_path = "res://assets/sprites"
 metadata/_custom_type_script = "uid://b10d32xehhclh"
 
-[node name="GlobeOnTable" type="Sprite2D" parent="."]
+[node name="DoorWithWindow" type="Sprite2D" parent="."]
 position = Vector2(444, 222)
 texture = ExtResource("2_csa4t")
 region_enabled = true
-region_rect = Rect2(450, 1154, 26, 42)
+region_rect = Rect2(385.04803, 774, 30.951965, 56)

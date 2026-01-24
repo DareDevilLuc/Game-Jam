@@ -92,7 +92,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_smehm"]
 resource_name = "walk_side"
-length = 0.5
+length = 0.55
 loop_mode = 2
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -135,12 +135,13 @@ _data = {
 &"walk_up": SubResource("Animation_fjrip")
 }
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 collision_mask = 6
 script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+position_smoothing_enabled = true
 editor_draw_limits = true
 script = ExtResource("2_qhqgy")
 
