@@ -1,13 +1,13 @@
 extends Area2D
-
 @onready var timer: Timer = $Timer
 
 
-
 func _on_body_entered(_body: Node2D) -> void:
-	print("You died")
-	timer.start()
+		print ("Next leve")
+		timer.start()
+		
+
 
 
 func _on_timer_timeout() -> void:
-	get_tree().reload_current_scene()
+	get_tree().change_scene_to_file("res://scenes/game.tscn")

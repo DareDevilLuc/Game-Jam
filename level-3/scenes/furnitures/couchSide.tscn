@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3x8nulkgydjq"]
+
+[ext_resource type="Texture2D" uid="uid://cet05f6gk6s4i" path="res://assets/textures/GreenCouchSide.atlastex" id="1_vw03i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(22, 36.25)
+
+[node name="CouchBack" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.875)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="GreenCouchSide" type="Sprite2D" parent="."]
+position = Vector2(1, -6)
+texture = ExtResource("1_vw03i")

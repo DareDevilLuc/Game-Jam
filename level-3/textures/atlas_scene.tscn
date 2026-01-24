@@ -1,16 +1,15 @@
 [gd_scene load_steps=3 format=3 uid="uid://cuvhrvx25if34"]
 
 [ext_resource type="Script" uid="uid://bdxnivhmcx64d" path="res://addons/sprite_cutter/AtlasScene.gd" id="1_v3m8f"]
-[ext_resource type="Texture2D" uid="uid://ck6almrw727ks" path="res://assets/TopDownHouse_SmallItems.png" id="3_saqeb"]
+[ext_resource type="Texture2D" uid="uid://chpl8j4urp15q" path="res://assets/decorations_BR.png" id="2_v3m8f"]
 
 [node name="AtlasScene" type="Node"]
 script = ExtResource("1_v3m8f")
 destination_path = "res://assets/textures"
 metadata/_custom_type_script = "uid://bdxnivhmcx64d"
 
-[node name="WineGlass" type="Sprite2D" parent="."]
-position = Vector2(232.5, -244)
-scale = Vector2(1.8046875, 2.078125)
-texture = ExtResource("3_saqeb")
+[node name="Alarm" type="Sprite2D" parent="."]
+position = Vector2(-10, -4)
+texture = ExtResource("2_v3m8f")
 region_enabled = true
-region_rect = Rect2(0, 96, 15, 16)
+region_rect = Rect2(99, 30, 10, 10)

@@ -72,9 +72,11 @@ position = Vector2(-6, -15)
 shape = SubResource("RectangleShape2D_ju5n0")
 
 [node name="trigger" parent="." instance=ExtResource("5_18pbm")]
+visible = false
 collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="trigger"]
+visible = false
 position = Vector2(-7, -13.5)
 shape = SubResource("RectangleShape2D_18pbm")
 
