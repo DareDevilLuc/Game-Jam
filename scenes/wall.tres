@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/sprites/GrayFloorSlab.png" id="4_nlogu"]
 [ext_resource type="Texture2D" uid="uid://brlo7fu8lryic" path="res://assets/sprites/asset_bordered.png" id="6_k1hj4"]
 [ext_resource type="Texture2D" uid="uid://dbehuyetcncqe" path="res://assets/sprites/DinoBonesFinal.png" id="8_k1hj4"]
+[ext_resource type="Texture2D" uid="uid://c4n87ngawuwtv" path="res://assets/sprites/MuseumPlacard.png" id="9_mimwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlogu"]
 texture = ExtResource("1_o81w4")
@@ -1378,32 +1379,6 @@ texture_region_size = Vector2i(32, 32)
 8:20/0 = 0
 9:20/0 = 0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_mimwd"]
-load_path = "res://.godot/imported/DinoBones.png-52a28d08305c040606fbdd36bc5a7cf6.ctex"
-
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mimwd"]
-texture = SubResource("CompressedTexture2D_mimwd")
-texture_region_size = Vector2i(32, 32)
-0:0/0 = 0
-1:0/0 = 0
-2:0/0 = 0
-3:0/0 = 0
-0:1/0 = 0
-1:1/0 = 0
-2:1/0 = 0
-3:1/0 = 0
-4:1/0 = 0
-0:2/0 = 0
-1:2/0 = 0
-2:2/0 = 0
-3:2/0 = 0
-4:2/0 = 0
-0:3/0 = 0
-1:3/0 = 0
-2:3/0 = 0
-3:3/0 = 0
-4:3/0 = 0
-
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3u2ee"]
 texture = ExtResource("4_4wgck")
 texture_region_size = Vector2i(32, 32)
@@ -1627,6 +1602,11 @@ texture_region_size = Vector2i(32, 32)
 3:3/0 = 0
 4:3/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ueml6"]
+texture = ExtResource("9_mimwd")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+
 [resource]
 tile_size = Vector2i(32, 32)
 sources/1 = SubResource("TileSetAtlasSource_cipko")
@@ -1634,7 +1614,7 @@ sources/0 = SubResource("TileSetAtlasSource_nlogu")
 sources/6 = SubResource("TileSetAtlasSource_w0aus")
 sources/7 = SubResource("TileSetAtlasSource_4wgck")
 sources/4 = SubResource("TileSetAtlasSource_k1hj4")
-sources/2 = SubResource("TileSetAtlasSource_mimwd")
 sources/3 = SubResource("TileSetAtlasSource_3u2ee")
 sources/5 = SubResource("TileSetAtlasSource_2c0yf")
 sources/8 = SubResource("TileSetAtlasSource_dnnsi")
+sources/9 = SubResource("TileSetAtlasSource_ueml6")
