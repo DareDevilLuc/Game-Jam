@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://bcqlw4c6fujdw"]
+[gd_scene load_steps=13 format=3 uid="uid://bcqlw4c6fujdw"]
 
 [ext_resource type="Script" uid="uid://dwu34ha4d5mab" path="res://scripts/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://b5j85r0qgoeve" path="res://assets/sprites/1st_anim-Sheet.png" id="2_g2els"]
+[ext_resource type="Script" uid="uid://dfiu6lg2c1hr0" path="res://scripts/PlayerCameraScript.gd" id="2_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(13, 18)
+size = Vector2(13, 21)
 
 [sub_resource type="Animation" id="Animation_qhqgy"]
 length = 0.001
@@ -140,9 +141,11 @@ script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
+editor_draw_limits = true
+script = ExtResource("2_qhqgy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, 2)
+position = Vector2(1.5, 5.5)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
