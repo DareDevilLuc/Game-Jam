@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=43 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -29,7 +29,6 @@
 [ext_resource type="Texture2D" uid="uid://b8ld1rl1bjj62" path="res://cuts/Scythe.atlastex" id="31_wso6h"]
 [ext_resource type="Texture2D" uid="uid://71jjcnxxtw3v" path="res://cuts/Axe.atlastex" id="32_4vsvd"]
 [ext_resource type="Texture2D" uid="uid://bynnxiut6wdhm" path="res://cuts/BlueSofa.atlastex" id="33_ehxya"]
-[ext_resource type="Texture2D" uid="uid://y2ijmne5onnh" path="res://cuts/Garbage.atlastex" id="34_tn25f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("2_wwpf4")
@@ -1419,6 +1418,27 @@ sources/3 = SubResource("TileSetAtlasSource_hrcei")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qo7hg"]
 size = Vector2(101.5853, 81.68317)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odav0"]
+size = Vector2(57, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac7c3"]
+size = Vector2(95.54082, 96.923065)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnv6s"]
+size = Vector2(192.00003, 95.5102)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icuov"]
+size = Vector2(190.98361, 59.825836)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3xffc"]
+size = Vector2(90.80716, 59.089935)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6lk74"]
+size = Vector2(38.808685, 40.851044)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wso6h"]
+size = Vector2(41.351654, 40.416763)
+
 [node name="Level2" type="Node2D"]
 z_index = -1
 y_sort_enabled = true
@@ -1442,7 +1462,7 @@ tile_map_data = PackedByteArray("AAAQAAQAAAAKAEIAAAAQAAUAAAAKAEMAAAARAAQAAAALAEI
 tile_set = ExtResource("1_d6fun")
 
 [node name="ArrowLeft" type="Sprite2D" parent="Decorations"]
-position = Vector2(993, 450)
+position = Vector2(994, 465)
 texture = ExtResource("6_bo4dx")
 
 [node name="DinoSkull" type="Sprite2D" parent="Decorations"]
@@ -1500,26 +1520,6 @@ texture = ExtResource("21_ekhvm")
 position = Vector2(891, 180)
 texture = ExtResource("22_nflru")
 
-[node name="MuseumPokeball" type="Sprite2D" parent="Decorations"]
-position = Vector2(265.875, 205)
-scale = Vector2(0.5442709, 0.4642858)
-texture = ExtResource("23_ikw2v")
-
-[node name="MuseumStone" type="Sprite2D" parent="Decorations"]
-position = Vector2(123, 209)
-scale = Vector2(0.47916663, 0.47115386)
-texture = ExtResource("24_cgqhq")
-
-[node name="BlueChair" type="Sprite2D" parent="Decorations"]
-position = Vector2(125, 382)
-scale = Vector2(0.48958325, 0.48958328)
-texture = ExtResource("25_ttvjw")
-
-[node name="BlueChair2" type="Sprite2D" parent="Decorations"]
-position = Vector2(254.99997, 383)
-scale = Vector2(0.50783944, 0.4948459)
-texture = ExtResource("25_ttvjw")
-
 [node name="BlueChair3" type="Sprite2D" parent="Decorations"]
 position = Vector2(323, 192)
 scale = Vector2(0.47916666, 0.5)
@@ -1569,12 +1569,12 @@ scale = Vector2(1.0384616, 0.78191483)
 texture = ExtResource("32_4vsvd")
 
 [node name="BlueSofa" type="Sprite2D" parent="Decorations"]
-position = Vector2(992, 380)
-scale = Vector2(1.1428572, 1.4791666)
+position = Vector2(982, 389)
+scale = Vector2(1.5803577, 2.1614592)
 texture = ExtResource("33_ehxya")
 
 [node name="Plant2" type="Sprite2D" parent="Decorations"]
-position = Vector2(798, 404.99997)
+position = Vector2(963, 381)
 scale = Vector2(0.71875, 0.72499967)
 texture = ExtResource("7_hrcei")
 
@@ -1582,23 +1582,6 @@ texture = ExtResource("7_hrcei")
 position = Vector2(765, 167.00002)
 scale = Vector2(0.33333263, 0.34375)
 texture = ExtResource("27_qo7hg")
-
-[node name="Garbage" type="Sprite2D" parent="Decorations"]
-position = Vector2(782, 407)
-scale = Vector2(0.43749985, 0.38392794)
-texture = ExtResource("34_tn25f")
-
-[node name="MuseumStone2" type="Sprite2D" parent="Decorations"]
-z_index = -1
-position = Vector2(122, 291)
-scale = Vector2(0.48171657, 0.46160778)
-texture = ExtResource("24_cgqhq")
-
-[node name="MuseumPokeball2" type="Sprite2D" parent="Decorations"]
-z_index = -1
-position = Vector2(269, 289.3125)
-scale = Vector2(0.53960514, 0.43415198)
-texture = ExtResource("23_ikw2v")
 
 [node name="CollisionStuffs" type="Node2D" parent="."]
 z_index = 2
@@ -1617,5 +1600,95 @@ position = Vector2(3.8415527, 14.438942)
 shape = SubResource("RectangleShape2D_qo7hg")
 
 [node name="BlueArmorCabinet" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -1
 position = Vector2(916, 184)
 texture = ExtResource("15_wvb8j")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueArmorCabinet"]
+y_sort_enabled = true
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueArmorCabinet/StaticBody2D"]
+position = Vector2(10.5, 10)
+shape = SubResource("RectangleShape2D_odav0")
+
+[node name="MuseumPokeball" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -1
+position = Vector2(265.875, 205)
+scale = Vector2(0.5442709, 0.4642858)
+texture = ExtResource("23_ikw2v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/MuseumPokeball"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/MuseumPokeball/StaticBody2D"]
+position = Vector2(2.0667725, 5.384613)
+shape = SubResource("RectangleShape2D_ac7c3")
+
+[node name="MuseumStone" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(123, 209)
+scale = Vector2(0.47916663, 0.47115386)
+texture = ExtResource("24_cgqhq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/MuseumStone"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/MuseumStone/StaticBody2D"]
+position = Vector2(0, -3.18367)
+shape = SubResource("RectangleShape2D_xnv6s")
+
+[node name="MuseumStone2" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(122, 291)
+scale = Vector2(0.48171657, 0.46160778)
+texture = ExtResource("24_cgqhq")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/MuseumStone2"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/MuseumStone2/StaticBody2D"]
+position = Vector2(0, -19.912903)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_icuov")
+
+[node name="MuseumPokeball2" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(269, 289.3125)
+scale = Vector2(0.53960514, 0.43415198)
+texture = ExtResource("23_ikw2v")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/MuseumPokeball2"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/MuseumPokeball2/StaticBody2D"]
+position = Vector2(0.92645264, -19.544983)
+shape = SubResource("RectangleShape2D_3xffc")
+
+[node name="BlueChair" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(125, 382)
+scale = Vector2(0.48958325, 0.48958328)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueChair"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueChair/StaticBody2D"]
+position = Vector2(-1.0212097, 0)
+scale = Vector2(1.0000005, 1)
+shape = SubResource("RectangleShape2D_6lk74")
+
+[node name="BlueChair2" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(254.99997, 383)
+scale = Vector2(0.50783944, 0.4948459)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueChair2"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueChair2/StaticBody2D"]
+position = Vector2(-0.9844971, -2.0209045)
+scale = Vector2(0.9999996, 1)
+shape = SubResource("RectangleShape2D_wso6h")
