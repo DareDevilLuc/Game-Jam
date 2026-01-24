@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=44 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://ol1jkybqkanx" path="res://cuts/RedList.atlastex" id="28_odav0"]
 [ext_resource type="Texture2D" uid="uid://v75uy554okmq" path="res://cuts/DinoBonesFinal.atlastex" id="29_xnv6s"]
 [ext_resource type="Texture2D" uid="uid://ckij6t1hpkvk6" path="res://cuts/Sword.atlastex" id="30_6lk74"]
+[ext_resource type="PackedScene" uid="uid://cxas0bnao8buj" path="res://scenes/CollisionDecor.tscn" id="30_qo7hg"]
 [ext_resource type="Texture2D" uid="uid://b8ld1rl1bjj62" path="res://cuts/Scythe.atlastex" id="31_wso6h"]
 [ext_resource type="Texture2D" uid="uid://71jjcnxxtw3v" path="res://cuts/Axe.atlastex" id="32_4vsvd"]
 [ext_resource type="Texture2D" uid="uid://bynnxiut6wdhm" path="res://cuts/BlueSofa.atlastex" id="33_ehxya"]
@@ -1520,26 +1521,6 @@ texture = ExtResource("21_ekhvm")
 position = Vector2(891, 180)
 texture = ExtResource("22_nflru")
 
-[node name="BlueChair3" type="Sprite2D" parent="Decorations"]
-position = Vector2(323, 192)
-scale = Vector2(0.47916666, 0.5)
-texture = ExtResource("26_ac7c3")
-
-[node name="BlueChair4" type="Sprite2D" parent="Decorations"]
-position = Vector2(344.00003, 192)
-scale = Vector2(0.4583332, 0.50000006)
-texture = ExtResource("26_ac7c3")
-
-[node name="BlueChair5" type="Sprite2D" parent="Decorations"]
-position = Vector2(364, 192)
-scale = Vector2(0.47025484, 0.50000024)
-texture = ExtResource("26_ac7c3")
-
-[node name="BlueChair6" type="Sprite2D" parent="Decorations"]
-position = Vector2(384, 192)
-scale = Vector2(0.41986868, 0.49999997)
-texture = ExtResource("26_ac7c3")
-
 [node name="List" type="Sprite2D" parent="Decorations"]
 position = Vector2(178, 163)
 scale = Vector2(0.20833333, 0.21875)
@@ -1692,3 +1673,45 @@ collision_layer = 6
 position = Vector2(-0.9844971, -2.0209045)
 scale = Vector2(0.9999996, 1)
 shape = SubResource("RectangleShape2D_wso6h")
+
+[node name="Chairs" type="Node2D" parent="CollisionStuffs"]
+
+[node name="BlueChair3" type="Sprite2D" parent="CollisionStuffs/Chairs"]
+z_index = -1
+position = Vector2(323, 192)
+scale = Vector2(0.47916666, 0.5)
+texture = ExtResource("26_ac7c3")
+
+[node name="StaticBody2D" parent="CollisionStuffs/Chairs/BlueChair3" instance=ExtResource("30_qo7hg")]
+position = Vector2(-12.521739, -1.9999999)
+collision_layer = 6
+
+[node name="BlueChair4" type="Sprite2D" parent="CollisionStuffs/Chairs"]
+z_index = -1
+position = Vector2(344.00003, 192)
+scale = Vector2(0.4583332, 0.50000006)
+texture = ExtResource("26_ac7c3")
+
+[node name="StaticBody2D" parent="CollisionStuffs/Chairs/BlueChair4" instance=ExtResource("30_qo7hg")]
+position = Vector2(-13.090979, -1.9999996)
+collision_layer = 6
+
+[node name="BlueChair5" type="Sprite2D" parent="CollisionStuffs/Chairs"]
+z_index = -1
+position = Vector2(364, 192)
+scale = Vector2(0.47025484, 0.50000024)
+texture = ExtResource("26_ac7c3")
+
+[node name="StaticBody2D" parent="CollisionStuffs/Chairs/BlueChair5" instance=ExtResource("30_qo7hg")]
+position = Vector2(-8.506025, -1.9999989)
+collision_layer = 6
+
+[node name="BlueChair6" type="Sprite2D" parent="CollisionStuffs/Chairs"]
+z_index = -1
+position = Vector2(384, 192)
+scale = Vector2(0.41986868, 0.49999997)
+texture = ExtResource("26_ac7c3")
+
+[node name="StaticBody2D" parent="CollisionStuffs/Chairs/BlueChair6" instance=ExtResource("30_qo7hg")]
+position = Vector2(-11.9084835, -2)
+collision_layer = 6
