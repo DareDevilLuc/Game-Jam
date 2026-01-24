@@ -5,6 +5,8 @@ var move_speed : float = 150.0
 var direction : Vector2 = Vector2.ZERO
 var state : String = "idle"
 
+const scaleChar = 0.15
+
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 
@@ -43,7 +45,7 @@ func SetDirection() -> bool:
 		return false
 	
 	cardinal_direction = new_dir
-	sprite.scale.x = -1 if cardinal_direction == Vector2.LEFT else 1
+	sprite.scale.x = scaleChar if cardinal_direction == Vector2.LEFT else -scaleChar
 
 	return true
 
