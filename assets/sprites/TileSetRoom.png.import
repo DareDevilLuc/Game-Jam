@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bgalckullms7n"
-path="res://.godot/imported/Room_Builder_free_32x32.png-18475b7b8c472cd801af39152c9252fb.ctex"
+path="res://.godot/imported/TileSetRoom.png-e542ff8a5d533f95145ab2f1177f9e37.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Room_Builder_free_32x32.png"
-dest_files=["res://.godot/imported/Room_Builder_free_32x32.png-18475b7b8c472cd801af39152c9252fb.ctex"]
+source_file="res://assets/sprites/TileSetRoom.png"
+dest_files=["res://.godot/imported/TileSetRoom.png-e542ff8a5d533f95145ab2f1177f9e37.ctex"]
 
 [params]
 

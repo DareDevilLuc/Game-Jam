@@ -1,12 +1,15 @@
-[gd_scene load_steps=14 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=18 format=4 uid="uid://bxb1mxatkgu"]
 
-[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/Room_Builder_free_32x32.png" id="1_g2h75"]
-[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/sprites/Interiors_free_32x32.png" id="2_wwpf4"]
+[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/TileSetRoom.png" id="1_g2h75"]
+[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/sprites/TileSet.png" id="2_wwpf4"]
 [ext_resource type="Script" uid="uid://ces4dmixr1m2y" path="res://scripts/tables.gd" id="3_ejswk"]
 [ext_resource type="PackedScene" uid="uid://cad5hlvstduti" path="res://scenes/diffTables.tscn" id="4_6sh32"]
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/ChairDown.tscn" id="4_dwgg1"]
 [ext_resource type="Texture2D" uid="uid://by8c8mryqagt4" path="res://assets/sprites/TeachersTable.png" id="4_ejswk"]
+[ext_resource type="Texture2D" uid="uid://c0jupapgdtjew" path="res://assets/sprites/Table_With_Chair_Left.atlastex" id="5_bbk5w"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/ChairUp.tscn" id="5_ru4tf"]
+[ext_resource type="Texture2D" uid="uid://csouhejuogrhc" path="res://assets/sprites/GlobeOnTable.atlastex" id="6_d3jkd"]
+[ext_resource type="PackedScene" uid="uid://do6x7hx0cr5cu" path="res://scenes/TableWithChairRight.tscn" id="8_d3jkd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2h75"]
 texture = ExtResource("1_g2h75")
@@ -1680,6 +1683,9 @@ physics_layer_0/collision_layer = 4
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_dwgg1")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3jkd"]
+size = Vector2(44, 46)
+
 [node name="Level1" type="TileMap"]
 z_index = -1
 tile_set = SubResource("TileSet_wwpf4")
@@ -1695,7 +1701,7 @@ tile_map_data = PackedByteArray("AAAAAAcAAAALAAgAAAAAAAgAAAALAAgAAAAAAAkAAAALAAg
 tile_set = SubResource("TileSet_m7ahb")
 
 [node name="WallFurniture" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAEAAEAAAANACgAAAAFAAEAAAAOACgAAAAIAAEAAAAEABgAAAAJAAEAAAAFABgAAAAKAAEAAAAGABgAAAAEAAIAAAANACkAAAAFAAIAAAAOACkAAAAGAAIAAAAAACkAAAAHAAIAAAABACkAAAAIAAIAAAAEABkAAAAJAAIAAAAFABkAAAAKAAIAAAAGABkAAAAAAAIAAAAFAA4AAAAAAAMAAAAFAA8AAAABAAIAAAAGAA4AAAABAAMAAAAGAA8AAAACAAIAAAAMACgAAAACAAMAAAAMACkAAAAOAA0AAAAMABgAAAAOAA4AAAAMABkAAAABAA0AAAAMABgAAAABAA4AAAAMABkAAAAEAA4AAAAMACgAAAAEAA8AAAAMACkAAAAFAA4AAAAMACgAAAAFAA8AAAAMACkAAAAGAA4AAAAMACgAAAAGAA8AAAAMACkAAAAHAA4AAAAMACgAAAAHAA8AAAAMACkAAAAIAA4AAAAFAA4AAAAIAA8AAAAFAA8AAAAJAA4AAAAGAA4AAAAJAA8AAAAGAA8AAAAKAA4AAAAMACgAAAAKAA8AAAAMACkAAAALAA4AAAAMACgAAAALAA8AAAAMACkAAAAQAA4AAAAMACgAAAAQAA8AAAAMACkAAAAUAA8AAAAGADgAAAAUABAAAAAPACgAAAAUABEAAAAPACkAAAARAA4AAAAFADcAAAARAA8AAAAFADgAAAASAA4AAAAGADcAAAASAA8AAAAGADgAAAATAA4AAAAFADcAAAATAA8AAAAFADgAAAAUAA4AAAAGADcAAAAMAA4AAAAFADcAAAAMAA8AAAAFADgAAAANAA4AAAAGADcAAAANAA8AAAAGADgAAAACAA0AAAAPAAMAAAACAA4AAAAPAAQAAAA=")
+tile_map_data = PackedByteArray("AAAEAAEAAAANACgAAAAFAAEAAAAOACgAAAAIAAEAAAAEABgAAAAJAAEAAAAFABgAAAAKAAEAAAAGABgAAAAEAAIAAAANACkAAAAFAAIAAAAOACkAAAAGAAIAAAAAACkAAAAHAAIAAAABACkAAAAIAAIAAAAEABkAAAAJAAIAAAAFABkAAAAKAAIAAAAGABkAAAAAAAIAAAAFAA4AAAAAAAMAAAAFAA8AAAABAAIAAAAGAA4AAAABAAMAAAAGAA8AAAACAAIAAAAMACgAAAACAAMAAAAMACkAAAAOAA0AAAAMABgAAAAOAA4AAAAMABkAAAABAA0AAAAMABgAAAABAA4AAAAMABkAAAAEAA4AAAAMACgAAAAEAA8AAAAMACkAAAAFAA4AAAAMACgAAAAFAA8AAAAMACkAAAAGAA4AAAAMACgAAAAGAA8AAAAMACkAAAAHAA4AAAAMACgAAAAHAA8AAAAMACkAAAAIAA4AAAAFAA4AAAAIAA8AAAAFAA8AAAAJAA4AAAAGAA4AAAAJAA8AAAAGAA8AAAAKAA4AAAAMACgAAAAKAA8AAAAMACkAAAALAA4AAAAMACgAAAALAA8AAAAMACkAAAAQAA4AAAAMACgAAAAQAA8AAAAMACkAAAAUAA8AAAAGADgAAAAUABAAAAAPACgAAAAUABEAAAAPACkAAAARAA4AAAAFADcAAAARAA8AAAAFADgAAAASAA4AAAAGADcAAAASAA8AAAAGADgAAAATAA4AAAAFADcAAAATAA8AAAAFADgAAAAUAA4AAAAGADcAAAAMAA4AAAAFADcAAAAMAA8AAAAFADgAAAANAA4AAAAGADcAAAANAA8AAAAGADgAAAACAA0AAAAPAAMAAAACAA4AAAAPAAQAAAAPAAUAAAAEABgAAAAPAAYAAAAEABkAAAAQAAUAAAAFABgAAAAQAAYAAAAFABkAAAARAAUAAAAGABgAAAARAAYAAAAGABkAAAASAAUAAAAHABwAAAASAAYAAAAHAB0AAAATAAUAAAAIABwAAAATAAYAAAAIAB0AAAANAAYAAAAAACkAAAAOAAYAAAABACkAAAA=")
 tile_set = SubResource("TileSet_ru4tf")
 
 [node name="Furniture" type="Node2D" parent="."]
@@ -1706,6 +1712,23 @@ script = ExtResource("3_ejswk")
 [node name="TeachersTable" type="Sprite2D" parent="Furniture/Tables"]
 position = Vector2(224, 152)
 texture = ExtResource("4_ejswk")
+
+[node name="TeachersTableLeft" type="Sprite2D" parent="Furniture/Tables"]
+position = Vector2(625, 319)
+texture = ExtResource("5_bbk5w")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Tables/TeachersTableLeft"]
+visible = false
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Tables/TeachersTableLeft/StaticBody2D"]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_d3jkd")
+
+[node name="Globe" type="Sprite2D" parent="Furniture/Tables"]
+position = Vector2(617, 307)
+texture = ExtResource("6_d3jkd")
 
 [node name="DiffTables_01" parent="Furniture/Tables" instance=ExtResource("4_6sh32")]
 position = Vector2(112, 236)
@@ -1741,6 +1764,18 @@ position = Vector2(144, 236)
 position = Vector2(240, 236)
 
 [node name="Chairs" type="Node2D" parent="Furniture"]
+
+[node name="Table_With_Chair_Right" parent="Furniture/Chairs" instance=ExtResource("8_d3jkd")]
+position = Vector2(454, 269)
+
+[node name="Table_With_Chair_Right2" parent="Furniture/Chairs" instance=ExtResource("8_d3jkd")]
+position = Vector2(548, 251)
+
+[node name="Table_With_Chair_Right3" parent="Furniture/Chairs" instance=ExtResource("8_d3jkd")]
+position = Vector2(545, 325)
+
+[node name="Table_With_Chair_Right4" parent="Furniture/Chairs" instance=ExtResource("8_d3jkd")]
+position = Vector2(459, 361)
 
 [node name="ChairDown_01" parent="Furniture/Chairs" instance=ExtResource("4_dwgg1")]
 position = Vector2(328, 104)
