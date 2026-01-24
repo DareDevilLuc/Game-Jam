@@ -48,8 +48,13 @@ left={
 
 [layer_names]
 
+2d_render/layer_1="Floor"
+2d_render/layer_2="Player"
+2d_render/layer_3="Wall"
+2d_render/layer_4="Decorations"
 2d_physics/layer_1="Player"
-2d_physics/layer_2="Walls"
+2d_physics/layer_2="Wall"
+2d_physics/layer_3="Decoration"
 
 [rendering]
 
