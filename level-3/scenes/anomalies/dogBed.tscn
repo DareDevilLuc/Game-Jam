@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://nq31pokwr2eo"]
+
+[ext_resource type="Texture2D" uid="uid://c68e5n5qjy02l" path="res://assets/textures/DogBed.atlastex" id="1_8v3od"]
+[ext_resource type="Texture2D" uid="uid://niu1863o0yxj" path="res://assets/textures/DogToy.atlastex" id="2_622o0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(23, 12)
+
+[node name="CouchBack" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="DogBed" type="Sprite2D" parent="."]
+position = Vector2(-3, 1)
+texture = ExtResource("1_8v3od")
+
+[node name="DogToy" type="Sprite2D" parent="."]
+position = Vector2(-2, -1)
+texture = ExtResource("2_622o0")

@@ -1,0 +1,60 @@
+[gd_scene load_steps=8 format=3 uid="uid://c38tcn35gbrtp"]
+
+[ext_resource type="Texture2D" uid="uid://boj23gxme8p18" path="res://assets/textures/Table.atlastex" id="1_mc02a"]
+[ext_resource type="Texture2D" uid="uid://co3ns35cxbm03" path="res://assets/textures/Wine.atlastex" id="2_hnrsw"]
+[ext_resource type="Texture2D" uid="uid://yt4xbif3ge6w" path="res://assets/textures/Food.atlastex" id="3_t2vx0"]
+[ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/textures/Coffee.atlastex" id="4_bv2qw"]
+[ext_resource type="Texture2D" uid="uid://cixuvjuopttld" path="res://assets/textures/FruitBasket.atlastex" id="5_bg11o"]
+[ext_resource type="Texture2D" uid="uid://d4ip6v0b4hjs8" path="res://assets/Cutlery.png" id="6_kx4aq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(68, 35)
+
+[node name="CouchBack" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 4.5)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="Table" type="Sprite2D" parent="."]
+position = Vector2(4.0000005, 9.749999)
+scale = Vector2(0.95362896, 0.96875)
+texture = ExtResource("1_mc02a")
+
+[node name="Wine" type="Sprite2D" parent="."]
+position = Vector2(-13, -6)
+scale = Vector2(0.59375, 0.59375)
+texture = ExtResource("2_hnrsw")
+
+[node name="Food" type="Sprite2D" parent="."]
+position = Vector2(-22, 2.3841858e-07)
+scale = Vector2(0.44531253, 0.44531253)
+texture = ExtResource("3_t2vx0")
+
+[node name="Food2" type="Sprite2D" parent="."]
+position = Vector2(29.000002, 2)
+scale = Vector2(0.45703125, 0.44140625)
+texture = ExtResource("3_t2vx0")
+
+[node name="Coffee" type="Sprite2D" parent="."]
+position = Vector2(24, 8)
+scale = Vector2(0.68333334, 0.71250004)
+texture = ExtResource("4_bv2qw")
+
+[node name="FruitBasket" type="Sprite2D" parent="."]
+position = Vector2(2.0000005, -2)
+scale = Vector2(0.5039062, 0.4309896)
+texture = ExtResource("5_bg11o")
+
+[node name="Cutlery" type="Sprite2D" parent="."]
+position = Vector2(34.000004, -5)
+rotation = -1.5815126
+scale = Vector2(0.45455724, 0.5736038)
+texture = ExtResource("6_kx4aq")
+
+[node name="Cutlery2" type="Sprite2D" parent="."]
+position = Vector2(-25.000002, 9)
+rotation = -4.696299
+scale = Vector2(0.51833373, 0.5085646)
+texture = ExtResource("6_kx4aq")

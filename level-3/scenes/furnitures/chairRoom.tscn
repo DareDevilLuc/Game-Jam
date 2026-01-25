@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b222bx3hpqxo6"]
+
+[ext_resource type="Texture2D" uid="uid://cqf7rb7q6oc74" path="res://assets/textures/VanityChair.atlastex" id="1_5nmbc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(17, 24)
+
+[node name="Chair" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -6)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="VanityChair" type="Sprite2D" parent="."]
+position = Vector2(3, -6)
+scale = Vector2(0.70312506, 0.7552084)
+texture = ExtResource("1_5nmbc")

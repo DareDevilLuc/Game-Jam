@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://c50tu36l0s1nt"]
+
+[ext_resource type="Texture2D" uid="uid://cn1yolpqyw705" path="res://assets/textures/DrawerSide.atlastex" id="1_y555c"]
+[ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/textures/Coffee.atlastex" id="2_gpehy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(11, 23)
+
+[node name="drawerSmall" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -1.5)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="DrawerSide" type="Sprite2D" parent="."]
+position = Vector2(0, -2)
+texture = ExtResource("1_y555c")
+
+[node name="Coffee" type="Sprite2D" parent="."]
+position = Vector2(-2, -11)
+scale = Vector2(0.8333333, 0.6875)
+texture = ExtResource("2_gpehy")

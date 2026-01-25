@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://nb8wiyucktl0"]
+
+[ext_resource type="Texture2D" uid="uid://d11uvxk7luurx" path="res://assets/textures/Sink.atlastex" id="1_d3880"]
+[ext_resource type="Texture2D" uid="uid://c1byv81lso4lu" path="res://assets/textures/SideIsle.atlastex" id="2_7woo4"]
+[ext_resource type="Texture2D" uid="uid://ciovjidwwjf26" path="res://assets/textures/Fisbowl.atlastex" id="3_awrax"]
+[ext_resource type="Texture2D" uid="uid://df4lq03yfdkw2" path="res://assets/textures/Meal.atlastex" id="4_v3qgn"]
+[ext_resource type="Texture2D" uid="uid://fadbkugn4w8o" path="res://assets/textures/Plate.atlastex" id="5_skgim"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(105, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xoy"]
+size = Vector2(18, 53)
+
+[node name="Sink" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.5, -10)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(55, 4.5)
+shape = SubResource("RectangleShape2D_r3xoy")
+
+[node name="Sink" type="Sprite2D" parent="."]
+position = Vector2(-4, -7)
+texture = ExtResource("1_d3880")
+
+[node name="SideIsle" type="Sprite2D" parent="."]
+position = Vector2(49, 1)
+texture = ExtResource("2_7woo4")
+
+[node name="Fisbowl" type="Sprite2D" parent="."]
+position = Vector2(54, -21)
+texture = ExtResource("3_awrax")
+
+[node name="Meal" type="Sprite2D" parent="."]
+position = Vector2(-28, -20)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_v3qgn")
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(-32, -19)
+scale = Vector2(0.49999997, 0.5)
+texture = ExtResource("5_skgim")
+
+[node name="Plate2" type="Sprite2D" parent="."]
+position = Vector2(-24.499998, -19.5)
+scale = Vector2(0.4666667, 0.6249999)
+texture = ExtResource("5_skgim")

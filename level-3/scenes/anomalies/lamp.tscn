@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://bhecbn1sxevs"]
+
+[ext_resource type="Texture2D" uid="uid://xfcwxpob4biu" path="res://assets/textures/Lamp.atlastex" id="1_4b8eh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(5, 30)
+
+[node name="Lamp" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3.5, -1)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(3.5, -1.4305115e-06)
+scale = Vector2(0.46875, 0.4722222)
+texture = ExtResource("1_4b8eh")

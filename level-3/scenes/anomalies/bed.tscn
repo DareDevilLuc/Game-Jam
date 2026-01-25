@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c8mhuwc011cfi"]
+
+[ext_resource type="Texture2D" uid="uid://cbrykvmbxlg8i" path="res://assets/textures/Bed.atlastex" id="1_rjuuy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(46, 50)
+
+[node name="Bed" type="StaticBody2D"]
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, -1)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="Bed" type="Sprite2D" parent="."]
+position = Vector2(4, -2)
+scale = Vector2(1, 1.0357143)
+texture = ExtResource("1_rjuuy")
