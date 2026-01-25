@@ -5711,6 +5711,48 @@ shape = SubResource("RectangleShape2D_ehxya")
 position = Vector2(21.514116, -7.865057)
 shape = SubResource("CapsuleShape2D_tn25f")
 
+[node name="BlueChair3" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(462, 272.00003)
+scale = Vector2(0.49484584, 0.50784004)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueChair3"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueChair3/StaticBody2D"]
+position = Vector2(-1.0212097, 2.0425415)
+scale = Vector2(1.0000006, 1)
+shape = SubResource("RectangleShape2D_6lk74")
+
+[node name="BlueChair4" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(544, 271.00003)
+scale = Vector2(0.49484584, 0.50784004)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueChair4"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueChair4/StaticBody2D"]
+position = Vector2(-1.0212097, 2.0425415)
+scale = Vector2(1.0000006, 1)
+shape = SubResource("RectangleShape2D_6lk74")
+
+[node name="BlueChair5" type="Sprite2D" parent="CollisionStuffs"]
+z_index = -2
+position = Vector2(623, 271)
+scale = Vector2(0.49484584, 0.50784004)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/BlueChair5"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/BlueChair5/StaticBody2D"]
+position = Vector2(-1.0212097, 2.0425415)
+scale = Vector2(1.0000006, 1)
+shape = SubResource("RectangleShape2D_6lk74")
+
 [node name="Partner" parent="." instance=ExtResource("31_odav0")]
 position = Vector2(6, 566)
 safe_margin = 7.917
@@ -5725,7 +5767,7 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_tn25f")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.66764146
+frame_progress = 0.09451628
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1"]
 position = Vector2(-14, 12)
