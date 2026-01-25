@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://diclv8sxgufi4" path="res://cuts/FrameBlueSky.atlastex" id="18_24ks5"]
 [ext_resource type="Texture2D" uid="uid://b5cg3echcvh3m" path="res://cuts/FrameBoy.atlastex" id="19_s4es8"]
 [ext_resource type="Texture2D" uid="uid://cxgv2lso6isgl" path="res://cuts/RedRug.atlastex" id="20_24ks5"]
+[ext_resource type="Texture2D" uid="uid://5tfqkkiwbpcj" path="res://cuts/DinosaurBonesFinal.atlastex" id="21_4vsvd"]
 [ext_resource type="Texture2D" uid="uid://cgwciaptx15fs" path="res://cuts/SmallTree.atlastex" id="21_ekhvm"]
 [ext_resource type="Texture2D" uid="uid://ce0pwysv7qdhp" path="res://cuts/Ladder.atlastex" id="22_nflru"]
 [ext_resource type="Texture2D" uid="uid://bglou8gwcovtn" path="res://cuts/MuseumPokeball.atlastex" id="23_ikw2v"]
@@ -24,7 +25,6 @@
 [ext_resource type="Texture2D" uid="uid://b5hclkfaxepb4" path="res://cuts/BlueChair2.atlastex" id="26_ac7c3"]
 [ext_resource type="Texture2D" uid="uid://bq0jjuq6cjs6c" path="res://cuts/List.atlastex" id="27_qo7hg"]
 [ext_resource type="Texture2D" uid="uid://ol1jkybqkanx" path="res://cuts/RedList.atlastex" id="28_odav0"]
-[ext_resource type="Texture2D" uid="uid://v75uy554okmq" path="res://cuts/DinoBonesFinal.atlastex" id="29_xnv6s"]
 [ext_resource type="Texture2D" uid="uid://ckij6t1hpkvk6" path="res://cuts/Sword.atlastex" id="30_6lk74"]
 [ext_resource type="PackedScene" uid="uid://cxas0bnao8buj" path="res://scenes/CollisionDecor.tscn" id="30_qo7hg"]
 [ext_resource type="PackedScene" uid="uid://kf0cx7rbdlxv" path="res://scenes/partner.tscn" id="31_odav0"]
@@ -5514,21 +5514,21 @@ texture = ExtResource("27_qo7hg")
 z_index = 2
 y_sort_enabled = true
 
-[node name="DinoBonesFinal" type="Sprite2D" parent="CollisionStuffs"]
+[node name="DinosaurBonesFinal" type="Sprite2D" parent="CollisionStuffs"]
 z_index = 1
 y_sort_enabled = true
-position = Vector2(812, 267)
-scale = Vector2(1.1714286, 1.212)
-texture = ExtResource("29_xnv6s")
-region_enabled = true
-region_rect = Rect2(0, 0, 140, 125)
+position = Vector2(818, 271)
+scale = Vector2(1.15, 1.15)
+texture = ExtResource("21_4vsvd")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/DinoBonesFinal"]
+[node name="StaticBody2D" type="StaticBody2D" parent="CollisionStuffs/DinosaurBonesFinal"]
 y_sort_enabled = true
+position = Vector2(-5.217407, -3.4782639)
+scale = Vector2(1.0186336, 1.0539131)
 collision_layer = 6
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/DinoBonesFinal/StaticBody2D"]
-position = Vector2(3.8415527, 26.402641)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionStuffs/DinosaurBonesFinal/StaticBody2D"]
+position = Vector2(3.8416748, 26.402641)
 shape = SubResource("RectangleShape2D_qo7hg")
 
 [node name="BlueArmorCabinet" type="Sprite2D" parent="CollisionStuffs"]
