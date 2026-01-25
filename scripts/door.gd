@@ -1,8 +1,7 @@
 extends Node2D
 
 @export var slide_distance := 28
-@export var slide_speed := 200.0
-
+@export var slide_speed := 150
 var start_position
 var target_position
 var sliding = false

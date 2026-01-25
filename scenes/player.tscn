@@ -141,7 +141,6 @@ script = ExtResource("1_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3, 3)
-position_smoothing_enabled = true
 editor_draw_limits = true
 script = ExtResource("2_qhqgy")
 

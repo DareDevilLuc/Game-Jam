@@ -12,6 +12,7 @@ texture = ExtResource("1_hpvv5")
 script = ExtResource("2_uvdjg")
 
 [node name="Area2D" type="Area2D" parent="."]
+visible = false
 position = Vector2(-43.636364, -392.00012)
 scale = Vector2(0.9090909, 0.8750003)
 
