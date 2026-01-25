@@ -5361,3 +5361,4 @@ shape = SubResource("CapsuleShape2D_tn25f")
 
 [node name="Partner" parent="." instance=ExtResource("31_odav0")]
 position = Vector2(6, 566)
+safe_margin = 7.917

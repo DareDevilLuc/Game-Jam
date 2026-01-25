@@ -1,17 +1,17 @@
 [gd_resource type="TileSet" load_steps=19 format=3 uid="uid://wqi2pi1541nd"]
 
-[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/background/Interiors_free_32x32.png" id="1_o81w4"]
-[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="2_7d4vu"]
-[ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/background/GrayFloor.png" id="3_7d4vu"]
-[ext_resource type="Texture2D" uid="uid://ca3tyedoe4yvf" path="res://assets/background/Interior_objects.png" id="3_cipko"]
-[ext_resource type="Texture2D" uid="uid://e0e6bvvh1bwc" path="res://assets/background/asset_noborder.png" id="4_4wgck"]
-[ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/background/GrayFloorSlab.png" id="4_nlogu"]
-[ext_resource type="Texture2D" uid="uid://brlo7fu8lryic" path="res://assets/background/asset_bordered.png" id="6_k1hj4"]
-[ext_resource type="Texture2D" uid="uid://dbehuyetcncqe" path="res://assets/background/DinoBonesFinal.png" id="8_k1hj4"]
-[ext_resource type="Texture2D" uid="uid://c4n87ngawuwtv" path="res://assets/background/MuseumPlacard.png" id="9_mimwd"]
+[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/background/Interiors_free_32x32.png" id="1_mimwd"]
+[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="2_3u2ee"]
+[ext_resource type="Texture2D" uid="uid://e0e6bvvh1bwc" path="res://assets/background/asset_noborder.png" id="3_2c0yf"]
+[ext_resource type="Texture2D" uid="uid://ca3tyedoe4yvf" path="res://assets/background/Interior_objects.png" id="4_dnnsi"]
+[ext_resource type="Texture2D" uid="uid://brlo7fu8lryic" path="res://assets/background/asset_bordered.png" id="5_ueml6"]
+[ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/background/GrayFloor.png" id="6_ruod7"]
+[ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/background/GrayFloorSlab.png" id="7_iwvm1"]
+[ext_resource type="Texture2D" uid="uid://dbehuyetcncqe" path="res://assets/background/DinoBonesFinal.png" id="8_fxqr2"]
+[ext_resource type="Texture2D" uid="uid://c4n87ngawuwtv" path="res://assets/background/MuseumPlacard.png" id="9_ixcl4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlogu"]
-texture = ExtResource("1_o81w4")
+texture = ExtResource("1_mimwd")
 texture_region_size = Vector2i(32, 32)
 1:0/0 = 0
 2:0/0 = 0
@@ -555,20 +555,14 @@ texture_region_size = Vector2i(32, 32)
 1:42/0 = 0
 2:42/0 = 0
 3:42/0 = 0
-3:42/0/z_index = -2
 4:42/0 = 0
-4:42/0/z_index = -2
 5:42/0 = 0
-5:42/0/z_index = -2
 0:43/0 = 0
 1:43/0 = 0
 2:43/0 = 0
 3:43/0 = 0
-3:43/0/z_index = -2
 4:43/0 = 0
-4:43/0/z_index = -2
 5:43/0 = 0
-5:43/0/z_index = -2
 2:44/0 = 0
 3:44/0 = 0
 4:44/0 = 0
@@ -1138,7 +1132,7 @@ texture_region_size = Vector2i(32, 32)
 15:88/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cipko"]
-texture = ExtResource("2_7d4vu")
+texture = ExtResource("2_3u2ee")
 texture_region_size = Vector2i(32, 32)
 3:0/0 = 0
 4:0/0 = 0
@@ -1162,7 +1156,9 @@ texture_region_size = Vector2i(32, 32)
 6:1/0 = 0
 6:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -4.0468206, -16, -3.8669643, -14.028981, 16, -14.02898, 16, -4.4964676, -16, -4.6763268)
 7:1/0 = 0
+7:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -4.779461, -16, -5.4167233)
 8:1/0 = 0
+8:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -4.1422005, -16, -4.779461)
 9:1/0 = 0
 9:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(2.2482338, 16, 2.607952, -16, 16, -16, 16, 16)
 10:1/0 = 0
@@ -1203,8 +1199,11 @@ texture_region_size = Vector2i(32, 32)
 8:3/0 = 0
 9:3/0 = 0
 11:3/0 = 0
+11:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.5931549, -16, 16, -16, 16, -4.4608307, 2.5490456, -4.779461)
 12:3/0 = 0
+12:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -5.098091, -16, -5.7353535)
 13:3/0 = 0
+13:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, -2.8676758, -16, -2.2304134, -5.098091, -16, -4.779461)
 14:3/0 = 0
 15:3/0 = 0
 16:3/0 = 0
@@ -1421,7 +1420,7 @@ texture_region_size = Vector2i(32, 32)
 9:20/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3u2ee"]
-texture = ExtResource("4_4wgck")
+texture = ExtResource("3_2c0yf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1443,7 +1442,7 @@ texture_region_size = Vector2i(32, 32)
 5:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_k1hj4"]
-texture = ExtResource("3_cipko")
+texture = ExtResource("4_dnnsi")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1589,7 +1588,7 @@ texture_region_size = Vector2i(32, 32)
 11:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2c0yf"]
-texture = ExtResource("6_k1hj4")
+texture = ExtResource("5_ueml6")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1611,17 +1610,17 @@ texture_region_size = Vector2i(32, 32)
 5:2/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_w0aus"]
-texture = ExtResource("3_7d4vu")
+texture = ExtResource("6_ruod7")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4wgck"]
-texture = ExtResource("4_nlogu")
+texture = ExtResource("7_iwvm1")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dnnsi"]
-texture = ExtResource("8_k1hj4")
+texture = ExtResource("8_fxqr2")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 1:0/0 = 0
@@ -1644,7 +1643,7 @@ texture_region_size = Vector2i(32, 32)
 4:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ueml6"]
-texture = ExtResource("9_mimwd")
+texture = ExtResource("9_ixcl4")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 
