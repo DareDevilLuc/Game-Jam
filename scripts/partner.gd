@@ -5,7 +5,7 @@ var player: CharacterBody2D
 
 @export var SPEED: int = 150 # Lowered slightly so they don't bump into you
 @export var ACCELERATION: int = 500
-@export var FRICTION: int = 600
+@export var FRICTION: int = 200
 
 @onready var nav_agent: NavigationAgent2D = $NavigationAgent2D
 @onready var body: AnimatedSprite2D = $Body
