@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=111 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -36,6 +36,7 @@
 [ext_resource type="Texture2D" uid="uid://byokchb2dfsas" path="res://assets/sprites/npc_talking_anim-Sheet.png" id="34_xnv6s"]
 [ext_resource type="Texture2D" uid="uid://y7bwqoxpyk53" path="res://assets/sprites/npc_walkside-anim-Sheet.png" id="35_6lk74"]
 [ext_resource type="Script" uid="uid://dy58561naqv31" path="res://scripts/npc_movement.gd" id="35_wso6h"]
+[ext_resource type="Texture2D" uid="uid://dndvmaka1kpd0" path="res://assets/sprites/cm_npc2-anim-Sheet.png" id="37_4vsvd"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_odav0"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -5193,7 +5194,7 @@ animations = [{
 size = Vector2(143.3335, 193.3333)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuxxq"]
-size = Vector2(205.00003, 93.33331)
+size = Vector2(225.00002, 93.33333)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6tj06"]
 atlas = ExtResource("34_xnv6s")
@@ -5344,6 +5345,58 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wso6h"]
 radius = 42.163715
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_go57r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8x6ip"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(1920, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_51yqd"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(2240, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rw1qx"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(2560, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3xf6"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(2880, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_46vug"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(3200, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sxojl"]
+atlas = ExtResource("37_4vsvd")
+region = Rect2(3520, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hulpw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8x6ip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_51yqd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rw1qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3xf6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_46vug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sxojl")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="Level2" type="Node2D"]
 z_index = -1
@@ -5672,7 +5725,7 @@ scale = Vector2(0.15, 0.15)
 sprite_frames = SubResource("SpriteFrames_tn25f")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.12156298
+frame_progress = 0.28401652
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1"]
 position = Vector2(-14, 12)
@@ -5727,9 +5780,10 @@ z_index = 1
 y_sort_enabled = true
 position = Vector2(533, 188)
 scale = Vector2(0.15, 0.15)
+collision_layer = 6
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC5"]
-position = Vector2(-35.833252, 86.66669)
+position = Vector2(-25.833252, 86.66666)
 shape = SubResource("RectangleShape2D_yuxxq")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPC5"]
@@ -5769,3 +5823,17 @@ frame_progress = 0.2192384
 [node name="CollisionShape2D" type="CollisionShape2D" parent="NPC1_1"]
 position = Vector2(-14, 12)
 shape = SubResource("RectangleShape2D_tn25f")
+
+[node name="NPC7" type="CharacterBody2D" parent="."]
+z_index = 1
+position = Vector2(972, 199)
+scale = Vector2(0.15, 0.15)
+collision_layer = 6
+motion_mode = 1
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC7"]
+shape = SubResource("RectangleShape2D_go57r")
+
+[node name="Body_npc" type="AnimatedSprite2D" parent="NPC7"]
+sprite_frames = SubResource("SpriteFrames_hulpw")
+autoplay = "default"
