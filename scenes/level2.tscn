@@ -1717,7 +1717,7 @@ position = Vector2(-11.9084835, -2)
 collision_layer = 6
 
 [node name="Plant" type="Sprite2D" parent="CollisionStuffs"]
-z_index = 1
+z_index = -1
 position = Vector2(105, 507)
 texture = ExtResource("7_hrcei")
 
