@@ -1825,3 +1825,9 @@ position = Vector2(48.000004, 448)
 
 [node name="Door2" parent="Furniture/Doors" instance=ExtResource("12_2ku1j")]
 position = Vector2(464, 448)
+
+[node name="NPCS" type="Node2D" parent="."]
+
+[node name="Classmates" type="Node2D" parent="NPCS"]
+
+[node name="Teachers" type="Node2D" parent="NPCS"]
