@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byy3bbll15bpj"
-path="res://.godot/imported/MuseumArt2.png-a33a70dc7414af030b045cd540238d20.ctex"
+uid="uid://cvjpjfymugq43"
+path="res://.godot/imported/GrayFloorSlab.png-b8c5aa4aea80608a32bad3c1c2c02560.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MuseumArt2.png"
-dest_files=["res://.godot/imported/MuseumArt2.png-a33a70dc7414af030b045cd540238d20.ctex"]
+source_file="res://assets/background/GrayFloorSlab.png"
+dest_files=["res://.godot/imported/GrayFloorSlab.png-b8c5aa4aea80608a32bad3c1c2c02560.ctex"]
 
 [params]
 

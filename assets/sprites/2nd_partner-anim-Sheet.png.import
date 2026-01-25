@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddgwyapblksfl"
-path="res://.godot/imported/MuseumArt3.png-52b3c3db6e30790720fa31004bab449f.ctex"
+uid="uid://cdski3rpai7jv"
+path="res://.godot/imported/2nd_partner-anim-Sheet.png-5a34c47e6a315b3fb9d5c796016b0d1e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MuseumArt3.png"
-dest_files=["res://.godot/imported/MuseumArt3.png-52b3c3db6e30790720fa31004bab449f.ctex"]
+source_file="res://assets/sprites/2nd_partner-anim-Sheet.png"
+dest_files=["res://.godot/imported/2nd_partner-anim-Sheet.png-5a34c47e6a315b3fb9d5c796016b0d1e.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvjpjfymugq43"
-path="res://.godot/imported/GrayFloorSlab.png-d686e884d7e0a536aa432f783955796d.ctex"
+uid="uid://chojwe8xdnxby"
+path="res://.godot/imported/Interiors_free_32x32.png-c94066cf33f6ba3162dbf4c9a79b857f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/GrayFloorSlab.png"
-dest_files=["res://.godot/imported/GrayFloorSlab.png-d686e884d7e0a536aa432f783955796d.ctex"]
+source_file="res://assets/background/Interiors_free_32x32.png"
+dest_files=["res://.godot/imported/Interiors_free_32x32.png-c94066cf33f6ba3162dbf4c9a79b857f.ctex"]
 
 [params]
 

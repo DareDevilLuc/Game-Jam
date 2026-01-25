@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4n87ngawuwtv"
-path="res://.godot/imported/MuseumPlacard.png-ec9bca78282521d282a10a689e2fd47c.ctex"
+uid="uid://banfsju1fxp1s"
+path="res://.godot/imported/MuseumTilesets.png-2278810b1ad065b06c2a52d4af1bd311.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MuseumPlacard.png"
-dest_files=["res://.godot/imported/MuseumPlacard.png-ec9bca78282521d282a10a689e2fd47c.ctex"]
+source_file="res://assets/background/MuseumTilesets.png"
+dest_files=["res://.godot/imported/MuseumTilesets.png-2278810b1ad065b06c2a52d4af1bd311.ctex"]
 
 [params]
 

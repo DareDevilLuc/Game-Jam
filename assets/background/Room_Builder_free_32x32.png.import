@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://banfsju1fxp1s"
-path="res://.godot/imported/MuseumTilesets.png-dfbaa865a8d388eb9b34b21a1e41f517.ctex"
+uid="uid://bgalckullms7n"
+path="res://.godot/imported/Room_Builder_free_32x32.png-d17d9e9632fc87cfc2eb19331ef27b9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/MuseumTilesets.png"
-dest_files=["res://.godot/imported/MuseumTilesets.png-dfbaa865a8d388eb9b34b21a1e41f517.ctex"]
+source_file="res://assets/background/Room_Builder_free_32x32.png"
+dest_files=["res://.godot/imported/Room_Builder_free_32x32.png-d17d9e9632fc87cfc2eb19331ef27b9a.ctex"]
 
 [params]
 

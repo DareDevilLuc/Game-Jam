@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ed2ruqmvp88v"
-path="res://.godot/imported/cafe_arcadeassets.png-a97ec925cca84409c1ebe8fb6acd5634.ctex"
+uid="uid://ccuyt7xlf6hxh"
+path="res://.godot/imported/GrayFloor.png-ebe0ed36e6a070584b562e5e6398494a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cafe_arcadeassets.png"
-dest_files=["res://.godot/imported/cafe_arcadeassets.png-a97ec925cca84409c1ebe8fb6acd5634.ctex"]
+source_file="res://assets/background/GrayFloor.png"
+dest_files=["res://.godot/imported/GrayFloor.png-ebe0ed36e6a070584b562e5e6398494a.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chojwe8xdnxby"
-path="res://.godot/imported/Interiors_free_32x32.png-d312cd56bfa66e230b5c6100c0800f22.ctex"
+uid="uid://ddgwyapblksfl"
+path="res://.godot/imported/MuseumArt3.png-ea89459fff9170e13af208eacd70b904.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Interiors_free_32x32.png"
-dest_files=["res://.godot/imported/Interiors_free_32x32.png-d312cd56bfa66e230b5c6100c0800f22.ctex"]
+source_file="res://assets/background/MuseumArt3.png"
+dest_files=["res://.godot/imported/MuseumArt3.png-ea89459fff9170e13af208eacd70b904.ctex"]
 
 [params]
 

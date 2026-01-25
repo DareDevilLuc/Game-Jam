@@ -4,9 +4,10 @@
 [ext_resource type="PackedScene" uid="uid://bxb1mxatkgu" path="res://scenes/level2.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
+position = Vector2(103, -376)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-39, 378)
+position = Vector2(-3, 359)
 collision_mask = 6
 
 [node name="Camera2D" type="Camera2D" parent="Player"]

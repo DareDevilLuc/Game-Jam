@@ -1,14 +1,14 @@
 [gd_resource type="TileSet" load_steps=19 format=3 uid="uid://wqi2pi1541nd"]
 
-[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/sprites/Interiors_free_32x32.png" id="1_o81w4"]
-[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/Room_Builder_free_32x32.png" id="2_7d4vu"]
-[ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/sprites/GrayFloor.png" id="3_7d4vu"]
-[ext_resource type="Texture2D" uid="uid://ca3tyedoe4yvf" path="res://assets/sprites/Interior_objects.png" id="3_cipko"]
-[ext_resource type="Texture2D" uid="uid://e0e6bvvh1bwc" path="res://assets/sprites/asset_noborder.png" id="4_4wgck"]
-[ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/sprites/GrayFloorSlab.png" id="4_nlogu"]
-[ext_resource type="Texture2D" uid="uid://brlo7fu8lryic" path="res://assets/sprites/asset_bordered.png" id="6_k1hj4"]
-[ext_resource type="Texture2D" uid="uid://dbehuyetcncqe" path="res://assets/sprites/DinoBonesFinal.png" id="8_k1hj4"]
-[ext_resource type="Texture2D" uid="uid://c4n87ngawuwtv" path="res://assets/sprites/MuseumPlacard.png" id="9_mimwd"]
+[ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/background/Interiors_free_32x32.png" id="1_o81w4"]
+[ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="2_7d4vu"]
+[ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/background/GrayFloor.png" id="3_7d4vu"]
+[ext_resource type="Texture2D" uid="uid://ca3tyedoe4yvf" path="res://assets/background/Interior_objects.png" id="3_cipko"]
+[ext_resource type="Texture2D" uid="uid://e0e6bvvh1bwc" path="res://assets/background/asset_noborder.png" id="4_4wgck"]
+[ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/background/GrayFloorSlab.png" id="4_nlogu"]
+[ext_resource type="Texture2D" uid="uid://brlo7fu8lryic" path="res://assets/background/asset_bordered.png" id="6_k1hj4"]
+[ext_resource type="Texture2D" uid="uid://dbehuyetcncqe" path="res://assets/background/DinoBonesFinal.png" id="8_k1hj4"]
+[ext_resource type="Texture2D" uid="uid://c4n87ngawuwtv" path="res://assets/background/MuseumPlacard.png" id="9_mimwd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlogu"]
 texture = ExtResource("1_o81w4")

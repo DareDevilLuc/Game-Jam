@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca3tyedoe4yvf"
-path="res://.godot/imported/Interior_objects.png-ee840bf52b9cd42ab389c6cfc53d4dbe.ctex"
+uid="uid://brlo7fu8lryic"
+path="res://.godot/imported/asset_bordered.png-61f8b38269c1e6eef96f04fbed84f7d9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Interior_objects.png"
-dest_files=["res://.godot/imported/Interior_objects.png-ee840bf52b9cd42ab389c6cfc53d4dbe.ctex"]
+source_file="res://assets/background/asset_bordered.png"
+dest_files=["res://.godot/imported/asset_bordered.png-61f8b38269c1e6eef96f04fbed84f7d9.ctex"]
 
 [params]
 
