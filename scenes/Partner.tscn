@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://co6ymb8lqlumw"]
+[gd_scene load_steps=5 format=3 uid="uid://dvbd3ryw5c6g4"]
 
-[ext_resource type="Texture2D" uid="uid://c6a5vqt60v3hs" path="res://assets/sprites/Classmate1.png" id="1_x67tv"]
+[ext_resource type="Texture2D" uid="uid://fy1vmtjjl2kv" path="res://assets/sprites/Partner.png" id="1_4p5bo"]
 
 [sub_resource type="Animation" id="Animation_scbgo"]
 length = 0.001
@@ -44,7 +44,7 @@ _data = {
 scale = Vector2(0.15, 0.15)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_x67tv")
+texture = ExtResource("1_4p5bo")
 hframes = 18
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

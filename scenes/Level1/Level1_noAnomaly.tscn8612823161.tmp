@@ -1723,7 +1723,7 @@ tile_map_data = PackedByteArray("AAAEAAEAAAANACgAAAAFAAEAAAAOACgAAAAIAAEAAAAEABg
 tile_set = SubResource("TileSet_ru4tf")
 
 [node name="PlayerSpawn" parent="." instance=ExtResource("4_1vmgx")]
-position = Vector2(24, 527)
+position = Vector2(8, 526)
 
 [node name="Furniture" type="Node2D" parent="."]
 
