@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5j85r0qgoeve"
-path="res://.godot/imported/1st_anim-Sheet.png-235489796f7a53fe5706e83bee877d9a.ctex"
+uid="uid://c6a5vqt60v3hs"
+path="res://.godot/imported/Classmate1.png-3738683c6d5d1598aacea6a2bf3b0d93.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/1st_anim-Sheet.png"
-dest_files=["res://.godot/imported/1st_anim-Sheet.png-235489796f7a53fe5706e83bee877d9a.ctex"]
+source_file="res://assets/sprites/Classmate1.png"
+dest_files=["res://.godot/imported/Classmate1.png-3738683c6d5d1598aacea6a2bf3b0d93.ctex"]
 
 [params]
 

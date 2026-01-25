@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://xky2dtaw4pnh"]
+
+[ext_resource type="Texture2D" uid="uid://dnv4riuoe6uf2" path="res://assets/sprites/Teacher2.png" id="1_wd207"]
+
+[sub_resource type="Animation" id="Animation_scbgo"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8d423"]
+resource_name = "idle_side"
+length = 0.55
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ybsoi"]
+_data = {
+&"RESET": SubResource("Animation_scbgo"),
+&"idle_side": SubResource("Animation_8d423")
+}
+
+[node name="Classmate2" type="Node2D"]
+scale = Vector2(0.15, 0.15)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wd207")
+hframes = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ybsoi")
+}
+autoplay = "idle_side"

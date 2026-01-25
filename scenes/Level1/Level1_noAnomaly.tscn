@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=28 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/sprites/TileSetRoom.png" id="1_g2h75"]
 [ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://scripts/level.gd" id="1_qj1v5"]
@@ -14,6 +14,11 @@
 [ext_resource type="Texture2D" uid="uid://csouhejuogrhc" path="res://assets/sprites/GlobeOnTable.atlastex" id="6_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://do6x7hx0cr5cu" path="res://scenes/TableWithChairRight.tscn" id="8_d3jkd"]
 [ext_resource type="PackedScene" uid="uid://b4m84k71pu7m" path="res://scenes/door.tscn" id="12_2ku1j"]
+[ext_resource type="PackedScene" uid="uid://co6ymb8lqlumw" path="res://scenes/Classmate1.tscn" id="15_cjiyi"]
+[ext_resource type="PackedScene" uid="uid://dt7vhsgcc0fk3" path="res://scenes/Classmate2.tscn" id="16_w6yaw"]
+[ext_resource type="PackedScene" uid="uid://b1isrb51cjs18" path="res://scenes/Classmate3.tscn" id="17_6c6k1"]
+[ext_resource type="PackedScene" uid="uid://y5byqsl4ntsl" path="res://scenes/Teacher1.tscn" id="18_h0533"]
+[ext_resource type="PackedScene" uid="uid://xky2dtaw4pnh" path="res://scenes/Teacher2.tscn" id="19_7ir5j"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwpf4"]
 texture = ExtResource("1_g2h75")
@@ -1728,11 +1733,11 @@ position = Vector2(224, 152)
 texture = ExtResource("4_ejswk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Furniture/Tables/TeachersTable"]
-visible = false
 collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Furniture/Tables/TeachersTable/StaticBody2D"]
+visible = false
 position = Vector2(-1, -8)
 shape = SubResource("RectangleShape2D_u3awl")
 
@@ -1830,4 +1835,19 @@ position = Vector2(464, 448)
 
 [node name="Classmates" type="Node2D" parent="NPCS"]
 
+[node name="Classmate1" parent="NPCS/Classmates" instance=ExtResource("15_cjiyi")]
+position = Vector2(327, 321)
+
+[node name="Classmate2" parent="NPCS/Classmates" instance=ExtResource("16_w6yaw")]
+position = Vector2(49, 160)
+
+[node name="Classmate3" parent="NPCS/Classmates" instance=ExtResource("17_6c6k1")]
+position = Vector2(445, 304)
+
 [node name="Teachers" type="Node2D" parent="NPCS"]
+
+[node name="Teacher1" parent="NPCS/Teachers" instance=ExtResource("18_h0533")]
+position = Vector2(179, 139)
+
+[node name="Teacher2" parent="NPCS/Teachers" instance=ExtResource("19_7ir5j")]
+position = Vector2(615, 257)
