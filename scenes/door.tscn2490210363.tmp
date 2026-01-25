@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://nps2477pr24m" path="res://scripts/door.gd" id="2_uvdjg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uvdjg"]
-size = Vector2(117, 61.999825)
+size = Vector2(31.999998, 61.999825)
 
 [node name="Door" type="Sprite2D"]
 scale = Vector2(1.1, 1.1428567)
@@ -16,5 +16,5 @@ position = Vector2(-43.636364, -392.00012)
 scale = Vector2(0.9090909, 0.8750003)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(5.5, 447.00027)
+position = Vector2(48, 447.00018)
 shape = SubResource("RectangleShape2D_uvdjg")
