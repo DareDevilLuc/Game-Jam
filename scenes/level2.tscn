@@ -1,4 +1,4 @@
-[gd_scene load_steps=112 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=122 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -21,6 +21,7 @@
 [ext_resource type="Texture2D" uid="uid://cgwciaptx15fs" path="res://cuts/SmallTree.atlastex" id="21_ekhvm"]
 [ext_resource type="Texture2D" uid="uid://ce0pwysv7qdhp" path="res://cuts/Ladder.atlastex" id="22_nflru"]
 [ext_resource type="Texture2D" uid="uid://bglou8gwcovtn" path="res://cuts/MuseumPokeball.atlastex" id="23_ikw2v"]
+[ext_resource type="Texture2D" uid="uid://b27vyvjkclgvh" path="res://assets/sprites/child_npccry-Sheet.png" id="24_5b1db"]
 [ext_resource type="Texture2D" uid="uid://kjtju2uqah4t" path="res://cuts/MuseumStone.atlastex" id="24_cgqhq"]
 [ext_resource type="Texture2D" uid="uid://dyhmoxhgvmhg" path="res://cuts/BlueChair.atlastex" id="25_ttvjw"]
 [ext_resource type="Texture2D" uid="uid://b5hclkfaxepb4" path="res://cuts/BlueChair2.atlastex" id="26_ac7c3"]
@@ -38,6 +39,7 @@
 [ext_resource type="Texture2D" uid="uid://y7bwqoxpyk53" path="res://assets/sprites/npc_walkside-anim-Sheet.png" id="35_6lk74"]
 [ext_resource type="Script" uid="uid://dy58561naqv31" path="res://scripts/npc_movement.gd" id="35_wso6h"]
 [ext_resource type="Texture2D" uid="uid://dndvmaka1kpd0" path="res://assets/sprites/cm_npc2-anim-Sheet.png" id="37_4vsvd"]
+[ext_resource type="Texture2D" uid="uid://bbcqddsauwa3w" path="res://assets/sprites/CCTV.png" id="39_tn25f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("2_wwpf4")
@@ -5400,10 +5402,62 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58bux"]
+size = Vector2(133.3335, 220.00009)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hulpw"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(0, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypacf"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(320, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_76n1c"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(640, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bglp6"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(960, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clv4n"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(1280, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j2k3a"]
+atlas = ExtResource("24_5b1db")
+region = Rect2(1600, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4x3jv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hulpw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ypacf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_76n1c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bglp6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clv4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j2k3a")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
 [node name="Level2" type="Node2D"]
 z_index = -1
 y_sort_enabled = true
-position = Vector2(69, -136)
 
 [node name="Floor" type="TileMapLayer" parent="."]
 z_index = -1
@@ -5806,88 +5860,109 @@ shape = SubResource("RectangleShape2D_go57r")
 sprite_frames = SubResource("SpriteFrames_hulpw")
 autoplay = "default"
 
-[node name="Untouched Stuff" type="Node2D" parent="."]
+[node name="NPC8" type="CharacterBody2D" parent="ExtraCharacters"]
+position = Vector2(1010, 274)
+scale = Vector2(0.15, 0.15)
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC8"]
+position = Vector2(0, 56.666626)
+shape = SubResource("RectangleShape2D_58bux")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ExtraCharacters/NPC8"]
+sprite_frames = SubResource("SpriteFrames_4x3jv")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.47515684
+
+[node name="UntouchedStuff" type="Node2D" parent="."]
 z_index = 1
 
-[node name="ArrowLeft" type="Sprite2D" parent="Untouched Stuff"]
+[node name="ArrowLeft" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(994, 465)
 texture = ExtResource("6_bo4dx")
 
-[node name="DinoSkull" type="Sprite2D" parent="Untouched Stuff"]
+[node name="DinoSkull" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(796, 167)
 texture = ExtResource("6_xa7n4")
 
-[node name="DinoInfo" type="Sprite2D" parent="Untouched Stuff"]
+[node name="DinoInfo" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(835, 173)
 scale = Vector2(1.1219513, 1.0510204)
 texture = ExtResource("7_bo4dx")
 
-[node name="BlueWindow2" type="Sprite2D" parent="Untouched Stuff"]
+[node name="BlueWindow2" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(598, 165)
 scale = Vector2(1.2996, 1.2233701)
 texture = ExtResource("6_6ep0u")
 
-[node name="BlueWindow" type="Sprite2D" parent="Untouched Stuff"]
+[node name="BlueWindow" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(491, 165.00002)
 scale = Vector2(1.2799993, 1.219697)
 texture = ExtResource("6_6ep0u")
 
-[node name="Chair" type="Sprite2D" parent="Untouched Stuff"]
+[node name="Chair" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(950, 193)
 texture = ExtResource("16_g8vcy")
 
-[node name="FrameGreenSky" type="Sprite2D" parent="Untouched Stuff"]
+[node name="FrameGreenSky" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(468, 331)
 scale = Vector2(0.9047619, 0.9285714)
 texture = ExtResource("17_o3sye")
 
-[node name="FrameBlueSky" type="Sprite2D" parent="Untouched Stuff"]
+[node name="FrameBlueSky" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(543, 332)
 texture = ExtResource("18_24ks5")
 
-[node name="FrameBoy" type="Sprite2D" parent="Untouched Stuff"]
+[node name="FrameBoy" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(622, 332)
 texture = ExtResource("19_s4es8")
 
-[node name="RedRug" type="Sprite2D" parent="Untouched Stuff"]
+[node name="RedRug" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(1004, 570.99994)
 rotation = 1.5707964
 scale = Vector2(0.7583737, 0.6336939)
 texture = ExtResource("20_24ks5")
 
-[node name="Ladder" type="Sprite2D" parent="Untouched Stuff"]
+[node name="Ladder" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(891, 180)
 texture = ExtResource("22_nflru")
 
-[node name="List" type="Sprite2D" parent="Untouched Stuff"]
+[node name="List" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(178, 163)
 scale = Vector2(0.20833333, 0.21875)
 texture = ExtResource("27_qo7hg")
 
-[node name="List2" type="Sprite2D" parent="Untouched Stuff"]
+[node name="List2" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(105, 464)
 scale = Vector2(0.32378462, 0.3013926)
 texture = ExtResource("27_qo7hg")
 
-[node name="RedList" type="Sprite2D" parent="Untouched Stuff"]
+[node name="RedList" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(353, 159)
 scale = Vector2(0.39062476, 0.48214287)
 texture = ExtResource("28_odav0")
 
-[node name="Sword" type="Sprite2D" parent="Untouched Stuff"]
+[node name="Sword" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(967, 164)
 texture = ExtResource("30_6lk74")
 
-[node name="Scythe" type="Sprite2D" parent="Untouched Stuff"]
+[node name="Scythe" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(986, 163)
 texture = ExtResource("31_wso6h")
 
-[node name="Axe" type="Sprite2D" parent="Untouched Stuff"]
+[node name="Axe" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(1009, 164.00002)
 scale = Vector2(1.0384616, 0.78191483)
 texture = ExtResource("32_4vsvd")
 
-[node name="List3" type="Sprite2D" parent="Untouched Stuff"]
+[node name="List3" type="Sprite2D" parent="UntouchedStuff"]
 position = Vector2(765, 167.00002)
 scale = Vector2(0.33333263, 0.34375)
 texture = ExtResource("27_qo7hg")
+
+[node name="Cctv" type="Sprite2D" parent="UntouchedStuff"]
+z_index = 5
+position = Vector2(88, 440)
+scale = Vector2(0.90625, 0.875)
+texture = ExtResource("39_tn25f")
