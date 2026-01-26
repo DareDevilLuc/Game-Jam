@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://dmlhso85n7866"]
+[gd_scene load_steps=3 format=3 uid="uid://dmlhso85n7866"]
 
 [ext_resource type="Texture2D" uid="uid://c68e5n5qjy02l" path="res://assets/textures/DogBed.atlastex" id="1_lyexf"]
-[ext_resource type="Texture2D" uid="uid://niu1863o0yxj" path="res://assets/textures/DogToy.atlastex" id="2_ypx1i"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(23, 12)
@@ -16,7 +15,3 @@ shape = SubResource("RectangleShape2D_h5ql5")
 [node name="DogBed" type="Sprite2D" parent="."]
 position = Vector2(-3, 1)
 texture = ExtResource("1_lyexf")
-
-[node name="DogToy" type="Sprite2D" parent="."]
-position = Vector2(-2, -1)
-texture = ExtResource("2_ypx1i")
