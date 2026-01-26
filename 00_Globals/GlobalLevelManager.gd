@@ -26,17 +26,19 @@ func load_new_level(
 	target_transition = _target_transition
 	position_offset = _position_offset
 
-	await get_tree().process_frame # Level Transition
+	await SceneTransition.fade_out()
 
 	level_load_started.emit()
 
 	await get_tree().process_frame # Level Transition
 
 	get_tree().change_scene_to_file( level_path )
+	
+	await get_tree().process_frame
 
 	get_tree().paused = false
 
-	await get_tree().process_frame
+	await SceneTransition.fade_in()
 
 	level_loaded.emit()
 

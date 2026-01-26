@@ -4,10 +4,10 @@ class_name LevelTransition extends Area2D
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
 var level : Array[ PackedScene ] = [
-	preload("res://scenes/Level1/Level1_noAnomaly.tscn"),
-	preload("res://scenes/Level1/Level1_withAnomaly1.tscn"),
-	preload("res://scenes/Level1/Level1_withAnomaly2.tscn"),
-	preload("res://scenes/Level1/Level1_withAnomaly3.tscn"),
+	load("res://scenes/Level1/Level1_noAnomaly.tscn"),
+	load("res://scenes/Level1/Level1_withAnomaly1.tscn"),
+	load("res://scenes/Level1/Level1_withAnomaly2.tscn"),
+	load("res://scenes/Level1/Level1_withAnomaly3.tscn"),
 ]
 @export var target_transition_area : String = "LevelTransition"
 
