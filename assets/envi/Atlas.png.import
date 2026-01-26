@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://chjgrk7gyuwva"
-path="res://.godot/imported/slime_green.png-f6349164bf3a0f5189bb927b97af9c58.ctex"
+uid="uid://d1xqsuxe1dkyc"
+path="res://.godot/imported/Atlas.png-3d056b43989c812fb81b7cc43355a646.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/slime_green.png"
-dest_files=["res://.godot/imported/slime_green.png-f6349164bf3a0f5189bb927b97af9c58.ctex"]
+source_file="res://assets/environment/Atlas.png"
+dest_files=["res://.godot/imported/Atlas.png-3d056b43989c812fb81b7cc43355a646.ctex"]
 
 [params]
 

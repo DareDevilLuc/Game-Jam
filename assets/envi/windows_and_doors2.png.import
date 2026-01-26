@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dv1aqcjtfqdch"
-path="res://.godot/imported/slime_purple.png-26dc5ddef235ce6a400e78e0d532b050.ctex"
+uid="uid://erleondx7qgj"
+path="res://.godot/imported/windows_and_doors2.png-36c7b953f2d54c6c2445caa1c751e3bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/slime_purple.png"
-dest_files=["res://.godot/imported/slime_purple.png-26dc5ddef235ce6a400e78e0d532b050.ctex"]
+source_file="res://assets/environment/windows_and_doors2.png"
+dest_files=["res://.godot/imported/windows_and_doors2.png-36c7b953f2d54c6c2445caa1c751e3bb.ctex"]
 
 [params]
 

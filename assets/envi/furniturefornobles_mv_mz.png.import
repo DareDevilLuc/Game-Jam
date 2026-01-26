@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cexcsj40la6br"
-path="res://.godot/imported/fruit.png-3735163b668af10c2b35b52cba81b68a.ctex"
+uid="uid://cw7tt67rhlwoc"
+path="res://.godot/imported/furniturefornobles_mv_mz.png-4068497cd5a8d8261c3aaee6ee7298da.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/fruit.png"
-dest_files=["res://.godot/imported/fruit.png-3735163b668af10c2b35b52cba81b68a.ctex"]
+source_file="res://assets/environment/furniturefornobles_mv_mz.png"
+dest_files=["res://.godot/imported/furniturefornobles_mv_mz.png-4068497cd5a8d8261c3aaee6ee7298da.ctex"]
 
 [params]
 
