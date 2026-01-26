@@ -436,63 +436,63 @@ position = Vector2(-166, 69)
 scale = Vector2(1, 1.0833334)
 texture = ExtResource("17_hkya4")
 
-[node name="Furnitures" type="Node" parent="Maps & Interactables"]
+[node name="Furnitures" type="Node" parent="."]
 
-[node name="CouchBack2" parent="Maps & Interactables/Furnitures" instance=ExtResource("18_e8wht")]
+[node name="CouchBack2" parent="Furnitures" instance=ExtResource("18_e8wht")]
 position = Vector2(265, 128)
 
-[node name="Hanger2" parent="Maps & Interactables/Furnitures" instance=ExtResource("19_22ac7")]
+[node name="Hanger2" parent="Furnitures" instance=ExtResource("19_22ac7")]
 position = Vector2(-212, 284)
 
-[node name="CouchBack3" parent="Maps & Interactables/Furnitures" instance=ExtResource("20_fvsjb")]
+[node name="CouchBack3" parent="Furnitures" instance=ExtResource("20_fvsjb")]
 position = Vector2(-145, 290)
 
-[node name="ChairLeft" parent="Maps & Interactables/Furnitures" instance=ExtResource("21_n4i7c")]
+[node name="ChairLeft" parent="Furnitures" instance=ExtResource("21_n4i7c")]
 position = Vector2(-50, 176)
 
-[node name="CouchSide" parent="Maps & Interactables/Furnitures" instance=ExtResource("22_80lu4")]
+[node name="CouchSide" parent="Furnitures" instance=ExtResource("22_80lu4")]
 position = Vector2(-207, 148)
 
-[node name="CouchBack" parent="Maps & Interactables/Furnitures" instance=ExtResource("23_q5ksm")]
+[node name="CouchBack" parent="Furnitures" instance=ExtResource("23_q5ksm")]
 position = Vector2(-159, 189)
 
-[node name="CoffeeTable" parent="Maps & Interactables/Furnitures" instance=ExtResource("24_n7fpp")]
+[node name="CoffeeTable" parent="Furnitures" instance=ExtResource("24_n7fpp")]
 position = Vector2(-163, 149)
 
-[node name="Television" parent="Maps & Interactables/Furnitures" instance=ExtResource("25_sacaw")]
+[node name="Television" parent="Furnitures" instance=ExtResource("25_sacaw")]
 position = Vector2(-165, 112)
 
-[node name="ChairRight" parent="Maps & Interactables/Furnitures" instance=ExtResource("26_crgxr")]
+[node name="ChairRight" parent="Furnitures" instance=ExtResource("26_crgxr")]
 position = Vector2(22, 177)
 
-[node name="Fridge" parent="Maps & Interactables/Furnitures" instance=ExtResource("27_uvdt0")]
+[node name="Fridge" parent="Furnitures" instance=ExtResource("27_uvdt0")]
 position = Vector2(4, 86)
 
-[node name="DiningTable" parent="Maps & Interactables/Furnitures" instance=ExtResource("28_xwwgy")]
+[node name="DiningTable" parent="Furnitures" instance=ExtResource("28_xwwgy")]
 position = Vector2(-8, 177)
 
-[node name="drawerSmall2" parent="Maps & Interactables/Furnitures" instance=ExtResource("29_6pvhj")]
+[node name="drawerSmall2" parent="Furnitures" instance=ExtResource("29_6pvhj")]
 position = Vector2(-206, 177)
 
-[node name="Corkboard" parent="Maps & Interactables/Furnitures" instance=ExtResource("30_tofye")]
+[node name="Corkboard" parent="Furnitures" instance=ExtResource("30_tofye")]
 position = Vector2(274, 111)
 
-[node name="Bed" parent="Maps & Interactables/Furnitures" instance=ExtResource("31_r8q02")]
+[node name="Bed" parent="Furnitures" instance=ExtResource("31_r8q02")]
 position = Vector2(322, 144)
 
-[node name="Sink" parent="Maps & Interactables/Furnitures" instance=ExtResource("32_ojh6b")]
+[node name="Sink" parent="Furnitures" instance=ExtResource("32_ojh6b")]
 position = Vector2(64, 104)
 
-[node name="drawerSmall" parent="Maps & Interactables/Furnitures" instance=ExtResource("33_6cxun")]
+[node name="drawerSmall" parent="Furnitures" instance=ExtResource("33_6cxun")]
 position = Vector2(222, 129)
 
-[node name="Lamp2" parent="Maps & Interactables/Furnitures" instance=ExtResource("34_pxuqq")]
+[node name="Lamp2" parent="Furnitures" instance=ExtResource("34_pxuqq")]
 position = Vector2(292, 120)
 
-[node name="Chair2" parent="Maps & Interactables/Furnitures" instance=ExtResource("35_chtxv")]
+[node name="Chair2" parent="Furnitures" instance=ExtResource("35_chtxv")]
 position = Vector2(334, 216)
 
-[node name="Chair" parent="Maps & Interactables/Furnitures" instance=ExtResource("36_006ye")]
+[node name="Chair" parent="Furnitures" instance=ExtResource("36_006ye")]
 position = Vector2(220, 142)
 
 [node name="Doors" type="Node" parent="."]
