@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dvbd3ryw5c6g4"]
+[gd_scene load_steps=6 format=3 uid="uid://dvbd3ryw5c6g4"]
 
 [ext_resource type="Texture2D" uid="uid://fy1vmtjjl2kv" path="res://assets/sprites/Partner.png" id="1_4p5bo"]
 
@@ -40,6 +40,9 @@ _data = {
 &"idle_down": SubResource("Animation_8d423")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4p5bo"]
+size = Vector2(113.33333, 140)
+
 [node name="Classmate1" type="Node2D"]
 scale = Vector2(0.15, 0.15)
 
@@ -52,3 +55,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_ybsoi")
 }
 autoplay = "idle_down"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3.333335, 30.000006)
+shape = SubResource("RectangleShape2D_4p5bo")

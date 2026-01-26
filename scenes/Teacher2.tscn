@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://xky2dtaw4pnh"]
+[gd_scene load_steps=6 format=3 uid="uid://xky2dtaw4pnh"]
 
 [ext_resource type="Texture2D" uid="uid://dnv4riuoe6uf2" path="res://assets/sprites/Teacher2.png" id="1_wd207"]
 
@@ -40,6 +40,9 @@ _data = {
 &"idle_side": SubResource("Animation_8d423")
 }
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wd207"]
+size = Vector2(113.33333, 140)
+
 [node name="Classmate2" type="Node2D"]
 scale = Vector2(0.15, 0.15)
 
@@ -52,3 +55,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_ybsoi")
 }
 autoplay = "idle_side"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(3.333335, 30.000006)
+shape = SubResource("RectangleShape2D_wd207")
