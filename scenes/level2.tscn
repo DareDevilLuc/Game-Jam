@@ -5429,89 +5429,6 @@ y_sort_enabled = true
 tile_map_data = PackedByteArray("AAAQAAQAAAAKAEIAAAAQAAUAAAAKAEMAAAARAAQAAAALAEIAAAARAAUAAAALAEMAAAATAA8ACQAAAAAAAAARAA8ACQAAAAAAAAAQAA8ACQAAAAAAAAAOAA8ACQAAAAAAAAAIAA8ACQAAAAAAAAAGAA8ACQAAAAAAAAAEAA8ACQAAAAAAAAAZAA8ACQAAAAAAAAAbAA8ACQAAAAAAAAAdAA8ACQAAAAAAAAAGAAQAAAADAEYAAAAGAAUAAAADAEcAAAAYAA4AAAAEABwAAAAUAAoAAAAJABsAAAANAAoAAAAJABoAAAADABAAAAADACoAAFADABEAAAAEACoAAFADABIAAAAFACoAAFACABAAAAADACsAAFACABEAAAAEACsAAFACABIAAAAFACsAAFADAAkAAAAAAEYAAAADAAoAAAAAAEcAAAAFAAkAAAAAAEgAAAAFAAoAAAAAAEkAAAAGAAkAAAAAAEoAAAAGAAoAAAAAAEsAAAAIAAkAAAACAEYAAAAIAAoAAAACAEcAAAA=")
 tile_set = ExtResource("1_d6fun")
 
-[node name="ArrowLeft" type="Sprite2D" parent="Decorations"]
-position = Vector2(994, 465)
-texture = ExtResource("6_bo4dx")
-
-[node name="DinoSkull" type="Sprite2D" parent="Decorations"]
-position = Vector2(796, 167)
-texture = ExtResource("6_xa7n4")
-
-[node name="DinoInfo" type="Sprite2D" parent="Decorations"]
-position = Vector2(835, 173)
-scale = Vector2(1.1219513, 1.0510204)
-texture = ExtResource("7_bo4dx")
-
-[node name="BlueWindow2" type="Sprite2D" parent="Decorations"]
-position = Vector2(598, 165)
-scale = Vector2(1.2996, 1.2233701)
-texture = ExtResource("6_6ep0u")
-
-[node name="BlueWindow" type="Sprite2D" parent="Decorations"]
-position = Vector2(491.00003, 165.00002)
-scale = Vector2(1.2799993, 1.219697)
-texture = ExtResource("6_6ep0u")
-
-[node name="Chair" type="Sprite2D" parent="Decorations"]
-position = Vector2(950, 193)
-texture = ExtResource("16_g8vcy")
-
-[node name="FrameGreenSky" type="Sprite2D" parent="Decorations"]
-position = Vector2(468, 331)
-scale = Vector2(0.9047619, 0.9285714)
-texture = ExtResource("17_o3sye")
-
-[node name="FrameBlueSky" type="Sprite2D" parent="Decorations"]
-position = Vector2(543, 332)
-texture = ExtResource("18_24ks5")
-
-[node name="FrameBoy" type="Sprite2D" parent="Decorations"]
-position = Vector2(622, 332)
-texture = ExtResource("19_s4es8")
-
-[node name="RedRug" type="Sprite2D" parent="Decorations"]
-position = Vector2(1004, 570.99994)
-rotation = 1.5707964
-scale = Vector2(0.7583737, 0.6336939)
-texture = ExtResource("20_24ks5")
-
-[node name="Ladder" type="Sprite2D" parent="Decorations"]
-position = Vector2(891, 180)
-texture = ExtResource("22_nflru")
-
-[node name="List" type="Sprite2D" parent="Decorations"]
-position = Vector2(178, 163)
-scale = Vector2(0.20833333, 0.21875)
-texture = ExtResource("27_qo7hg")
-
-[node name="List2" type="Sprite2D" parent="Decorations"]
-position = Vector2(105, 464)
-scale = Vector2(0.32378462, 0.3013926)
-texture = ExtResource("27_qo7hg")
-
-[node name="RedList" type="Sprite2D" parent="Decorations"]
-position = Vector2(353, 159)
-scale = Vector2(0.39062476, 0.48214287)
-texture = ExtResource("28_odav0")
-
-[node name="Sword" type="Sprite2D" parent="Decorations"]
-position = Vector2(967, 164)
-texture = ExtResource("30_6lk74")
-
-[node name="Scythe" type="Sprite2D" parent="Decorations"]
-position = Vector2(986, 163)
-texture = ExtResource("31_wso6h")
-
-[node name="Axe" type="Sprite2D" parent="Decorations"]
-position = Vector2(1009, 164.00002)
-scale = Vector2(1.0384616, 0.78191483)
-texture = ExtResource("32_4vsvd")
-
-[node name="List3" type="Sprite2D" parent="Decorations"]
-position = Vector2(765, 167.00002)
-scale = Vector2(0.33333263, 0.34375)
-texture = ExtResource("27_qo7hg")
-
 [node name="CollisionStuffs" type="Node2D" parent="."]
 z_index = 2
 y_sort_enabled = true
@@ -5888,3 +5805,89 @@ shape = SubResource("RectangleShape2D_go57r")
 [node name="Body_npc" type="AnimatedSprite2D" parent="ExtraCharacters/NPC7"]
 sprite_frames = SubResource("SpriteFrames_hulpw")
 autoplay = "default"
+
+[node name="Untouched Stuff" type="Node2D" parent="."]
+z_index = 1
+
+[node name="ArrowLeft" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(994, 465)
+texture = ExtResource("6_bo4dx")
+
+[node name="DinoSkull" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(796, 167)
+texture = ExtResource("6_xa7n4")
+
+[node name="DinoInfo" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(835, 173)
+scale = Vector2(1.1219513, 1.0510204)
+texture = ExtResource("7_bo4dx")
+
+[node name="BlueWindow2" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(598, 165)
+scale = Vector2(1.2996, 1.2233701)
+texture = ExtResource("6_6ep0u")
+
+[node name="BlueWindow" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(491, 165.00002)
+scale = Vector2(1.2799993, 1.219697)
+texture = ExtResource("6_6ep0u")
+
+[node name="Chair" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(950, 193)
+texture = ExtResource("16_g8vcy")
+
+[node name="FrameGreenSky" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(468, 331)
+scale = Vector2(0.9047619, 0.9285714)
+texture = ExtResource("17_o3sye")
+
+[node name="FrameBlueSky" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(543, 332)
+texture = ExtResource("18_24ks5")
+
+[node name="FrameBoy" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(622, 332)
+texture = ExtResource("19_s4es8")
+
+[node name="RedRug" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(1004, 570.99994)
+rotation = 1.5707964
+scale = Vector2(0.7583737, 0.6336939)
+texture = ExtResource("20_24ks5")
+
+[node name="Ladder" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(891, 180)
+texture = ExtResource("22_nflru")
+
+[node name="List" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(178, 163)
+scale = Vector2(0.20833333, 0.21875)
+texture = ExtResource("27_qo7hg")
+
+[node name="List2" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(105, 464)
+scale = Vector2(0.32378462, 0.3013926)
+texture = ExtResource("27_qo7hg")
+
+[node name="RedList" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(353, 159)
+scale = Vector2(0.39062476, 0.48214287)
+texture = ExtResource("28_odav0")
+
+[node name="Sword" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(967, 164)
+texture = ExtResource("30_6lk74")
+
+[node name="Scythe" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(986, 163)
+texture = ExtResource("31_wso6h")
+
+[node name="Axe" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(1009, 164.00002)
+scale = Vector2(1.0384616, 0.78191483)
+texture = ExtResource("32_4vsvd")
+
+[node name="List3" type="Sprite2D" parent="Untouched Stuff"]
+position = Vector2(765, 167.00002)
+scale = Vector2(0.33333263, 0.34375)
+texture = ExtResource("27_qo7hg")
