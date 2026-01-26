@@ -3,7 +3,12 @@ class_name LevelTransition extends Area2D
 
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
-@export_file( "*.tscn" ) var level
+var level : Array[ PackedScene ] = [
+	preload("res://scenes/Level1/Level1_noAnomaly.tscn"),
+	preload("res://scenes/Level1/Level1_withAnomaly1.tscn"),
+	preload("res://scenes/Level1/Level1_withAnomaly2.tscn"),
+	preload("res://scenes/Level1/Level1_withAnomaly3.tscn"),
+]
 @export var target_transition_area : String = "LevelTransition"
 
 @export_category("Collision Area Settings")
@@ -40,8 +45,15 @@ func _ready() -> void:
 	
 	pass
 
+func _random_level() -> String:
+	if level.is_empty():
+		return ""
+	
+	return level.pick_random().resource_path
+	
+
 func _player_entered(_p : Node2D) -> void:
-	LevelManager.load_new_level( level, target_transition_area, get_offset() )
+	LevelManager.load_new_level( _random_level(), target_transition_area, get_offset() )
 	pass
 
 func _place_player() -> void:
