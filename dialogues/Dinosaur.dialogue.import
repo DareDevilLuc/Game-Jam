@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dp0rt5jqrenib"
+path="res://.godot/imported/Dinosaur.dialogue-11cbbfc6d1368cbf76f4f74a7bb8c916.tres"
+
+[deps]
+
+source_file="res://dialogues/Dinosaur.dialogue"
+dest_files=["res://.godot/imported/Dinosaur.dialogue-11cbbfc6d1368cbf76f4f74a7bb8c916.tres"]
+
+[params]
+
+defaults=true
