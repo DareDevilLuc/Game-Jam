@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=133 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -17,16 +17,22 @@
 [ext_resource type="Texture2D" uid="uid://diclv8sxgufi4" path="res://cuts/FrameBlueSky.atlastex" id="18_24ks5"]
 [ext_resource type="Texture2D" uid="uid://b5cg3echcvh3m" path="res://cuts/FrameBoy.atlastex" id="19_s4es8"]
 [ext_resource type="Texture2D" uid="uid://cxgv2lso6isgl" path="res://cuts/RedRug.atlastex" id="20_24ks5"]
+[ext_resource type="Resource" uid="uid://dy7n8o6xxrccp" path="res://dialogues/npcGuard.dialogue" id="20_58bux"]
+[ext_resource type="PackedScene" uid="uid://covcf4h1w7g5s" path="res://scenes/actionable.tscn" id="20_go57r"]
 [ext_resource type="Texture2D" uid="uid://5tfqkkiwbpcj" path="res://cuts/DinosaurBonesFinal.atlastex" id="21_4vsvd"]
+[ext_resource type="Resource" uid="uid://bdoo1fhgvfrea" path="res://dialogues/npcBelow.dialogue" id="21_58bux"]
 [ext_resource type="Texture2D" uid="uid://cgwciaptx15fs" path="res://cuts/SmallTree.atlastex" id="21_ekhvm"]
 [ext_resource type="Texture2D" uid="uid://ce0pwysv7qdhp" path="res://cuts/Ladder.atlastex" id="22_nflru"]
 [ext_resource type="Texture2D" uid="uid://bglou8gwcovtn" path="res://cuts/MuseumPokeball.atlastex" id="23_ikw2v"]
 [ext_resource type="Texture2D" uid="uid://b27vyvjkclgvh" path="res://assets/sprites/child_npccry-Sheet.png" id="24_5b1db"]
 [ext_resource type="Texture2D" uid="uid://kjtju2uqah4t" path="res://cuts/MuseumStone.atlastex" id="24_cgqhq"]
+[ext_resource type="Resource" uid="uid://bfx4cado0ibh2" path="res://dialogues/npcGirlDino.dialogue" id="24_q43j7"]
 [ext_resource type="Texture2D" uid="uid://dyhmoxhgvmhg" path="res://cuts/BlueChair.atlastex" id="25_ttvjw"]
+[ext_resource type="Resource" uid="uid://dqu523c00yxce" path="res://dialogues/npcGuard2.dialogue" id="26_7wm5o"]
 [ext_resource type="Texture2D" uid="uid://b5hclkfaxepb4" path="res://cuts/BlueChair2.atlastex" id="26_ac7c3"]
 [ext_resource type="Texture2D" uid="uid://bq0jjuq6cjs6c" path="res://cuts/List.atlastex" id="27_qo7hg"]
 [ext_resource type="Texture2D" uid="uid://ol1jkybqkanx" path="res://cuts/RedList.atlastex" id="28_odav0"]
+[ext_resource type="Resource" uid="uid://1gnbv5pbjcpa" path="res://dialogues/npcChild.dialogue" id="29_p8hhf"]
 [ext_resource type="Texture2D" uid="uid://ckij6t1hpkvk6" path="res://cuts/Sword.atlastex" id="30_6lk74"]
 [ext_resource type="PackedScene" uid="uid://cxas0bnao8buj" path="res://scenes/CollisionDecor.tscn" id="30_qo7hg"]
 [ext_resource type="PackedScene" uid="uid://kf0cx7rbdlxv" path="res://scenes/partner.tscn" id="31_odav0"]
@@ -5107,6 +5113,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tn25f"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_58bux"]
+radius = 18.027756
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5b1db"]
 size = Vector2(141.66656, 121.66675)
 
@@ -5124,6 +5133,9 @@ animations = [{
 "name": &"static",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_go57r"]
+radius = 114.69765
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_etc3t"]
 size = Vector2(88.33374, 121.66666)
@@ -5195,6 +5207,9 @@ animations = [{
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_30fb6"]
 size = Vector2(143.3335, 193.3333)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q43j7"]
+radius = 135.97356
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuxxq"]
 size = Vector2(225.00002, 93.33333)
@@ -5349,6 +5364,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_wso6h"]
 radius = 42.163715
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_p8hhf"]
+radius = 18.0
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_go57r"]
 size = Vector2(116.666504, 133.33331)
 
@@ -5454,6 +5472,9 @@ animations = [{
 "name": &"idle",
 "speed": 5.0
 }]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7wm5o"]
+radius = 133.49957
 
 [node name="Level2" type="Node2D"]
 z_index = -1
@@ -5751,6 +5772,13 @@ frame_progress = 0.14691974
 position = Vector2(-14, 12)
 shape = SubResource("RectangleShape2D_tn25f")
 
+[node name="Actionable" parent="ExtraCharacters/NPC1" instance=ExtResource("20_go57r")]
+dialogue_resource = ExtResource("20_58bux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC1/Actionable"]
+position = Vector2(-12, 17)
+shape = SubResource("CircleShape2D_58bux")
+
 [node name="NPC2" type="CharacterBody2D" parent="ExtraCharacters"]
 z_index = 1
 position = Vector2(470, 510)
@@ -5764,6 +5792,15 @@ shape = SubResource("RectangleShape2D_5b1db")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ExtraCharacters/NPC2"]
 sprite_frames = SubResource("SpriteFrames_etc3t")
 animation = &"static"
+
+[node name="Actionable" parent="ExtraCharacters/NPC2" instance=ExtResource("20_go57r")]
+position = Vector2(6.6666665, 6.6666665)
+collision_mask = 1
+dialogue_resource = ExtResource("21_58bux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC2/Actionable"]
+position = Vector2(-6.6666665, 73.33333)
+shape = SubResource("CircleShape2D_go57r")
 
 [node name="NPC3" type="CharacterBody2D" parent="ExtraCharacters"]
 z_index = 1
@@ -5795,6 +5832,13 @@ autoplay = "idle"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC4"]
 position = Vector2(-6.666992, 63.333374)
 shape = SubResource("RectangleShape2D_30fb6")
+
+[node name="Actionable" parent="ExtraCharacters/NPC4" instance=ExtResource("20_go57r")]
+dialogue_resource = ExtResource("24_q43j7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC4/Actionable"]
+position = Vector2(-26.666666, 40)
+shape = SubResource("CircleShape2D_q43j7")
 
 [node name="NPC5" type="CharacterBody2D" parent="ExtraCharacters"]
 z_index = 1
@@ -5845,6 +5889,13 @@ frame_progress = 0.2192384
 position = Vector2(-14, 12)
 shape = SubResource("RectangleShape2D_tn25f")
 
+[node name="Actionable" parent="ExtraCharacters/NPC1_1" instance=ExtResource("20_go57r")]
+dialogue_resource = ExtResource("26_7wm5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC1_1/Actionable"]
+position = Vector2(-13, 18)
+shape = SubResource("CircleShape2D_p8hhf")
+
 [node name="NPC7" type="CharacterBody2D" parent="ExtraCharacters"]
 z_index = 1
 position = Vector2(972, 199)
@@ -5874,6 +5925,13 @@ sprite_frames = SubResource("SpriteFrames_4x3jv")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.47515684
+
+[node name="Actionable" parent="ExtraCharacters/NPC8" instance=ExtResource("20_go57r")]
+dialogue_resource = ExtResource("29_p8hhf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/NPC8/Actionable"]
+position = Vector2(0, 59.999996)
+shape = SubResource("CircleShape2D_7wm5o")
 
 [node name="UntouchedStuff" type="Node2D" parent="."]
 z_index = 1

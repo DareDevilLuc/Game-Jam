@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dqu523c00yxce"
+path="res://.godot/imported/npcGuard2.dialogue-d4a869c34a3c79cbd7ddb7bc027d7a52.tres"
+
+[deps]
+
+source_file="res://dialogues/npcGuard2.dialogue"
+dest_files=["res://.godot/imported/npcGuard2.dialogue-d4a869c34a3c79cbd7ddb7bc027d7a52.tres"]
+
+[params]
+
+defaults=true

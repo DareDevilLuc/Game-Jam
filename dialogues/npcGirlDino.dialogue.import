@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bfx4cado0ibh2"
+path="res://.godot/imported/npcGirlDino.dialogue-c5c974734ac059092a1c06fa3cf32da1.tres"
+
+[deps]
+
+source_file="res://dialogues/npcGirlDino.dialogue"
+dest_files=["res://.godot/imported/npcGirlDino.dialogue-c5c974734ac059092a1c06fa3cf32da1.tres"]
+
+[params]
+
+defaults=true

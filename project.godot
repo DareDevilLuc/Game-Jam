@@ -18,10 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/sprite_cutter/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/sprite_cutter/plugin.cfg")
 
 [input]
 
@@ -49,6 +50,15 @@ left={
 , Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
 ]
 }
+interact={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":101,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://dialogues/npcBelow.dialogue", "res://dialogues/npcChild.dialogue", "res://dialogues/npcGirlDino.dialogue", "res://dialogues/npcGuard2.dialogue", "res://dialogues/npcGuard.dialogue")
 
 [layer_names]
 
@@ -59,6 +69,7 @@ left={
 2d_physics/layer_1="Player"
 2d_physics/layer_2="Wall"
 2d_physics/layer_3="Decoration"
+2d_physics/layer_5="Actionable"
 
 [rendering]
 
