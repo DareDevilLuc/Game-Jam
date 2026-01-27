@@ -1,17 +1,31 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmlhso85n7866"]
+[gd_scene load_steps=5 format=3 uid="uid://dmlhso85n7866"]
 
 [ext_resource type="Texture2D" uid="uid://c68e5n5qjy02l" path="res://assets/textures/DogBed.atlastex" id="1_lyexf"]
+[ext_resource type="Texture2D" uid="uid://dm466p7ymks3t" path="res://assets/textures/Bone.atlastex" id="2_ypx1i"]
+[ext_resource type="Texture2D" uid="uid://b4kftbi0eqhij" path="res://assets/textures/Fisbone.atlastex" id="3_oasq3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
-size = Vector2(23, 12)
+size = Vector2(23, 9)
 
 [node name="CouchBack" type="StaticBody2D"]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-0.5, 0)
+position = Vector2(-0.5, -0.5)
 shape = SubResource("RectangleShape2D_h5ql5")
 
 [node name="DogBed" type="Sprite2D" parent="."]
-position = Vector2(-3, 1)
+position = Vector2(-4.875, 2)
+scale = Vector2(1.125, 1.125)
 texture = ExtResource("1_lyexf")
+
+[node name="Bone" type="Sprite2D" parent="."]
+position = Vector2(-1.0000005, 1)
+scale = Vector2(0.036547612, 0.037499998)
+texture = ExtResource("2_ypx1i")
+
+[node name="Fisbone" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-0.68674684, 1.140625)
+scale = Vector2(0.026333908, 0.027484939)
+texture = ExtResource("3_oasq3")

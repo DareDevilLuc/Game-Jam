@@ -1,27 +1,33 @@
-[gd_scene load_steps=8 format=3 uid="uid://g1jgrj3cu60s"]
+[gd_scene load_steps=11 format=3 uid="uid://g1jgrj3cu60s"]
 
 [ext_resource type="Texture2D" uid="uid://d11uvxk7luurx" path="res://assets/textures/Sink.atlastex" id="1_dappa"]
+[ext_resource type="Script" uid="uid://cxgilxxcmadsu" path="res://scripts/sink&isle.gd" id="1_e3pg1"]
 [ext_resource type="Texture2D" uid="uid://c1byv81lso4lu" path="res://assets/textures/SideIsle.atlastex" id="2_uk31x"]
 [ext_resource type="Texture2D" uid="uid://ciovjidwwjf26" path="res://assets/textures/Fisbowl.atlastex" id="3_shrb1"]
 [ext_resource type="Texture2D" uid="uid://df4lq03yfdkw2" path="res://assets/textures/Meal.atlastex" id="4_2rpr1"]
 [ext_resource type="Texture2D" uid="uid://fadbkugn4w8o" path="res://assets/textures/Plate.atlastex" id="5_e3pg1"]
+[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/trigger.tscn" id="7_5gg0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
-size = Vector2(105, 40)
+size = Vector2(105, 20)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3xoy"]
-size = Vector2(18, 53)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pg1"]
+size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3cio"]
+size = Vector2(70, 40)
 
 [node name="Sink" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_e3pg1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, -10)
+position = Vector2(10.5, -20)
 shape = SubResource("RectangleShape2D_h5ql5")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(55, 4.5)
-shape = SubResource("RectangleShape2D_r3xoy")
+position = Vector2(55, 9.5)
+shape = SubResource("RectangleShape2D_e3pg1")
 
 [node name="Sink" type="Sprite2D" parent="."]
 position = Vector2(-4, -7)
@@ -49,3 +55,14 @@ texture = ExtResource("5_e3pg1")
 position = Vector2(-24.499998, -19.5)
 scale = Vector2(0.4666667, 0.6249999)
 texture = ExtResource("5_e3pg1")
+
+[node name="trigger" parent="." instance=ExtResource("7_5gg0l")]
+position = Vector2(45, -10)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_y3cio")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://ccfic6rw0fxjh"]
+[gd_scene load_steps=51 format=4 uid="uid://ccfic6rw0fxjh"]
 
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/TX Tileset Grass.png" id="1_mnu1b"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/Tileset_32x32_3.png" id="2_be7ao"]
@@ -39,6 +39,7 @@
 [ext_resource type="PackedScene" uid="uid://d2fbsqsas54nx" path="res://scenes/furnitures/door.tscn" id="37_jxghd"]
 [ext_resource type="PackedScene" uid="uid://c0r2qerrl6iyo" path="res://scenes/safezone.tscn" id="38_6v2jr"]
 [ext_resource type="PackedScene" uid="uid://cawppcyk6abji" path="res://scenes/killzone.tscn" id="39_qy2ap"]
+[ext_resource type="PackedScene" uid="uid://c0ochitr88wb1" path="res://scenes/puppy.tscn" id="40_be7ao"]
 [ext_resource type="PackedScene" uid="uid://mt3lotj7nrev" path="res://scenes/partner.tscn" id="40_y07bx"]
 [ext_resource type="PackedScene" uid="uid://5q1g2fbomj0n" path="res://scenes/mc.tscn" id="41_ig14o"]
 
@@ -359,7 +360,7 @@ scale = Vector2(0.5781253, 0.5781253)
 texture = ExtResource("3_1x8o1")
 
 [node name="Plant3" type="Sprite2D" parent="Maps & Interactables"]
-position = Vector2(89, 271)
+position = Vector2(94, 270)
 texture = ExtResource("4_nvr1i")
 
 [node name="Plant2" type="Sprite2D" parent="Maps & Interactables"]
@@ -368,12 +369,12 @@ texture = ExtResource("4_nvr1i")
 
 [node name="Carpet" type="Sprite2D" parent="Maps & Interactables"]
 texture_filter = 1
-position = Vector2(-5, 187)
+position = Vector2(-25, 190)
 scale = Vector2(0.79296875, 0.7312499)
 texture = ExtResource("5_hs0n0")
 
 [node name="FrameRed" type="Sprite2D" parent="Maps & Interactables"]
-position = Vector2(-177.00002, 257)
+position = Vector2(-230, 244.00002)
 scale = Vector2(1.25, 1.3125)
 texture = ExtResource("6_c4rup")
 
@@ -445,31 +446,31 @@ position = Vector2(265, 128)
 position = Vector2(-212, 284)
 
 [node name="CouchBack3" parent="Furnitures" instance=ExtResource("20_fvsjb")]
-position = Vector2(-145, 290)
+position = Vector2(-186, 288)
 
 [node name="ChairLeft" parent="Furnitures" instance=ExtResource("21_n4i7c")]
-position = Vector2(-50, 176)
+position = Vector2(-70, 180)
 
 [node name="CouchSide" parent="Furnitures" instance=ExtResource("22_80lu4")]
 position = Vector2(-207, 148)
 
 [node name="CouchBack" parent="Furnitures" instance=ExtResource("23_q5ksm")]
-position = Vector2(-159, 189)
+position = Vector2(-161, 193)
 
 [node name="CoffeeTable" parent="Furnitures" instance=ExtResource("24_n7fpp")]
-position = Vector2(-163, 149)
+position = Vector2(-157, 151)
 
 [node name="Television" parent="Furnitures" instance=ExtResource("25_sacaw")]
 position = Vector2(-165, 112)
 
 [node name="ChairRight" parent="Furnitures" instance=ExtResource("26_crgxr")]
-position = Vector2(22, 177)
+position = Vector2(-2, 181)
 
 [node name="Fridge" parent="Furnitures" instance=ExtResource("27_uvdt0")]
 position = Vector2(4, 86)
 
 [node name="DiningTable" parent="Furnitures" instance=ExtResource("28_xwwgy")]
-position = Vector2(-8, 177)
+position = Vector2(-30, 181)
 
 [node name="drawerSmall2" parent="Furnitures" instance=ExtResource("29_6pvhj")]
 position = Vector2(-206, 177)
@@ -493,7 +494,7 @@ position = Vector2(292, 120)
 position = Vector2(334, 216)
 
 [node name="Chair" parent="Furnitures" instance=ExtResource("36_006ye")]
-position = Vector2(220, 142)
+position = Vector2(241, 139)
 
 [node name="Doors" type="Node" parent="."]
 
@@ -526,12 +527,15 @@ shape = SubResource("WorldBoundaryShape2D_pf7vy")
 
 [node name="Characters" type="Node" parent="."]
 
+[node name="Puppy" parent="Characters" instance=ExtResource("40_be7ao")]
+position = Vector2(51, 287)
+
 [node name="Partner" parent="Characters" instance=ExtResource("40_y07bx")]
 z_index = 5
 position = Vector2(43, 124)
 
 [node name="Player" parent="Characters" instance=ExtResource("41_ig14o")]
-position = Vector2(-3, 117)
+position = Vector2(213, 163)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Characters/Player"]

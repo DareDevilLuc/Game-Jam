@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://crbcwkuhgfbqf"]
+[gd_scene load_steps=6 format=3 uid="uid://crbcwkuhgfbqf"]
 
 [ext_resource type="Texture2D" uid="uid://dawfbmx13a8n8" path="res://assets/textures/Fridge.atlastex" id="1_dj6bw"]
+[ext_resource type="Script" uid="uid://cg4jjtig5s1hl" path="res://scripts/fridge.gd" id="1_irq2n"]
+[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/trigger.tscn" id="3_phyis"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(23, 40)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nqgjk"]
+size = Vector2(19, 29)
+
 [node name="Fridge" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_irq2n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0.5, -6)
@@ -15,3 +21,14 @@ shape = SubResource("RectangleShape2D_h5ql5")
 [node name="Fridge" type="Sprite2D" parent="."]
 position = Vector2(1, -2)
 texture = ExtResource("1_dj6bw")
+
+[node name="trigger" parent="." instance=ExtResource("3_phyis")]
+position = Vector2(-1, -1)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(1.5, 7.5)
+shape = SubResource("RectangleShape2D_nqgjk")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]

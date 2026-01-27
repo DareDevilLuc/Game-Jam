@@ -1,12 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://cn51tma2r0ue2"]
+[gd_scene load_steps=6 format=3 uid="uid://cn51tma2r0ue2"]
 
+[ext_resource type="Script" uid="uid://t23l1thbmctc" path="res://scripts/bed.gd" id="1_3pjts"]
 [ext_resource type="Texture2D" uid="uid://cbrykvmbxlg8i" path="res://assets/textures/Bed.atlastex" id="1_ukwhg"]
+[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/trigger.tscn" id="3_6is1p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(46, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4isge"]
+size = Vector2(49, 51.5)
+
 [node name="Bed" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_3pjts")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(4, -1)
@@ -16,3 +22,13 @@ shape = SubResource("RectangleShape2D_h5ql5")
 position = Vector2(4, -2)
 scale = Vector2(1, 1.0357143)
 texture = ExtResource("1_ukwhg")
+
+[node name="trigger" parent="." instance=ExtResource("3_6is1p")]
+position = Vector2(0, -2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(3, 1.25)
+shape = SubResource("RectangleShape2D_4isge")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]

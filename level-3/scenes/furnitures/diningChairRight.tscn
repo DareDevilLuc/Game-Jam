@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bmtwixtb3fai" path="res://assets/textures/InteriorsFree32x32.atlastex" id="1_rl3bq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_knn3e"]
-size = Vector2(8, 47)
+size = Vector2(8, 40)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bskue"]
 size = Vector2(12, 26)
@@ -12,7 +12,7 @@ size = Vector2(12, 26)
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(18, -3.5)
+position = Vector2(18, 0)
 shape = SubResource("RectangleShape2D_knn3e")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]

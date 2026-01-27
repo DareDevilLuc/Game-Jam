@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Level3State="*res://scripts/level3State.gd"
 
 [dialogue_manager]
 

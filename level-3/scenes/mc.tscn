@@ -288,8 +288,8 @@ animations = [{
 "speed": 7.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4rxjt"]
-size = Vector2(12, 16)
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6vl1"]
+radius = 9.055386
 
 [node name="MC" type="CharacterBody2D" groups=["player"]]
 z_index = 5
@@ -308,5 +308,5 @@ frame_progress = 0.0885261
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
-position = Vector2(2, 10)
-shape = SubResource("RectangleShape2D_4rxjt")
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_i6vl1")
