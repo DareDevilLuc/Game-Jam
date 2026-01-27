@@ -1,7 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://mt3lotj7nrev"]
+[gd_scene load_steps=25 format=3 uid="uid://mt3lotj7nrev"]
 
 [ext_resource type="Script" uid="uid://dueacs56knok7" path="res://scripts/partner.gd" id="1_5j83e"]
 [ext_resource type="Texture2D" uid="uid://bjq6p2bomfk0c" path="res://assets/3rd_partner-anim-Sheet.png" id="1_sdr36"]
+[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/trigger.tscn" id="3_3ek73"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ljs46"]
 size = Vector2(23.999973, 23.325447)
@@ -150,6 +151,9 @@ animations = [{
 "speed": 7.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4rh2"]
+size = Vector2(17, 20)
+
 [node name="Partner" type="CharacterBody2D" groups=["player"]]
 collision_mask = 3
 script = ExtResource("1_5j83e")
@@ -165,4 +169,14 @@ scale = Vector2(0.153125, 0.1623125)
 sprite_frames = SubResource("SpriteFrames_cy2by")
 animation = &"idleSide"
 autoplay = "idleSide"
-frame_progress = 0.47932732
+
+[node name="trigger" parent="." instance=ExtResource("3_3ek73")]
+position = Vector2(0, -2)
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(0.5, -1)
+shape = SubResource("RectangleShape2D_r4rh2")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]
