@@ -1,4 +1,4 @@
-[gd_scene load_steps=144 format=4 uid="uid://bxb1mxatkgu"]
+[gd_scene load_steps=147 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="TileSet" uid="uid://wqi2pi1541nd" path="res://scenes/wall.tres" id="1_d6fun"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/background/Room_Builder_free_32x32.png" id="1_g2h75"]
@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dryxdt5wbhd0f" path="res://cuts/BlueArmorCabinet.atlastex" id="15_wvb8j"]
 [ext_resource type="Texture2D" uid="uid://ny4klbmgcamj" path="res://cuts/Chair.atlastex" id="16_g8vcy"]
 [ext_resource type="Resource" uid="uid://bu15402luhxqa" path="res://dialogues/Heart.dialogue" id="16_gxpvt"]
+[ext_resource type="Resource" uid="uid://dv8splkblw4md" path="res://dialogues/Stone.dialogue" id="16_kxd52"]
 [ext_resource type="Resource" uid="uid://dknmg23uuw1wp" path="res://dialogues/Castle.dialogue" id="16_v4jxo"]
 [ext_resource type="Texture2D" uid="uid://bclso0l24wtal" path="res://cuts/FrameGreenSky.atlastex" id="17_o3sye"]
 [ext_resource type="Texture2D" uid="uid://diclv8sxgufi4" path="res://cuts/FrameBlueSky.atlastex" id="18_24ks5"]
@@ -31,6 +32,7 @@
 [ext_resource type="Texture2D" uid="uid://bglou8gwcovtn" path="res://cuts/MuseumPokeball.atlastex" id="23_ikw2v"]
 [ext_resource type="Texture2D" uid="uid://b27vyvjkclgvh" path="res://assets/sprites/child_npccry-Sheet.png" id="24_5b1db"]
 [ext_resource type="Texture2D" uid="uid://kjtju2uqah4t" path="res://cuts/MuseumStone.atlastex" id="24_cgqhq"]
+[ext_resource type="Resource" uid="uid://bdk4vqqsg2cwv" path="res://dialogues/partner.dialogue" id="24_kxd52"]
 [ext_resource type="Resource" uid="uid://bfx4cado0ibh2" path="res://dialogues/npcGirlDino.dialogue" id="24_q43j7"]
 [ext_resource type="Texture2D" uid="uid://dyhmoxhgvmhg" path="res://cuts/BlueChair.atlastex" id="25_ttvjw"]
 [ext_resource type="Resource" uid="uid://da5rufpgqaqnp" path="res://dialogues/npcTalking.dialogue" id="25_yuxxq"]
@@ -5060,7 +5062,7 @@ height = 18.506012
 size = Vector2(38.808685, 36.765945)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kxd52"]
-size = Vector2(62.75, 20)
+size = Vector2(69.1875, 96)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_qo7hg"]
 
@@ -5078,6 +5080,9 @@ size = Vector2(103.29265, 103.9604)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q43j7"]
 size = Vector2(114, 98)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gxpvt"]
+size = Vector2(80, 46.666702)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_icuov"]
 atlas = ExtResource("32_3xffc")
@@ -5737,6 +5742,30 @@ shape = SubResource("RectangleShape2D_6lk74")
 position = Vector2(195.625, 354)
 shape = SubResource("RectangleShape2D_kxd52")
 
+[node name="ForStone" type="Area2D" parent="."]
+z_index = 2
+collision_layer = 16
+script = ExtResource("7_6tj06")
+dialogue_resource = ExtResource("16_kxd52")
+
+[node name="BlueChair" type="Sprite2D" parent="ForStone"]
+z_index = -2
+position = Vector2(126, 385)
+scale = Vector2(0.48958325, 0.48958328)
+texture = ExtResource("25_ttvjw")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ForStone/BlueChair"]
+collision_layer = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForStone/BlueChair/StaticBody2D"]
+position = Vector2(-1.0212097, 2.0425415)
+scale = Vector2(1.0000006, 1)
+shape = SubResource("RectangleShape2D_6lk74")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ForStone"]
+position = Vector2(257.40625, 240)
+shape = SubResource("RectangleShape2D_kxd52")
+
 [node name="ForPlantDialogue" type="Area2D" parent="."]
 z_index = 2
 collision_layer = 16
@@ -5820,6 +5849,15 @@ z_index = 1
 [node name="Partner" parent="ExtraCharacters" instance=ExtResource("31_odav0")]
 position = Vector2(6, 566)
 safe_margin = 7.917
+
+[node name="Actionable" type="Area2D" parent="ExtraCharacters/Partner"]
+collision_layer = 16
+script = ExtResource("7_6tj06")
+dialogue_resource = ExtResource("24_kxd52")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExtraCharacters/Partner/Actionable"]
+position = Vector2(6.666664, 103.33325)
+shape = SubResource("RectangleShape2D_gxpvt")
 
 [node name="NPC1" type="CharacterBody2D" parent="ExtraCharacters"]
 position = Vector2(175, 218)

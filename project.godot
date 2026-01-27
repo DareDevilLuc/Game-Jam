@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Game="*res://scripts/game.gd"
 
 [editor_plugins]
 
@@ -58,7 +59,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogues/npcBelow.dialogue", "res://dialogues/npcChild.dialogue", "res://dialogues/npcGirlDino.dialogue", "res://dialogues/npcGuard2.dialogue", "res://dialogues/npcGuard.dialogue", "res://dialogues/Dinosaur.dialogue", "res://dialogues/npcTalking.dialogue", "res://dialogues/Castle.dialogue", "res://dialogues/Chair.dialogue", "res://dialogues/Heart.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogues/npcBelow.dialogue", "res://dialogues/npcChild.dialogue", "res://dialogues/npcGirlDino.dialogue", "res://dialogues/npcGuard2.dialogue", "res://dialogues/npcGuard.dialogue", "res://dialogues/Dinosaur.dialogue", "res://dialogues/npcTalking.dialogue", "res://dialogues/Castle.dialogue", "res://dialogues/Chair.dialogue", "res://dialogues/Heart.dialogue", "res://dialogues/Stone.dialogue", "res://dialogues/partner.dialogue")
 
 [layer_names]
 

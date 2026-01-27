@@ -1,10 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://dsv1yaispraxf"]
+[gd_scene load_steps=5 format=3 uid="uid://dsv1yaispraxf"]
 
+[ext_resource type="Script" uid="uid://npnvsfnmaq5b" path="res://scripts/game.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bcqlw4c6fujdw" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://shwa07270fxx" path="res://scripts/PlayerCamera.gd" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://bxb1mxatkgu" path="res://scenes/level2.tscn" id="2_yqjtg"]
 
 [node name="Game" type="Node2D"]
+script = ExtResource("1_lbhrr")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 2
