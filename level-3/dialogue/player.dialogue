@@ -15,8 +15,11 @@ Athy: [[We got Chimmy at our 3rd year anniversary a year ago.|I’ve always thou
 Athy: [[There’s lots of leftover food in the fridge|I want to snack on some chocolates.|Maybe what I need is a vacation.]]
 => END
 ~ BOX
-Athy: [[I received a package from an old friend a week ago.|I should visit my parents.|These parcels are taking up lots of space|We have so many pictures here from our old dates.]]
+Athy: [[I received a package from an old friend a week ago.|I should visit my parents.|These parcels are taking up lots of space]]
 => END
 ~ BED
 Athy: [[I always sleep on the left side.|Maybe I should take a nap|What a beautiful day to sleep 2 more hours]]
 => END
+~ DRAWER
+Athy: [[Where did I put my socks?|We have so many pictures here from our old dates.|I should probably give away my old sweatshirts.]]
+=> END 

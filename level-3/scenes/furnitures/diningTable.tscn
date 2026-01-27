@@ -8,13 +8,13 @@
 [ext_resource type="Texture2D" uid="uid://d4ip6v0b4hjs8" path="res://assets/Cutlery.png" id="6_lghni"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
-size = Vector2(68, 35)
+size = Vector2(68, 36)
 
 [node name="CouchBack" type="StaticBody2D"]
 collision_mask = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 4.5)
+position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_h5ql5")
 
 [node name="Table" type="Sprite2D" parent="."]
