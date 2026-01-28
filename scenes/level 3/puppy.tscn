@@ -106,9 +106,8 @@ shape = SubResource("RectangleShape2D_ljs46")
 position = Vector2(2, -2)
 scale = Vector2(0.050000004, 0.055188686)
 sprite_frames = SubResource("SpriteFrames_cy2by")
-animation = &"puppyNormal"
+animation = &"puppyAnomally"
 autoplay = "puppyNormal"
-frame_progress = 0.79505277
 
 [node name="trigger" parent="." instance=ExtResource("3_hwwxj")]
 position = Vector2(0, -2)

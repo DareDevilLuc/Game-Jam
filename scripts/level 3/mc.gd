@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var player: AnimatedSprite2D = $AnimatedSprite2D
 var direction : String = "side"
-const SPEED: float = 40.0
+const SPEED: float = 70.0
 
 func _physics_process(_delta: float) -> void:
 	var input_vector: Vector2 = Input.get_vector("left", "right", "up", "down")

@@ -5,6 +5,7 @@ extends Area2D
 
 
 func _on_body_entered(_body: Node2D) -> void:
+	print(Stage3State.anomalyCtr)
 	timer.start()
 
 

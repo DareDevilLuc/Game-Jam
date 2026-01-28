@@ -6,6 +6,7 @@ extends StaticBody2D
 @onready var side_isle: Sprite2D = $SideIsle
 @onready var plate: Sprite2D = $Plate
 @onready var plate_2: Sprite2D = $Plate2
+@onready var sink_anommaly: Sprite2D = $SinkAnommaly
 
 var balloon: Node = null
 var player_in_range := false
@@ -17,6 +18,16 @@ func _ready():
 	if get_tree().current_scene.name != "Level 3":
 		randomize()
 		var show_plates := randi() % 2 == 0
+		var sink_anomally := randi() % 8 == 0
+		
+		if (sink_anomally):
+			sink.visible = true
+			sink_anommaly.visible = false
+			Stage3State.add_anomaly()
+		else:
+			sink.visible = false
+			sink_anommaly.visible = true
+			
 		plate.visible = show_plates
 		plate_2.visible = show_plates
 		if show_plates:

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="5_18pbm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ju5n0"]
-size = Vector2(29, 19.5)
+size = Vector2(19, 14.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18pbm"]
 size = Vector2(30.5, 49)
@@ -68,12 +68,11 @@ collision_mask = 2
 script = ExtResource("1_la1wf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-6, -15)
+position = Vector2(-5.5, -11.625)
 shape = SubResource("RectangleShape2D_ju5n0")
 
 [node name="trigger" parent="." instance=ExtResource("5_18pbm")]
 visible = false
-collision_mask = 2
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="trigger"]
 visible = false

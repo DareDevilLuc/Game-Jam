@@ -12,6 +12,17 @@ var player_in_range := false
 var dialogue_open := false
 var interact_start: Node = null
 
+func _ready():
+	if get_tree().current_scene.name != "Level 3":
+		randomize()
+		var popAnommaly := randi() % 2 == 0
+		if (popAnommaly):
+			pup.play("puppyAnomally")
+			Stage3State.add_anomaly()
+		else:
+			pup.play("puppyNormal")
+			
+
 func _process(_delta):
 	if player_in_range and not dialogue_open and Input.is_action_just_pressed("interact"):
 		dialogue_open = true

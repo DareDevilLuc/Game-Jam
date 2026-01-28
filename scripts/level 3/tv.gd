@@ -6,6 +6,19 @@ extends StaticBody2D
 @onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
+@onready var tv_anomally: Sprite2D = $TvAnomally
+
+func _ready():
+	if get_tree().current_scene.name != "Level 3":
+		randomize()
+		var anomally := randi() % 9 == 0
+		if anomally:
+			tv.visible = false
+			tv_anomally.visible = true
+			Stage3State.add_anomaly()
+		else:
+			tv.visible = true
+			tv_anomally.visible = false
 
 
 var balloon: Node = null

@@ -535,7 +535,7 @@ z_index = 5
 position = Vector2(43, 124)
 
 [node name="Player" parent="Characters" instance=ExtResource("42_06kw5")]
-position = Vector2(-192, 326)
+position = Vector2(274, 177)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Characters/Player"]

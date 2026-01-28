@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8mepxfkqbdso"]
+[gd_scene load_steps=8 format=3 uid="uid://c8mepxfkqbdso"]
 
 [ext_resource type="Script" uid="uid://1bcfmfdo00sw" path="res://scripts/level 3/tv.gd" id="1_2os3q"]
 [ext_resource type="Texture2D" uid="uid://boj23gxme8p18" path="res://assets/level 3/textures/Table.atlastex" id="1_5xwnk"]
 [ext_resource type="Texture2D" uid="uid://dp5ca0rf87nai" path="res://assets/level 3/textures/TV.atlastex" id="2_2os3q"]
+[ext_resource type="Texture2D" uid="uid://yfxbvsuvgkpq" path="res://assets/level 3/Anomalies/TvAnomally.atlastex" id="4_m50ng"]
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="4_xiq3r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
@@ -28,6 +29,12 @@ texture = ExtResource("1_5xwnk")
 position = Vector2(-2, -16)
 scale = Vector2(0.91666675, 0.9375)
 texture = ExtResource("2_2os3q")
+
+[node name="TvAnomally" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-1.75, -16)
+scale = Vector2(0.9222222, 0.93749994)
+texture = ExtResource("4_m50ng")
 
 [node name="trigger" parent="." instance=ExtResource("4_xiq3r")]
 position = Vector2(-2, -12)

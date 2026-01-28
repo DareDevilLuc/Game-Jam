@@ -9,7 +9,10 @@ func add_anomaly():
 	anomalyCtr += 1
 
 func heartbreak():
-	heartHealth -= 1
+	if heartHealth == 1:
+		heartHealth = 3
+	else: 
+		heartHealth -= 1
 
 
 	
