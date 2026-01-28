@@ -2,3 +2,8 @@
 .godot/
 addons/
 /android/
+
+# Temp files
+*.tmp
+*.bak
+*.log
