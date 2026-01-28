@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
+Game2="*res://scripts/Level 2/game2.gd"
 PlayerManager="*res://00_Globals/GlobalPlayerManager.gd"
 SceneTransition="*res://scenes/Level1/scene_transition.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"

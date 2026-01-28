@@ -1,7 +1,7 @@
 ~ start
-if Game.guard1_met == false:
+if Game2.guard1_met == false:
 	Security Guard: Do not touch these artifacts. Is something wrong?
-	set Game.guard1_met = true
+	set Game2.guard1_met = true
 else:
 	Security Guard: I'm still watching you. Keep your hands off the glass.
 => END
