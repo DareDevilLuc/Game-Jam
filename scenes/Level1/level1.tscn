@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://ces4dmixr1m2y" path="res://scripts/Level 1/tables.gd" id="3_ejswk"]
 [ext_resource type="PackedScene" uid="uid://cad5hlvstduti" path="res://scenes/Level1/diffTables.tscn" id="4_6sh32"]
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/Level1/ChairDown.tscn" id="4_dwgg1"]
-[ext_resource type="Texture2D" uid="uid://by8c8mryqagt4" path="res://assets/sprites/Level 1/TeachersTable.png" id="4_ejswk"]
+[ext_resource type="Texture2D" uid="uid://by8c8mryqagt4" path="res://assets/Level 1/sprites/TeachersTable.png" id="4_ejswk"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/Level1/ChairUp.tscn" id="5_ru4tf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_g2h75"]

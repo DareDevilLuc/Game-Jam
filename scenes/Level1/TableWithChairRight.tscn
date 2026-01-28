@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://do6x7hx0cr5cu"]
 
-[ext_resource type="Texture2D" uid="uid://dmixwkdliyxwp" path="res://assets/sprites/Level 1/Table_with_Chair_Right.atlastex" id="1_5fbon"]
+[ext_resource type="Texture2D" uid="uid://dmixwkdliyxwp" path="res://assets/Level 1/sprites/Table_with_Chair_Right.atlastex" id="1_5fbon"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5fbon"]
 size = Vector2(48, 41)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://btgns8oa8652v"
-path="res://.godot/imported/ExamplePlayerSprite.png-a5f845b1cac22e99c18d65f88632f45f.ctex"
+uid="uid://c2x3hg8b6jfm6"
+path="res://.godot/imported/ChairUp.png-9335ea5727e28f4cffe551099606c1fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/ExamplePlayerSprite.png"
-dest_files=["res://.godot/imported/ExamplePlayerSprite.png-a5f845b1cac22e99c18d65f88632f45f.ctex"]
+source_file="res://assets/Level 1/sprites/ChairUp.png"
+dest_files=["res://.godot/imported/ChairUp.png-9335ea5727e28f4cffe551099606c1fe.ctex"]
 
 [params]
 

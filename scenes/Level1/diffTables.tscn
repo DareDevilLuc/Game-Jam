@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cad5hlvstduti"]
 
 [ext_resource type="Script" uid="uid://mnu3avu518i8" path="res://scripts/Level 1/diff_tables.gd" id="1_cffv5"]
-[ext_resource type="Texture2D" uid="uid://bf8p4fnfmn17o" path="res://assets/sprites/Level 1/DiffTables.png" id="1_f6gun"]
+[ext_resource type="Texture2D" uid="uid://bf8p4fnfmn17o" path="res://assets/Level 1/sprites/DiffTables.png" id="1_f6gun"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cffv5"]
 size = Vector2(32, 32)

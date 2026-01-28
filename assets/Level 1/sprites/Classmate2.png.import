@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://do8x33jqanug7"
-path="res://.godot/imported/chairDown.png-bf45c5e74aa9527a2fb66434986d1543.ctex"
+uid="uid://dndvmaka1kpd0"
+path="res://.godot/imported/Classmate2.png-2f7c1c05a4a497a34b6447ea2812935c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/chairDown.png"
-dest_files=["res://.godot/imported/chairDown.png-bf45c5e74aa9527a2fb66434986d1543.ctex"]
+source_file="res://assets/Level 1/sprites/Classmate2.png"
+dest_files=["res://.godot/imported/Classmate2.png-2f7c1c05a4a497a34b6447ea2812935c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dndvmaka1kpd0"
-path="res://.godot/imported/Classmate2.png-c9dec122952142c3276ebfa9ec82be63.ctex"
+uid="uid://fy1vmtjjl2kv"
+path="res://.godot/imported/Partner.png-e429a56e6175d31cf828b67674aec169.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/Classmate2.png"
-dest_files=["res://.godot/imported/Classmate2.png-c9dec122952142c3276ebfa9ec82be63.ctex"]
+source_file="res://assets/Level 1/sprites/Partner.png"
+dest_files=["res://.godot/imported/Partner.png-e429a56e6175d31cf828b67674aec169.ctex"]
 
 [params]
 

@@ -20,10 +20,11 @@ config/icon="res://icon.svg"
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
 PlayerManager="*res://00_Globals/GlobalPlayerManager.gd"
 SceneTransition="*res://scenes/Level1/scene_transition.tscn"
+DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 
 [editor_plugins]
 
-enabled=PackedStringArray()
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 
 [input]
 

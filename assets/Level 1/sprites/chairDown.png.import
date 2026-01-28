@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf8p4fnfmn17o"
-path="res://.godot/imported/DiffTables.png-24f4d242f42d9e5ce5231b5dad05a734.ctex"
+uid="uid://do8x33jqanug7"
+path="res://.godot/imported/chairDown.png-5753df921a08e81742098ad23f54ee7e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/DiffTables.png"
-dest_files=["res://.godot/imported/DiffTables.png-24f4d242f42d9e5ce5231b5dad05a734.ctex"]
+source_file="res://assets/Level 1/sprites/chairDown.png"
+dest_files=["res://.godot/imported/chairDown.png-5753df921a08e81742098ad23f54ee7e.ctex"]
 
 [params]
 

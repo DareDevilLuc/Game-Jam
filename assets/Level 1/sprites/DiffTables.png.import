@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2x3hg8b6jfm6"
-path="res://.godot/imported/ChairUp.png-40d88a043c11035993f58be5ebea06f1.ctex"
+uid="uid://bf8p4fnfmn17o"
+path="res://.godot/imported/DiffTables.png-d28f9411eda6266a9f48e444f53f60e3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/ChairUp.png"
-dest_files=["res://.godot/imported/ChairUp.png-40d88a043c11035993f58be5ebea06f1.ctex"]
+source_file="res://assets/Level 1/sprites/DiffTables.png"
+dest_files=["res://.godot/imported/DiffTables.png-d28f9411eda6266a9f48e444f53f60e3.ctex"]
 
 [params]
 

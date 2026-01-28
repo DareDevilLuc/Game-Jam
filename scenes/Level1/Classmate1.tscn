@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://co6ymb8lqlumw"]
 
-[ext_resource type="Texture2D" uid="uid://c6a5vqt60v3hs" path="res://assets/sprites/Level 1/Classmate1.png" id="1_x67tv"]
+[ext_resource type="Texture2D" uid="uid://c6a5vqt60v3hs" path="res://assets/Level 1/sprites/Classmate1.png" id="1_x67tv"]
 
 [sub_resource type="Animation" id="Animation_scbgo"]
 length = 0.001

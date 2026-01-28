@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by8c8mryqagt4"
-path="res://.godot/imported/TeachersTable.png-7b6d5722afd45249d7e96beb20230458.ctex"
+uid="uid://dnv4riuoe6uf2"
+path="res://.godot/imported/Teacher2.png-752055c6d49dbaf8283f3c017d58a900.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/Level 1/TeachersTable.png"
-dest_files=["res://.godot/imported/TeachersTable.png-7b6d5722afd45249d7e96beb20230458.ctex"]
+source_file="res://assets/Level 1/sprites/Teacher2.png"
+dest_files=["res://.godot/imported/Teacher2.png-752055c6d49dbaf8283f3c017d58a900.ctex"]
 
 [params]
 
