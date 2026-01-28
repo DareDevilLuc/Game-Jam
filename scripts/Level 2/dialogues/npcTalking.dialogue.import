@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://da5rufpgqaqnp"
+path="res://.godot/imported/npcTalking.dialogue-4675d07f6427355ff2dbd08001d75609.tres"
+
+[deps]
+
+source_file="res://scripts/Level 2/dialogues/npcTalking.dialogue"
+dest_files=["res://.godot/imported/npcTalking.dialogue-4675d07f6427355ff2dbd08001d75609.tres"]
+
+[params]
+
+defaults=true

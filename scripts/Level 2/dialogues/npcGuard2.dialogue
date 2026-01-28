@@ -1,0 +1,7 @@
+~ start
+if Game.guard2_met == false:
+	Security Guard: Uhm. You're supposed to watch the paintings.
+	set Game.guard2_met = true
+else:
+	Security Guard: I don't look like a painting, do I?
+=> END

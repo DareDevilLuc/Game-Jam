@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://1ju14v7c7sfv"]
+
+[ext_resource type="Script" uid="uid://npnvsfnmaq5b" path="res://scripts/Level 2/game2.gd" id="1_olhiu"]
+[ext_resource type="PackedScene" uid="uid://bwcbbqpj4ejbd" path="res://scenes/Level 2/level2.tscn" id="2_7bdfk"]
+[ext_resource type="PackedScene" uid="uid://d0bqkh0m14aoy" path="res://scenes/Level 2/player2.tscn" id="3_722d1"]
+[ext_resource type="Script" uid="uid://shwa07270fxx" path="res://scripts/Level 2/PlayerCamera2.gd" id="4_s1pfi"]
+
+[node name="Game2" type="Node2D"]
+script = ExtResource("1_olhiu")
+
+[node name="Level2" parent="." instance=ExtResource("2_7bdfk")]
+position = Vector2(-131, -195)
+
+[node name="Player2" parent="Level2" instance=ExtResource("3_722d1")]
+z_index = 2
+position = Vector2(128, 554)
+collision_mask = 6
+
+[node name="Camera2D2" type="Camera2D" parent="Level2/Player2"]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("4_s1pfi")

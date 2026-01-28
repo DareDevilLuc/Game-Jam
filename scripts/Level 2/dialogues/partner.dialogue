@@ -1,0 +1,12 @@
+~ start
+if Game.proposal_happened == false:
+	Boyfriend: Love, we’ve been dating for 4 years now and I was wondering something...
+	Athy: Hmm?
+	Boyfriend: Well, I was able to buy a place in the neighborhood and I wanted to ask if you wanted to move in together?
+	Athy: Oh...
+	Boyfriend: I mean, we can take it slow of course if you’re not ready…
+	Athy: No, let's do it. Let's move in together!
+	set Game.proposal_happened = true
+else:
+	Boyfriend: I'm so excited for us to move in together, Athy!
+=> END
