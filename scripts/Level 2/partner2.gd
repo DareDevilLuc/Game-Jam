@@ -12,7 +12,7 @@ var player: CharacterBody2D
 var last_direction: String = "down"
 
 func _ready() -> void:
-	player = get_tree().root.find_child("Player", true, false)
+	player = get_tree().root.find_child("Player2", true, false)
 	
 	if player == null:
 		print("Partner Error: Could not find Player node in the Scene Tree!")

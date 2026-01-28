@@ -1,6 +1,6 @@
 [gd_scene load_steps=41 format=3 uid="uid://kf0cx7rbdlxv"]
 
-[ext_resource type="Script" uid="uid://dfrbbgmg4yqt" path="res://scripts/Level 2/partner.gd" id="1_5j83e"]
+[ext_resource type="Script" uid="uid://dfrbbgmg4yqt" path="res://scripts/Level 2/partner2.gd" id="1_5j83e"]
 [ext_resource type="Texture2D" uid="uid://cdski3rpai7jv" path="res://assets/Level 2/sprites/2nd_partner-anim-Sheet.png" id="1_sdr36"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5j83e"]
@@ -291,7 +291,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_5j83e"]
 radius = 33.99346
 
-[node name="Partner" type="CharacterBody2D"]
+[node name="Partner2" type="CharacterBody2D"]
 z_index = 2
 y_sort_enabled = true
 scale = Vector2(0.15, 0.15)

@@ -19,7 +19,7 @@ config/icon="res://icon.svg"
 
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-Game="*res://scripts/Level 2/game.gd"
+Game="*res://scripts/Level 2/game2.gd"
 
 [editor_plugins]
 
