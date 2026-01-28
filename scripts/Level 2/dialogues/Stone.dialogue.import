@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dv8splkblw4md"
+path="res://.godot/imported/Stone.dialogue-bd0d017a4a70a9c734d015c485351073.tres"
+
+[deps]
+
+source_file="res://scripts/Level 2/dialogues/Stone.dialogue"
+dest_files=["res://.godot/imported/Stone.dialogue-bd0d017a4a70a9c734d015c485351073.tres"]
+
+[params]
+
+defaults=true

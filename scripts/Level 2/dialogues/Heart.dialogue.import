@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bu15402luhxqa"
+path="res://.godot/imported/Heart.dialogue-c7b7d3953245974aa367a9664e219412.tres"
+
+[deps]
+
+source_file="res://scripts/Level 2/dialogues/Heart.dialogue"
+dest_files=["res://.godot/imported/Heart.dialogue-c7b7d3953245974aa367a9664e219412.tres"]
+
+[params]
+
+defaults=true

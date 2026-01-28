@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://1gnbv5pbjcpa"
+path="res://.godot/imported/npcChild.dialogue-788912fa7f6080a19ea294724f4c4037.tres"
+
+[deps]
+
+source_file="res://scripts/Level 2/dialogues/npcChild.dialogue"
+dest_files=["res://.godot/imported/npcChild.dialogue-788912fa7f6080a19ea294724f4c4037.tres"]
+
+[params]
+
+defaults=true

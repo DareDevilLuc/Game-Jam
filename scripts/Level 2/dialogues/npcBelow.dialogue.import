@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bdoo1fhgvfrea"
+path="res://.godot/imported/npcBelow.dialogue-a52f58a636bcb4a561c1feca72718eb6.tres"
+
+[deps]
+
+source_file="res://scripts/Level 2/dialogues/npcBelow.dialogue"
+dest_files=["res://.godot/imported/npcBelow.dialogue-a52f58a636bcb4a561c1feca72718eb6.tres"]
+
+[params]
+
+defaults=true
