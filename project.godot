@@ -23,7 +23,7 @@ SceneTransition="*res://scenes/Level1/scene_transition.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/sprite_cutter/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
