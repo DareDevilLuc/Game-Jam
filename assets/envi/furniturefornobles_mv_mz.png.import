@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cw7tt67rhlwoc"
-path="res://.godot/imported/furniturefornobles_mv_mz.png-4068497cd5a8d8261c3aaee6ee7298da.ctex"
+path="res://.godot/imported/furniturefornobles_mv_mz.png-82d9c65996658211c6ec9ffdc98dfde0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/environment/furniturefornobles_mv_mz.png"
-dest_files=["res://.godot/imported/furniturefornobles_mv_mz.png-4068497cd5a8d8261c3aaee6ee7298da.ctex"]
+source_file="res://assets/envi/furniturefornobles_mv_mz.png"
+dest_files=["res://.godot/imported/furniturefornobles_mv_mz.png-82d9c65996658211c6ec9ffdc98dfde0.ctex"]
 
 [params]
 
