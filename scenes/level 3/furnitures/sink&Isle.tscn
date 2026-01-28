@@ -1,0 +1,67 @@
+[gd_scene load_steps=11 format=3 uid="uid://g1jgrj3cu60s"]
+
+[ext_resource type="Script" uid="uid://cxgilxxcmadsu" path="res://scripts/level 3/sink&isle.gd" id="1_k3cge"]
+[ext_resource type="Texture2D" uid="uid://d11uvxk7luurx" path="res://assets/level 3/textures/Sink.atlastex" id="2_6ak0x"]
+[ext_resource type="Texture2D" uid="uid://c1byv81lso4lu" path="res://assets/level 3/textures/SideIsle.atlastex" id="3_8ft1q"]
+[ext_resource type="Texture2D" uid="uid://ciovjidwwjf26" path="res://assets/level 3/textures/Fisbowl.atlastex" id="4_t5mov"]
+[ext_resource type="Texture2D" uid="uid://df4lq03yfdkw2" path="res://assets/level 3/textures/Meal.atlastex" id="5_41irs"]
+[ext_resource type="Texture2D" uid="uid://fadbkugn4w8o" path="res://assets/level 3/textures/Plate.atlastex" id="6_u16tm"]
+[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="7_p20su"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(105, 37)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pg1"]
+size = Vector2(20, 27)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3cio"]
+size = Vector2(70, 40)
+
+[node name="Sink" type="StaticBody2D"]
+collision_mask = 3
+script = ExtResource("1_k3cge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(10.5, -11.5)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(55, 9.5)
+shape = SubResource("RectangleShape2D_e3pg1")
+
+[node name="Sink" type="Sprite2D" parent="."]
+position = Vector2(-4, -7)
+texture = ExtResource("2_6ak0x")
+
+[node name="SideIsle" type="Sprite2D" parent="."]
+position = Vector2(49, 1)
+texture = ExtResource("3_8ft1q")
+
+[node name="Fisbowl" type="Sprite2D" parent="."]
+position = Vector2(54, -21)
+texture = ExtResource("4_t5mov")
+
+[node name="Meal" type="Sprite2D" parent="."]
+position = Vector2(-28, -20)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_41irs")
+
+[node name="Plate" type="Sprite2D" parent="."]
+position = Vector2(-32, -19)
+scale = Vector2(0.49999997, 0.5)
+texture = ExtResource("6_u16tm")
+
+[node name="Plate2" type="Sprite2D" parent="."]
+position = Vector2(-24.499998, -19.5)
+scale = Vector2(0.4666667, 0.6249999)
+texture = ExtResource("6_u16tm")
+
+[node name="trigger" parent="." instance=ExtResource("7_p20su")]
+position = Vector2(45, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+position = Vector2(-16, 0)
+shape = SubResource("RectangleShape2D_y3cio")
+
+[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
+[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]
