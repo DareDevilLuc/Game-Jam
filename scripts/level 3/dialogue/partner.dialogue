@@ -1,0 +1,19 @@
+~ partner_intro
+Boyfriend: [[I can see a future with you|My parents really want to know more about you|Maybe we could raise a daughter one day, she'll look just like you|I'm sorry if I got you upset, I wont forget next time|You've been drinking wine a lot lately, you okay?|I'll do the dishes, you can go get some rest.]]
+=> END
+
+~ partner_apology
+Boyfriend: Hey love, are you still mad?
+Athy: ...
+Boyfriend: I'm really sorry, I know it meant a lot to you.
+Athy: Why does it only feel a lot to me and not to you? You don't seem to care.
+Boyfriend: I do care. I will do better, I promise. I just had a lot of things in my mind.
+Athy: You always say that. What could you even be thinking about?
+Boyfriend: Well…actually..
+Athy: ...
+Boyfriend: Uh, I was thinking about getting married.
+Athy: Like us, getting married?
+Boyfriend: Yes! Well, but not right now. When I can save up for a ring, I wanted to propose.
+Boyfriend: Would that be okay?
+Athy: Okay, we'll see.
+=> END

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs4tyuagr65jx"]
+
+[ext_resource type="Texture2D" uid="uid://bkq5fmyb7tgtw" path="res://assets/level 3/textures/Hanger.atlastex" id="1_dkbnq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
+size = Vector2(4, 40)
+
+[node name="Hanger" type="StaticBody2D"]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("RectangleShape2D_h5ql5")
+
+[node name="Hanger" type="Sprite2D" parent="."]
+position = Vector2(0.33333302, -10.000001)
+scale = Vector2(0.95833325, 1)
+texture = ExtResource("1_dkbnq")
