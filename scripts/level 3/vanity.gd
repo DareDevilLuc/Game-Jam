@@ -8,19 +8,23 @@ extends StaticBody2D
 @onready var vanity: Sprite2D = $Vanity
 @onready var champagne_problems: Sprite2D = $ChampagneProblems
 @onready var wine_glass: Sprite2D = $WineGlass
+@onready var phone: Sprite2D = $Phone
 
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var anomally := randi() % 6 == 0
-			if (anomally):
+	if get_tree().current_scene.name == "Vanity":
 				wine_glass.visible = false
 				champagne_problems.visible = true
-				Stage3State.add_anomaly()
-			else:
+	else:
 				wine_glass.visible = true
 				champagne_problems.visible = false
+				
+	if get_tree().current_scene.name == "Phone":
+				phone.visible = false
+				
+	else:
+				phone.visible = true
+			
 
 
 var balloon: Node = null

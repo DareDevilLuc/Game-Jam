@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://g1jgrj3cu60s"]
+[gd_scene load_steps=13 format=3 uid="uid://g1jgrj3cu60s"]
 
 [ext_resource type="Script" uid="uid://cxgilxxcmadsu" path="res://scripts/level 3/sink&isle.gd" id="1_k3cge"]
 [ext_resource type="Texture2D" uid="uid://d11uvxk7luurx" path="res://assets/level 3/textures/Sink.atlastex" id="2_6ak0x"]
@@ -15,8 +15,11 @@ size = Vector2(105, 37)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e3pg1"]
 size = Vector2(20, 27)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ak0x"]
+size = Vector2(28.5, 41)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_y3cio"]
-size = Vector2(106, 40)
+size = Vector2(49, 40)
 
 [node name="Sink" type="StaticBody2D"]
 collision_mask = 3
@@ -74,8 +77,12 @@ texture = ExtResource("5_41irs")
 [node name="trigger" parent="." instance=ExtResource("7_p20su")]
 position = Vector2(45, -10)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="trigger"]
+position = Vector2(4, 2.5)
+shape = SubResource("RectangleShape2D_6ak0x")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
-position = Vector2(-34, 0)
+position = Vector2(-63.5, 1)
 shape = SubResource("RectangleShape2D_y3cio")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]

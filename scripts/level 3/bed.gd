@@ -13,10 +13,7 @@ extends StaticBody2D
 
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-		randomize()
-		var anomally := randi() % 9 == 0
-		if anomally:
+	if get_tree().current_scene.name == "Bed":
 			bed.visible = false
 			one_bed.visible = true
 			double_bed.disabled = true
@@ -24,7 +21,7 @@ func _ready():
 			double.disabled = true
 			single_bed.disabled = false
 			Stage3State.add_anomaly()
-		else:
+	else:
 			bed.visible = true
 			one_bed.visible = false
 			double_bed.disabled = false

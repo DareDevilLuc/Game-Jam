@@ -5,13 +5,10 @@ extends StaticBody2D
 
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var anomally := randi() % 2 == 0
-			if (anomally):
+	if get_tree().current_scene.name == "Chair":
 				vanity_chair.visible = false
 				vanity_char_2.visible = true
 				Stage3State.add_anomaly()
-			else:
+	else:
 				vanity_chair.visible = true
 				vanity_char_2.visible = false

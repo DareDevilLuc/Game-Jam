@@ -4,6 +4,17 @@ extends StaticBody2D
 @onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
+@onready var wardrobe_2: Sprite2D = $Wardrobe2
+@onready var wardrobe_3: Sprite2D = $Wardrobe3
+func _ready():
+	if get_tree().current_scene.name == "Drawer":
+				wardrobe_2.visible = true
+				wardrobe_3.visible = true
+				wardrobe.visible = false
+	else:
+				wardrobe_2.visible = false
+				wardrobe_3.visible = false
+				wardrobe.visible = true
 
 
 var balloon: Node = null
@@ -27,6 +38,8 @@ func _on_trigger_body_entered(body):
 
 	player_in_range = true
 	wardrobe.modulate = Color(1.3, 1.3, 1.3)
+	wardrobe_2.modulate = Color(1.3, 1.3, 1.3)
+	wardrobe_3.modulate = Color(1.3, 1.3, 1.3)
 	interact_start = interact.instantiate()
 	add_child(interact_start)
 	var icon = interact_start.get_child(0)
@@ -44,6 +57,8 @@ func _on_trigger_body_exited(body):
 	player_in_range = false
 	dialogue_open = false
 	wardrobe.modulate = Color.WHITE
+	wardrobe_2.modulate = Color.WHITE
+	wardrobe_3.modulate =  Color.WHITE
 
 
 	if balloon:

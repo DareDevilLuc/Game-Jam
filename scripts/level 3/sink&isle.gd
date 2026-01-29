@@ -18,6 +18,8 @@ var interact_start: Node = null
 		
 
 func _process(_delta):
+	
+	
 	if player_in_range and not dialogue_open and Input.is_action_just_pressed("interact"):
 		sink.visible = true
 		sink_anommaly.visible = false
@@ -25,16 +27,11 @@ func _process(_delta):
 		plate.visible = true
 		plate_2.visible = true
 		meal.visible = false
-		if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var show_plates := randi() % 2 == 0	
-			
-			if (show_plates):			
+		if get_tree().current_scene.name == "Sink":
 				plate.visible = false
 				plate_2.visible = false
 				meal.visible = true
-				Stage3State.add_anomaly()
-			else:
+		else:
 				plate.visible = true
 				plate_2.visible = true
 				meal.visible = false
