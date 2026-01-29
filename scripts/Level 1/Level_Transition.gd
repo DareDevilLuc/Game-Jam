@@ -4,7 +4,7 @@ class_name LevelTransition extends Area2D
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
 var level : Array[ PackedScene ] = [
-	load("res://scenes/Level1/Level1_noAnomaly.tscn"),
+	load("res://scenes/Level1/Anomalies/Level1_noAnomaly.tscn"),
 	load("res://scenes/Level1/Anomalies/Level1_Anomaly1.tscn"),
 	load("res://scenes/Level1/Anomalies/Level1_Anomaly2.tscn"),
 	load("res://scenes/Level1/Anomalies/Level1_Anomaly3.tscn"),
