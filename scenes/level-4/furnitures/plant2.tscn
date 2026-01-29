@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://cl5xk015g5wyq"]
+
+[ext_resource type="Texture2D" uid="uid://intiggw5xpqe" path="res://assets/level-4/envi/Interiors_free_32x32.png" id="1_buw2v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qwun"]
+radius = 9.0
+height = 18.0
+
+[node name="Plant" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_buw2v")
+offset = Vector2(0, -10)
+region_enabled = true
+region_rect = Rect2(334, 1426, 36, 62)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 8)
+shape = SubResource("CapsuleShape2D_0qwun")

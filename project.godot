@@ -18,10 +18,10 @@ config/icon="res://icon.svg"
 [autoload]
 
 LevelManager="*res://00_Globals/GlobalLevelManager.gd"
-Game2="*res://scripts/Level 2/game2.gd"
 PlayerManager="*res://00_Globals/GlobalPlayerManager.gd"
 SceneTransition="*res://scenes/Level1/scene_transition.tscn"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
+Game2="*res://scripts/Level 2/game2.gd"
 Level3State="*res://scripts/level 3/level3State.gd"
 Stage3State="*res://scripts/level 3/StageGameState.gd"
 
@@ -59,7 +59,7 @@ interact={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://scripts/Level 2/dialogues/Castle.dialogue", "res://scripts/Level 2/dialogues/Chair.dialogue", "res://scripts/Level 2/dialogues/Dinosaur.dialogue", "res://scripts/Level 2/dialogues/Heart.dialogue", "res://scripts/Level 2/dialogues/npcBelow.dialogue", "res://scripts/Level 2/dialogues/npcChild.dialogue", "res://scripts/Level 2/dialogues/npcGirlDino.dialogue", "res://scripts/Level 2/dialogues/npcGuard.dialogue", "res://scripts/Level 2/dialogues/npcGuard2.dialogue", "res://scripts/Level 2/dialogues/npcTalking.dialogue", "res://scripts/Level 2/dialogues/partner.dialogue", "res://scripts/Level 2/dialogues/Stone.dialogue", "res://scripts/level 3/dialogue/partner.dialogue", "res://scripts/level 3/dialogue/player.dialogue")
+locale/translations_pot_files=PackedStringArray("res://scripts/Level 2/dialogues/Castle.dialogue", "res://scripts/Level 2/dialogues/Chair.dialogue", "res://scripts/Level 2/dialogues/Dinosaur.dialogue", "res://scripts/Level 2/dialogues/Heart.dialogue", "res://scripts/Level 2/dialogues/npcBelow.dialogue", "res://scripts/Level 2/dialogues/npcChild.dialogue", "res://scripts/Level 2/dialogues/npcGirlDino.dialogue", "res://scripts/Level 2/dialogues/npcGuard.dialogue", "res://scripts/Level 2/dialogues/npcGuard2.dialogue", "res://scripts/Level 2/dialogues/npcTalking.dialogue", "res://scripts/Level 2/dialogues/partner.dialogue", "res://scripts/Level 2/dialogues/Stone.dialogue", "res://scripts/level 3/dialogue/partner.dialogue", "res://scripts/level 3/dialogue/player.dialogue", "res://assets/level-4/dialogues/npc.dialogue", "res://assets/level-4/dialogues/parent.dialogue")
 
 [layer_names]
 

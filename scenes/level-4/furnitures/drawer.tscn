@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnqwmm8dnvk8o"]
+
+[ext_resource type="Texture2D" uid="uid://intiggw5xpqe" path="res://assets/level-4/envi/Interiors_free_32x32.png" id="1_2pmo6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pbntl"]
+radius = 13.038404
+
+[node name="Drawer" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_2pmo6")
+offset = Vector2(0, 18)
+region_enabled = true
+region_rect = Rect2(32.066696, 1833.7809, 32.183624, 40.40796)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 24)
+shape = SubResource("CircleShape2D_pbntl")
