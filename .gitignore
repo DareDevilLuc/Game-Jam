@@ -1,3 +1,10 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Temp files
+*.tmp
+*.bak
+*.log
+
+*.depren

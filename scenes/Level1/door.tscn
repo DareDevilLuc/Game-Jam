@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4m84k71pu7m"]
+
+[ext_resource type="Texture2D" uid="uid://cumo04vgwyljv" path="res://assets/Level 1/sprites/DoorWithWindow.atlastex" id="1_hpvv5"]
+[ext_resource type="Script" uid="uid://nps2477pr24m" path="res://scripts/Level 1/door.gd" id="2_uvdjg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uvdjg"]
+size = Vector2(117, 61.999825)
+
+[node name="Door" type="Sprite2D"]
+scale = Vector2(1.1, 1.1428567)
+texture = ExtResource("1_hpvv5")
+script = ExtResource("2_uvdjg")
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(-43.636364, -392.00012)
+scale = Vector2(0.9090909, 0.8750003)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(5.5, 447.00027)
+shape = SubResource("RectangleShape2D_uvdjg")
