@@ -27,11 +27,11 @@ SceneTransition="*res://scenes/Level1/scene_transition.tscn"
 
 [dialogue_manager]
 
-runtime/balloon_path="res://scenes/level 3/dialogueBox/balloon.tscn"
+runtime/balloon_path="res://scenes/level 3/dialogueBox/newDialogueBox/balloon.tscn"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg", "res://addons/sprite_cutter/plugin.cfg")
 
 [global_group]
 
@@ -72,7 +72,7 @@ skip={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://scripts/level 3/dialogue/partner.dialogue", "res://scripts/level 3/dialogue/player.dialogue")
+locale/translations_pot_files=PackedStringArray("res://scripts/level 3/dialogue/partner.dialogue", "res://scripts/level 3/dialogue/player.dialogue", "res://scripts/Level 2/dialogues/Castle.dialogue", "res://scripts/Level 2/dialogues/Chair.dialogue", "res://scripts/Level 2/dialogues/Dinosaur.dialogue", "res://scripts/Level 2/dialogues/Heart.dialogue", "res://scripts/Level 2/dialogues/npcBelow.dialogue", "res://scripts/Level 2/dialogues/npcChild.dialogue", "res://scripts/Level 2/dialogues/npcGirlDino.dialogue", "res://scripts/Level 2/dialogues/npcGuard.dialogue", "res://scripts/Level 2/dialogues/npcGuard2.dialogue", "res://scripts/Level 2/dialogues/npcTalking.dialogue", "res://scripts/Level 2/dialogues/partner.dialogue", "res://scripts/Level 2/dialogues/Stone.dialogue")
 
 [layer_names]
 

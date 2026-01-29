@@ -535,11 +535,10 @@ z_index = 5
 position = Vector2(43, 124)
 
 [node name="Player" parent="Characters" instance=ExtResource("41_ig14o")]
-position = Vector2(4, 119)
-collision_layer = 2
+position = Vector2(7, 120)
 
 [node name="Camera2D" type="Camera2D" parent="Characters/Player"]
-position = Vector2(10, 2)
+position = Vector2(14, 1)
 zoom = Vector2(8, 8)
 limit_left = -255
 limit_top = 25

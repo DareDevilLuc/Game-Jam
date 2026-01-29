@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+
 @onready var player: CharacterBody2D = get_node("../Player") 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var trigger: Area2D = $trigger
@@ -19,7 +20,7 @@ func face_player():
 	else:
 		sprite.play("idleFront")
 
-@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
+@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/newDialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/partner.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
 
