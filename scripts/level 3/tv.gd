@@ -9,16 +9,13 @@ extends StaticBody2D
 @onready var tv_anomally: Sprite2D = $TvAnomally
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-		randomize()
-		var anomally := randi() % 9 == 0
-		if anomally:
-			tv.visible = false
-			tv_anomally.visible = true
-			Stage3State.add_anomaly()
-		else:
-			tv.visible = true
-			tv_anomally.visible = false
+	if get_tree().current_scene.name == "TV":
+		tv.visible = false
+		tv_anomally.visible = true
+		
+	else:
+		tv.visible = true
+		tv_anomally.visible = false
 
 
 var balloon: Node = null

@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ctbepn800vnaa"]
+[gd_scene load_steps=5 format=3 uid="uid://ctbepn800vnaa"]
 
 [ext_resource type="Texture2D" uid="uid://cn1yolpqyw705" path="res://assets/level 3/textures/DrawerSide.atlastex" id="1_qko0n"]
+[ext_resource type="Script" uid="uid://wwta6kekwylf" path="res://scripts/level 3/small_drawer&coffee.gd" id="1_tiu6k"]
 [ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/level 3/textures/Coffee.atlastex" id="2_2pv7q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
@@ -8,6 +9,7 @@ size = Vector2(11, 23)
 
 [node name="drawerSmall" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_tiu6k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -1.5)

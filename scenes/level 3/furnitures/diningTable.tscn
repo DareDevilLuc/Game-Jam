@@ -84,6 +84,8 @@ visible = false
 position = Vector2(3.0000005, -7.1525574e-07)
 scale = Vector2(0.5142857, 0.45)
 texture = ExtResource("8_7xci7")
+region_enabled = true
+region_rect = Rect2(0, 0, 33.407173, 40)
 
 [node name="trigger" parent="." instance=ExtResource("9_b12me")]
 position = Vector2(0, 1)

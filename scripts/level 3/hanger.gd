@@ -3,13 +3,10 @@ extends StaticBody2D
 @onready var hanger_anomally: Sprite2D = $HangerAnomally
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var anomally := randi() % 15 == 0
-			if (anomally):
+	if get_tree().current_scene.name == "Hanger":
 				hanger.visible = false
 				hanger_anomally.visible = true
 				Stage3State.add_anomaly()
-			else:
+	else:
 				hanger.visible = true
 				hanger_anomally.visible = false
