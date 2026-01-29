@@ -22,6 +22,23 @@ shape = SubResource("RectangleShape2D_h5ql5")
 position = Vector2(3.3999999, -5)
 scale = Vector2(0.7749999, 0.6)
 texture = ExtResource("1_vmci1")
+region_rect = Rect2(0, 0, 48, 40)
+
+[node name="Wardrobe2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(2.9999962, -0.5000019)
+scale = Vector2(0.79166675, 0.483871)
+texture = ExtResource("1_vmci1")
+region_enabled = true
+region_rect = Rect2(0, 8.171834, 48, 31.828167)
+
+[node name="Wardrobe3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3.125, -10.250002)
+scale = Vector2(0.7864583, 0.51923066)
+texture = ExtResource("1_vmci1")
+region_enabled = true
+region_rect = Rect2(0, 0, 48.29502, 26.446436)
 
 [node name="trigger" parent="." instance=ExtResource("3_yh8cc")]
 position = Vector2(1, -5)

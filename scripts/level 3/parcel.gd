@@ -8,12 +8,23 @@ extends StaticBody2D
 @onready var parcel: Sprite2D = $Parcel
 @onready var parcel_3: Sprite2D = $Parcel3
 @onready var parcel_2: Sprite2D = $Parcel2
+@onready var parcel_4: Sprite2D = $Parcel4
 
 
 var balloon: Node = null
 var player_in_range := false
 var dialogue_open := false
 var interact_start: Node = null
+
+
+func _ready():
+	if get_tree().current_scene.name == "Box":
+		parcel_4.visible = true;
+	else:
+		parcel_4.visible = false;
+				
+
+
 
 func _process(_delta):
 	if player_in_range and not dialogue_open and Input.is_action_just_pressed("interact"):
@@ -33,6 +44,7 @@ func _on_trigger_body_entered(body):
 	parcel.modulate = Color(1.3, 1.3, 1.3)
 	parcel_2.modulate = Color(1.3, 1.3, 1.3)
 	parcel_3.modulate = Color(1.3, 1.3, 1.3)
+	parcel_4.modulate = Color(1.3, 1.3, 1.3)
 
 	interact_start = interact.instantiate()
 	add_child(interact_start)
@@ -54,6 +66,7 @@ func _on_trigger_body_exited(body):
 	parcel.modulate = Color.WHITE
 	parcel_2.modulate = Color.WHITE
 	parcel_3.modulate = Color.WHITE
+	parcel_4.modulate = Color.WHITE
 
 	if balloon:
 		balloon.queue_free()

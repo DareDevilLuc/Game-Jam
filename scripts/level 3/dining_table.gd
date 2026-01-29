@@ -13,28 +13,22 @@ extends StaticBody2D
 
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-		randomize()
-		var anomally := randi() % 9 == 0
-		if anomally:
+	if get_tree().current_scene.name == "Dining":
 			fruit_basket.visible = false
 			vegetable.visible = true
-			Stage3State.add_anomaly()
-		else:
+	else:
 			fruit_basket.visible = true
 			vegetable.visible = false
-		var wineAnomally := randi() % 5 == 0
-		if wineAnomally:
+	if get_tree().current_scene.name == "Utensils":
 			wine.visible = false
 			wine_right.visible = true
 			cutlery_2.visible = false
 			cutlery_3.visible = true
-			Stage3State.add_anomaly()
-		else:
+	else:
 			wine.visible = true
 			wine_right.visible = false
 			cutlery_2.visible = true
-			cutlery_3.visible = false
+			cutlery_3.visible = false	
 			
 
 

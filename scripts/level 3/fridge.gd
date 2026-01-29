@@ -19,14 +19,11 @@ func _process(_delta):
 	if player_in_range and not dialogue_open and Input.is_action_just_pressed("interact"):
 		fridge.visible = false
 		open_fridge.visible = true
-		if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var anomally := randi() % 9 == 0
-			if anomally:
-				coffee_anomally.visible = true
-				Stage3State.add_anomaly()
-			else:
-				coffee_anomally.visible = false
+		if get_tree().current_scene.name == "Fridge":
+			coffee_anomally.visible = true
+			Stage3State.add_anomaly()
+		else:
+			coffee_anomally.visible = false
 			
 		dialogue_open = true
 		balloon = balloon_scene.instantiate()

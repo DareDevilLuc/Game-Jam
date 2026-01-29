@@ -12,13 +12,9 @@ var dialogue_open := false
 var interact_start: Node = null
 
 func _ready():
-	if get_tree().current_scene.name != "Level 3":
-		randomize()
-		var popAnommaly := randi() % 10 == 0
-		if (popAnommaly):
+	if get_tree().current_scene.name == "Puppy":
 			pup.play("puppyAnomally")
-			Stage3State.add_anomaly()
-		else:
+	else:
 			pup.play("puppyNormal")
 			
 
