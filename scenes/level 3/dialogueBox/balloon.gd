@@ -1,6 +1,7 @@
 extends CanvasLayer
 ## A basic dialogue balloon for use with Dialogue Manager.
 
+@onready var progress: Sprite2D = $Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/Control/ArrowDownSheet
 
 ## The dialogue resource
 @export var dialogue_resource: DialogueResource
@@ -64,8 +65,6 @@ var mutation_cooldown: Timer = Timer.new()
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
-## Indicator to show that player can progress dialogue.
-@onready var progress: Polygon2D = %Progress
 
 
 func _ready() -> void:

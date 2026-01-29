@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=3 uid="uid://mt3lotj7nrev"]
 
-[ext_resource type="Script" uid="uid://dueacs56knok7" path="res://scripts/level 3/partner.gd" id="1_5j83e"]
+[ext_resource type="Script" uid="uid://dueacs56knok7" path="res://scripts/level 3/partner_3.gd" id="1_5j83e"]
 [ext_resource type="Texture2D" uid="uid://bjq6p2bomfk0c" path="res://assets/level 3/3rd_partner-anim-Sheet.png" id="1_sdr36"]
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="3_3ek73"]
 
