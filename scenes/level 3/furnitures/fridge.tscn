@@ -1,33 +1,45 @@
-[gd_scene load_steps=6 format=3 uid="uid://crbcwkuhgfbqf"]
+[gd_scene load_steps=8 format=3 uid="uid://crbcwkuhgfbqf"]
 
 [ext_resource type="Texture2D" uid="uid://dawfbmx13a8n8" path="res://assets/level 3/textures/Fridge.atlastex" id="1_dj6bw"]
 [ext_resource type="Script" uid="uid://cg4jjtig5s1hl" path="res://scripts/level 3/fridge.gd" id="1_irq2n"]
+[ext_resource type="Texture2D" uid="uid://ba7k2n7a82714" path="res://assets/level 3/Anomalies/RefAnomally.atlastex" id="2_eqat3"]
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="3_phyis"]
+[ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/level 3/textures/Coffee.atlastex" id="4_nmfei"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
-size = Vector2(23, 40)
+size = Vector2(23, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqgjk"]
-size = Vector2(19, 29)
+size = Vector2(23.5, 33.5)
 
 [node name="Fridge" type="StaticBody2D"]
 collision_mask = 3
 script = ExtResource("1_irq2n")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.5, -6)
+position = Vector2(0.5, -1.5)
 shape = SubResource("RectangleShape2D_h5ql5")
 
-[node name="Fridge" type="Sprite2D" parent="."]
+[node name="RefAnomally" type="Sprite2D" parent="."]
+position = Vector2(1, -2)
+texture = ExtResource("2_eqat3")
+
+[node name="OpenFridge" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, -2)
 texture = ExtResource("1_dj6bw")
 
+[node name="CoffeeAnomally" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(5, 2)
+scale = Vector2(0.45, 0.45000002)
+texture = ExtResource("4_nmfei")
+
 [node name="trigger" parent="." instance=ExtResource("3_phyis")]
 position = Vector2(-1, -1)
-collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
-position = Vector2(1.5, 7.5)
+position = Vector2(2.25, 10.25)
 shape = SubResource("RectangleShape2D_nqgjk")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]

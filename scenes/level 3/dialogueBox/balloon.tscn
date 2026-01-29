@@ -1,9 +1,10 @@
-[gd_scene load_steps=14 format=3 uid="uid://yb2tfot3u0mq"]
+[gd_scene load_steps=15 format=3 uid="uid://yb2tfot3u0mq"]
 
 [ext_resource type="Script" uid="uid://w32mwfbb2kub" path="res://scenes/level 3/dialogueBox/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
-[ext_resource type="Texture2D" uid="uid://bx1nwqmafx15f" path="res://assets/level 3/textbox_darker_textarea.png" id="2_bnb56"]
+[ext_resource type="Texture2D" uid="uid://dhrisn816eyeb" path="res://assets/level 3/dia-box-Sheet.png" id="2_u6umw"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://tmwpwelqf8k6" path="res://assets/level 3/arrow-down-Sheet.png" id="4_gi868"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -65,42 +66,116 @@ MarginContainer/constants/margin_top = 15
 PanelContainer/styles/panel = SubResource("StyleBoxFlat_qkmqt")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vh05t"]
-texture = ExtResource("2_bnb56")
+texture = ExtResource("2_u6umw")
+expand_margin_left = 50.0
 
-[sub_resource type="Animation" id="Animation_nlsx6"]
-length = 0.001
-tracks/0/type = "bezier"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Progress:position:y")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"handle_modes": PackedInt32Array(0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
-"times": PackedFloat32Array(0)
-}
-
-[sub_resource type="Animation" id="Animation_qkmqt"]
-resource_name = "progress"
+[sub_resource type="Animation" id="Animation_mf7f4"]
+resource_name = "bounce"
 loop_mode = 1
-step = 0.1
-tracks/0/type = "bezier"
+tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Progress:position:y")
+tracks/0/path = NodePath("../ArrowDownSheet:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
-"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.2, -0.0157438, -4, -0.2, 0.0112069, 0.25, 0, -4, -0.25, 0, 0.25, 0, 0, -0.2, 0.00299701, 0.25, 0),
-"times": PackedFloat32Array(0, 0.1, 0.5, 0.6, 1)
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowDownSheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(7.999961, -12), Vector2(7.9999695, -23), Vector2(7.999961, -12)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.46666667, 1.0333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0.68333334, 0.68333334), Vector2(0.68333334, 0.68333334), Vector2(0.68333334, 0.68333334)]
 }
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1337t"]
+[sub_resource type="Animation" id="Animation_vcbdn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../ArrowDownSheet:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28, 22)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../ArrowDownSheet:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(28, 22)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1s53v"]
 _data = {
-&"RESET": SubResource("Animation_nlsx6"),
-&"progress": SubResource("Animation_qkmqt")
+&"RESET": SubResource("Animation_vcbdn"),
+&"bounce": SubResource("Animation_mf7f4")
 }
 
 [node name="ExampleBalloon" type="CanvasLayer"]
@@ -110,20 +185,27 @@ script = ExtResource("1_36de5")
 [node name="Balloon" type="Control" parent="."]
 unique_name_in_owner = true
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+offset_left = -576.0
+offset_top = -648.0
+offset_right = -576.0
+offset_bottom = -648.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
+size_flags_stretch_ratio = 3.0
 theme = SubResource("Theme_qq3yp")
 
 [node name="PanelContainer" type="PanelContainer" parent="Balloon"]
 clip_children = 2
 layout_mode = 0
-offset_left = 14.0
-offset_top = 426.0
-offset_right = 1106.0
-offset_bottom = 615.0
+offset_left = -11.0
+offset_top = 410.0
+offset_right = 1105.9231
+offset_bottom = 597.0
 mouse_filter = 1
 theme_override_styles/panel = SubResource("StyleBoxTexture_vh05t")
 
@@ -161,15 +243,15 @@ custom_minimum_size = Vector2(20, 10)
 layout_mode = 2
 size_flags_vertical = 8
 
-[node name="Progress" type="Polygon2D" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/Control"]
-unique_name_in_owner = true
-polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
+[node name="ArrowDownSheet" type="Sprite2D" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/Control"]
+position = Vector2(28, 22)
+texture = ExtResource("4_gi868")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/Control"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/Control/ArrowDownSheet"]
 libraries = {
-&"": SubResource("AnimationLibrary_1337t")
+&"": SubResource("AnimationLibrary_1s53v")
 }
-autoplay = "progress"
+autoplay = "bounce"
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true

@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b222bx3hpqxo6"]
+[gd_scene load_steps=5 format=3 uid="uid://b222bx3hpqxo6"]
 
 [ext_resource type="Texture2D" uid="uid://cqf7rb7q6oc74" path="res://assets/level 3/textures/VanityChair.atlastex" id="1_5nmbc"]
+[ext_resource type="Script" uid="uid://cdg251dxgne4r" path="res://scripts/level 3/chair_room.gd" id="1_5raxj"]
+[ext_resource type="Texture2D" uid="uid://kr8obhm3ny6o" path="res://assets/level 3/Anomalies/VanityChar2.atlastex" id="3_3i0uh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(17, 24)
 
 [node name="Chair" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_5raxj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(2.5, -6)
@@ -16,3 +19,9 @@ shape = SubResource("RectangleShape2D_h5ql5")
 position = Vector2(3, -6)
 scale = Vector2(0.70312506, 0.7552084)
 texture = ExtResource("1_5nmbc")
+
+[node name="VanityChar2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(3.4999993, -3.833334)
+scale = Vector2(0.6333334, 0.6369048)
+texture = ExtResource("3_3i0uh")

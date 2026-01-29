@@ -1,13 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://w78omdprmg65"]
+[gd_scene load_steps=6 format=3 uid="uid://w78omdprmg65"]
 
+[ext_resource type="Script" uid="uid://bari1iyixk26y" path="res://scripts/level 3/coffee_table.gd" id="1_abaay"]
 [ext_resource type="Texture2D" uid="uid://c347offtguiln" path="res://assets/level 3/textures/SmallDesk.atlastex" id="1_ve8bb"]
 [ext_resource type="Texture2D" uid="uid://dbruagu4t4kop" path="res://assets/level 3/textures/MiniPlant.atlastex" id="2_ecq5j"]
+[ext_resource type="Texture2D" uid="uid://ip3cv7q4fxha" path="res://assets/level 3/Anomalies/CarpetAnomally.atlastex" id="3_6kf4b"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(23, 17)
 
 [node name="CouchBack" type="StaticBody2D"]
 collision_mask = 3
+script = ExtResource("1_abaay")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-0.5, -2.5)
@@ -16,6 +19,19 @@ shape = SubResource("RectangleShape2D_h5ql5")
 [node name="SmallDesk" type="Sprite2D" parent="."]
 position = Vector2(-1, -3)
 texture = ExtResource("1_ve8bb")
+
+[node name="CarpetAnomally" type="Sprite2D" parent="."]
+position = Vector2(0.2500003, -4.25)
+scale = Vector2(1.1166667, 1.09375)
+texture = ExtResource("3_6kf4b")
+
+[node name="CarpetAnomally2" type="Sprite2D" parent="."]
+position = Vector2(-1, 5)
+rotation = -1.5737407
+scale = Vector2(0.8110398, 1.09375)
+texture = ExtResource("3_6kf4b")
+region_enabled = true
+region_rect = Rect2(0, 0, 10, 16)
 
 [node name="MiniPlant" type="Sprite2D" parent="."]
 position = Vector2(9.536743e-07, -10)

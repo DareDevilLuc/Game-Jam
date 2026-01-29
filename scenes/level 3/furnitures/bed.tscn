@@ -1,21 +1,27 @@
-[gd_scene load_steps=7 format=3 uid="uid://cn51tma2r0ue2"]
+[gd_scene load_steps=9 format=3 uid="uid://cn51tma2r0ue2"]
 
 [ext_resource type="Script" uid="uid://t23l1thbmctc" path="res://scripts/level 3/bed.gd" id="1_3pjts"]
 [ext_resource type="Texture2D" uid="uid://cbrykvmbxlg8i" path="res://assets/level 3/textures/Bed.atlastex" id="1_ukwhg"]
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="3_6is1p"]
-[ext_resource type="Texture2D" uid="uid://cxl8bn44e7p8v" path="res://assets/level 3/OneBed.atlastex" id="3_16blu"]
+[ext_resource type="Texture2D" uid="uid://cxl8bn44e7p8v" path="res://assets/level 3/textures_2/OneBed.atlastex" id="3_16blu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(46, 50)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_16blu"]
+size = Vector2(26, 53)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4isge"]
 size = Vector2(49, 51.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pi13a"]
+size = Vector2(27, 53)
+
 [node name="Bed" type="StaticBody2D"]
-collision_mask = 3
+collision_mask = 2
 script = ExtResource("1_3pjts")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="DoubleBed" type="CollisionShape2D" parent="."]
 position = Vector2(4, -1)
 shape = SubResource("RectangleShape2D_h5ql5")
 
@@ -30,12 +36,20 @@ position = Vector2(14, -1.5)
 scale = Vector2(0.9375, 1.0535715)
 texture = ExtResource("3_16blu")
 
+[node name="Single" type="CollisionShape2D" parent="."]
+position = Vector2(14, -0.5)
+shape = SubResource("RectangleShape2D_16blu")
+
 [node name="trigger" parent="." instance=ExtResource("3_6is1p")]
 position = Vector2(0, -2)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+[node name="Double" type="CollisionShape2D" parent="trigger"]
 position = Vector2(3, 1.25)
 shape = SubResource("RectangleShape2D_4isge")
+
+[node name="SingleBed" type="CollisionShape2D" parent="trigger"]
+position = Vector2(10.5, 1.5)
+shape = SubResource("RectangleShape2D_pi13a")
 
 [connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
 [connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]
