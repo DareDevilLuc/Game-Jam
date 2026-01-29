@@ -1,9 +1,22 @@
 extends CharacterBody2D
 
 @onready var player: CharacterBody2D = get_node("../Player") 
-@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var trigger: Area2D = $trigger
 @onready var collision_shape_2d: CollisionShape2D = $trigger/CollisionShape2D
+@onready var sprite :AnimatedSprite2D = null
+@onready var blonde: AnimatedSprite2D = $Blonde
+@onready var blue: AnimatedSprite2D = $Blue
+@onready var default: AnimatedSprite2D = $Default
+
+
+func _ready() -> void:
+	default.visible = false
+	blonde.visible = false
+	blue.visible = false
+	
+	sprite = default
+	sprite.visible = true
+	
 
 func _physics_process(_delta):       
 	face_player()
@@ -50,7 +63,7 @@ func _on_trigger_body_entered(body):
 	interact_start = interact.instantiate()
 	add_child(interact_start)
 	var icon = interact_start.get_child(0)
-	icon.position = body.global_position + Vector2(450, 80)
+	icon.position = body.global_position + Vector2(1050, 400)
 
 	
 
