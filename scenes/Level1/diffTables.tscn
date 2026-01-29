@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://cad5hlvstduti"]
+
+[ext_resource type="Script" uid="uid://mnu3avu518i8" path="res://scripts/Level 1/diff_tables.gd" id="1_cffv5"]
+[ext_resource type="Texture2D" uid="uid://bf8p4fnfmn17o" path="res://assets/Level 1/sprites/DiffTables.png" id="1_f6gun"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cffv5"]
+size = Vector2(32, 32)
+
+[node name="DiffTables" type="Node2D"]
+script = ExtResource("1_cffv5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_f6gun")
+hframes = 4
+frame = 1
+region_rect = Rect2(31.354969, -0.10213852, 32.209106, 46.10214)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+visible = false
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_cffv5")

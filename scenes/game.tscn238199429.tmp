@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dsv1yaispraxf"]
+
+[ext_resource type="PackedScene" uid="uid://bxb1mxatkgu" path="res://scenes/Level1/Level1_noAnomaly.tscn" id="2_yqjtg"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Level1_noAnomaly" parent="." instance=ExtResource("2_yqjtg")]
