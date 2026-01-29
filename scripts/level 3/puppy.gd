@@ -1,7 +1,7 @@
 extends CharacterBody2D
 \
 @onready var trigger: Area2D = $trigger
-@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/newDialogueBox/balloon.tscn")
+@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
 @onready var pup: AnimatedSprite2D = $AnimatedSprite2D

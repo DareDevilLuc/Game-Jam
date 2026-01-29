@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @onready var fridge: Sprite2D = $Fridge
 @onready var trigger: Area2D = $trigger
-@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/newDialogueBox/balloon.tscn")
+@onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue//player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
 

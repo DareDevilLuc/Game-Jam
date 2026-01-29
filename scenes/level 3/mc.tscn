@@ -293,7 +293,7 @@ radius = 9.055386
 
 [node name="MC" type="CharacterBody2D" groups=["player"]]
 z_index = 5
-collision_layer = 2
+collision_layer = 3
 script = ExtResource("1_vvnj3")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

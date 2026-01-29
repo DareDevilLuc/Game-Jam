@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://yb2tfot3u0mq"]
 
 [ext_resource type="Script" uid="uid://w32mwfbb2kub" path="res://scenes/level 3/dialogueBox/balloon.gd" id="1_36de5"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Texture2D" uid="uid://bx1nwqmafx15f" path="res://assets/level 3/textbox_darker_textarea.png" id="2_bnb56"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
-[ext_resource type="Script" uid="uid://g32um0mltv5d" path="res://addons/dialogue_manager/dialogue_label.gd" id="3_lu4wo"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -150,20 +150,11 @@ text = "Partner"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer"]
-_import_path = NodePath("")
+[node name="DialogueLabel" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
-process_mode = 0
-process_priority = 0
-process_physics_priority = 0
-process_thread_group = 0
-physics_interpolation_mode = 0
-auto_translate_mode = 0
-editor_description = ""
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
-script = ExtResource("3_lu4wo")
 
 [node name="Control" type="Control" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(20, 10)
@@ -180,7 +171,7 @@ libraries = {
 }
 autoplay = "progress"
 
-[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon"]
+[node name="ResponsesMenu" type="VBoxContainer" parent="Balloon" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
@@ -198,6 +189,7 @@ size_flags_vertical = 8
 theme_override_constants/separation = 2
 alignment = 1
 script = ExtResource("3_72ixx")
+response_template = NodePath("ResponseExample")
 
 [node name="ResponseExample" type="Button" parent="Balloon/ResponsesMenu"]
 layout_mode = 2
@@ -207,3 +199,4 @@ text = "Response example"
 unique_name_in_owner = true
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="Balloon/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
