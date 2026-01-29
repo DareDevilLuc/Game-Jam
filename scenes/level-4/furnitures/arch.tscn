@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://bq62ty0q2dap3"]
+
+[ext_resource type="Texture2D" uid="uid://wew0l05xgo1x" path="res://assets/level-4/envi/Starbird-Advent-Day-24.png" id="1_ld8gl"]
+
+[node name="StaticBody2D" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ld8gl")
+offset = Vector2(0, -45)
+region_enabled = true
+region_rect = Rect2(256, 384, 111.57864, 96)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(-50, 1, -35, 2, -36, -14, -49, -13, -49, -3)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(1, 0)
+polygon = PackedVector2Array(34, 2, 48, 2, 48, -12, 33, -11)

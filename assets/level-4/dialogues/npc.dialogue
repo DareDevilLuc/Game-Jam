@@ -1,0 +1,21 @@
+~ partner_start
+Fiance: Today is going to be the best day of my life.
+% Fiance: You look absolutely beautiful, my love.[wait="ui_accept"]
+% Fiance: Everyone we love is here. They're here for us.[wait="ui_accept"]
+% Fiance: I do today, I do tomorrow, I do forever.[wait="ui_accept"]
+% Fiance: Let me touch this strand of hair for you.[wait="ui_accept"]
+=> END
+
+~ child_start
+Child: When can we eat chocolate?
+=> END
+
+~ normal_adult8
+Friend: Thank you for inviting me.
+Friend: It's been a while.
+=> END 
+
+~ anomaly_adult8
+Friend: He was going to pick me.
+Friend: And then you had to come along and steal him from me.
+=> END 

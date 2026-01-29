@@ -1,0 +1,11 @@
+~ mom_start
+Mom: Our beautiful girl, this has been your dream to get married.
+=> END 
+
+~ dad_start
+Dad: We're so happy for you, sweetie.
+=> END
+
+~ inlaw_start
+Fiance's Mom: Please take care of my dear boy.
+=> END

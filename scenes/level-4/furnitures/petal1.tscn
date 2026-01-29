@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cje6cr2f8pljo"]
+
+[ext_resource type="Texture2D" uid="uid://1vihg5dykg25" path="res://assets/level-4/envi/Flower 3 - PURPLE.png" id="1_08doe"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_08doe")

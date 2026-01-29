@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://sqph4yg55ifu"]
+
+[ext_resource type="Texture2D" uid="uid://dhqhf05rdgy8o" path="res://assets/level-4/envi/AtelierMagicae_FlowerGarden_RPGM.png" id="1_27aja"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_g8s4n"]
+radius = 7.0
+
+[node name="Flower" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_27aja")
+offset = Vector2(0, -12)
+region_enabled = true
+region_rect = Rect2(147, 138, 33, 27)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("CircleShape2D_g8s4n")
