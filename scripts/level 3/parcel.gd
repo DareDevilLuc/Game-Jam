@@ -49,7 +49,7 @@ func _on_trigger_body_entered(body):
 	interact_start = interact.instantiate()
 	add_child(interact_start)
 	var icon = interact_start.get_child(0)
-	icon.position = body.global_position + Vector2(450, 80)
+	icon.position = body.global_position + Vector2(1050, 400)
 
 
 
