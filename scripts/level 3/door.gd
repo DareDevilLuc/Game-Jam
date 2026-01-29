@@ -33,10 +33,8 @@ func close_door():
 
 func _on_animation_finished():
 	if sprite.animation == "door opening":
-		collision_shape_2d.disabled = true
 		sprite.play("door open")
-		
+		collision_shape_2d.disabled = true
 	elif sprite.animation == "door closing":
-		collision_shape_2d.disabled = false
 		sprite.play("closed door")
-		
+		collision_shape_2d.disabled = false

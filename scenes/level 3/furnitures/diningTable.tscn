@@ -1,27 +1,20 @@
-[gd_scene load_steps=12 format=3 uid="uid://cldmueirikaf7"]
+[gd_scene load_steps=8 format=3 uid="uid://cldmueirikaf7"]
 
 [ext_resource type="Texture2D" uid="uid://boj23gxme8p18" path="res://assets/level 3/textures/Table.atlastex" id="1_7pehm"]
-[ext_resource type="Script" uid="uid://cjsv5i82ejxgq" path="res://scripts/level 3/dining_table.gd" id="1_dmlgc"]
 [ext_resource type="Texture2D" uid="uid://co3ns35cxbm03" path="res://assets/level 3/textures/Wine.atlastex" id="2_2qrmg"]
 [ext_resource type="Texture2D" uid="uid://yt4xbif3ge6w" path="res://assets/level 3/textures/Food.atlastex" id="3_041p2"]
 [ext_resource type="Texture2D" uid="uid://7d420dybrxoe" path="res://assets/level 3/textures/Coffee.atlastex" id="4_ncgcw"]
 [ext_resource type="Texture2D" uid="uid://cixuvjuopttld" path="res://assets/level 3/textures/FruitBasket.atlastex" id="5_sab6j"]
 [ext_resource type="Texture2D" uid="uid://d4ip6v0b4hjs8" path="res://assets/level 3/Cutlery.png" id="6_lghni"]
-[ext_resource type="Texture2D" uid="uid://bfir5yh12mcf4" path="res://assets/level 3/Anomalies/Vegetable.atlastex" id="8_7xci7"]
-[ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="9_b12me"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
-size = Vector2(68, 35)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_64mn1"]
-size = Vector2(69, 41)
+size = Vector2(68, 36)
 
 [node name="CouchBack" type="StaticBody2D"]
 collision_mask = 3
-script = ExtResource("1_dmlgc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4, 4.5)
+position = Vector2(4, 4)
 shape = SubResource("RectangleShape2D_h5ql5")
 
 [node name="Table" type="Sprite2D" parent="."]
@@ -34,14 +27,8 @@ position = Vector2(-13, -6)
 scale = Vector2(0.59375, 0.59375)
 texture = ExtResource("2_2qrmg")
 
-[node name="WineRight" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-13, 9)
-scale = Vector2(0.59375, 0.59375)
-texture = ExtResource("2_2qrmg")
-
 [node name="Food" type="Sprite2D" parent="."]
-position = Vector2(-22, 2.0000002)
+position = Vector2(-22, 2.3841858e-07)
 scale = Vector2(0.44531253, 0.44531253)
 texture = ExtResource("3_041p2")
 
@@ -67,32 +54,7 @@ scale = Vector2(0.45455724, 0.5736038)
 texture = ExtResource("6_lghni")
 
 [node name="Cutlery2" type="Sprite2D" parent="."]
-position = Vector2(-25, 10)
+position = Vector2(-25.000002, 9)
 rotation = -4.696299
 scale = Vector2(0.51833373, 0.5085646)
 texture = ExtResource("6_lghni")
-
-[node name="Cutlery3" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(-25, -5)
-rotation = -4.696299
-scale = Vector2(0.51833373, 0.5085646)
-texture = ExtResource("6_lghni")
-
-[node name="Vegetable" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(3.0000005, -7.1525574e-07)
-scale = Vector2(0.5142857, 0.45)
-texture = ExtResource("8_7xci7")
-
-[node name="trigger" parent="." instance=ExtResource("9_b12me")]
-position = Vector2(0, 1)
-script = null
-
-[node name="table" type="CollisionShape2D" parent="trigger"]
-visible = false
-position = Vector2(4.5, 4.5)
-shape = SubResource("RectangleShape2D_64mn1")
-
-[connection signal="body_entered" from="trigger" to="." method="_on_trigger_body_entered"]
-[connection signal="body_exited" from="trigger" to="." method="_on_trigger_body_exited"]

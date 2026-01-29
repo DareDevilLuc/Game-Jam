@@ -1,19 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c17e3s1x2cbim"]
+[gd_scene load_steps=3 format=3 uid="uid://c17e3s1x2cbim"]
 
 [ext_resource type="PackedScene" uid="uid://ccfic6rw0fxjh" path="res://scenes/level 3/level_3.tscn" id="1_7clk6"]
 [ext_resource type="PackedScene" uid="uid://ilpw5eq22m5r" path="res://scenes/level 3/level_3_random.tscn" id="2_lm8vq"]
-[ext_resource type="PackedScene" uid="uid://06afruo05agl" path="res://scenes/level 3/heart_health.tscn" id="3_0vgh6"]
 
 [node name="Level 3 - Stage" type="Node2D"]
 
 [node name="Stage 1" parent="." instance=ExtResource("1_7clk6")]
 
 [node name="Stage 2" parent="." instance=ExtResource("2_lm8vq")]
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="HeartHealth" parent="CanvasLayer" instance=ExtResource("3_0vgh6")]
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-grow_horizontal = 0

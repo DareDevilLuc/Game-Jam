@@ -1,15 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs4tyuagr65jx"]
+[gd_scene load_steps=3 format=3 uid="uid://cs4tyuagr65jx"]
 
 [ext_resource type="Texture2D" uid="uid://bkq5fmyb7tgtw" path="res://assets/level 3/textures/Hanger.atlastex" id="1_dkbnq"]
-[ext_resource type="Script" uid="uid://brebppsrcj68t" path="res://scripts/level 3/hanger.gd" id="1_mb4t5"]
-[ext_resource type="Texture2D" uid="uid://t6sgr43y5ugi" path="res://assets/level 3/Anomalies/HangerAnomally.atlastex" id="3_eqw4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
 size = Vector2(4, 40)
 
 [node name="Hanger" type="StaticBody2D"]
 collision_mask = 2
-script = ExtResource("1_mb4t5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -10)
@@ -19,9 +16,3 @@ shape = SubResource("RectangleShape2D_h5ql5")
 position = Vector2(0.33333302, -10.000001)
 scale = Vector2(0.95833325, 1)
 texture = ExtResource("1_dkbnq")
-
-[node name="HangerAnomally" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1.75, -10)
-scale = Vector2(1.0333333, 1)
-texture = ExtResource("3_eqw4m")

@@ -13,31 +13,30 @@ var player_in_range := false
 var dialogue_open := false
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
 var interact_start: Node = null
-@onready var meal: Sprite2D = $Meal
 
+func _ready():
+	if get_tree().current_scene.name != "Level 3":
+		randomize()
+		var show_plates := randi() % 2 == 0
+		var sink_anomally := randi() % 8 == 0
+		
+		if (sink_anomally):
+			sink.visible = true
+			sink_anommaly.visible = false
+			Stage3State.add_anomaly()
+		else:
+			sink.visible = false
+			sink_anommaly.visible = true
+			
+		plate.visible = show_plates
+		plate_2.visible = show_plates
+		if show_plates:
+			Stage3State.add_anomaly()
 		
 
 func _process(_delta):
 	if player_in_range and not dialogue_open and Input.is_action_just_pressed("interact"):
-		sink.visible = true
-		sink_anommaly.visible = false
 		dialogue_open = true
-		plate.visible = true
-		plate_2.visible = true
-		meal.visible = false
-		if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var show_plates := randi() % 2 == 0	
-			
-			if (show_plates):			
-				plate.visible = false
-				plate_2.visible = false
-				meal.visible = true
-				Stage3State.add_anomaly()
-			else:
-				plate.visible = true
-				plate_2.visible = true
-				meal.visible = false
 		balloon = balloon_scene.instantiate()
 		get_tree().current_scene.add_child(balloon)
 		balloon.start(dialogue_res, "SINK")
@@ -51,7 +50,6 @@ func _on_trigger_body_entered(body):
 
 	player_in_range = true
 	sink.modulate = Color(1.3, 1.3, 1.3)
-	sink_anommaly.modulate = Color(1.3, 1.3, 1.3)
 	side_isle.modulate= Color(1.3, 1.3, 1.3)
 	interact_start = interact.instantiate()
 	add_child(interact_start)
@@ -63,12 +61,7 @@ func _on_trigger_body_entered(body):
 func _on_trigger_body_exited(body):
 	if body.name != "Player":
 		return
-	
-	sink.visible = false
-	sink_anommaly.visible = true
-	plate.visible = false
-	plate_2.visible = false
-	meal.visible = false
+
 	if interact_start:
 		interact_start.queue_free()
 		interact_start = null
@@ -77,7 +70,6 @@ func _on_trigger_body_exited(body):
 	dialogue_open = false
 	sink.modulate = Color.WHITE
 	side_isle.modulate=Color.WHITE
-	sink_anommaly.modulate = Color.WHITE
 
 	if balloon:
 		balloon.queue_free()

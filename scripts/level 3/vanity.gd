@@ -6,21 +6,6 @@ extends StaticBody2D
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
 @onready var vanity: Sprite2D = $Vanity
-@onready var champagne_problems: Sprite2D = $ChampagneProblems
-@onready var wine_glass: Sprite2D = $WineGlass
-
-
-func _ready():
-	if get_tree().current_scene.name != "Level 3":
-			randomize()
-			var anomally := randi() % 6 == 0
-			if (anomally):
-				wine_glass.visible = false
-				champagne_problems.visible = true
-				Stage3State.add_anomaly()
-			else:
-				wine_glass.visible = true
-				champagne_problems.visible = false
 
 
 var balloon: Node = null

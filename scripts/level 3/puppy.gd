@@ -1,4 +1,5 @@
 extends CharacterBody2D
+\
 @onready var trigger: Area2D = $trigger
 @onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
@@ -14,7 +15,7 @@ var interact_start: Node = null
 func _ready():
 	if get_tree().current_scene.name != "Level 3":
 		randomize()
-		var popAnommaly := randi() % 10 == 0
+		var popAnommaly := randi() % 2 == 0
 		if (popAnommaly):
 			pup.play("puppyAnomally")
 			Stage3State.add_anomaly()

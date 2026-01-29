@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=4 uid="uid://ilpw5eq22m5r"]
+[gd_scene load_steps=51 format=4 uid="uid://ilpw5eq22m5r"]
 
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_o2qke"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_x3bjr"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://xyhultxbkvgu" path="res://assets/level 3/textures/Shelf.atlastex" id="9_05yhj"]
 [ext_resource type="Texture2D" uid="uid://rxbbtrhjadm5" path="res://assets/level 3/textures/Teapot.atlastex" id="10_ji57l"]
 [ext_resource type="Texture2D" uid="uid://bbl2udvmp3y30" path="res://assets/level 3/textures/Tecup.atlastex" id="11_m01ss"]
+[ext_resource type="Texture2D" uid="uid://dufmw8ybgyio2" path="res://assets/level 3/textures/Cabinet2.atlastex" id="12_yqpbi"]
 [ext_resource type="Texture2D" uid="uid://31mjyxjlkqe0" path="res://assets/level 3/textures/Painting.atlastex" id="13_3l2r7"]
 [ext_resource type="Texture2D" uid="uid://daimjd47fjxg0" path="res://assets/level 3/textures/Window.atlastex" id="14_0n8iv"]
 [ext_resource type="Texture2D" uid="uid://bqd22uuunm3lo" path="res://assets/level 3/textures/Cupboard.atlastex" id="15_mko1e"]
@@ -278,9 +279,7 @@ texture_region_size = Vector2i(32, 32)
 8:5/0 = 0
 9:5/0 = 0
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(3.8235703, -16, 16, -16, 16, 16, 4.1422005, 16, -16, 16, -16, 4.779461, 4.1422005, 4.4608307)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.779461, -16, -3.5049362, 4.4608307, 16, 4.779461, 16, 16, -16, 16, -16, 4.779461, -16, -16)
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
@@ -290,9 +289,7 @@ texture_region_size = Vector2i(32, 32)
 8:6/0 = 0
 9:6/0 = 0
 0:7/0 = 0
-0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 13.701122, 19.117844, 4.1422005, 16, 5.416725, -2.5490456, -16, -2.2304153)
 1:7/0 = 0
-1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.779461, -16, 16, -16, 16, -4.1422005, -2.5490456, -5.4167233, -1.9117832, 16, -16, 16, -16, -16)
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
@@ -331,8 +328,8 @@ normal = Vector2(-0.99993694, 0.011235246)
 distance = -5.0000033
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_pf7vy"]
-normal = Vector2(-0.010360231, -0.99994636)
-distance = 3.9999852
+normal = Vector2(-0.010359704, -0.99994636)
+distance = 24.999983
 
 [node name="Level 3_Random" type="Node2D"]
 
@@ -402,6 +399,11 @@ texture = ExtResource("10_ji57l")
 [node name="Tecup" type="Sprite2D" parent="Maps & Interactables"]
 position = Vector2(52, 58)
 texture = ExtResource("11_m01ss")
+
+[node name="Cabinet2" type="Sprite2D" parent="Maps & Interactables"]
+position = Vector2(328, 280)
+scale = Vector2(0.6874999, 0.77083266)
+texture = ExtResource("12_yqpbi")
 
 [node name="Painting" type="Sprite2D" parent="Maps & Interactables"]
 position = Vector2(12, 256)
@@ -510,7 +512,7 @@ rotation = 0.011108819
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zones/safezone"]
-position = Vector2(-4.6108913, 35.053383)
+position = Vector2(-19.609966, 35.220013)
 shape = SubResource("WorldBoundaryShape2D_3hbvx")
 
 [node name="killzone" parent="Zones" instance=ExtResource("39_n8xp4")]
@@ -530,10 +532,10 @@ position = Vector2(51, 287)
 
 [node name="Partner" parent="Characters" instance=ExtResource("41_pv7f5")]
 z_index = 5
-position = Vector2(80, 119)
+position = Vector2(43, 124)
 
 [node name="Player" parent="Characters" instance=ExtResource("42_06kw5")]
-position = Vector2(-169, 330)
+position = Vector2(274, 177)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Characters/Player"]
