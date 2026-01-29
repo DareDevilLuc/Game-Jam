@@ -43,6 +43,7 @@ func _on_trigger_body_entered(body):
 	player_in_range = true
 	table.modulate = Color(1.3, 1.3, 1.3)
 	tv.modulate = Color(1.3, 1.3, 1.3)
+	tv_anomally.modulate = Color(1.3, 1.3, 1.3)
 	interact_start = interact.instantiate()
 	add_child(interact_start)
 	var icon = interact_start.get_child(0)
@@ -61,6 +62,7 @@ func _on_trigger_body_exited(body):
 	dialogue_open = false
 	table.modulate = Color.WHITE
 	tv.modulate = Color.WHITE
+	tv_anomally.modulate = Color.WHITE
 
 	if balloon:
 		balloon.queue_free()

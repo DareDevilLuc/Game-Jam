@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcugtbmjdx2ev"]
+[gd_scene load_steps=11 format=3 uid="uid://dcugtbmjdx2ev"]
 
 [ext_resource type="Script" uid="uid://mtaxgqj6m7c2" path="res://scripts/level 3/vanity.gd" id="1_cogje"]
 [ext_resource type="Texture2D" uid="uid://ejeyxr41tq03" path="res://assets/level 3/textures/Vanity.atlastex" id="1_fu0fs"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://co3ns35cxbm03" path="res://assets/level 3/textures/Wine.atlastex" id="3_0qcco"]
 [ext_resource type="Texture2D" uid="uid://d3f6gyuusk7vc" path="res://assets/level 3/textures/Phone.atlastex" id="4_fbon5"]
 [ext_resource type="Texture2D" uid="uid://dynjt6grtu6l7" path="res://assets/level 3/textures/Books.atlastex" id="5_n3drn"]
+[ext_resource type="Texture2D" uid="uid://ydi62bh5w8q2" path="res://assets/level 3/Anomalies/ChampagneProblems.atlastex" id="6_6ob8j"]
 [ext_resource type="PackedScene" uid="uid://bg5u0ru0atlxd" path="res://scenes/level 3/trigger.tscn" id="7_5ubbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h5ql5"]
@@ -28,7 +29,7 @@ scale = Vector2(0.90625, 0.90625)
 texture = ExtResource("1_fu0fs")
 
 [node name="WineGlass" type="Sprite2D" parent="."]
-position = Vector2(-18, -14)
+position = Vector2(-18, -13.000001)
 scale = Vector2(0.6333333, 0.6333334)
 texture = ExtResource("2_rerjd")
 
@@ -36,11 +37,6 @@ texture = ExtResource("2_rerjd")
 position = Vector2(-22, -11.000001)
 scale = Vector2(0.6333333, 0.6333334)
 texture = ExtResource("2_rerjd")
-
-[node name="Wine" type="Sprite2D" parent="."]
-position = Vector2(-14, -11)
-scale = Vector2(0.625, 0.625)
-texture = ExtResource("3_0qcco")
 
 [node name="Phone" type="Sprite2D" parent="."]
 position = Vector2(12.549272, -11.479925)
@@ -53,10 +49,22 @@ position = Vector2(-0.767858, -9.375)
 scale = Vector2(0.24355158, 0.19196425)
 texture = ExtResource("5_n3drn")
 
+[node name="ChampagneProblems" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(-17.375, -13.0625)
+scale = Vector2(0.72499955, 0.6328125)
+texture = ExtResource("6_6ob8j")
+
+[node name="Wine" type="Sprite2D" parent="."]
+position = Vector2(-14, -11)
+scale = Vector2(0.625, 0.625)
+texture = ExtResource("3_0qcco")
+
 [node name="trigger" parent="." instance=ExtResource("7_5ubbr")]
 position = Vector2(-3, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="trigger"]
+visible = false
 position = Vector2(0, 2.5)
 shape = SubResource("RectangleShape2D_b8aag")
 

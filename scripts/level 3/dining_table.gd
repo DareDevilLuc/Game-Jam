@@ -1,15 +1,15 @@
 extends StaticBody2D
-@onready var bed: Sprite2D = $Bed
 
-@onready var trigger: Area2D = $trigger
 @onready var balloon_scene = preload("res://scenes/level 3/dialogueBox/balloon.tscn")
 @onready var dialogue_res = preload("res://scripts/level 3/dialogue/player.dialogue")
 @onready var interact = preload("res://scenes/level 3/dialogueBox/interact.tscn")
-@onready var one_bed: Sprite2D = $OneBed
-@onready var double_bed: CollisionShape2D = $DoubleBed
-@onready var single: CollisionShape2D = $Single
-@onready var double: CollisionShape2D = $trigger/Double
-@onready var single_bed: CollisionShape2D = $trigger/SingleBed
+@onready var vegetable: Sprite2D = $Vegetable
+@onready var table: Sprite2D = $Table
+@onready var fruit_basket: Sprite2D = $FruitBasket
+@onready var wine: Sprite2D = $Wine
+@onready var wine_right: Sprite2D = $WineRight
+@onready var cutlery_2: Sprite2D = $Cutlery2
+@onready var cutlery_3: Sprite2D = $Cutlery3
 
 
 func _ready():
@@ -17,22 +17,26 @@ func _ready():
 		randomize()
 		var anomally := randi() % 9 == 0
 		if anomally:
-			bed.visible = false
-			one_bed.visible = true
-			double_bed.disabled = true
-			single.disabled = false
-			double.disabled = true
-			single_bed.disabled = false
+			fruit_basket.visible = false
+			vegetable.visible = true
 			Stage3State.add_anomaly()
 		else:
-			bed.visible = true
-			one_bed.visible = false
-			double_bed.disabled = false
-			single.disabled = true
-			double.disabled = false
-			single_bed.disabled = true
-		
+			fruit_basket.visible = true
+			vegetable.visible = false
+		var wineAnomally := randi() % 5 == 0
+		if wineAnomally:
+			wine.visible = false
+			wine_right.visible = true
+			cutlery_2.visible = false
+			cutlery_3.visible = true
+			Stage3State.add_anomaly()
+		else:
+			wine.visible = true
+			wine_right.visible = false
+			cutlery_2.visible = true
+			cutlery_3.visible = false
 			
+
 
 var balloon: Node = null
 var player_in_range := false
@@ -44,7 +48,7 @@ func _process(_delta):
 		dialogue_open = true
 		balloon = balloon_scene.instantiate()
 		get_tree().current_scene.add_child(balloon)
-		balloon.start(dialogue_res, "BED")
+		balloon.start(dialogue_res, "DINING")
 		interact_start.queue_free()
 		interact_start = null
 
@@ -54,8 +58,7 @@ func _on_trigger_body_entered(body):
 		return
 
 	player_in_range = true
-	bed.modulate = Color(1.3, 1.3, 1.3)
-	one_bed.modulate = Color(1.3, 1.3, 1.3)
+	table.modulate = Color(1.3, 1.3, 1.3)
 	interact_start = interact.instantiate()
 	add_child(interact_start)
 	var icon = interact_start.get_child(0)
@@ -72,9 +75,7 @@ func _on_trigger_body_exited(body):
 
 	player_in_range = false
 	dialogue_open = false
-	bed.modulate = Color.WHITE
-	one_bed.modulate = Color.WHITE
-
+	table.modulate = Color.WHITE
 
 	if balloon:
 		balloon.queue_free()

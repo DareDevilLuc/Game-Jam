@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=4 uid="uid://ccfic6rw0fxjh"]
+[gd_scene load_steps=50 format=4 uid="uid://ccfic6rw0fxjh"]
 
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_mnu1b"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_be7ao"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://xyhultxbkvgu" path="res://assets/level 3/textures/Shelf.atlastex" id="9_sf7oq"]
 [ext_resource type="Texture2D" uid="uid://rxbbtrhjadm5" path="res://assets/level 3/textures/Teapot.atlastex" id="10_kmaj6"]
 [ext_resource type="Texture2D" uid="uid://bbl2udvmp3y30" path="res://assets/level 3/textures/Tecup.atlastex" id="11_12f7l"]
-[ext_resource type="Texture2D" uid="uid://dufmw8ybgyio2" path="res://assets/level 3/textures/Cabinet2.atlastex" id="12_76odh"]
 [ext_resource type="Texture2D" uid="uid://31mjyxjlkqe0" path="res://assets/level 3/textures/Painting.atlastex" id="13_xgc1e"]
 [ext_resource type="Texture2D" uid="uid://daimjd47fjxg0" path="res://assets/level 3/textures/Window.atlastex" id="14_04pdi"]
 [ext_resource type="Texture2D" uid="uid://bqd22uuunm3lo" path="res://assets/level 3/textures/Cupboard.atlastex" id="15_ddneo"]
@@ -279,7 +278,9 @@ texture_region_size = Vector2i(32, 32)
 8:5/0 = 0
 9:5/0 = 0
 0:6/0 = 0
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(4.4608307, 4.779461, 2.2304153, -16, 16, -16, 16, 16, 3.1863098, 16, -16, 16, -16, 4.4608307)
 1:6/0 = 0
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.975645, -16, -2.5490456, -16, -3.8235683, 4.1422005, 16, 4.1422005, 16, 16, 3.1863098, 16, -16, 16, -16, 4.4608307)
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
@@ -289,7 +290,9 @@ texture_region_size = Vector2i(32, 32)
 8:6/0 = 0
 9:6/0 = 0
 0:7/0 = 0
+0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -4.779461, 16, 16, 3.1863098, 16, 3.50494, -4.779461, -16, -5.4167233)
 1:7/0 = 0
+1:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, -4.779461, -1.9117832, -4.4608307, -2.8676758, 16, -16, 16)
 2:7/0 = 0
 3:7/0 = 0
 4:7/0 = 0
@@ -399,11 +402,6 @@ texture = ExtResource("10_kmaj6")
 [node name="Tecup" type="Sprite2D" parent="Maps & Interactables"]
 position = Vector2(52, 58)
 texture = ExtResource("11_12f7l")
-
-[node name="Cabinet2" type="Sprite2D" parent="Maps & Interactables"]
-position = Vector2(328, 280)
-scale = Vector2(0.6874999, 0.77083266)
-texture = ExtResource("12_76odh")
 
 [node name="Painting" type="Sprite2D" parent="Maps & Interactables"]
 position = Vector2(12, 256)
@@ -532,10 +530,10 @@ position = Vector2(51, 287)
 
 [node name="Partner" parent="Characters" instance=ExtResource("40_y07bx")]
 z_index = 5
-position = Vector2(43, 124)
+position = Vector2(80, 119)
 
 [node name="Player" parent="Characters" instance=ExtResource("41_ig14o")]
-position = Vector2(4, 119)
+position = Vector2(-169, 331)
 collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="Characters/Player"]
