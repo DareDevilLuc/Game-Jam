@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://6ckqtg776q2b"]
+
+[ext_resource type="Texture2D" uid="uid://dyagyyn5n6gyo" path="res://00_Globals/heart-anim-Sheet.png" id="1_tj57w"]
+[ext_resource type="Script" uid="uid://cuv4ncoh3we6i" path="res://00_Globals/heart_health.gd" id="1_waai6"]
+
+[node name="HeartHealth" type="Node2D"]
+position = Vector2(977, 503)
+script = ExtResource("1_waai6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tj57w")
+hframes = 5
