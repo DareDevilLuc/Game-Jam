@@ -37,6 +37,32 @@ var level2 : Array[ String ] = [
 	"res://scenes/Level 2/Level2Scenes/Lvl2_An19.tscn",
 	"res://scenes/Level 2/Level2Scenes/Lvl2_An20.tscn",
 ]
+
+var level3 : Array[ String ] = [
+	"res://scenes/level 3/GameScenes/level_3.tscn",
+	"res://scenes/level 3/GameScenes/level_3_bed.tscn",
+	"res://scenes/level 3/GameScenes/level_3_bone.tscn",
+	"res://scenes/level 3/GameScenes/level_3_box.tscn",
+	"res://scenes/level 3/GameScenes/level_3_chair.tscn",
+	"res://scenes/level 3/GameScenes/level_3_clock.tscn",
+	"res://scenes/level 3/GameScenes/level_3_coffee.tscn",
+	"res://scenes/level 3/GameScenes/level_3_dining.tscn",
+	"res://scenes/level 3/GameScenes/level_3_drawer.tscn",
+	"res://scenes/level 3/GameScenes/level_3_food.tscn",
+	"res://scenes/level 3/GameScenes/level_3_fridge.tscn",
+	"res://scenes/level 3/GameScenes/level_3_hanger.tscn",
+	"res://scenes/level 3/GameScenes/level_3_miniTable.tscn",
+	"res://scenes/level 3/GameScenes/level_3_painting.tscn",
+	"res://scenes/level 3/GameScenes/level_3_phone.tscn",
+	"res://scenes/level 3/GameScenes/level_3_puppy.tscn",
+	"res://scenes/level 3/GameScenes/level_3_shelf.tscn",
+	"res://scenes/level 3/GameScenes/level_3_sink.tscn",
+	"res://scenes/level 3/GameScenes/level_3_TV.tscn",
+	"res://scenes/level 3/GameScenes/level_3_utensils.tscn",
+	"res://scenes/level 3/GameScenes/level_3_vanity.tscn",
+	"res://scenes/level 3/GameScenes/level_3_window.tscn",
+	"res://scenes/level 3/GameScenes/level_3_world.tscn",
+]
 @export var target_transition_area : String = "LevelTransition"
 
 @export_category("Collision Area Settings")
@@ -80,6 +106,8 @@ func _random_level() -> String:
 		return level[LevelManager.return_randomInt()]
 	if LevelManager.current_level_index == 1:
 		return level2[LevelManager.return_randomInt()]
+	if LevelManager.current_level_index == 2:
+		return level3[LevelManager.return_randomInt()]
 	else:
 		return ""
 
@@ -100,6 +128,8 @@ func _place_player() -> void:
 		PlayerManager.set_player_position( global_position + LevelManager.position_offset )
 	if LevelManager.current_level_index == 1:
 		Player2Manager.set_player_position( global_position + LevelManager.position_offset )
+	if LevelManager.current_level_index == 2:
+		Player3Manager.set_player_position( global_position + LevelManager.position_offset )
 
 
 func get_offset() -> Vector2:
@@ -109,6 +139,8 @@ func get_offset() -> Vector2:
 		player_pos = PlayerManager.player.global_position
 	elif LevelManager.current_level_index == 1:
 		player_pos = Player2Manager.player.global_position
+	elif LevelManager.current_level_index == 2:
+		player_pos = Player3Manager.player.global_position
 	
 
 	if side == SIDE.LEFT or side == SIDE.RIGHT:

@@ -1,5 +1,6 @@
-[gd_scene load_steps=46 format=4 uid="uid://cdiqfhk8flwud"]
+[gd_scene load_steps=47 format=4 uid="uid://cdiqfhk8flwud"]
 
+[ext_resource type="Script" uid="uid://ctgkg82y6m2ho" path="res://00_Globals/level3.gd" id="1_a0gho"]
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_vl622"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_a0gho"]
 [ext_resource type="Texture2D" uid="uid://m8j6k5syu8r7" path="res://assets/level 3/textures/RoomCarpet.atlastex" id="3_oxe5m"]
@@ -37,7 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://d2fbsqsas54nx" path="res://scenes/level 3/furnitures/door.tscn" id="36_ilno4"]
 [ext_resource type="PackedScene" uid="uid://c0ochitr88wb1" path="res://scenes/level 3/puppy.tscn" id="37_310cx"]
 [ext_resource type="PackedScene" uid="uid://mt3lotj7nrev" path="res://scenes/level 3/partner_3.tscn" id="38_p1mat"]
-[ext_resource type="PackedScene" uid="uid://5q1g2fbomj0n" path="res://scenes/level 3/mc.tscn" id="39_1vdq1"]
+[ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="39_a0gho"]
 [ext_resource type="AudioStream" uid="uid://bqvmgpfchc7pj" path="res://sounds/bgm/3_fight.mp3" id="39_vl622"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pr1ej"]
@@ -325,6 +326,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="Dining" type="Node2D"]
+script = ExtResource("1_a0gho")
 
 [node name="Maps & Interactables" type="Node" parent="."]
 
@@ -496,20 +498,14 @@ position = Vector2(51, 287)
 z_index = 5
 position = Vector2(-25, 122)
 
-[node name="Player" parent="Characters" instance=ExtResource("39_1vdq1")]
-position = Vector2(-169, 331)
-collision_layer = 2
-
-[node name="Camera2D" type="Camera2D" parent="Characters/Player"]
-position = Vector2(10, 2)
-zoom = Vector2(8, 8)
-limit_left = -255
-limit_top = 25
-limit_right = 385
-limit_bottom = 400
-limit_smoothed = true
-position_smoothing_enabled = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("39_vl622")
 autoplay = true
+
+[node name="LevelTransition" parent="." instance=ExtResource("39_a0gho")]
+position = Vector2(-236, 330)
+target_transition_area = "LevelTransition2"
+
+[node name="LevelTransition2" parent="." instance=ExtResource("39_a0gho")]
+position = Vector2(358, 333)
+side = 1

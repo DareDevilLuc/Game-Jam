@@ -290,7 +290,7 @@ animations = [{
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_i6vl1"]
 
-[node name="MC" type="CharacterBody2D" groups=["player"]]
+[node name="Player" type="CharacterBody2D" groups=["player"]]
 z_index = 5
 collision_layer = 3
 script = ExtResource("1_vvnj3")
@@ -308,3 +308,13 @@ flip_h = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["player"]]
 position = Vector2(0, 9)
 shape = SubResource("CircleShape2D_i6vl1")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(10, 2)
+zoom = Vector2(8, 8)
+limit_left = -255
+limit_top = 25
+limit_right = 385
+limit_bottom = 400
+limit_smoothed = true
+position_smoothing_enabled = true

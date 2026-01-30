@@ -1,5 +1,6 @@
-[gd_scene load_steps=44 format=4 uid="uid://dxrk5kr2tvhxj"]
+[gd_scene load_steps=45 format=4 uid="uid://dxrk5kr2tvhxj"]
 
+[ext_resource type="Script" uid="uid://ctgkg82y6m2ho" path="res://00_Globals/level3.gd" id="1_78jly"]
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_naaov"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_78jly"]
 [ext_resource type="Texture2D" uid="uid://m8j6k5syu8r7" path="res://assets/level 3/textures/RoomCarpet.atlastex" id="3_iph3o"]
@@ -36,7 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://d2fbsqsas54nx" path="res://scenes/level 3/furnitures/door.tscn" id="35_ykali"]
 [ext_resource type="PackedScene" uid="uid://c0ochitr88wb1" path="res://scenes/level 3/puppy.tscn" id="36_ssau5"]
 [ext_resource type="PackedScene" uid="uid://mt3lotj7nrev" path="res://scenes/level 3/partner_3.tscn" id="37_myjle"]
-[ext_resource type="PackedScene" uid="uid://5q1g2fbomj0n" path="res://scenes/level 3/mc.tscn" id="38_42nte"]
+[ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="37_qtftd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pr1ej"]
 texture = ExtResource("1_naaov")
@@ -323,6 +324,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="Level 3" type="Node2D"]
+script = ExtResource("1_78jly")
 
 [node name="Maps & Interactables" type="Node" parent="."]
 
@@ -491,16 +493,10 @@ position = Vector2(51, 287)
 z_index = 5
 position = Vector2(-25, 122)
 
-[node name="Player" parent="Characters" instance=ExtResource("38_42nte")]
-position = Vector2(-169, 331)
-collision_layer = 2
+[node name="LevelTransition" parent="." instance=ExtResource("37_qtftd")]
+position = Vector2(-236, 330)
+target_transition_area = "LevelTransition2"
 
-[node name="Camera2D" type="Camera2D" parent="Characters/Player"]
-position = Vector2(10, 2)
-zoom = Vector2(8, 8)
-limit_left = -255
-limit_top = 25
-limit_right = 385
-limit_bottom = 400
-limit_smoothed = true
-position_smoothing_enabled = true
+[node name="LevelTransition2" parent="." instance=ExtResource("37_qtftd")]
+position = Vector2(358, 333)
+side = 1

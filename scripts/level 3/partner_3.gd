@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@onready var player: CharacterBody2D = get_node("../Player") 
+var player: CharacterBody2D = Player3Manager.player
 @onready var trigger: Area2D = $trigger
 @onready var collision_shape_2d: CollisionShape2D = $trigger/CollisionShape2D
 @onready var sprite :AnimatedSprite2D = null
