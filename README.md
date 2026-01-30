@@ -1,16 +1,14 @@
 # Crossroads of Us
 
-Crossroads of Us is a 2D top-down psychological romance game built in Godot. Flustered by love bugs and the repetitive cycles of relationship dynamics, the game utilizes a looping mechanic to tell its story.
+**Crossroads of Us** is a 2D top-down psychological romance game built in Godot. Flustered by "love bugs" and the repetitive cycles of relationship dynamics, the game utilizes a looping mechanic to explore the uncertainties of the heart.
 
-## Game Description
+## 📖 Game Description
 
-Is love in the air? Experience a romance-focused twist on observation gameplay. You are trapped in a looping hallway of memories and domestic spaces where the environment reflects the different stages of a relationship.
+Inspired by the poem *The Road Not Taken*, this game explores the path we *didn't* choose. You play as **Athy**, a character yearning for a happy ending but paralyzed by the uncertainties of love. Navigate through four distinct maps, each with its own unique soundtrack reflecting the stages of love. As she moves through different stages of a relationship, her overthinking begins to manifest as "Love Bugs" in her reality that represent her fears and doubts. When you start to overthink, things feel out of place. You must observe your surroundings carefully. If you notice a love bug, you must decide whether to let it break your heart or leave it all behind.
 
-* **Spot the Changes:** Pay close attention to your surroundings; small shifts indicate the evolving state of human connection.
-* **The Loop:** If you notice something is wrong, leave to the left. If everything seems normal, proceed to the right.
-* **The Goal:** Break the cycle by navigating the nuances of love as you venture the paths less taken.
+But heartbreak isn't the end. If you fail, you loop back to the beginning, sometimes meeting old partners or starting anew. 
 
-## How To Use (Di pa final hi kyle)
+## How To Use 
 
 1) **Open the Project:**
    Clone the repository and open `project.godot` using Godot Engine 4.x.
@@ -36,7 +34,7 @@ This game is designed to be submitted as a Web or Desktop build for game jam sub
 
 ### Team
 * **Development:** Kyle Casirayan, Russel Niño Buno, Angela Jahziel Encabo, Aissha Monceda
-* **Art:** Kishanta Liz Siton
+* **Art:** Kishanta Liz Siton, Jhun Lynart Bajao
 * **Sounds:** Aissha Monceda
 
 ### Third-Party Assets & Tools
