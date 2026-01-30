@@ -1,36 +1,56 @@
-# Sprite Cutter
+# Crossroads of Us
 
-This is a tool to manually create .atlastex texures from a single atlas/spritesheet texture
+**Crossroads of Us** is a 2D top-down psychological romance game built in Godot. Flustered by "love bugs" and the repetitive cycles of relationship dynamics, the game utilizes a looping mechanic to explore the uncertainties of the heart.
 
-## How To Use
+## 📖 Game Description
 
-1) Create a new scene with an AtlasScene root node.
+Inspired by the poem *The Road Not Taken*, this game explores the path we *didn't* choose. You play as **Athy**, a character yearning for a happy ending but paralyzed by the uncertainties of love. Navigate through four distinct maps, each with its own unique soundtrack reflecting the stages of love. As she moves through different stages of a relationship, her overthinking begins to manifest as "Love Bugs" in her reality that represent her fears and doubts. When you start to overthink, things feel out of place. You must observe your surroundings carefully. If you notice a love bug, you must decide whether to let it break your heart or leave it all behind.
 
-![spritecutter1](https://user-images.githubusercontent.com/526829/132289808-9ec4094d-cb05-453e-b2ef-029fed7cbaa4.png)
+But heartbreak isn't the end. If you fail, you loop back to the beginning, sometimes meeting old partners or starting anew. 
 
+## How To Use 
 
-2) Add as many Sprite nodes as you want using region and the TextureRegion dock to define the region to use. The name of the node will be the name of the exported file.
+1) **Open the Project:**
+   Clone the repository and open `project.godot` using Godot Engine 4.x.
 
-![spritecutter2](https://user-images.githubusercontent.com/526829/132289817-96e85fab-b8d6-46bb-8772-06fb0a4959a6.png)
+2) **Run the Game:**
+   Press `F5` or the Play button in the top right corner of the editor to start the game.
 
+3) **Interaction:**
+   * **Movement:** Use **WASD** to move.
+   * **Interact:** Press **E** to interact with objects.
+   * **Dialogue:** Press the **Space Bar** during dialogue to complete the typing animation or skip to the next line of dialogue.
 
-3) Set the export path. If it doesn't exist it will be created
+## Build Instructions (itch.io)
 
-![spritecutter3](https://user-images.githubusercontent.com/526829/132289827-47319c35-7717-43d1-9aaf-875dac10ba7c.png)
+This game is designed to be submitted as a Web or Desktop build for game jam submission:
 
+1) Go to **Project > Export**.
+2) Add a **Web** preset.
+3) Ensure the "VRAM Compression" is compatible with web browsers.
+4) Export the project into a dedicated folder, zip the contents (ensuring `index.html` is at the root), and upload to itch.io.
 
-4) Go to Tools->Sprite Cutter: Export Atlas Textures
+## Credits
 
-![spritecutter4](https://user-images.githubusercontent.com/526829/132289844-4d00baf8-883a-4b11-a5d4-8543a7dad162.png)
+### Team
+* **Development:** Kyle Casirayan, Russel Niño Buno, Angela Jahziel Encabo, Aissha Monceda
+* **Art:** Kishanta Liz Siton, Jhun Lynart Bajao
+* **Sounds:** Aissha Monceda
 
-![spritecutter5](https://user-images.githubusercontent.com/526829/132289851-e83f7a01-0623-4cd7-85b9-88e36fbaa7cc.png)
-
-
-
-You can save the AtlasScene as a scene in case you ever need to change the sprite regions
-
-If you change the AtlasScene just repeat step 4. Existing textures will be overwritten.
-
-### License
-MIT licensed. See LICENSE.md
-The sprites shown in How To Use section are from https://kenney.nl/assets/toon-characters-1
+### Third-Party Assets & Tools
+* **Dialogue System:** [Dialogue Manager 3](https://github.com/nathanhoad/godot_dialogue_manager) by Nathan Hoad.
+* **Sprite Management:** [Sprite Cutter](https://godotengine.org/asset-library/asset/1043) — A tool to manually create .atlastex textures from a single atlas/spritesheet texture.
+* **Modern Interiors:** [LimeZu](https://limezu.itch.io/moderninteriors).
+* **Pixel Interior Bedroom:** [Bitglow](https://bitglow.itch.io/pixelinterior-bedroom).
+* **Top-Down Retro Interior:** [Penzilla](https://penzilla.itch.io/top-down-retro-interior).
+* **Free Top-Down RPG Tile Set:** [Mixelslime](https://mixelslime.itch.io/free-top-down-rpg-32x32-tile-set).
+* **Pixel Painting Assets** [John Ivess](https://ivess.itch.io/ivesss-pixel-paintings-asset-pack).
+* **Museum Tileset** [skatefilter5](https://www.deviantart.com/skatefilter5/art/Museum-Tileset-614676631?fbclid=IwY2xjawPpgn5leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEefvgCvuUpEpe_2l5wG9t74RcugfEqnTFMGVPVSINw8Z_aYqS7GxlRzUdBwmk_aem__Mz1gb5U9pUxC1Ngi3Jkag).
+* **Pixel Art Guide Hall** [craft_pix](https://craftpix.net/freebies/free-top-down-pixel-art-guild-hall-asset-pack/).
+* **Pixel Art Flower Pack** [karsiori](https://karsiori.itch.io/free-pixel-art-flower-pack).
+* **Flower Garden** [Atelier Magicae](https://ateliermagicae.itch.io/rpg-maker-extras-flower-garden).
+* **Interior floor tiles** [bluecarrot16](https://opengameart.org/content/lpc-floors).
+* **Dungeon or Temple Tileset** [AppleDog](https://apple-dog.itch.io/dungeont).
+* **Church Design** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbirds-complete-mz-tiles.125842/page-9#post-1238489).
+* **Inn interior** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbirds-complete-mz-tiles.125842/page-6#post-1233655).
+* **Church Design, Again** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbird-rtp-edits.102687/).
