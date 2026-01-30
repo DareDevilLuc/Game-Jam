@@ -1,6 +1,6 @@
 [gd_scene load_steps=30 format=4 uid="uid://nd12alf7saa4"]
 
-[ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://scripts/Level 1/level.gd" id="1_aalxa"]
+[ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_aalxa"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_wspvo"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="3_wi2qx"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="4_vhkhm"]

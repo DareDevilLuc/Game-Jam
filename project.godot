@@ -25,6 +25,7 @@ Game2="*res://scripts/Level 2/game2.gd"
 Level3State="*res://scripts/level 3/level3State.gd"
 Stage3State="*res://scripts/level 3/StageGameState.gd"
 HealthHud="*res://00_Globals/Health_HUD.tscn"
+Player2Manager="*res://00_Globals/GlobalPlayer2Manager.gd"
 
 [display]
 

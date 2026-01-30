@@ -3,15 +3,39 @@ class_name LevelTransition extends Area2D
 
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
-var level : Array[ PackedScene ] = [
-	load("res://scenes/Level1/Anomalies/Level1_noAnomaly.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly1.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly2.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly3.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly3.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly4.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly5.tscn"),
-	load("res://scenes/Level1/Anomalies/Level1_Anomaly6.tscn")
+var level : Array[ String ] = [
+	"res://scenes/Level1/Anomalies/Level1_noAnomaly.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly1.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly2.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly3.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly3.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly4.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly5.tscn",
+	"res://scenes/Level1/Anomalies/Level1_Anomaly6.tscn"
+]
+
+var level2 : Array[ String ] = [
+	"res://scenes/Level 2/Level2Scenes/Level2_Base.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An1.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An2.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An3.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An4.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An5.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An6.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An7.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An8.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An9.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An10.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An11.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An12.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An13.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An14.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An15.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An16.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An17.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An18.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An19.tscn",
+	"res://scenes/Level 2/Level2Scenes/Lvl2_An20.tscn",
 ]
 @export var target_transition_area : String = "LevelTransition"
 
@@ -52,26 +76,40 @@ func _ready() -> void:
 func _random_level() -> String:
 	if level.is_empty():
 		return ""
-		
-	return level[LevelManager.return_randomInt()].resource_path
+	if LevelManager.current_level_index == 0:
+		return level[LevelManager.return_randomInt()]
+	if LevelManager.current_level_index == 1:
+		return level2[LevelManager.return_randomInt()]
+	else:
+		return ""
+
 	
 
 func _player_entered(_p : Node2D) -> void:
 	if (name == "LevelTransition" and not LevelManager.isAnomaly) or (name == "LevelTransition2" and LevelManager.isAnomaly):
 		HealthHud.damage_heart()
+	else:
+		LevelManager.current_correct += 1
 	LevelManager.load_new_level( _random_level(), target_transition_area, get_offset() )
 	pass
 
 func _place_player() -> void:
 	if name != LevelManager.target_transition:
 		return
-	
-	PlayerManager.set_player_position( global_position + LevelManager.position_offset )
+	if LevelManager.current_level_index == 0:
+		PlayerManager.set_player_position( global_position + LevelManager.position_offset )
+	if LevelManager.current_level_index == 1:
+		Player2Manager.set_player_position( global_position + LevelManager.position_offset )
 
 
 func get_offset() -> Vector2:
+	var player_pos
 	var offset : Vector2 = Vector2.ZERO
-	var player_pos = PlayerManager.player.global_position
+	if LevelManager.current_level_index == 0:
+		player_pos = PlayerManager.player.global_position
+	elif LevelManager.current_level_index == 1:
+		player_pos = Player2Manager.player.global_position
+	
 
 	if side == SIDE.LEFT or side == SIDE.RIGHT:
 		offset.y = player_pos.y - global_position.y
