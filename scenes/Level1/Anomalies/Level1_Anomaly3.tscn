@@ -1863,10 +1863,8 @@ position = Vector2(570, 499)
 position = Vector2(-31, 528)
 target_transition_area = "LevelTransition2"
 size = 1
-snap_to_grid = false
 
 [node name="LevelTransition2" parent="." instance=ExtResource("21_oct1p")]
 position = Vector2(704, 529)
 side = 1
 size = 1
-snap_to_grid = false

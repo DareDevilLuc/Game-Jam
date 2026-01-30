@@ -52,11 +52,13 @@ func _ready() -> void:
 func _random_level() -> String:
 	if level.is_empty():
 		return ""
-	
-	return level.pick_random().resource_path
+		
+	return level[LevelManager.return_randomInt()].resource_path
 	
 
 func _player_entered(_p : Node2D) -> void:
+	if (name == "LevelTransition" and not LevelManager.isAnomaly) or (name == "LevelTransition2" and LevelManager.isAnomaly):
+		HealthHud.damage_heart()
 	LevelManager.load_new_level( _random_level(), target_transition_area, get_offset() )
 	pass
 
