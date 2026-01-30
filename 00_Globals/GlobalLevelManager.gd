@@ -114,6 +114,10 @@ func load_next_level() -> void:
 		Player4Turn.emit()
 	elif current_level_index == 4:
 		get_tree().change_scene_to_file( starter_levels[current_level_index] )
+		get_tree().process_frame
+		get_tree().paused = false
+		await SceneTransition.fade_in()
+		HealthHud.heart.visible = false
 		return
 	
 	await get_tree().process_frame
