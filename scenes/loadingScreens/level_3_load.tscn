@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://3hhonjvfe55v"]
+
+[ext_resource type="Texture2D" uid="uid://dsddpkqaa535n" path="res://assets/mainScreen/title-menu-background.png" id="1_6uvlj"]
+[ext_resource type="Texture2D" uid="uid://b7vsxyf4p61ae" path="res://assets/mainScreen/game-title.PNG" id="3_pwvjk"]
+[ext_resource type="AudioStream" uid="uid://bqvmgpfchc7pj" path="res://sounds/bgm/3_fight.mp3" id="4_f51p5"]
+[ext_resource type="Texture2D" uid="uid://02fc6ft3t8fj" path="res://assets/level 3/3rd_anim-Sheet.png" id="4_p1d2i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oqjj4"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(5760, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wl8h"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(6080, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j5chw"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(6400, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vf6kt"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(6720, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c2uad"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(7040, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hy0ep"]
+atlas = ExtResource("4_p1d2i")
+region = Rect2(7360, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egync"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_oqjj4")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_3wl8h")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_j5chw")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_vf6kt")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_c2uad")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_hy0ep")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="Node"]
+
+[node name="TitleMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.35291055, 0.3529106)
+texture = ExtResource("1_6uvlj")
+
+[node name="GameTitle2" type="Sprite2D" parent="."]
+position = Vector2(-5.9024353, -53.11878)
+scale = Vector2(0.18887359, 0.19937341)
+texture = ExtResource("3_pwvjk")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(0.18637085, 61.78317)
+scale = Vector2(0.37616485, 0.3469191)
+sprite_frames = SubResource("SpriteFrames_egync")
+autoplay = "default"
+frame_progress = 0.8300701
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -103.0
+offset_top = 102.0
+offset_right = 102.0
+offset_bottom = 165.0
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 20
+text = "Arguments over unwashed dishes and forgotten date nights, will love prevail inspite?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_f51p5")
+autoplay = true

@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://ba4jfcqmoqjv4"]
+
+[ext_resource type="Texture2D" uid="uid://dsddpkqaa535n" path="res://assets/mainScreen/title-menu-background.png" id="1_e3ovn"]
+[ext_resource type="Texture2D" uid="uid://b7vsxyf4p61ae" path="res://assets/mainScreen/game-title.PNG" id="3_o78wd"]
+[ext_resource type="AudioStream" uid="uid://csi8cchysij7y" path="res://sounds/bgm/1_classroom.mp3" id="4_vvtuy"]
+[ext_resource type="Texture2D" uid="uid://vkh1k2cv73vf" path="res://assets/mainScreen/1st_anim-Sheet.png" id="4_yd21c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvtuy"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(5760, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o78wd"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6080, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b66ck"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6400, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al6fu"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6720, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt1t7"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(7040, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjuvh"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(7360, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egync"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_vvtuy")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_o78wd")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_b66ck")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_al6fu")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_mt1t7")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_qjuvh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="Node"]
+
+[node name="TitleMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.35291055, 0.3529106)
+texture = ExtResource("1_e3ovn")
+
+[node name="GameTitle2" type="Sprite2D" parent="."]
+position = Vector2(-5.9024353, -53.11878)
+scale = Vector2(0.18887359, 0.19937341)
+texture = ExtResource("3_o78wd")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="."]
+position = Vector2(-2.999998, 63)
+scale = Vector2(0.3897657, 0.3315154)
+sprite_frames = SubResource("SpriteFrames_egync")
+autoplay = "default"
+frame_progress = 0.12788875
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -87.0
+offset_top = 101.0
+offset_right = 85.0
+offset_bottom = 164.0
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 20
+text = "Love is all around campus today, may cupid find its way to your heart."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_vvtuy")
+autoplay = true

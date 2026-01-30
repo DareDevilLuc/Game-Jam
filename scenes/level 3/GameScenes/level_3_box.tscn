@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=4 uid="uid://dv3ejdb4wlh14"]
+[gd_scene load_steps=46 format=4 uid="uid://dv3ejdb4wlh14"]
 
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_6cccs"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_sbywg"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://c0ochitr88wb1" path="res://scenes/level 3/puppy.tscn" id="36_dw1hd"]
 [ext_resource type="PackedScene" uid="uid://mt3lotj7nrev" path="res://scenes/level 3/partner_3.tscn" id="37_oi0dw"]
 [ext_resource type="PackedScene" uid="uid://5q1g2fbomj0n" path="res://scenes/level 3/mc.tscn" id="38_2og1y"]
+[ext_resource type="AudioStream" uid="uid://bqvmgpfchc7pj" path="res://sounds/bgm/3_fight.mp3" id="39_sbywg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pr1ej"]
 texture = ExtResource("1_6cccs")
@@ -509,3 +510,7 @@ limit_right = 385
 limit_bottom = 400
 limit_smoothed = true
 position_smoothing_enabled = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_sbywg")
+autoplay = true

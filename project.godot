@@ -25,11 +25,6 @@ Game2="*res://scripts/Level 2/game2.gd"
 Level3State="*res://scripts/level 3/level3State.gd"
 Stage3State="*res://scripts/level 3/StageGameState.gd"
 
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
