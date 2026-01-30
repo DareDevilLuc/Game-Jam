@@ -1,4 +1,4 @@
-# Crossroads of Us
+<img width="543" height="736" alt="image" src="https://github.com/user-attachments/assets/5441a811-c8ba-42fb-9164-aba73ba8a5e6" /><img width="543" height="736" alt="image" src="https://github.com/user-attachments/assets/b7b9068e-51c7-4b51-be5d-80c298667114" /># Crossroads of Us
 
 **Crossroads of Us** is a 2D top-down psychological romance game built in Godot. Flustered by "love bugs" and the repetitive cycles of relationship dynamics, the game utilizes a looping mechanic to explore the uncertainties of the heart.
 
@@ -46,3 +46,11 @@ This game is designed to be submitted as a Web or Desktop build for game jam sub
 * **Free Top-Down RPG Tile Set:** [Mixelslime](https://mixelslime.itch.io/free-top-down-rpg-32x32-tile-set).
 * **Pixel Painting Assets** [John Ivess](https://ivess.itch.io/ivesss-pixel-paintings-asset-pack).
 * **Museum Tileset** [skatefilter5](https://www.deviantart.com/skatefilter5/art/Museum-Tileset-614676631?fbclid=IwY2xjawPpgn5leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEefvgCvuUpEpe_2l5wG9t74RcugfEqnTFMGVPVSINw8Z_aYqS7GxlRzUdBwmk_aem__Mz1gb5U9pUxC1Ngi3Jkag).
+* **Pixel Art Guide Hall** [craft_pix](https://craftpix.net/freebies/free-top-down-pixel-art-guild-hall-asset-pack/).
+* **Pixel Art Flower Pack** [karsiori](https://karsiori.itch.io/free-pixel-art-flower-pack).
+* **Flower Garden** [Atelier Magicae](https://ateliermagicae.itch.io/rpg-maker-extras-flower-garden).
+* **Interior floor tiles** [bluecarrot16](https://opengameart.org/content/lpc-floors).
+* **Dungeon or Temple Tileset** [AppleDog](https://apple-dog.itch.io/dungeont).
+* **Church Design** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbirds-complete-mz-tiles.125842/page-9#post-1238489).
+* **Inn interior** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbirds-complete-mz-tiles.125842/page-6#post-1233655).
+* **Church Design, Again** [Starbird_Resources](https://forums.rpgmakerweb.com/index.php?threads/starbird-rtp-edits.102687/).
