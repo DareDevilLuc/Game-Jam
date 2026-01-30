@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://3cc5wt6ytp0r"]
 
-[ext_resource type="Texture2D" uid="uid://banugosgih3va" path="res://assets/level 3/textures/TopdownRpg32x32UiPanels&Buttons.atlastex" id="1_byui1"]
+[ext_resource type="Texture2D" path="res://assets/level 3/Press E.atlastex" id="1_1tlab"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xb7kp"]
-texture = ExtResource("1_byui1")
+texture = ExtResource("1_1tlab")
 
 [node name="Interact" type="CanvasLayer"]
 
@@ -15,10 +15,10 @@ offset_bottom = 40.0
 
 [node name="PanelContainer" type="PanelContainer" parent="Control"]
 layout_mode = 0
-offset_left = -82.0
-offset_top = -14.0
-offset_right = 129.0
-offset_bottom = 55.0
+offset_left = -41.0
+offset_top = -33.0
+offset_right = 36.0
+offset_bottom = 52.0
 theme_override_styles/panel = SubResource("StyleBoxTexture_xb7kp")
 
 [node name="MarginContainer2" type="MarginContainer" parent="Control/PanelContainer"]
@@ -44,7 +44,6 @@ text = "
      Press [E] to interact
 
 "
-fit_content = true
 scroll_active = false
 horizontal_alignment = 1
 vertical_alignment = 1

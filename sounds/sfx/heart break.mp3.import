@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duex8h5xdxkfq"
+path="res://.godot/imported/heart break.mp3-a89b3210c4bb97bd4c2b2aece06ba0f3.mp3str"
+
+[deps]
+
+source_file="res://sounds/sfx/heart break.mp3"
+dest_files=["res://.godot/imported/heart break.mp3-a89b3210c4bb97bd4c2b2aece06ba0f3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
