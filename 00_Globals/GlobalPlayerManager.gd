@@ -5,8 +5,6 @@ const PLAYER = preload("uid://bcqlw4c6fujdw")
 var player : Player
 var player_spawned : bool = false
 func _ready() -> void:
-	var heart = get_tree().current_scene
-	await heart.heart_break
 	add_player_instance()
 
 func add_player_instance() -> void:

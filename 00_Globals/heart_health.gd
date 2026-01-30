@@ -1,6 +1,6 @@
-extends Node2D
+extends CanvasLayer
 
-@onready var heart :Sprite2D = $Sprite2D
+@onready var heart :Sprite2D = $Control/Sprite2D
 signal heart_break
 
 # Called when the node enters the scene tree for the first time.
