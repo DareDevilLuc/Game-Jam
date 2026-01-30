@@ -4,7 +4,7 @@ Crossroads of Us is a 2D top-down psychological romance game built in Godot. Flu
 
 ## Game Description
 
-Is love in the air? Experience a romance-focused twist on observation gameplay. You are trapped in a looping hallway of memories and domestic spaces where the environment reflects the state of a relationship.
+Is love in the air? Experience a romance-focused twist on observation gameplay. You are trapped in a looping hallway of memories and domestic spaces where the environment reflects the different stages of a relationship.
 
 * **Spot the Changes:** Pay close attention to your surroundings; small shifts indicate the evolving state of human connection.
 * **The Loop:** If you notice something is wrong, leave to the left. If everything seems normal, proceed to the right.
@@ -37,11 +37,14 @@ This game is designed to be submitted as a Web or Desktop build for game jam sub
 ### Team
 * **Development:** Kyle Casirayan, Russel Niño Buno, Angela Jahziel Encabo, Aissha Monceda
 * **Art:** Kishanta Liz Siton
-* **Background Music:** Aissha Monceda
+* **Sounds:** Aissha Monceda
 
 ### Third-Party Assets & Tools
 * **Dialogue System:** [Dialogue Manager 3](https://github.com/nathanhoad/godot_dialogue_manager) by Nathan Hoad.
+* **Sprite Management:** [Sprite Cutter](https://godotengine.org/asset-library/asset/1043) — A tool to manually create .atlastex textures from a single atlas/spritesheet texture.
 * **Modern Interiors:** [LimeZu](https://limezu.itch.io/moderninteriors).
 * **Pixel Interior Bedroom:** [Bitglow](https://bitglow.itch.io/pixelinterior-bedroom).
 * **Top-Down Retro Interior:** [Penzilla](https://penzilla.itch.io/top-down-retro-interior).
 * **Free Top-Down RPG Tile Set:** [Mixelslime](https://mixelslime.itch.io/free-top-down-rpg-32x32-tile-set).
+* **Pixel Painting Assets** [John Ivess](https://ivess.itch.io/ivesss-pixel-paintings-asset-pack).
+* **Museum Tileset** [skatefilter5](https://www.deviantart.com/skatefilter5/art/Museum-Tileset-614676631?fbclid=IwY2xjawPpgn5leHRuA2FlbQIxMQBzcnRjBmFwcF9pZAEwAAEefvgCvuUpEpe_2l5wG9t74RcugfEqnTFMGVPVSINw8Z_aYqS7GxlRzUdBwmk_aem__Mz1gb5U9pUxC1Ngi3Jkag).
