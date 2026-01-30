@@ -10,6 +10,7 @@ signal Player3Turn
 
 const REQUIRED_CORRECT : int = 4
 
+var is_game_over : bool = false
 var current_correct : int = 0
 var current_tilemap_bounds : Array[Vector2]
 var target_transition : String 
@@ -47,6 +48,9 @@ func load_new_level(
 		_position_offset : Vector2
 ) -> void:
 	print("Score:", current_correct)
+	
+	if is_game_over:
+		return
 	
 	if current_correct == 4:
 		current_correct = 0
