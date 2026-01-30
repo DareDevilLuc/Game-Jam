@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bqlq380co4pg2" path="res://scenes/level-4/npcs/adult8.tscn" id="18_74jrj"]
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="19_r3881"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="20_l7xkk"]
-[ext_resource type="PackedScene" uid="uid://kf0cx7rbdlxv" path="res://scenes/level-4/npcs/partner.tscn" id="21_8mb2f"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="21_8mb2f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
@@ -257,8 +257,8 @@ y_sort_enabled = true
 position = Vector2(925.99994, 169.99998)
 scale = Vector2(0.22, 0.22)
 
-[node name="Partner" parent="y-sortObjects/CharSort" instance=ExtResource("21_8mb2f")]
-position = Vector2(960, 254)
+[node name="Groom" parent="y-sortObjects/CharSort" instance=ExtResource("21_8mb2f")]
+position = Vector2(958.99994, 252.99998)
 scale = Vector2(0.25, 0.25)
 
 [node name="TileMaps2" type="Node2D" parent="."]

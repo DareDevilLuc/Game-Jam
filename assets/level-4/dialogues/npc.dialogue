@@ -1,9 +1,9 @@
 ~ partner_start
 Fiance: Today is going to be the best day of my life.
-% Fiance: You look absolutely beautiful, my love.[wait="ui_accept"]
-% Fiance: Everyone we love is here. They're here for us.[wait="ui_accept"]
-% Fiance: I do today, I do tomorrow, I do forever.[wait="ui_accept"]
-% Fiance: Let me touch this strand of hair for you.[wait="ui_accept"]
+% Fiance: You look absolutely beautiful, my love.[wait="interact"]
+% Fiance: Everyone we love is here. They're here for us.[wait="interact"]
+% Fiance: I do today, I do tomorrow, I do forever.[wait="interact"]
+% Fiance: Let me touch this strand of hair for you.[wait="interact"]
 => END
 
 ~ child_start
@@ -18,4 +18,9 @@ Friend: It's been a while.
 ~ anomaly_adult8
 Friend: He was going to pick me.
 Friend: And then you had to come along and steal him from me.
+=> END 
+
+~ anomaly_adult3
+% Friend: Is this really a wedding worth attending?
+% Friend: He looked better with his ex.
 => END 

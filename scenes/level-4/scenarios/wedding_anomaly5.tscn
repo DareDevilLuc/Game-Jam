@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bqlq380co4pg2" path="res://scenes/level-4/npcs/adult8.tscn" id="17_3mfry"]
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="18_r2ph4"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="19_py7qp"]
-[ext_resource type="PackedScene" uid="uid://kf0cx7rbdlxv" path="res://scenes/level-4/npcs/partner.tscn" id="20_llsqw"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="20_llsqw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
@@ -186,17 +186,17 @@ y_sort_enabled = true
 
 [node name="parent" parent="y-sortObjects/CharSort" instance=ExtResource("7_lwfia")]
 y_sort_enabled = true
-position = Vector2(826, 482)
+position = Vector2(830, 201)
 scale = Vector2(0.25, 0.25)
 
 [node name="parent2" parent="y-sortObjects/CharSort" instance=ExtResource("8_5k8c2")]
 y_sort_enabled = true
-position = Vector2(830, 233)
+position = Vector2(829, 475)
 scale = Vector2(0.25, 0.25)
 
 [node name="parent3" parent="y-sortObjects/CharSort" instance=ExtResource("9_3k5ba")]
 y_sort_enabled = true
-position = Vector2(826, 196)
+position = Vector2(830, 527)
 scale = Vector2(0.25, 0.25)
 
 [node name="adult2" parent="y-sortObjects/CharSort" instance=ExtResource("10_iiegh")]
@@ -231,12 +231,12 @@ scale = Vector2(0.25, 0.25)
 
 [node name="adult7" parent="y-sortObjects/CharSort" instance=ExtResource("16_bn0xc")]
 y_sort_enabled = true
-position = Vector2(537, 204)
+position = Vector2(539, 519)
 scale = Vector2(0.25, 0.25)
 
 [node name="adult8" parent="y-sortObjects/CharSort" instance=ExtResource("17_3mfry")]
 y_sort_enabled = true
-position = Vector2(539, 525)
+position = Vector2(539, 220)
 scale = Vector2(0.25, 0.25)
 
 [node name="child" parent="y-sortObjects/CharSort" instance=ExtResource("18_r2ph4")]
@@ -249,8 +249,8 @@ y_sort_enabled = true
 position = Vector2(925.99994, 169.99998)
 scale = Vector2(0.22, 0.22)
 
-[node name="Partner" parent="y-sortObjects/CharSort" instance=ExtResource("20_llsqw")]
-position = Vector2(953, 259)
+[node name="Groom" parent="y-sortObjects/CharSort" instance=ExtResource("20_llsqw")]
+position = Vector2(958.99994, 252.99998)
 scale = Vector2(0.25, 0.25)
 
 [node name="TileMaps2" type="Node2D" parent="."]
