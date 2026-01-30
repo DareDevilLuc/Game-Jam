@@ -249,7 +249,7 @@ y_sort_enabled = true
 position = Vector2(925.99994, 169.99998)
 scale = Vector2(0.22, 0.22)
 
-[node name="Partner" parent="y-sortObjects/CharSort" instance=ExtResource("21_fxgyf")]
+[node name="Groom" parent="y-sortObjects/CharSort" instance=ExtResource("21_fxgyf")]
 position = Vector2(958.99994, 252.99998)
 scale = Vector2(0.25, 0.25)
 

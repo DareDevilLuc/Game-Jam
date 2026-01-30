@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cl5xk015g5wyq"]
+[gd_scene load_steps=4 format=3 uid="uid://cl5xk015g5wyq"]
 
+[ext_resource type="Script" uid="uid://bku8ad23ggi5s" path="res://scripts/level-4/plant.gd" id="1_ar1cv"]
 [ext_resource type="Texture2D" uid="uid://intiggw5xpqe" path="res://assets/level-4/envi/Interiors_free_32x32.png" id="1_buw2v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0qwun"]
@@ -8,6 +9,7 @@ height = 18.0
 
 [node name="Plant" type="StaticBody2D"]
 y_sort_enabled = true
+script = ExtResource("1_ar1cv")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_buw2v")
