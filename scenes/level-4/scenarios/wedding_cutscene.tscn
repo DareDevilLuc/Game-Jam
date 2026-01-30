@@ -1,56 +1,291 @@
-[gd_scene load_steps=14 format=4 uid="uid://c2vyn3hohi5q6"]
+[gd_scene load_steps=17 format=4 uid="uid://xywe6547n8hy"]
 
-[ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_gs0oh"]
-[ext_resource type="Texture2D" uid="uid://wew0l05xgo1x" path="res://assets/level-4/envi/Starbird-Advent-Day-24.png" id="2_7mkij"]
-[ext_resource type="Texture2D" uid="uid://dhqhf05rdgy8o" path="res://assets/level-4/envi/AtelierMagicae_FlowerGarden_RPGM.png" id="2_gb433"]
-[ext_resource type="PackedScene" uid="uid://cnaym2gktcysw" path="res://scenes/level-4/player.tscn" id="3_gb433"]
-[ext_resource type="Texture2D" uid="uid://dxj77vrllcprp" path="res://assets/level-4/envi/Starbird_Churc1.png" id="4_htbwc"]
-[ext_resource type="PackedScene" uid="uid://bq62ty0q2dap3" path="res://scenes/level-4/furnitures/arch.tscn" id="4_rfkdx"]
-[ext_resource type="PackedScene" uid="uid://ctdu3mxhjahsp" path="res://scenes/level-4/npcs/priest.tscn" id="6_7mkij"]
-[ext_resource type="PackedScene" uid="uid://cks1qv31h4m4k" path="res://scenes/level-4/npcs/adult1.tscn" id="8_7bg8e"]
-[ext_resource type="PackedScene" uid="uid://dplm7dob05618" path="res://scenes/level-4/npcs/adult5.tscn" id="9_8ma20"]
-[ext_resource type="PackedScene" uid="uid://br0tr8gtup6u" path="res://scenes/level-4/npcs/adult6.tscn" id="10_htbwc"]
-[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="11_8ma20"]
-[ext_resource type="PackedScene" uid="uid://n22wev0aul81" path="res://scenes/level-4/npcs/adult7.tscn" id="11_i0eat"]
-[ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="12_8ma20"]
+[ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_600wu"]
+[ext_resource type="Texture2D" uid="uid://dhqhf05rdgy8o" path="res://assets/level-4/envi/AtelierMagicae_FlowerGarden_RPGM.png" id="2_yfwtl"]
+[ext_resource type="Texture2D" uid="uid://wew0l05xgo1x" path="res://assets/level-4/envi/Starbird-Advent-Day-24.png" id="3_x456r"]
+[ext_resource type="Texture2D" uid="uid://dxj77vrllcprp" path="res://assets/level-4/envi/Starbird_Churc1.png" id="4_flw15"]
+[ext_resource type="PackedScene" uid="uid://cnaym2gktcysw" path="res://scenes/level-4/player.tscn" id="5_e5o27"]
+[ext_resource type="PackedScene" uid="uid://bq62ty0q2dap3" path="res://scenes/level-4/furnitures/arch.tscn" id="6_2m4dd"]
+[ext_resource type="PackedScene" uid="uid://ctdu3mxhjahsp" path="res://scenes/level-4/npcs/priest.tscn" id="7_n3gfm"]
+[ext_resource type="PackedScene" uid="uid://cks1qv31h4m4k" path="res://scenes/level-4/npcs/adult1.tscn" id="8_ylfob"]
+[ext_resource type="PackedScene" uid="uid://dplm7dob05618" path="res://scenes/level-4/npcs/adult5.tscn" id="9_j5uun"]
+[ext_resource type="PackedScene" uid="uid://br0tr8gtup6u" path="res://scenes/level-4/npcs/adult6.tscn" id="10_vlmq8"]
+[ext_resource type="PackedScene" uid="uid://n22wev0aul81" path="res://scenes/level-4/npcs/adult7.tscn" id="11_hm1g7"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="12_gfrws"]
+[ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="13_rahve"]
 
-[node name="2nd part wedding" type="Node2D"]
+[sub_resource type="Animation" id="Animation_yfwtl"]
+length = 12.0
+step = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("y-sort/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(515, 562)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("y-sort/Player:in_cutscene")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("y-sort/Player/Camera2D:offset")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("y-sort/npcs/Groom:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(550, 242.99998)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("y-sort/Player/Camera2D:zoom")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.5, 3.5)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = false
+tracks/5/path = NodePath("CinematicBars/Fadeout:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("y-sort/npcs/adult/AnimatedSprite2D:flip_h")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("y-sort/npcs/adult4/AnimatedSprite2D:flip_h")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_600wu"]
+resource_name = "wedding_part2"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("y-sort/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 6, 7, 8, 9, 15),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(515, 562), Vector2(515, 300), Vector2(515, 300), Vector2(476, 300), Vector2(476, 276), Vector2(476, 276), Vector2(500, 276)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("y-sort/Player")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5, 6, 7, 8, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": ["walk_up"],
+"method": &"play_anim"
+}, {
+"args": ["idle_up"],
+"method": &"play_stop"
+}, {
+"args": ["walk_left"],
+"method": &"play_anim"
+}, {
+"args": ["walk_up"],
+"method": &"play_anim"
+}, {
+"args": ["idle_right"],
+"method": &"play_stop"
+}, {
+"args": ["walk_right"],
+"method": &"slow_anim"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("y-sort/Player:in_cutscene")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("y-sort/Player/Camera2D:offset")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(9, 14.3),
+"transitions": PackedFloat32Array(1, 3.732129),
+"update": 0,
+"values": [Vector2(-10, 0), Vector2(15, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("y-sort/npcs/Groom:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(9, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(550, 242.99998), Vector2(520, 243)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("y-sort/Player/Camera2D:zoom")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(9, 15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(4, 4), Vector2(4.5, 4.5)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("CinematicBars/Fadeout:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(11, 14.5),
+"transitions": PackedFloat32Array(1.4142135, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("y-sort/npcs/adult/AnimatedSprite2D:flip_h")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("y-sort/npcs/adult4/AnimatedSprite2D:flip_h")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x456r"]
+_data = {
+&"RESET": SubResource("Animation_yfwtl"),
+&"wedding_part2": SubResource("Animation_600wu")
+}
+
+[node name="Wedding_cutscene" type="Node2D"]
 
 [node name="TilemapLayers" type="Node2D" parent="."]
 position = Vector2(30, 139)
 
 [node name="Ground" type="TileMapLayer" parent="TilemapLayers"]
 tile_map_data = PackedByteArray("AAAIAAMABwAVADUAAAAIAAQABwAVADUAAAAIAAUABwAVADUAAAAIAAYABwAVADUAAAAIAAcABwAVADUAAAAIAAgABwAVADUAAAAIAAkABwAVADUAAAAIAAoABwAVADUAAAAIAAsABwAVADUAAAAIAAwABwAVADUAAAAIAA0ABwAVADUAAAAIAA4ABwAVADUAAAAIAA8ABwAVADUAAAAJAAMABwAVADUAAAAJAAQABwAVADUAAAAJAAUABwAVADUAAAAJAAYABwAVADUAAAAJAAcABwAVADUAAAAJAAgABwAVADUAAAAJAAkABwAVADUAAAAJAAoABwAVADUAAAAJAAsABwAVADUAAAAJAAwABwAVADUAAAAJAA0ABwAVADUAAAAJAA4ABwAVADUAAAAJAA8ABwAVADUAAAAKAAMABwAVADUAAAAKAAQABwAVADUAAAAKAAUABwAVADUAAAAKAAYABwAVADUAAAAKAAcABwAVADUAAAAKAAgABwAVADUAAAAKAAkABwAVADUAAAAKAAoABwAVADUAAAAKAAsABwAVADUAAAAKAAwABwAVADUAAAAKAA0ABwAVADUAAAAKAA4ABwAVADUAAAAKAA8ABwAVADUAAAALAAMABwAVADUAAAALAAQABwAVADUAAAALAAUABwAVADUAAAALAAYABwAVADUAAAALAAcABwAVADUAAAALAAgABwAVADUAAAALAAkABwAVADUAAAALAAoABwAVADUAAAALAAsABwAVADUAAAALAAwABwAVADUAAAALAA0ABwAVADUAAAALAA4ABwAVADUAAAALAA8ABwAVADUAAAAMAAMABwAVADUAAAAMAAQABwAVADUAAAAMAAUABwAVADUAAAAMAAYABwAVADUAAAAMAAcABwAVADUAAAAMAAgABwAVADUAAAAMAAkABwAVADUAAAAMAAoABwAVADUAAAAMAAsABwAVADUAAAAMAAwABwAVADUAAAAMAA0ABwAVADUAAAAMAA4ABwAVADUAAAAMAA8ABwAVADUAAAANAAMABwAVADUAAAANAAQABwAVADUAAAANAAUABwAVADUAAAANAAYABwAVADUAAAANAAcABwAVADUAAAANAAgABwAVADUAAAANAAkABwAVADUAAAANAAoABwAVADUAAAANAAsABwAVADUAAAANAAwABwAVADUAAAANAA0ABwAVADUAAAANAA4ABwAVADUAAAANAA8ABwAVADUAAAAOAAMABwAVADUAAAAOAAQABwAVADUAAAAOAAUABwAVADUAAAAOAAYABwAVADUAAAAOAAcABwAVADUAAAAOAAgABwAVADUAAAAOAAkABwAVADUAAAAOAAoABwAVADUAAAAOAAsABwAVADUAAAAOAAwABwAVADUAAAAOAA0ABwAVADUAAAAOAA4ABwAVADUAAAAOAA8ABwAVADUAAAAPAAMABwAVADUAAAAPAAQABwAVADUAAAAPAAUABwAVADUAAAAPAAYABwAVADUAAAAPAAcABwAVADUAAAAPAAgABwAVADUAAAAPAAkABwAVADUAAAAPAAoABwAVADUAAAAPAAsABwAVADUAAAAPAAwABwAVADUAAAAPAA0ABwAVADUAAAAPAA4ABwAVADUAAAAPAA8ABwAVADUAAAAQAAMABwAVADUAAAAQAAQABwAVADUAAAAQAAUABwAVADUAAAAQAAYABwAVADUAAAAQAAcABwAVADUAAAAQAAgABwAVADUAAAAQAAkABwAVADUAAAAQAAoABwAVADUAAAAQAAsABwAVADUAAAAQAAwABwAVADUAAAAQAA0ABwAVADUAAAAQAA4ABwAVADUAAAAQAA8ABwAVADUAAAARAAMABwAVADUAAAARAAQABwAVADUAAAARAAUABwAVADUAAAARAAYABwAVADUAAAARAAcABwAVADUAAAARAAkABwAVADUAAAARAAoABwAVADUAAAARAAsABwAVADUAAAARAAwABwAVADUAAAARAA0ABwAVADUAAAARAA4ABwAVADUAAAARAA8ABwAVADUAAAASAAMABwAVADUAAAASAAQABwAVADUAAAASAAUABwAVADUAAAASAAYABwAVADUAAAASAAcABwAVADUAAAASAAgABwAVADUAAAASAAkABwAVADUAAAASAAoABwAVADUAAAASAAsABwAVADUAAAASAAwABwAVADUAAAASAA0ABwAVADUAAAASAA4ABwAVADUAAAASAA8ABwAVADUAAAATAAMABwAVADUAAAATAAQABwAVADUAAAATAAUABwAVADUAAAATAAYABwAVADUAAAATAAcABwAVADUAAAATAAgABwAVADUAAAATAAkABwAVADUAAAATAAoABwAVADUAAAATAAsABwAVADUAAAATAAwABwAVADUAAAATAA0ABwAVADUAAAATAA4ABwAVADUAAAATAA8ABwAVADUAAAAUAAMABwAVADUAAAAUAAQABwAVADUAAAAUAAUABwAVADUAAAAUAAYABwAVADUAAAAUAAcABwAVADUAAAAUAAgABwAVADUAAAAUAAkABwAVADUAAAAUAAoABwAVADUAAAAUAAsABwAVADUAAAAUAAwABwAVADUAAAAUAA0ABwAVADUAAAAUAA4ABwAVADUAAAAUAA8ABwAVADUAAAAVAAMABwAVADUAAAAVAAQABwAVADUAAAAVAAUABwAVADUAAAAVAAYABwAVADUAAAAVAAcABwAVADUAAAAVAAgABwAVADUAAAAVAAkABwAVADUAAAAVAAoABwAVADUAAAAVAAsABwAVADUAAAAVAAwABwAVADUAAAAVAA0ABwAVADUAAAAVAA4ABwAVADUAAAAVAA8ABwAVADUAAAAWAAMABwAVADUAAAAWAAQABwAVADUAAAAWAAUABwAVADUAAAAWAAYABwAVADUAAAAWAAcABwAVADUAAAAWAAgABwAVADUAAAAWAAkABwAVADUAAAAWAAoABwAVADUAAAAWAAsABwAVADUAAAAWAAwABwAVADUAAAAWAA0ABwAVADUAAAAWAA4ABwAVADUAAAAWAA8ABwAVADUAAAAXAAMABwAVADUAAAAXAAQABwAVADUAAAAXAAUABwAVADUAAAAXAAYABwAVADUAAAAXAAcABwAVADUAAAAXAAgABwAVADUAAAAXAAkABwAVADUAAAAXAAoABwAVADUAAAAXAAsABwAVADUAAAAXAAwABwAVADUAAAAXAA0ABwAVADUAAAAXAA4ABwAVADUAAAAXAA8ABwAVADUAAAAYAAAAAAAMAAAAAAAYAAEAAAAMAAAAAAAYAAIAAAAMAAAAAAAYAAMAAAAMAAAAAAAYAAQAAAAMAAAAAAAYAAUAAAAMAAAAAAAYAAYAAAAMAAAAAAAYAAcAAAAMAAAAAAAYAAgAAAAMAAAAAAAYAAkAAAAMAAAAAAAYAAoAAAAMAAAAAAAYAAsAAAAMAAAAAAAYAAwAAAAMAAAAAAAYAA0AAAAMAAAAAAAYAA4AAAAMAAAAAAAYAA8AAAAMAAAAAAAZAAAAAAAMAAAAAAAZAAEAAAAMAAAAAAAZAAIAAAAMAAAAAAAZAAMAAAAMAAAAAAAZAAQAAAAMAAAAAAAZAAUAAAAMAAAAAAAZAAYAAAAMAAAAAAAZAAcAAAAMAAAAAAAZAAgAAAAMAAAAAAAZAAkAAAAMAAAAAAAZAAoAAAAMAAAAAAAZAAsAAAAMAAAAAAAZAAwAAAAMAAAAAAAZAA0AAAAMAAAAAAAZAA4AAAAMAAAAAAAZAA8AAAAMAAAAAAAaAAAAAAAMAAAAAAAaAAEAAAAMAAAAAAAaAAIAAAAMAAAAAAAaAAMAAAAMAAAAAAAaAAQAAAAMAAAAAAAaAAUAAAAMAAAAAAAaAAYAAAAMAAAAAAAaAAcAAAAMAAAAAAAaAAgAAAAMAAAAAAAaAAkAAAAMAAAAAAAaAAoAAAAMAAAAAAAaAAsAAAAMAAAAAAAaAAwAAAAMAAAAAAAaAA0AAAAMAAAAAAAaAA4AAAAMAAAAAAAaAA8AAAAMAAAAAAAbAAAAAAAMAAAAAAAbAAEAAAAMAAAAAAAbAAIAAAAMAAAAAAAbAAMAAAAMAAAAAAAbAAQAAAAMAAAAAAAbAAUAAAAMAAAAAAAbAAYAAAAMAAAAAAAbAAcAAAAMAAAAAAAbAAgAAAAMAAAAAAAbAAkAAAAMAAAAAAAbAAoAAAAMAAAAAAAbAAsAAAAMAAAAAAAbAAwAAAAMAAAAAAAbAA0AAAAMAAAAAAAbAA4AAAAMAAAAAAAbAA8AAAAMAAAAAAAcAAAAAAAMAAAAAAAcAAEAAAAMAAAAAAAcAAIAAAAMAAAAAAAcAAMAAAAMAAAAAAAcAAQAAAAMAAAAAAAcAAUAAAAMAAAAAAAcAAYAAAAMAAAAAAAcAAcAAAAMAAAAAAAcAAgAAAAMAAAAAAAcAAkAAAAMAAAAAAAcAAoAAAAMAAAAAAAcAAsAAAAMAAAAAAAcAAwAAAAMAAAAAAAcAA0AAAAMAAAAAAAcAA4AAAAMAAAAAAAcAA8AAAAMAAAAAAAdAAAAAAAMAAAAAAAdAAEAAAAMAAAAAAAdAAIAAAAMAAAAAAAdAAMAAAAMAAAAAAAdAAQAAAAMAAAAAAAdAAUAAAAMAAAAAAAdAAYAAAAMAAAAAAAdAAcAAAAMAAAAAAAdAAgAAAAMAAAAAAAdAAkAAAAMAAAAAAAdAAoAAAAMAAAAAAAdAAsAAAAMAAAAAAAdAAwAAAAMAAAAAAAdAA0AAAAMAAAAAAAdAA4AAAAMAAAAAAAdAA8AAAAMAAAAAAAeAAAAAAAMAAAAAAAeAAEAAAAMAAAAAAAeAAIAAAAMAAAAAAAeAAMAAAAMAAAAAAAeAAQAAAAMAAAAAAAeAAUAAAAMAAAAAAAeAAYAAAAMAAAAAAAeAAcAAAAMAAAAAAAeAAgAAAAMAAAAAAAeAAkAAAAMAAAAAAAeAAoAAAAMAAAAAAAeAAsAAAAMAAAAAAAeAAwAAAAMAAAAAAAeAA0AAAAMAAAAAAAeAA4AAAAMAAAAAAAeAA8AAAAMAAAAAAAfAAAAAAAMAAAAAAAfAAEAAAAMAAAAAAAfAAIAAAAMAAAAAAAfAAMAAAAMAAAAAAAfAAQAAAAMAAAAAAAfAAUAAAAMAAAAAAAfAAYAAAAMAAAAAAAfAAcAAAAMAAAAAAAfAAgAAAAMAAAAAAAfAAkAAAAMAAAAAAAfAAoAAAAMAAAAAAAfAAsAAAAMAAAAAAAfAAwAAAAMAAAAAAAfAA0AAAAMAAAAAAAfAA4AAAAMAAAAAAAfAA8AAAAMAAAAAAAgAAAAAAAMAAAAAAAgAAEAAAAMAAAAAAAgAAIAAAAMAAAAAAAgAAMAAAAMAAAAAAAgAAQAAAAMAAAAAAAgAAUAAAAMAAAAAAAgAAYAAAAMAAAAAAAgAAcAAAAMAAAAAAAgAAgAAAAMAAAAAAAgAAkAAAAMAAAAAAAgAAoAAAAMAAAAAAAgAAsAAAAMAAAAAAAgAAwAAAAMAAAAAAAgAA0AAAAMAAAAAAAgAA4AAAAMAAAAAAAgAA8AAAAMAAAAAAAAAAAAAAAMAAAAAAAAAAEAAAAMAAAAAAAAAAIAAAAMAAAAAAAAAAMAAAAMAAAAAAAAAAQAAAAMAAAAAAAAAAUAAAAMAAAAAAAAAAYAAAAMAAAAAAAAAAcAAAAMAAAAAAAAAAgAAAAMAAAAAAAAAAkAAAAMAAAAAAAAAAoAAAAMAAAAAAAAAAsAAAAMAAAAAAAAAAwAAAAMAAAAAAAAAA0AAAAMAAAAAAAAAA4AAAAMAAAAAAAAAA8AAAAMAAAAAAABAAAAAAAMAAAAAAABAAEAAAAMAAAAAAABAAIAAAAMAAAAAAABAAMAAAAMAAAAAAABAAQAAAAMAAAAAAABAAUAAAAMAAAAAAABAAYAAAAMAAAAAAABAAcAAAAMAAAAAAABAAgAAAAMAAAAAAABAAkAAAAMAAAAAAABAAoAAAAMAAAAAAABAAsAAAAMAAAAAAABAAwAAAAMAAAAAAABAA0AAAAMAAAAAAABAA4AAAAMAAAAAAABAA8AAAAMAAAAAAACAAAAAAAMAAAAAAACAAEAAAAMAAAAAAACAAIAAAAMAAAAAAACAAMAAAAMAAAAAAACAAQAAAAMAAAAAAACAAUAAAAMAAAAAAACAAYAAAAMAAAAAAACAAcAAAAMAAAAAAACAAgAAAAMAAAAAAACAAkAAAAMAAAAAAACAAoAAAAMAAAAAAACAAsAAAAMAAAAAAACAAwAAAAMAAAAAAACAA0AAAAMAAAAAAACAA4AAAAMAAAAAAACAA8AAAAMAAAAAAADAAAAAAAMAAAAAAADAAEAAAAMAAAAAAADAAIAAAAMAAAAAAADAAMAAAAMAAAAAAADAAQAAAAMAAAAAAADAAUAAAAMAAAAAAADAAYAAAAMAAAAAAADAAcAAAAMAAAAAAADAAgAAAAMAAAAAAADAAkAAAAMAAAAAAADAAoAAAAMAAAAAAADAAsAAAAMAAAAAAADAAwAAAAMAAAAAAADAA0AAAAMAAAAAAADAA4AAAAMAAAAAAADAA8AAAAMAAAAAAAEAAAAAAAMAAAAAAAEAAEAAAAMAAAAAAAEAAIAAAAMAAAAAAAEAAMAAAAMAAAAAAAEAAQAAAAMAAAAAAAEAAUAAAAMAAAAAAAEAAYAAAAMAAAAAAAEAAcAAAAMAAAAAAAEAAgAAAAMAAAAAAAEAAkAAAAMAAAAAAAEAAoAAAAMAAAAAAAEAAsAAAAMAAAAAAAEAAwAAAAMAAAAAAAEAA0AAAAMAAAAAAAEAA4AAAAMAAAAAAAEAA8AAAAMAAAAAAAFAAAAAAAMAAAAAAAFAAEAAAAMAAAAAAAFAAIAAAAMAAAAAAAFAAMAAAAMAAAAAAAFAAQAAAAMAAAAAAAFAAUAAAAMAAAAAAAFAAYAAAAMAAAAAAAFAAcAAAAMAAAAAAAFAAgAAAAMAAAAAAAFAAkAAAAMAAAAAAAFAAoAAAAMAAAAAAAFAAsAAAAMAAAAAAAFAAwAAAAMAAAAAAAFAA0AAAAMAAAAAAAFAA4AAAAMAAAAAAAFAA8AAAAMAAAAAAAGAAAAAAAMAAAAAAAGAAEAAAAMAAAAAAAGAAIAAAAMAAAAAAAGAAMAAAAMAAAAAAAGAAQAAAAMAAAAAAAGAAUAAAAMAAAAAAAGAAYAAAAMAAAAAAAGAAcAAAAMAAAAAAAGAAgAAAAMAAAAAAAGAAkAAAAMAAAAAAAGAAoAAAAMAAAAAAAGAAsAAAAMAAAAAAAGAAwAAAAMAAAAAAAGAA0AAAAMAAAAAAAGAA4AAAAMAAAAAAAGAA8AAAAMAAAAAAAHAAAAAAAMAAAAAAAHAAEAAAAMAAAAAAAHAAIAAAAMAAAAAAAHAAMAAAAMAAAAAAAHAAQAAAAMAAAAAAAHAAUAAAAMAAAAAAAHAAYAAAAMAAAAAAAHAAcAAAAMAAAAAAAHAAgAAAAMAAAAAAAHAAkAAAAMAAAAAAAHAAoAAAAMAAAAAAAHAAsAAAAMAAAAAAAHAAwAAAAMAAAAAAAHAA0AAAAMAAAAAAAHAA4AAAAMAAAAAAAHAA8AAAAMAAAAAAAAAPv/AAAMAAAAAAAAAPz/AAAMAAAAAAAAAP3/AAAMAAAAAAAAAP7/AAAMAAAAAAAAAP//AAAMAAAAAAABAPv/AAAMAAAAAAABAPz/AAAMAAAAAAABAP3/AAAMAAAAAAABAP7/AAAMAAAAAAABAP//AAAMAAAAAAACAPv/AAAMAAAAAAACAPz/AAAMAAAAAAACAP3/AAAMAAAAAAACAP7/AAAMAAAAAAACAP//AAAMAAAAAAADAPv/AAAMAAAAAAADAPz/AAAMAAAAAAADAP3/AAAMAAAAAAADAP7/AAAMAAAAAAADAP//AAAMAAAAAAAEAPv/AAAMAAAAAAAEAPz/AAAMAAAAAAAEAP3/AAAMAAAAAAAEAP7/AAAMAAAAAAAEAP//AAAMAAAAAAAFAPv/AAAMAAAAAAAFAPz/AAAMAAAAAAAFAP3/AAAMAAAAAAAFAP7/AAAMAAAAAAAFAP//AAAMAAAAAAAGAPv/AAAMAAAAAAAGAPz/AAAMAAAAAAAGAP3/AAAMAAAAAAAGAP7/AAAMAAAAAAAGAP//AAAMAAAAAAAHAPv/AAAMAAAAAAAHAPz/AAAMAAAAAAAHAP3/AAAMAAAAAAAHAP7/AAAMAAAAAAAHAP//AAAMAAAAAAAIAPv/AAAMAAAAAAAIAPz/AAAMAAAAAAAIAP3/AAAMAAAAAAAIAP7/AAAMAAAAAAAIAP//AAAMAAAAAAAJAPv/AAAMAAAAAAAJAPz/AAAMAAAAAAAJAP3/AAAMAAAAAAAJAP7/AAAMAAAAAAAJAP//AAAMAAAAAAAKAPv/AAAMAAAAAAAKAPz/AAAMAAAAAAAKAP3/AAAMAAAAAAAKAP7/AAAMAAAAAAAKAP//AAAMAAAAAAALAPv/AAAMAAAAAAALAPz/AAAMAAAAAAALAP3/AAAMAAAAAAALAP7/AAAMAAAAAAALAP//AAAMAAAAAAAMAPv/AAAMAAAAAAAMAPz/AAAMAAAAAAAMAP3/AAAMAAAAAAAMAP7/AAAMAAAAAAAMAP//AAAMAAAAAAANAPv/AAAMAAAAAAANAPz/AAAMAAAAAAANAP3/AAAMAAAAAAANAP7/AAAMAAAAAAANAP//AAAMAAAAAAAOAPv/AAAMAAAAAAAOAPz/AAAMAAAAAAAOAP3/AAAMAAAAAAAOAP7/AAAMAAAAAAAOAP//AAAMAAAAAAAPAPv/AAAMAAAAAAAPAPz/AAAMAAAAAAAPAP3/AAAMAAAAAAAPAP7/AAAMAAAAAAAPAP//AAAMAAAAAAAQAPv/AAAMAAAAAAAQAPz/AAAMAAAAAAAQAP3/AAAMAAAAAAAQAP7/AAAMAAAAAAAQAP//AAAMAAAAAAARAPv/AAAMAAAAAAARAPz/AAAMAAAAAAARAP3/AAAMAAAAAAARAP7/AAAMAAAAAAARAP//AAAMAAAAAAASAPv/AAAMAAAAAAASAPz/AAAMAAAAAAASAP3/AAAMAAAAAAASAP7/AAAMAAAAAAASAP//AAAMAAAAAAATAPv/AAAMAAAAAAATAPz/AAAMAAAAAAATAP3/AAAMAAAAAAATAP7/AAAMAAAAAAATAP//AAAMAAAAAAAUAPv/AAAMAAAAAAAUAPz/AAAMAAAAAAAUAP3/AAAMAAAAAAAUAP7/AAAMAAAAAAAUAP//AAAMAAAAAAAVAPv/AAAMAAAAAAAVAPz/AAAMAAAAAAAVAP3/AAAMAAAAAAAVAP7/AAAMAAAAAAAVAP//AAAMAAAAAAAWAPv/AAAMAAAAAAAWAPz/AAAMAAAAAAAWAP3/AAAMAAAAAAAWAP7/AAAMAAAAAAAWAP//AAAMAAAAAAAXAPv/AAAMAAAAAAAXAPz/AAAMAAAAAAAXAP3/AAAMAAAAAAAXAP7/AAAMAAAAAAAXAP//AAAMAAAAAAAYAPv/AAAMAAAAAAAYAPz/AAAMAAAAAAAYAP3/AAAMAAAAAAAYAP7/AAAMAAAAAAAYAP//AAAMAAAAAAAZAPv/AAAMAAAAAAAZAPz/AAAMAAAAAAAZAP3/AAAMAAAAAAAZAP7/AAAMAAAAAAAZAP//AAAMAAAAAAAaAPv/AAAMAAAAAAAaAPz/AAAMAAAAAAAaAP3/AAAMAAAAAAAaAP7/AAAMAAAAAAAaAP//AAAMAAAAAAAbAPv/AAAMAAAAAAAbAPz/AAAMAAAAAAAbAP3/AAAMAAAAAAAbAP7/AAAMAAAAAAAbAP//AAAMAAAAAAAcAPv/AAAMAAAAAAAcAPz/AAAMAAAAAAAcAP3/AAAMAAAAAAAcAP7/AAAMAAAAAAAcAP//AAAMAAAAAAAdAPv/AAAMAAAAAAAdAPz/AAAMAAAAAAAdAP3/AAAMAAAAAAAdAP7/AAAMAAAAAAAdAP//AAAMAAAAAAAeAPv/AAAMAAAAAAAeAPz/AAAMAAAAAAAeAP3/AAAMAAAAAAAeAP7/AAAMAAAAAAAeAP//AAAMAAAAAAAfAPv/AAAMAAAAAAAfAPz/AAAMAAAAAAAfAP3/AAAMAAAAAAAfAP7/AAAMAAAAAAAfAP//AAAMAAAAAAAgAPv/AAAMAAAAAAAgAPz/AAAMAAAAAAAgAP3/AAAMAAAAAAAgAP7/AAAMAAAAAAAgAP//AAAMAAAAAAARAAgABwAVADUAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="Wall" type="TileMapLayer" parent="TilemapLayers"]
 tile_map_data = PackedByteArray("AAAIAAAAAAAHABMAAAAJAAAAAAAIABMAAAAKAAAAAAAIABMAAAALAAAAAAAIABMAAAAMAAAAAAAIABMAAAANAAAAAAAIABMAAAAOAAAAAAAIABMAAAAPAAAAAAAIABMAAAAQAAAAAAAIABMAAAARAAAAAAAIABMAAAASAAAAAAAIABMAAAATAAAAAAAIABMAAAAUAAAAAAAIABMAAAAVAAAAAAAIABMAAAAWAAAAAAAIABMAAAAXAAAAAAAJABMAAAAIAAEAAAAEABMAAAAXAAEAAAAGABMAAAAJAAEAAAAFABMAAAAKAAEAAAAFABMAAAALAAEAAAAFABMAAAAMAAEAAAAFABMAAAANAAEAAAAFABMAAAAOAAEAAAAFABMAAAAPAAEAAAAFABMAAAAQAAEAAAAFABMAAAARAAEAAAAFABMAAAASAAEAAAAFABMAAAATAAEAAAAFABMAAAAUAAEAAAAFABMAAAAVAAEAAAAFABMAAAAWAAEAAAAFABMAAAAIAAIAAAAHABQAAAAJAAIAAAAIABQAAAAKAAIAAAAIABQAAAALAAIAAAAIABQAAAAMAAIAAAAIABQAAAANAAIAAAAIABQAAAAOAAIAAAAIABQAAAAPAAIAAAAIABQAAAAQAAIAAAAIABQAAAARAAIAAAAIABQAAAASAAIAAAAIABQAAAATAAIAAAAIABQAAAAUAAIAAAAIABQAAAAVAAIAAAAIABQAAAAWAAIAAAAIABQAAAAXAAIAAAAJABQAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="Windows" type="TileMapLayer" parent="TilemapLayers"]
 tile_map_data = PackedByteArray("AAAKAAEAAwAKAAEAAAAKAAIAAwAKAAIAAAALAAEAAwALAAEAAAALAAIAAwALAAIAAAAUAAEAAwAKAAEAAAAUAAIAAwAKAAIAAAAVAAEAAwALAAEAAAAVAAIAAwALAAIAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="Decor" type="TileMapLayer" parent="TilemapLayers"]
 tile_map_data = PackedByteArray("AAAJAAAABAACAAIAAAAJAAEABAACAAMAAAAMAAAABAACAAIAAAAMAAEABAACAAMAAAAWAAAABAACAAIAAAAWAAEABAACAAMAAAATAAAABAACAAIAAAATAAEABAACAAMAAAAXAAAABAAEAAEAAAAXAAEABAAEAAIAAAAIAAAABAAEAAEAAAAIAAEABAAEAAIAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="Carpet" type="TileMapLayer" parent="TilemapLayers"]
 tile_map_data = PackedByteArray("AAAQAA8ABwAHAAMAAAAQAA4ABwAHAAMAAAAPAA8ABwAHAAMAAAAPAA4ABwAHAAMAAAAPAA0ABwAHAAMAAAAPAAwABwAHAAMAAAAQAA0ABwAHAAMAAAAQAAwABwAHAAMAAAAQAAsABwAHAAMAAAAPAAsABwAHAAMAAAARAAsABwAIAAMAAAARAAwABwAIAAMAAAARAA0ABwAIAAMAAAARAA4ABwAIAAMAAAARAA8ABwAIAAMAAAAOAA4ABwAGAAMAAAAOAA8ABwAGAAMAAAAOAAwABwAGAAMAAAAOAA0ABwAGAAMAAAAOAAsABwAGAAMAAAAQAAoABwAHAAMAAAARAAoABwAIAAMAAAAPAAoABwAHAAMAAAAOAAoABwAGAAMAAAAOAAkABwAIAAAAAAAPAAkABwAHAAMAAAAQAAkABwAHAAMAAAARAAkABwAHAAAAAAARAAgABwAHAAMAAAAQAAgABwAHAAMAAAAOAAgABwAKAAMAAAAPAAgABwAHAAMAAAAPAAcABwAHAAIAAAAQAAcABwAHAAIAAAARAAcABwAHAAIAAAAOAAcABwAHAAIAAAASAAgABwAHAAMAAAATAAgABwAHAAMAAAAUAAgABwAHAAMAAAAVAAgABwAHAAMAAAAWAAgABwAHAAMAAAAXAAgABwAHAAMAAAANAAgABwAHAAMAAAAMAAgABwAHAAMAAAALAAgABwAHAAMAAAAKAAgABwAHAAMAAAAJAAgABwAHAAMAAAAIAAgABwAHAAMAAAASAAcABwAHAAIAAAATAAcABwAHAAIAAAAUAAcABwAHAAIAAAAVAAcABwAHAAIAAAAWAAcABwAHAAIAAAAXAAcABwAHAAIAAAANAAcABwAHAAIAAAAMAAcABwAHAAIAAAALAAcABwAHAAIAAAAKAAcABwAHAAIAAAAJAAcABwAHAAIAAAAIAAcABwAHAAIAAAAXAAkABwAHAAQAAAAWAAkABwAHAAQAAAAVAAkABwAHAAQAAAAUAAkABwAHAAQAAAATAAkABwAHAAQAAAASAAkABwAHAAQAAAAIAAkABwAHAAQAAAAJAAkABwAHAAQAAAAKAAkABwAHAAQAAAALAAkABwAHAAQAAAAMAAkABwAHAAQAAAANAAkABwAHAAQAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="Furnitures" type="Node2D" parent="."]
 position = Vector2(30, 139)
 
 [node name="Flowers" type="Sprite2D" parent="Furnitures"]
 position = Vector2(558, 54)
-texture = ExtResource("2_gb433")
+texture = ExtResource("2_yfwtl")
 region_enabled = true
 region_rect = Rect2(454.07928, 13.184327, 38.955627, 61.806717)
 
 [node name="Flowers2" type="Sprite2D" parent="Furnitures"]
 position = Vector2(464, 53)
-texture = ExtResource("2_gb433")
+texture = ExtResource("2_yfwtl")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(454.07928, 13.184327, 38.955627, 61.806717)
@@ -58,42 +293,42 @@ region_rect = Rect2(454.07928, 13.184327, 38.955627, 61.806717)
 [node name="Thingy1" type="Sprite2D" parent="Furnitures"]
 position = Vector2(673, 75)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_7mkij")
+texture = ExtResource("3_x456r")
 region_enabled = true
 region_rect = Rect2(480, 0, 240, 260)
 
 [node name="Thingy2" type="Sprite2D" parent="Furnitures"]
 position = Vector2(352, 75)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("2_7mkij")
+texture = ExtResource("3_x456r")
 region_enabled = true
 region_rect = Rect2(480, 0, 240, 260)
 
 [node name="Cross" type="Sprite2D" parent="Furnitures"]
 position = Vector2(511, 63)
 scale = Vector2(1.23, 1.23)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(288.9001, 240, 45.684082, 80)
 
 [node name="Candle" type="Sprite2D" parent="Furnitures"]
 position = Vector2(592, 156.4)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(144, 240, 48, 64)
 
 [node name="Candle2" type="Sprite2D" parent="Furnitures"]
 position = Vector2(427, 156.4)
 scale = Vector2(1.2, 1.2)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(144, 240, 48, 64)
 
 [node name="Table2" type="Sprite2D" parent="Furnitures"]
 position = Vector2(513, 161)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(128, 160, 128, 80)
 
@@ -101,37 +336,37 @@ region_rect = Rect2(128, 160, 128, 80)
 
 [node name="Bench1" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(674, 507)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
 [node name="Bench2" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(348, 507)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
 [node name="Bench3" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(675, 437)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
 [node name="Bench4" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(348, 437)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
 [node name="Bench5" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(349, 367)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
 [node name="Bench6" type="Sprite2D" parent="Furnitures/Benches"]
 position = Vector2(674, 368)
-texture = ExtResource("4_htbwc")
+texture = ExtResource("4_flw15")
 region_enabled = true
 region_rect = Rect2(528, 288, 144, 48)
 
@@ -139,18 +374,22 @@ region_rect = Rect2(528, 288, 144, 48)
 y_sort_enabled = true
 position = Vector2(30, 139)
 
-[node name="Player" parent="y-sort" instance=ExtResource("3_gb433")]
-position = Vector2(512, 531)
-scale = Vector2(0.2, 0.2)
+[node name="Player" parent="y-sort" instance=ExtResource("5_e5o27")]
+position = Vector2(515, 562)
+scale = Vector2(0.22, 0.22)
+in_cutscene = true
 
 [node name="Camera2D" type="Camera2D" parent="y-sort/Player"]
-zoom = Vector2(2.815, 2.815)
-limit_left = 288
-limit_top = 144
-limit_right = 795
-limit_bottom = 651
+position = Vector2(28.57135, -148.57141)
+scale = Vector2(5.7142854, 5.7142854)
+zoom = Vector2(3.5, 3.5)
+limit_left = 100
+limit_top = 0
+limit_right = 1020
+limit_bottom = 650
 
-[node name="Arch" parent="y-sort" instance=ExtResource("4_rfkdx")]
+[node name="Arch" parent="y-sort" instance=ExtResource("6_2m4dd")]
+visible = false
 position = Vector2(512, 412.99997)
 scale = Vector2(1.45, 1.45)
 
@@ -158,79 +397,85 @@ scale = Vector2(1.45, 1.45)
 y_sort_enabled = true
 position = Vector2(0, 32)
 
-[node name="priest" parent="y-sort/npcs" instance=ExtResource("6_7mkij")]
+[node name="priest" parent="y-sort/npcs" instance=ExtResource("7_n3gfm")]
 position = Vector2(512, 201)
 scale = Vector2(0.2, 0.2)
 
-[node name="adult" parent="y-sort/npcs" instance=ExtResource("8_7bg8e")]
+[node name="adult" parent="y-sort/npcs" instance=ExtResource("8_ylfob")]
 position = Vector2(617, 210)
 scale = Vector2(0.22, 0.22)
 
-[node name="adult2" parent="y-sort/npcs" instance=ExtResource("9_8ma20")]
+[node name="adult2" parent="y-sort/npcs" instance=ExtResource("9_j5uun")]
 position = Vector2(412.00003, 210)
 scale = Vector2(0.22, 0.22)
 
-[node name="adult3" parent="y-sort/npcs" instance=ExtResource("10_htbwc")]
+[node name="adult3" parent="y-sort/npcs" instance=ExtResource("10_vlmq8")]
 position = Vector2(385, 228)
 scale = Vector2(0.22, 0.22)
 
-[node name="adult4" parent="y-sort/npcs" instance=ExtResource("11_i0eat")]
+[node name="adult4" parent="y-sort/npcs" instance=ExtResource("11_hm1g7")]
 position = Vector2(638, 228)
 scale = Vector2(0.22, 0.22)
 
-[node name="Groom" parent="y-sort/npcs" instance=ExtResource("11_8ma20")]
+[node name="Groom" parent="y-sort/npcs" instance=ExtResource("12_gfrws")]
 position = Vector2(550, 242.99998)
 scale = Vector2(0.22, 0.22)
 
 [node name="Flowers" type="Node2D" parent="y-sort"]
 y_sort_enabled = true
 
-[node name="Flower" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(586, 514)
 
-[node name="Flower2" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower2" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(443, 513)
 
-[node name="Flower3" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower3" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(443, 328)
 
-[node name="Flower4" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower4" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(583, 328)
 
-[node name="Flower5" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower5" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(582, 423)
 
-[node name="Flower6" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower6" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(443, 425)
 
-[node name="Flower7" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower7" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(669, 330)
 
-[node name="Flower8" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower8" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(746, 328)
 
-[node name="Flower9" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower9" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(361, 328)
 
-[node name="Flower10" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower10" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(277, 328)
 
-[node name="Flower11" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower11" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(746, 226)
 
-[node name="Flower12" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower12" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(277, 226)
 
-[node name="Flower13" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower13" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(447, 226)
 
-[node name="Flower14" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+[node name="Flower14" parent="y-sort/Flowers" instance=ExtResource("13_rahve")]
 position = Vector2(577, 226)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_x456r")
+}
+autoplay = "wedding_part2"
 
 [node name="Border" type="TileMapLayer" parent="."]
 position = Vector2(30, 139)
 tile_map_data = PackedByteArray("AAAIAAAAAAAKAAEAAAAJAAAAAAAMAAMAAAAKAAAAAAAMAAMAAAALAAAAAAAMAAMAAAAMAAAAAAAMAAMAAAANAAAAAAAMAAMAAAAOAAAAAAAMAAMAAAAPAAAAAAAMAAMAAAAQAAAAAAAMAAMAAAARAAAAAAAMAAMAAAASAAAAAAAMAAMAAAATAAAAAAAMAAMAAAAUAAAAAAAMAAMAAAAVAAAAAAAMAAMAAAAWAAAAAAAMAAMAAAAXAAAAAAAJAAEAAAAXAAEAAAALAAIAAAAXAAIAAAALAAIAAAAXAAMAAAALAAIAAAAXAAQAAAALAAIAAAAXAAUAAAALAAIAAAAXAAYAAAALAAIAAAAXAAcAAAALAAIAAAAXAAgAAAALAAIAAAAIAAEAAAANAAIAAAAIAAIAAAANAAIAAAAIAAMAAAANAAIAAAAIAAQAAAANAAIAAAAIAAUAAAANAAIAAAAIAAYAAAANAAIAAAAIAAcAAAANAAIAAAAIAAgAAAANAAIAAAAIAAkAAAANAAIAAAAIAAoAAAANAAIAAAAIAAsAAAANAAIAAAAIAAwAAAANAAIAAAAIAA0AAAANAAIAAAAIAA4AAAANAAIAAAAIAA8AAAANAAIAAAAXAAkAAAALAAIAAAAXAAoAAAALAAIAAAAXAAsAAAALAAIAAAAXAAwAAAALAAIAAAAXAA0AAAALAAIAAAAXAA4AAAALAAIAAAAXAA8AAAALAAIAAAAHABAAAAAMAAAAAAAIABAAAAAMAAAAAAAJABAAAAAMAAAAAAAKABAAAAAMAAAAAAALABAAAAAMAAAAAAAMABAAAAAMAAAAAAANABAAAAAMAAAAAAAOABAAAAAMAAAAAAAPABAAAAAMAAAAAAAQABAAAAAMAAAAAAARABAAAAAMAAAAAAASABAAAAAMAAAAAAATABAAAAAMAAAAAAAUABAAAAAMAAAAAAAVABAAAAAMAAAAAAAWABAAAAAMAAAAAAAXABAAAAAMAAAAAAAYABAAAAAMAAAAAAAFABAAAAAMAAAAAAAGABAAAAAMAAAAAAANABEAAAAMAAAAAAAOABEAAAAMAAAAAAAPABEAAAAMAAAAAAAQABEAAAAMAAAAAAARABEAAAAMAAAAAAASABEAAAAMAAAAAAATABEAAAAMAAAAAAAUABEAAAAMAAAAAAAVABEAAAAMAAAAAAAWABEAAAAMAAAAAAAZABAAAAAMAAAAAAAaABAAAAAMAAAAAAAbABAAAAAMAAAAAAAaABEAAAAMAAAAAAAZABEAAAAMAAAAAAAYABEAAAAMAAAAAAAXABEAAAAMAAAAAAAMABEAAAAMAAAAAAALABEAAAAMAAAAAAAKABEAAAAMAAAAAAAJABEAAAAMAAAAAAAIABEAAAAMAAAAAAAHABEAAAAMAAAAAAAGABEAAAAMAAAAAAAFABEAAAAMAAAAAAAbABEAAAAMAAAAAAA=")
-tile_set = ExtResource("1_gs0oh")
+tile_set = ExtResource("1_600wu")
 
 [node name="collisions" type="StaticBody2D" parent="."]
 visible = false
@@ -238,3 +483,35 @@ visible = false
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="collisions"]
 position = Vector2(0, 6)
 polygon = PackedVector2Array(301, 646, 439, 674, 644, 675, 640, 420, 727, 416, 741, 352, 735, 325, 717, 288, 659, 287, 644, 293, 637, 325, 446, 325, 442, 292, 376, 317, 382, 404, 443, 419, 441, 636, 265, 637, 254, 181, 248, 104, 819, 102, 829, 437, 839, 667, 737, 725, 395, 716, 250, 672, 256, 647)
+
+[node name="CinematicBars" type="CanvasLayer" parent="."]
+
+[node name="TopBorder" type="ColorRect" parent="CinematicBars"]
+custom_minimum_size = Vector2(0, 160)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BottomBorder" type="ColorRect" parent="CinematicBars"]
+custom_minimum_size = Vector2(0, 160)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
+[node name="Fadeout" type="ColorRect" parent="CinematicBars"]
+modulate = Color(1, 1, 1, 0.12087953)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[editable path="y-sort/npcs/adult"]
+[editable path="y-sort/npcs/adult4"]
