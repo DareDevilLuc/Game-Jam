@@ -1,6 +1,7 @@
-[gd_scene load_steps=147 format=4 uid="uid://bjcsksp37i0ph"]
+[gd_scene load_steps=150 format=4 uid="uid://bjcsksp37i0ph"]
 
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="1_rjkqs"]
+[ext_resource type="Script" uid="uid://c1lfajbi03n8l" path="res://00_Globals/level2.gd" id="1_tne3c"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="2_wenux"]
 [ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/Level 2/background/GrayFloorSlab.png" id="3_eady5"]
 [ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/Level 2/background/GrayFloor.png" id="4_gdixp"]
@@ -54,6 +55,8 @@
 [ext_resource type="Texture2D" uid="uid://b8ld1rl1bjj62" path="res://assets/Level 2/cuts/Scythe.atlastex" id="52_ifoyk"]
 [ext_resource type="Texture2D" uid="uid://71jjcnxxtw3v" path="res://assets/Level 2/cuts/Axe.atlastex" id="53_okk6u"]
 [ext_resource type="Texture2D" uid="uid://bbcqddsauwa3w" path="res://assets/Level 2/sprites/CCTV.png" id="54_52p3c"]
+[ext_resource type="PackedScene" uid="uid://degnb6jkdwp2r" path="res://00_Globals/player_spawn2.tscn" id="55_1fqb3"]
+[ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="57_6imh1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("1_rjkqs")
@@ -5505,6 +5508,7 @@ radius = 133.49957
 [node name="Level2" type="Node2D"]
 z_index = -1
 y_sort_enabled = true
+script = ExtResource("1_tne3c")
 
 [node name="Floor" type="TileMapLayer" parent="."]
 z_index = -1
@@ -5847,7 +5851,7 @@ shape = SubResource("RectangleShape2D_q43j7")
 z_index = 1
 
 [node name="Partner" parent="ExtraCharacters" instance=ExtResource("23_4dnsp")]
-position = Vector2(6, 566)
+position = Vector2(89, 558)
 safe_margin = 7.917
 
 [node name="Actionable" type="Area2D" parent="ExtraCharacters/Partner"]
@@ -6136,3 +6140,14 @@ z_index = 5
 position = Vector2(88, 440)
 scale = Vector2(0.90625, 0.875)
 texture = ExtResource("54_52p3c")
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("55_1fqb3")]
+position = Vector2(156, 562)
+
+[node name="LevelTransition" parent="." instance=ExtResource("57_6imh1")]
+position = Vector2(66, 555)
+target_transition_area = "LevelTransition2"
+
+[node name="LevelTransition2" parent="." instance=ExtResource("57_6imh1")]
+position = Vector2(1026, 568)
+side = 1

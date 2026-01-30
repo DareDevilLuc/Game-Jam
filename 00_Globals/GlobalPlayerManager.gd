@@ -1,10 +1,8 @@
 extends Node
 
 const PLAYER = preload("uid://bcqlw4c6fujdw")
-
 var player : Player
 var player_spawned : bool = false
-
 func _ready() -> void:
 	add_player_instance()
 

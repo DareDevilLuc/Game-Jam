@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://lve08xsbd1qu"]
+
+[ext_resource type="Texture2D" uid="uid://b7vsxyf4p61ae" path="res://assets/mainScreen/game-title.PNG" id="3_wq6re"]
+[ext_resource type="AudioStream" uid="uid://d0wa58tts160y" path="res://sounds/bgm/2_museum.mp3" id="4_nbssi"]
+[ext_resource type="Texture2D" uid="uid://cwh6bx2ftqqfx" path="res://assets/mainScreen/2nd_anim-Sheet.png" id="4_sl845"]
+[ext_resource type="Texture2D" uid="uid://dsddpkqaa535n" path="res://assets/mainScreen/title-menu-background.png" id="5_wq6re"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbssi"]
+atlas = ExtResource("4_sl845")
+region = Rect2(5760, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq6re"]
+atlas = ExtResource("4_sl845")
+region = Rect2(6080, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_651pd"]
+atlas = ExtResource("4_sl845")
+region = Rect2(6400, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_551mv"]
+atlas = ExtResource("4_sl845")
+region = Rect2(6720, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dh5kq"]
+atlas = ExtResource("4_sl845")
+region = Rect2(7040, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egync"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_nbssi")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_wq6re")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_651pd")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_551mv")
+}, {
+"duration": 1.01,
+"texture": SubResource("AtlasTexture_dh5kq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="Node"]
+
+[node name="TitleMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.35291055, 0.3529106)
+texture = ExtResource("5_wq6re")
+
+[node name="GameTitle2" type="Sprite2D" parent="."]
+position = Vector2(-5.9024353, -53.11878)
+scale = Vector2(0.18887359, 0.19937341)
+texture = ExtResource("3_wq6re")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.3113923, 61.923943)
+scale = Vector2(0.3855538, 0.34147587)
+sprite_frames = SubResource("SpriteFrames_egync")
+autoplay = "default"
+frame_progress = 0.0598836
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+offset_left = -103.0
+offset_top = 102.0
+offset_right = 102.0
+offset_bottom = 165.0
+theme_override_font_sizes/normal_font_size = 7
+theme_override_font_sizes/bold_font_size = 20
+text = " Everyone is eyeing the new dinosaur exhibit, but a certain someone only has his eyes on you."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_nbssi")
+autoplay = true

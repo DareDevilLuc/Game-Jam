@@ -12,6 +12,7 @@ var player: CharacterBody2D
 var last_direction: String = "down"
 
 func _ready() -> void:
+	await LevelManager.PartnerTurn
 	player = get_tree().root.find_child("Player2", true, false)
 	
 	if player == null:

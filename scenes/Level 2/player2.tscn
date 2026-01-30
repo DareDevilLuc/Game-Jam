@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://d0bqkh0m14aoy"]
+[gd_scene load_steps=17 format=3 uid="uid://d0bqkh0m14aoy"]
 
 [ext_resource type="Script" uid="uid://dv1f1y2ok4yff" path="res://scripts/Level 2/player2.gd" id="1_l3rmf"]
 [ext_resource type="Texture2D" uid="uid://yv1mhh4sbqte" path="res://assets/Level 2/sprites/2nd_anim-Sheet.png" id="2_a56cp"]
+[ext_resource type="Script" uid="uid://shwa07270fxx" path="res://scripts/Level 2/PlayerCamera2.gd" id="2_pc2q4"]
 [ext_resource type="Script" uid="uid://bgocuy7a0cufn" path="res://scripts/Level 2/player_state_machine.gd" id="3_n2jd5"]
 [ext_resource type="Script" uid="uid://b6ewl6e6wan21" path="res://scripts/Level 2/state_idle.gd" id="4_sr72x"]
 [ext_resource type="Script" uid="uid://p5ay200tl84o" path="res://scripts/Level 2/state_walk.gd" id="5_qqiom"]
@@ -146,6 +147,12 @@ y_sort_enabled = true
 position = Vector2(0, 6)
 collision_mask = 2
 script = ExtResource("1_l3rmf")
+
+[node name="Camera2D2" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+script = ExtResource("2_pc2q4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true

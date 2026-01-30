@@ -24,11 +24,8 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Game2="*res://scripts/Level 2/game2.gd"
 Level3State="*res://scripts/level 3/level3State.gd"
 Stage3State="*res://scripts/level 3/StageGameState.gd"
-
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
+HealthHud="*res://00_Globals/Health_HUD.tscn"
+Player2Manager="*res://00_Globals/GlobalPlayer2Manager.gd"
 
 [editor_plugins]
 

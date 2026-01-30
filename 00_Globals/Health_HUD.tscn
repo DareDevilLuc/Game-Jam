@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1jjyhamuk2xb"]
+
+[ext_resource type="Script" uid="uid://cuv4ncoh3we6i" path="res://00_Globals/heart_health.gd" id="1_du3sl"]
+[ext_resource type="Texture2D" uid="uid://dyagyyn5n6gyo" path="res://00_Globals/heart-anim-Sheet.png" id="2_t62wp"]
+
+[node name="HealthHud" type="CanvasLayer"]
+script = ExtResource("1_du3sl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Control"]
+position = Vector2(1847.0001, 68)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_t62wp")
+hframes = 5

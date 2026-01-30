@@ -1,5 +1,6 @@
-[gd_scene load_steps=147 format=4 uid="uid://cchlmkhhg6w0y"]
+[gd_scene load_steps=149 format=4 uid="uid://cchlmkhhg6w0y"]
 
+[ext_resource type="Script" uid="uid://c1lfajbi03n8l" path="res://00_Globals/level2.gd" id="1_ovqdl"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="1_sdile"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="2_ovqdl"]
 [ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/Level 2/background/GrayFloorSlab.png" id="3_c1nt4"]
@@ -54,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ld1rl1bjj62" path="res://assets/Level 2/cuts/Scythe.atlastex" id="52_mv3vw"]
 [ext_resource type="Texture2D" uid="uid://71jjcnxxtw3v" path="res://assets/Level 2/cuts/Axe.atlastex" id="53_81xnm"]
 [ext_resource type="Texture2D" uid="uid://bbcqddsauwa3w" path="res://assets/Level 2/sprites/CCTV.png" id="54_tecr0"]
+[ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="56_c1nt4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("1_sdile")
@@ -5505,6 +5507,7 @@ radius = 133.49957
 [node name="Level2" type="Node2D"]
 z_index = -1
 y_sort_enabled = true
+script = ExtResource("1_ovqdl")
 
 [node name="Floor" type="TileMapLayer" parent="."]
 z_index = -1
@@ -6136,3 +6139,11 @@ z_index = 5
 position = Vector2(88, 440)
 scale = Vector2(0.90625, 0.875)
 texture = ExtResource("54_tecr0")
+
+[node name="LevelTransition" parent="." instance=ExtResource("56_c1nt4")]
+position = Vector2(66, 555)
+target_transition_area = "LevelTransition2"
+
+[node name="LevelTransition2" parent="." instance=ExtResource("56_c1nt4")]
+position = Vector2(1026, 568)
+side = 1
