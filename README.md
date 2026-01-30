@@ -1,4 +1,4 @@
-<img width="543" height="736" alt="image" src="https://github.com/user-attachments/assets/5441a811-c8ba-42fb-9164-aba73ba8a5e6" /><img width="543" height="736" alt="image" src="https://github.com/user-attachments/assets/b7b9068e-51c7-4b51-be5d-80c298667114" /># Crossroads of Us
+# Crossroads of Us
 
 **Crossroads of Us** is a 2D top-down psychological romance game built in Godot. Flustered by "love bugs" and the repetitive cycles of relationship dynamics, the game utilizes a looping mechanic to explore the uncertainties of the heart.
 
