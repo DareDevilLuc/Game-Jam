@@ -383,19 +383,31 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ur7pv"]
-radius = 60.00833
+radius = 17.029387
 
 [node name="Player" type="CharacterBody2D"]
 y_sort_enabled = true
+position = Vector2(953, 566)
 script = ExtResource("1_g2els")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, -8)
+scale = Vector2(5.7142854, 5.7142854)
+zoom = Vector2(2.66, 2.66)
+limit_enabled = false
+limit_left = 10000
+limit_top = 10000
+limit_right = 10000
+limit_bottom = 10000
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_smehm")
 animation = &"walk_up"
 frame_progress = 0.6646814
 offset = Vector2(0, -130)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -55)
+position = Vector2(0, -13)
 shape = SubResource("CircleShape2D_ur7pv")

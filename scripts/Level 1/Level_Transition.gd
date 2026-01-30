@@ -63,6 +63,19 @@ var level3 : Array[ String ] = [
 	"res://scenes/level 3/GameScenes/level_3_window.tscn",
 	"res://scenes/level 3/GameScenes/level_3_world.tscn",
 ]
+var level4 : Array[ String ] = [
+	"res://scenes/level-4/scenarios/wedding_level.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly1.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly2.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly3.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly4.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly5.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly6.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly7.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly8.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly9.tscn",
+	"res://scenes/level-4/scenarios/wedding_anomaly10.tscn",
+]
 @export var target_transition_area : String = "LevelTransition"
 
 @export_category("Collision Area Settings")
@@ -108,6 +121,8 @@ func _random_level() -> String:
 		return level2[LevelManager.return_randomInt()]
 	if LevelManager.current_level_index == 2:
 		return level3[LevelManager.return_randomInt()]
+	if LevelManager.current_level_index == 3:
+		return level4[LevelManager.return_randomInt()]
 	else:
 		return ""
 
@@ -130,6 +145,8 @@ func _place_player() -> void:
 		Player2Manager.set_player_position( global_position + LevelManager.position_offset )
 	if LevelManager.current_level_index == 2:
 		Player3Manager.set_player_position( global_position + LevelManager.position_offset )
+	if LevelManager.current_level_index == 3:
+		Player4Manager.set_player_position( global_position + LevelManager.position_offset )
 
 
 func get_offset() -> Vector2:
@@ -141,6 +158,8 @@ func get_offset() -> Vector2:
 		player_pos = Player2Manager.player.global_position
 	elif LevelManager.current_level_index == 2:
 		player_pos = Player3Manager.player.global_position
+	elif LevelManager.current_level_index == 3:
+		player_pos = Player4Manager.player.global_position
 	
 
 	if side == SIDE.LEFT or side == SIDE.RIGHT:

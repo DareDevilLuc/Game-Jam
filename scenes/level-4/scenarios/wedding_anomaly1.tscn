@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=4 uid="uid://dvny11oubd33s"]
+[gd_scene load_steps=23 format=4 uid="uid://dvny11oubd33s"]
 
 [ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_3q5tv"]
-[ext_resource type="PackedScene" uid="uid://cnaym2gktcysw" path="res://scenes/level-4/player.tscn" id="2_x6hr2"]
+[ext_resource type="Script" uid="uid://be0r4m107l3nk" path="res://00_Globals/level4.gd" id="1_unarr"]
 [ext_resource type="PackedScene" uid="uid://du3nh63d2llj1" path="res://scenes/level-4/furnitures/flower3.tscn" id="3_unarr"]
 [ext_resource type="PackedScene" uid="uid://cl5xk015g5wyq" path="res://scenes/level-4/furnitures/plant2.tscn" id="4_xeyso"]
 [ext_resource type="PackedScene" uid="uid://vmto26g1whqt" path="res://scenes/level-4/furnitures/plant.tscn" id="5_ayki4"]
@@ -19,12 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://bqlq380co4pg2" path="res://scenes/level-4/npcs/adult8.tscn" id="17_6u6wt"]
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="18_7hxfv"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="19_ohadm"]
-[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="20_x6hr2"]
+[ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="20_unarr"]
+[ext_resource type="PackedScene" path="res://scenes/level-4/npcs/groom.tscn" id="20_x6hr2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
 
 [node name="Wedding Level" type="Node2D"]
+script = ExtResource("1_unarr")
 
 [node name="TileMaps" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -57,19 +59,6 @@ y_sort_enabled = true
 position = Vector2(94, -2)
 tile_map_data = PackedByteArray("AAAMAA0AAQAJAFAAAAANAA0AAQAKAFAAAAAPAA0AAQAJAFAAAAAQAA0AAQAKAFAAAAASAA0AAQAJAFAAAAATAA0AAQAKAFAAAAAVAA0AAQAJAFAAAAAWAA0AAQAKAFAAAAAMAA4AAQAJAFMAAAANAA4AAQAKAFMAAAAMAA8AAQAJAFMAAAANAA8AAQAKAFMAAAAPAA4AAQAJAFMAAAAQAA4AAQAKAFMAAAAPAA8AAQAJAFMAAAAQAA8AAQAKAFMAAAASAA4AAQAJAFMAAAATAA4AAQAKAFMAAAASAA8AAQAJAFMAAAATAA8AAQAKAFMAAAAVAA4AAQAJAFMAAAAWAA4AAQAKAFMAAAAVAA8AAQAJAFMAAAAWAA8AAQAKAFMAAAAMABAAAQAJAFIAAAANABAAAQAKAFIAAAAPABAAAQAJAFIAAAAQABAAAQAKAFIAAAASABAAAQAJAFIAAAATABAAAQAKAFIAAAAVABAAAQAJAFIAAAAWABAAAQAKAFIAAAAMAAcAAQAJAFIAAAANAAcAAQAKAFIAAAAPAAcAAQAJAFIAAAAQAAcAAQAKAFIAAAASAAcAAQAJAFIAAAATAAcAAQAKAFIAAAAVAAcAAQAJAFIAAAAWAAcAAQAKAFIAAAAMAAYAAQAJAFMAAAANAAYAAQAKAFMAAAAMAAUAAQAJAFMAAAANAAUAAQAKAFMAAAAPAAYAAQAJAFMAAAAQAAYAAQAKAFMAAAAPAAUAAQAJAFMAAAAQAAUAAQAKAFMAAAASAAYAAQAJAFMAAAATAAYAAQAKAFMAAAASAAUAAQAJAFMAAAATAAUAAQAKAFMAAAAVAAYAAQAJAFMAAAAWAAYAAQAKAFMAAAAVAAUAAQAJAFMAAAAWAAUAAQAKAFMAAAAMAAQAAQAJAFAAAAANAAQAAQAKAFAAAAAPAAQAAQAJAFAAAAAQAAQAAQAKAFAAAAATAAQAAQAKAFAAAAAWAAQAAQAKAFAAAAAVAAQAAQAJAFAAAAASAAQAAQAJAFAAAAA=")
 tile_set = ExtResource("1_3q5tv")
-
-[node name="Player" parent="y-sortObjects" instance=ExtResource("2_x6hr2")]
-position = Vector2(178, 360)
-scale = Vector2(0.22, 0.22)
-
-[node name="Camera2D" type="Camera2D" parent="y-sortObjects/Player"]
-position = Vector2(28.57135, -148.57141)
-scale = Vector2(5.7142854, 5.7142854)
-zoom = Vector2(2.66, 2.66)
-limit_left = 100
-limit_top = 0
-limit_right = 1020
-limit_bottom = 603
 
 [node name="FurnitureSort" type="Node2D" parent="y-sortObjects"]
 y_sort_enabled = true
@@ -302,3 +291,11 @@ shape = SubResource("RectangleShape2D_wmp38")
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Collision"]
 position = Vector2(502, 203)
 shape = SubResource("RectangleShape2D_wmp38")
+
+[node name="LevelTransition" parent="." instance=ExtResource("20_unarr")]
+position = Vector2(98, 328)
+target_transition_area = "LevelTransition2"
+
+[node name="LevelTransition2" parent="." instance=ExtResource("20_unarr")]
+position = Vector2(1020, 341)
+side = 1
