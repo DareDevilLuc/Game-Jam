@@ -1,0 +1,128 @@
+[gd_scene load_steps=17 format=3 uid="uid://c5lvrhtcjbeje"]
+
+[ext_resource type="Script" uid="uid://du2hfqoyg7fjg" path="res://scripts/main/main.gd" id="1_yb3bl"]
+[ext_resource type="Texture2D" uid="uid://dsddpkqaa535n" path="res://assets/mainScreen/title-menu-background.png" id="2_yb3bl"]
+[ext_resource type="Texture2D" uid="uid://twamnhygg20b" path="res://assets/mainScreen/menu animation frames/frame-0.PNG" id="3_3whng"]
+[ext_resource type="Texture2D" uid="uid://dqnfdbyohsjkm" path="res://assets/mainScreen/menu animation frames/frame-1.PNG" id="4_f12vl"]
+[ext_resource type="Texture2D" uid="uid://cix6bok5gl4y1" path="res://assets/mainScreen/menu animation frames/frame-2.PNG" id="5_m0udh"]
+[ext_resource type="Texture2D" uid="uid://c306s5qitahf7" path="res://assets/mainScreen/menu animation frames/frame-3.PNG" id="6_wtb8d"]
+[ext_resource type="Texture2D" uid="uid://cubpya68qowss" path="res://assets/mainScreen/menu animation frames/frame-4.PNG" id="7_4l1py"]
+[ext_resource type="Texture2D" uid="uid://buy8bb4q0c16a" path="res://assets/mainScreen/menu animation frames/frame-5.PNG" id="8_slfyk"]
+[ext_resource type="Texture2D" uid="uid://ccl1ed0mp587c" path="res://assets/mainScreen/menu animation frames/frame-6.PNG" id="9_d1cqb"]
+[ext_resource type="Texture2D" uid="uid://bcgxefcsxc6ug" path="res://assets/mainScreen/menu animation frames/frame-7.PNG" id="10_haag3"]
+[ext_resource type="Texture2D" uid="uid://db0hws0rqs2e8" path="res://assets/mainScreen/menu animation frames/frame-8.PNG" id="11_alpd7"]
+[ext_resource type="Texture2D" uid="uid://dipsxywl6njvc" path="res://assets/mainScreen/button-anim-Sheet.png" id="12_yivga"]
+[ext_resource type="Script" uid="uid://5q5hdxp5yd4p" path="res://scripts/main/tutorial.gd" id="13_p3dhn"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m36t8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_3whng")
+}, {
+"duration": 0.11,
+"texture": ExtResource("4_f12vl")
+}, {
+"duration": 0.11,
+"texture": ExtResource("5_m0udh")
+}, {
+"duration": 0.11,
+"texture": ExtResource("6_wtb8d")
+}, {
+"duration": 0.11,
+"texture": ExtResource("7_4l1py")
+}, {
+"duration": 0.11,
+"texture": ExtResource("8_slfyk")
+}, {
+"duration": 0.11,
+"texture": ExtResource("9_d1cqb")
+}, {
+"duration": 0.11,
+"texture": ExtResource("10_haag3")
+}, {
+"duration": 0.11,
+"texture": ExtResource("11_alpd7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gat6"]
+size = Vector2(149.86623, 26.480633)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnbrk"]
+size = Vector2(143.0976, 25.712608)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_yb3bl")
+
+[node name="TitleMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(-1, -1)
+scale = Vector2(0.35291055, 0.3529106)
+texture = ExtResource("2_yb3bl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-6, -11)
+scale = Vector2(0.26741162, 0.26741165)
+sprite_frames = SubResource("SpriteFrames_m36t8")
+autoplay = "default"
+frame_progress = 0.5177247
+
+[node name="buttons" type="Node2D" parent="."]
+
+[node name="Tutorial" type="Sprite2D" parent="buttons"]
+position = Vector2(114.99999, 10)
+rotation = 0.11653003
+scale = Vector2(0.26539376, 0.26539373)
+texture = ExtResource("12_yivga")
+region_enabled = true
+region_rect = Rect2(1740, 10, 620, 150)
+
+[node name="Tutorial_Down" type="Sprite2D" parent="buttons"]
+visible = false
+position = Vector2(355.11893, 74.564224)
+rotation = 0.11653003
+scale = Vector2(0.7059834, 0.7059833)
+texture = ExtResource("12_yivga")
+region_enabled = true
+region_rect = Rect2(2560, 20, 620, 140)
+
+[node name="Start" type="Sprite2D" parent="buttons"]
+position = Vector2(121.00001, -33)
+rotation = 0.12334481
+scale = Vector2(0.25627, 0.2562699)
+texture = ExtResource("12_yivga")
+region_enabled = true
+region_rect = Rect2(100, 10, 620, 150)
+
+[node name="Start_Down" type="Sprite2D" parent="buttons"]
+visible = false
+position = Vector2(372.00003, -40.999992)
+rotation = 0.12334481
+scale = Vector2(0.72636354, 0.7263634)
+texture = ExtResource("12_yivga")
+region_enabled = true
+region_rect = Rect2(920, 20, 620, 140)
+
+[node name="tutorial" type="Area2D" parent="."]
+script = ExtResource("13_p3dhn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="tutorial"]
+position = Vector2(116.925606, 6.2095423)
+rotation = 0.11349301
+scale = Vector2(0.9999997, 0.9999997)
+shape = SubResource("RectangleShape2D_4gat6")
+
+[node name="startNow" type="Area2D" parent="."]
+
+[node name="startNow_collision" type="CollisionShape2D" parent="startNow"]
+position = Vector2(122.53343, -36.7928)
+rotation = 0.11373591
+scale = Vector2(0.9999993, 0.9999993)
+shape = SubResource("RectangleShape2D_jnbrk")
+
+[connection signal="input_event" from="tutorial" to="tutorial" method="_on_input_event"]
+[connection signal="mouse_entered" from="tutorial" to="tutorial" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="tutorial" to="tutorial" method="_on_mouse_exited"]

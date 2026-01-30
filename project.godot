@@ -27,11 +27,6 @@ Stage3State="*res://scripts/level 3/StageGameState.gd"
 HealthHud="*res://00_Globals/Health_HUD.tscn"
 Player2Manager="*res://00_Globals/GlobalPlayer2Manager.gd"
 
-[display]
-
-window/size/viewport_width=1920
-window/size/viewport_height=1080
-
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
