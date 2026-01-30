@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 class_name Player4
  
+@export var in_cutscene: bool = false
 # speed in pixels/sec
 var speed = 150
 # for sprite animation
@@ -11,6 +12,9 @@ var dir  = "down"
 	
  
 func _physics_process(_delta):
+	if in_cutscene:
+		return
+	
 	# setup direction of movement
 	var direction = Input.get_vector("left", "right", "up", "down")
 	# stop diagonal moavement by listening for input then setting axis to zero
@@ -40,3 +44,12 @@ func update_animation(vel):
 	else:
 		animated_sprite.play("idle_" + dir)
 		
+
+func play_anim(anim_name) -> void:
+	animated_sprite.play(anim_name, 1.0)
+	
+func slow_anim(anim_name) -> void:
+	animated_sprite.play(anim_name, 0.2)
+
+func play_stop(idle_name) -> void:
+	animated_sprite.play(idle_name, 1.0)

@@ -293,9 +293,9 @@ position = Vector2(502, 203)
 shape = SubResource("RectangleShape2D_wmp38")
 
 [node name="LevelTransition" parent="." instance=ExtResource("20_8281c")]
-position = Vector2(98, 328)
+position = Vector2(131, 347)
 target_transition_area = "LevelTransition2"
 
 [node name="LevelTransition2" parent="." instance=ExtResource("20_8281c")]
-position = Vector2(1020, 341)
+position = Vector2(992, 344)
 side = 1
