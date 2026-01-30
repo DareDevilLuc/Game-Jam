@@ -1,15 +1,16 @@
-[gd_scene load_steps=13 format=4 uid="uid://c2vyn3hohi5q6"]
+[gd_scene load_steps=14 format=4 uid="uid://c2vyn3hohi5q6"]
 
 [ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_gs0oh"]
 [ext_resource type="Texture2D" uid="uid://wew0l05xgo1x" path="res://assets/level-4/envi/Starbird-Advent-Day-24.png" id="2_7mkij"]
 [ext_resource type="Texture2D" uid="uid://dhqhf05rdgy8o" path="res://assets/level-4/envi/AtelierMagicae_FlowerGarden_RPGM.png" id="2_gb433"]
 [ext_resource type="PackedScene" uid="uid://cnaym2gktcysw" path="res://scenes/level-4/player.tscn" id="3_gb433"]
+[ext_resource type="Texture2D" uid="uid://dxj77vrllcprp" path="res://assets/level-4/envi/Starbird_Churc1.png" id="4_htbwc"]
 [ext_resource type="PackedScene" uid="uid://bq62ty0q2dap3" path="res://scenes/level-4/furnitures/arch.tscn" id="4_rfkdx"]
-[ext_resource type="PackedScene" uid="uid://kf0cx7rbdlxv" path="res://scenes/level-4/npcs/partner.tscn" id="5_j3vxv"]
 [ext_resource type="PackedScene" uid="uid://ctdu3mxhjahsp" path="res://scenes/level-4/npcs/priest.tscn" id="6_7mkij"]
 [ext_resource type="PackedScene" uid="uid://cks1qv31h4m4k" path="res://scenes/level-4/npcs/adult1.tscn" id="8_7bg8e"]
 [ext_resource type="PackedScene" uid="uid://dplm7dob05618" path="res://scenes/level-4/npcs/adult5.tscn" id="9_8ma20"]
 [ext_resource type="PackedScene" uid="uid://br0tr8gtup6u" path="res://scenes/level-4/npcs/adult6.tscn" id="10_htbwc"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="11_8ma20"]
 [ext_resource type="PackedScene" uid="uid://n22wev0aul81" path="res://scenes/level-4/npcs/adult7.tscn" id="11_i0eat"]
 [ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="12_8ma20"]
 
@@ -35,45 +36,104 @@ tile_map_data = PackedByteArray("AAAJAAAABAACAAIAAAAJAAEABAACAAMAAAAMAAAABAACAAI
 tile_set = ExtResource("1_gs0oh")
 
 [node name="Carpet" type="TileMapLayer" parent="TilemapLayers"]
-tile_map_data = PackedByteArray("AAAQAA8ABwAHAAMAAAAQAA4ABwAHAAMAAAAPAA8ABwAHAAMAAAAPAA4ABwAHAAMAAAAPAA0ABwAHAAMAAAAPAAwABwAHAAMAAAAQAA0ABwAHAAMAAAAQAAwABwAHAAMAAAAQAAsABwAHAAMAAAAPAAsABwAHAAMAAAARAAsABwAIAAMAAAARAAwABwAIAAMAAAARAA0ABwAIAAMAAAARAA4ABwAIAAMAAAARAA8ABwAIAAMAAAAOAA4ABwAGAAMAAAAOAA8ABwAGAAMAAAAOAAwABwAGAAMAAAAOAA0ABwAGAAMAAAAOAAsABwAGAAMAAAAQAAoABwAHAAMAAAARAAoABwAIAAMAAAAPAAoABwAHAAMAAAAOAAoABwAGAAMAAAAOAAkABwAGAAMAAAAPAAkABwAHAAMAAAAQAAkABwAHAAMAAAARAAkABwAIAAMAAAARAAgABwAIAAIAAAAQAAgABwAHAAIAAAAPAAgABwAHAAIAAAAOAAgABwAGAAIAAAA=")
+tile_map_data = PackedByteArray("AAAQAA8ABwAHAAMAAAAQAA4ABwAHAAMAAAAPAA8ABwAHAAMAAAAPAA4ABwAHAAMAAAAPAA0ABwAHAAMAAAAPAAwABwAHAAMAAAAQAA0ABwAHAAMAAAAQAAwABwAHAAMAAAAQAAsABwAHAAMAAAAPAAsABwAHAAMAAAARAAsABwAIAAMAAAARAAwABwAIAAMAAAARAA0ABwAIAAMAAAARAA4ABwAIAAMAAAARAA8ABwAIAAMAAAAOAA4ABwAGAAMAAAAOAA8ABwAGAAMAAAAOAAwABwAGAAMAAAAOAA0ABwAGAAMAAAAOAAsABwAGAAMAAAAQAAoABwAHAAMAAAARAAoABwAIAAMAAAAPAAoABwAHAAMAAAAOAAoABwAGAAMAAAAOAAkABwAIAAAAAAAPAAkABwAHAAMAAAAQAAkABwAHAAMAAAARAAkABwAHAAAAAAARAAgABwAHAAMAAAAQAAgABwAHAAMAAAAOAAgABwAKAAMAAAAPAAgABwAHAAMAAAAPAAcABwAHAAIAAAAQAAcABwAHAAIAAAARAAcABwAHAAIAAAAOAAcABwAHAAIAAAASAAgABwAHAAMAAAATAAgABwAHAAMAAAAUAAgABwAHAAMAAAAVAAgABwAHAAMAAAAWAAgABwAHAAMAAAAXAAgABwAHAAMAAAANAAgABwAHAAMAAAAMAAgABwAHAAMAAAALAAgABwAHAAMAAAAKAAgABwAHAAMAAAAJAAgABwAHAAMAAAAIAAgABwAHAAMAAAASAAcABwAHAAIAAAATAAcABwAHAAIAAAAUAAcABwAHAAIAAAAVAAcABwAHAAIAAAAWAAcABwAHAAIAAAAXAAcABwAHAAIAAAANAAcABwAHAAIAAAAMAAcABwAHAAIAAAALAAcABwAHAAIAAAAKAAcABwAHAAIAAAAJAAcABwAHAAIAAAAIAAcABwAHAAIAAAAXAAkABwAHAAQAAAAWAAkABwAHAAQAAAAVAAkABwAHAAQAAAAUAAkABwAHAAQAAAATAAkABwAHAAQAAAASAAkABwAHAAQAAAAIAAkABwAHAAQAAAAJAAkABwAHAAQAAAAKAAkABwAHAAQAAAALAAkABwAHAAQAAAAMAAkABwAHAAQAAAANAAkABwAHAAQAAAA=")
 tile_set = ExtResource("1_gs0oh")
 
 [node name="Furnitures" type="Node2D" parent="."]
 position = Vector2(30, 139)
 
 [node name="Flowers" type="Sprite2D" parent="Furnitures"]
-position = Vector2(558, 62)
+position = Vector2(558, 54)
 texture = ExtResource("2_gb433")
 region_enabled = true
 region_rect = Rect2(454.07928, 13.184327, 38.955627, 61.806717)
 
 [node name="Flowers2" type="Sprite2D" parent="Furnitures"]
-position = Vector2(467, 62)
+position = Vector2(464, 53)
 texture = ExtResource("2_gb433")
 flip_h = true
 region_enabled = true
 region_rect = Rect2(454.07928, 13.184327, 38.955627, 61.806717)
 
-[node name="Sprite2D" type="Sprite2D" parent="Furnitures"]
-position = Vector2(639, 77)
+[node name="Thingy1" type="Sprite2D" parent="Furnitures"]
+position = Vector2(673, 75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7mkij")
 region_enabled = true
 region_rect = Rect2(480, 0, 240, 260)
 
-[node name="Sprite2D2" type="Sprite2D" parent="Furnitures"]
-position = Vector2(383, 78)
+[node name="Thingy2" type="Sprite2D" parent="Furnitures"]
+position = Vector2(352, 75)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7mkij")
 region_enabled = true
 region_rect = Rect2(480, 0, 240, 260)
 
-[node name="Sprite2D3" type="Sprite2D" parent="Furnitures"]
-position = Vector2(511, 93)
-scale = Vector2(0.55, 0.55)
-texture = ExtResource("2_7mkij")
+[node name="Cross" type="Sprite2D" parent="Furnitures"]
+position = Vector2(511, 63)
+scale = Vector2(1.23, 1.23)
+texture = ExtResource("4_htbwc")
 region_enabled = true
-region_rect = Rect2(96, 0, 240, 272)
+region_rect = Rect2(288.9001, 240, 45.684082, 80)
+
+[node name="Candle" type="Sprite2D" parent="Furnitures"]
+position = Vector2(592, 156.4)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(144, 240, 48, 64)
+
+[node name="Candle2" type="Sprite2D" parent="Furnitures"]
+position = Vector2(427, 156.4)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_htbwc")
+flip_h = true
+region_enabled = true
+region_rect = Rect2(144, 240, 48, 64)
+
+[node name="Table2" type="Sprite2D" parent="Furnitures"]
+position = Vector2(513, 161)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(128, 160, 128, 80)
+
+[node name="Benches" type="Node2D" parent="Furnitures"]
+
+[node name="Bench1" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(674, 507)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
+
+[node name="Bench2" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(348, 507)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
+
+[node name="Bench3" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(675, 437)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
+
+[node name="Bench4" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(348, 437)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
+
+[node name="Bench5" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(349, 367)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
+
+[node name="Bench6" type="Sprite2D" parent="Furnitures/Benches"]
+position = Vector2(674, 368)
+texture = ExtResource("4_htbwc")
+region_enabled = true
+region_rect = Rect2(528, 288, 144, 48)
 
 [node name="y-sort" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -90,48 +150,82 @@ limit_top = 144
 limit_right = 795
 limit_bottom = 651
 
-[node name="StaticBody2D" parent="y-sort" instance=ExtResource("4_rfkdx")]
-position = Vector2(511, 443.99997)
-scale = Vector2(1.7, 1.7)
+[node name="Arch" parent="y-sort" instance=ExtResource("4_rfkdx")]
+position = Vector2(512, 412.99997)
+scale = Vector2(1.45, 1.45)
 
 [node name="npcs" type="Node2D" parent="y-sort"]
 y_sort_enabled = true
-
-[node name="Partner" parent="y-sort/npcs" instance=ExtResource("5_j3vxv")]
-position = Vector2(561, 233)
-scale = Vector2(0.22, 0.22)
+position = Vector2(0, 32)
 
 [node name="priest" parent="y-sort/npcs" instance=ExtResource("6_7mkij")]
-position = Vector2(511, 209)
+position = Vector2(512, 201)
 scale = Vector2(0.2, 0.2)
 
 [node name="adult" parent="y-sort/npcs" instance=ExtResource("8_7bg8e")]
-position = Vector2(617, 244)
+position = Vector2(617, 210)
 scale = Vector2(0.22, 0.22)
 
 [node name="adult2" parent="y-sort/npcs" instance=ExtResource("9_8ma20")]
-position = Vector2(412.00003, 244)
+position = Vector2(412.00003, 210)
 scale = Vector2(0.22, 0.22)
 
 [node name="adult3" parent="y-sort/npcs" instance=ExtResource("10_htbwc")]
-position = Vector2(379, 269)
+position = Vector2(385, 228)
 scale = Vector2(0.22, 0.22)
 
 [node name="adult4" parent="y-sort/npcs" instance=ExtResource("11_i0eat")]
-position = Vector2(633.99994, 269)
+position = Vector2(638, 228)
 scale = Vector2(0.22, 0.22)
 
-[node name="Flower" parent="y-sort" instance=ExtResource("12_8ma20")]
+[node name="Groom" parent="y-sort/npcs" instance=ExtResource("11_8ma20")]
+position = Vector2(550, 242.99998)
+scale = Vector2(0.22, 0.22)
+
+[node name="Flowers" type="Node2D" parent="y-sort"]
+y_sort_enabled = true
+
+[node name="Flower" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
 position = Vector2(586, 514)
 
-[node name="Flower2" parent="y-sort" instance=ExtResource("12_8ma20")]
+[node name="Flower2" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
 position = Vector2(443, 513)
 
-[node name="Flower3" parent="y-sort" instance=ExtResource("12_8ma20")]
-position = Vector2(445, 312)
+[node name="Flower3" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(443, 328)
 
-[node name="Flower4" parent="y-sort" instance=ExtResource("12_8ma20")]
-position = Vector2(577, 314)
+[node name="Flower4" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(583, 328)
+
+[node name="Flower5" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(582, 423)
+
+[node name="Flower6" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(443, 425)
+
+[node name="Flower7" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(669, 330)
+
+[node name="Flower8" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(746, 328)
+
+[node name="Flower9" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(361, 328)
+
+[node name="Flower10" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(277, 328)
+
+[node name="Flower11" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(746, 226)
+
+[node name="Flower12" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(277, 226)
+
+[node name="Flower13" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(447, 226)
+
+[node name="Flower14" parent="y-sort/Flowers" instance=ExtResource("12_8ma20")]
+position = Vector2(577, 226)
 
 [node name="Border" type="TileMapLayer" parent="."]
 position = Vector2(30, 139)

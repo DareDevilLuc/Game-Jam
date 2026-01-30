@@ -19,7 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://bqlq380co4pg2" path="res://scenes/level-4/npcs/adult8.tscn" id="17_tqu7f"]
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="18_yboq7"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="19_e1lfh"]
-[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/partner4.tscn" id="20_uu7ph"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="20_uu7ph"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
