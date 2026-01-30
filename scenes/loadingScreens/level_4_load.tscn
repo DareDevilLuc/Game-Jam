@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://dfnwfb2n8sd50"]
 
-[ext_resource type="Texture2D" uid="uid://t0d88y6qqpr3" path="res://assets/mainScreen/loading. . ..png" id="1_wshqh"]
-[ext_resource type="Texture2D" uid="uid://cpkkyi0jn1vuy" path="res://assets/mainScreen/618871942_1230470859222789_1496407592032057055_n.jpg" id="2_lmt7b"]
+[ext_resource type="Texture2D" uid="uid://dsddpkqaa535n" path="res://assets/mainScreen/title-menu-background.png" id="1_hjdxt"]
 [ext_resource type="Texture2D" uid="uid://b7vsxyf4p61ae" path="res://assets/mainScreen/game-title.PNG" id="3_ew2k3"]
+[ext_resource type="AudioStream" uid="uid://f3xndutqpms1" path="res://sounds/bgm/4_wedding.mp3" id="4_lmt7b"]
 [ext_resource type="Texture2D" uid="uid://d4fylkk5mjwsy" path="res://assets/mainScreen/4th_anim-Sheet.png" id="4_wshqh"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lmt7b"]
@@ -32,22 +32,22 @@ region = Rect2(7360, 0, 320, 320)
 [sub_resource type="SpriteFrames" id="SpriteFrames_egync"]
 animations = [{
 "frames": [{
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_lmt7b")
 }, {
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_ew2k3")
 }, {
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_6vebo")
 }, {
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_k8xfo")
 }, {
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_qbtwc")
 }, {
-"duration": 0.7,
+"duration": 0.91,
 "texture": SubResource("AtlasTexture_v2gfe")
 }],
 "loop": true,
@@ -57,33 +57,34 @@ animations = [{
 
 [node name="LoadingScreen" type="Node"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(3, 4)
-texture = ExtResource("1_wshqh")
-
-[node name="Background2" type="Sprite2D" parent="."]
-position = Vector2(3, 7)
-scale = Vector2(1.605, 1.4247788)
-texture = ExtResource("2_lmt7b")
+[node name="TitleMenuBackground" type="Sprite2D" parent="."]
+position = Vector2(2, 3)
+scale = Vector2(0.35291055, 0.3529106)
+texture = ExtResource("1_hjdxt")
 
 [node name="GameTitle" type="Sprite2D" parent="."]
-position = Vector2(1.5258789e-05, -179.99998)
-scale = Vector2(0.58049184, 0.61276245)
+position = Vector2(-5.9024353, -53.11878)
+scale = Vector2(0.18887359, 0.19937341)
 texture = ExtResource("3_ew2k3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-4, 170.00002)
-scale = Vector2(1.1765625, 1.1299001)
-sprite_frames = SubResource("SpriteFrames_egync")
-frame_progress = 0.62946856
-
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_left = -418.0
-offset_top = 356.0
-offset_right = 385.0
-offset_bottom = 434.0
-theme_override_font_sizes/normal_font_size = 25
+offset_left = -120.0
+offset_top = 102.0
+offset_right = 124.0
+offset_bottom = 165.0
+theme_override_font_sizes/normal_font_size = 7
 theme_override_font_sizes/bold_font_size = 20
 text = "The birds are chirping, the wedding bells are ringing, but why is it so that you heart is loudly pounding?"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1.1093774, 61.013947)
+scale = Vector2(0.3555664, 0.34146464)
+sprite_frames = SubResource("SpriteFrames_egync")
+autoplay = "default"
+frame_progress = 0.889501
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_lmt7b")
+autoplay = true
