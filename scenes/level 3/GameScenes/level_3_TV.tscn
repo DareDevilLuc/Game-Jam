@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=4 uid="uid://dk1lgn76hgex3"]
+[gd_scene load_steps=46 format=4 uid="uid://dk1lgn76hgex3"]
 
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_natc3"]
+[ext_resource type="Script" uid="uid://ctgkg82y6m2ho" path="res://00_Globals/level3.gd" id="1_ooiwq"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_ooiwq"]
 [ext_resource type="Texture2D" uid="uid://m8j6k5syu8r7" path="res://assets/level 3/textures/RoomCarpet.atlastex" id="3_afip0"]
 [ext_resource type="Texture2D" uid="uid://dsorbhko22tqx" path="res://assets/level 3/textures/Plant2.atlastex" id="4_vsk4q"]
@@ -324,6 +325,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="TV" type="Node2D"]
+script = ExtResource("1_ooiwq")
 
 [node name="Maps & Interactables" type="Node" parent="."]
 

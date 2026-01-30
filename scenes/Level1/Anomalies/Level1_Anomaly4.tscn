@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://clol0ht5rgt45"]
+[gd_scene load_steps=29 format=4 uid="uid://clol0ht5rgt45"]
 
 [ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_3go6e"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_iqmsl"]
@@ -12,7 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://cad5hlvstduti" path="res://scenes/Level1/diffTables.tscn" id="10_nuabp"]
 [ext_resource type="PackedScene" uid="uid://do6x7hx0cr5cu" path="res://scenes/Level1/TableWithChairRight.tscn" id="11_h1jyx"]
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/Level1/ChairDown.tscn" id="12_nr0kp"]
-[ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/Level1/ChairUp.tscn" id="13_prmcb"]
 [ext_resource type="PackedScene" uid="uid://b4m84k71pu7m" path="res://scenes/Level1/door.tscn" id="14_5tfq8"]
 [ext_resource type="PackedScene" uid="uid://co6ymb8lqlumw" path="res://scenes/Level1/Classmate1.tscn" id="15_ymkia"]
 [ext_resource type="PackedScene" uid="uid://dt7vhsgcc0fk3" path="res://scenes/Level1/Classmate2.tscn" id="16_pmgf3"]
@@ -1809,21 +1808,6 @@ position = Vector2(459, 361)
 
 [node name="ChairDown_01" parent="Furniture/Chairs" instance=ExtResource("12_nr0kp")]
 position = Vector2(328, 104)
-
-[node name="ChairUp_01" parent="Furniture/Chairs" instance=ExtResource("13_prmcb")]
-position = Vector2(112, 264)
-
-[node name="ChairUp_02" parent="Furniture/Chairs" instance=ExtResource("13_prmcb")]
-position = Vector2(208, 360)
-
-[node name="ChairUp_03" parent="Furniture/Chairs" instance=ExtResource("13_prmcb")]
-position = Vector2(176, 360)
-
-[node name="ChairUp_04" parent="Furniture/Chairs" instance=ExtResource("13_prmcb")]
-position = Vector2(144, 360)
-
-[node name="ChairUp_05" parent="Furniture/Chairs" instance=ExtResource("13_prmcb")]
-position = Vector2(239, 276)
 
 [node name="Doors" type="Node2D" parent="Furniture"]
 

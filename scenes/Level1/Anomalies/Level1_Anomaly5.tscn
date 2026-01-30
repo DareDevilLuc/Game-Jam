@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://c68j58x23pq7j"]
+[gd_scene load_steps=29 format=4 uid="uid://c68j58x23pq7j"]
 
 [ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_sqltg"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_xmima"]
@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://b1isrb51cjs18" path="res://scenes/Level1/Classmate3.tscn" id="17_ku520"]
 [ext_resource type="PackedScene" uid="uid://y5byqsl4ntsl" path="res://scenes/Level1/Teacher1.tscn" id="18_kmnw5"]
 [ext_resource type="PackedScene" uid="uid://xky2dtaw4pnh" path="res://scenes/Level1/Teacher2.tscn" id="19_6l80d"]
-[ext_resource type="PackedScene" uid="uid://dvbd3ryw5c6g4" path="res://scenes/Level1/Partner.tscn" id="20_vjyen"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_10scx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwpf4"]
@@ -1855,9 +1854,6 @@ position = Vector2(179, 139)
 position = Vector2(615, 257)
 
 [node name="Partner" type="Node2D" parent="NPCS"]
-
-[node name="Partner" parent="NPCS/Partner" instance=ExtResource("20_vjyen")]
-position = Vector2(570, 499)
 
 [node name="LevelTransition" parent="." instance=ExtResource("21_10scx")]
 position = Vector2(-31, 528)

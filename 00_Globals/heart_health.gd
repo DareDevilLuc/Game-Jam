@@ -12,7 +12,7 @@ func damage_heart() -> void:
 	if heart.frame != 3:
 		heart.frame += 1
 		return
-	_on_heart_break()
+
 	pass
 
 
