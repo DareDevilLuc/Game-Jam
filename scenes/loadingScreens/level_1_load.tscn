@@ -75,13 +75,13 @@ texture = ExtResource("3_o78wd")
 position = Vector2(-4, 170.00002)
 scale = Vector2(1.1765625, 1.1299001)
 sprite_frames = SubResource("SpriteFrames_egync")
-frame_progress = 0.47344488
+frame_progress = 0.31589714
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
 anchors_preset = -1
 offset_left = -418.0
 offset_top = 356.0
-offset_right = 419.0
+offset_right = 448.0
 offset_bottom = 396.0
 theme_override_font_sizes/normal_font_size = 25
 theme_override_font_sizes/bold_font_size = 20
