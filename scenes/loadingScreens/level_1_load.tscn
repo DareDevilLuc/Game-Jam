@@ -1,0 +1,90 @@
+[gd_scene load_steps=12 format=3 uid="uid://ba4jfcqmoqjv4"]
+
+[ext_resource type="Texture2D" uid="uid://t0d88y6qqpr3" path="res://assets/mainScreen/loading. . ..png" id="1_yd21c"]
+[ext_resource type="Texture2D" uid="uid://cpkkyi0jn1vuy" path="res://assets/mainScreen/618871942_1230470859222789_1496407592032057055_n.jpg" id="2_vvtuy"]
+[ext_resource type="Texture2D" uid="uid://b7vsxyf4p61ae" path="res://assets/mainScreen/game-title.PNG" id="3_o78wd"]
+[ext_resource type="Texture2D" uid="uid://vkh1k2cv73vf" path="res://assets/mainScreen/1st_anim-Sheet.png" id="4_yd21c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvtuy"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(5760, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o78wd"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6080, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b66ck"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6400, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_al6fu"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(6720, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mt1t7"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(7040, 0, 320, 320)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjuvh"]
+atlas = ExtResource("4_yd21c")
+region = Rect2(7360, 0, 320, 320)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_egync"]
+animations = [{
+"frames": [{
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_vvtuy")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_o78wd")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_b66ck")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_al6fu")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_mt1t7")
+}, {
+"duration": 0.7,
+"texture": SubResource("AtlasTexture_qjuvh")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="LoadingScreen" type="Node"]
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(3, 4)
+texture = ExtResource("1_yd21c")
+
+[node name="Background2" type="Sprite2D" parent="."]
+position = Vector2(3, 7)
+scale = Vector2(1.605, 1.4247788)
+texture = ExtResource("2_vvtuy")
+
+[node name="GameTitle" type="Sprite2D" parent="."]
+position = Vector2(1.5258789e-05, -179.99998)
+scale = Vector2(0.58049184, 0.61276245)
+texture = ExtResource("3_o78wd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-4, 170.00002)
+scale = Vector2(1.1765625, 1.1299001)
+sprite_frames = SubResource("SpriteFrames_egync")
+frame_progress = 0.47344488
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+anchors_preset = -1
+offset_left = -418.0
+offset_top = 356.0
+offset_right = 419.0
+offset_bottom = 396.0
+theme_override_font_sizes/normal_font_size = 25
+theme_override_font_sizes/bold_font_size = 20
+text = "Love is all around campus today, may cupid find its way to your heart."
+horizontal_alignment = 1
+vertical_alignment = 1
