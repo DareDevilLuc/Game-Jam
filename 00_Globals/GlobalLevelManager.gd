@@ -42,28 +42,32 @@ func return_randomInt() -> int:
 		
 	if current_level_index == 0:
 		if is_even:
+			isAnomaly = false
 			return 0
 		else:
+			isAnomaly = true
 			random = randi_range(1,5)
 	elif current_level_index == 1:
 		if is_even:
+			isAnomaly = false
 			return 0
 		else:
+			isAnomaly = true
 			random = randi_range(1,20)
 	elif current_level_index == 2:
 		if is_even:
+			isAnomaly = false
 			return 0
 		else:
+			isAnomaly = true
 			random = randi_range(1, 23)
 	elif current_level_index == 3:
 		if is_even:
+			isAnomaly = false
 			return 0
 		else:
+			isAnomaly = true
 			random = randi_range(1, 10)
-	if is_even:
-		isAnomaly = false
-	else:
-		isAnomaly = true
 	return random
 
 func ChangeTileMapBounds( bounds: Array[Vector2] ) -> void:
@@ -81,6 +85,7 @@ func load_new_level(
 	if current_correct == 4:
 		current_correct = 0
 		current_level_index += 1
+		isAnomaly = false
 		load_next_level()
 		return
 
