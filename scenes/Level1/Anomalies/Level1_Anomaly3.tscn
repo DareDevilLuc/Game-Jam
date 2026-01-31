@@ -1,6 +1,6 @@
-[gd_scene load_steps=25 format=4 uid="uid://gqbnatabvfbl"]
+[gd_scene load_steps=26 format=4 uid="uid://gqbnatabvfbl"]
 
-[ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_bm6yk"]
+[ext_resource type="Script" path="res://00_Globals/level.gd" id="1_bm6yk"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_3gbwy"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="3_duc8k"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="4_cto1o"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/Level1/ChairDown.tscn" id="12_e7mje"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/Level1/ChairUp.tscn" id="13_lq0cm"]
 [ext_resource type="PackedScene" uid="uid://b4m84k71pu7m" path="res://scenes/Level1/door.tscn" id="14_f1a1j"]
+[ext_resource type="AudioStream" uid="uid://csi8cchysij7y" path="res://sounds/bgm/1_classroom.mp3" id="17_pbdrl"]
 [ext_resource type="PackedScene" uid="uid://dvbd3ryw5c6g4" path="res://scenes/Level1/Partner.tscn" id="20_iad0u"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_oct1p"]
 
@@ -1848,3 +1849,8 @@ size = 1
 position = Vector2(704, 529)
 side = 1
 size = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("17_pbdrl")
+autoplay = true
+parameters/looping = true

@@ -1,7 +1,7 @@
-[gd_scene load_steps=150 format=4 uid="uid://bjcsksp37i0ph"]
+[gd_scene load_steps=151 format=4 uid="uid://bjcsksp37i0ph"]
 
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="1_rjkqs"]
-[ext_resource type="Script" uid="uid://c1lfajbi03n8l" path="res://00_Globals/level2.gd" id="1_tne3c"]
+[ext_resource type="Script" path="res://00_Globals/level2.gd" id="1_tne3c"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="2_wenux"]
 [ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/Level 2/background/GrayFloorSlab.png" id="3_eady5"]
 [ext_resource type="Texture2D" uid="uid://ccuyt7xlf6hxh" path="res://assets/Level 2/background/GrayFloor.png" id="4_gdixp"]
@@ -57,6 +57,7 @@
 [ext_resource type="Texture2D" uid="uid://bbcqddsauwa3w" path="res://assets/Level 2/sprites/CCTV.png" id="54_52p3c"]
 [ext_resource type="PackedScene" uid="uid://degnb6jkdwp2r" path="res://00_Globals/player_spawn2.tscn" id="55_1fqb3"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="57_6imh1"]
+[ext_resource type="AudioStream" uid="uid://d0wa58tts160y" path="res://sounds/bgm/2_museum.mp3" id="58_spbsf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("1_rjkqs")
@@ -6151,3 +6152,8 @@ target_transition_area = "LevelTransition2"
 [node name="LevelTransition2" parent="." instance=ExtResource("57_6imh1")]
 position = Vector2(1026, 568)
 side = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("58_spbsf")
+autoplay = true
+parameters/looping = true

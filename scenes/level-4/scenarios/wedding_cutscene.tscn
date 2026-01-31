@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://xywe6547n8hy"]
+[gd_scene load_steps=18 format=4 uid="uid://xywe6547n8hy"]
 
 [ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_600wu"]
 [ext_resource type="Texture2D" uid="uid://dhqhf05rdgy8o" path="res://assets/level-4/envi/AtelierMagicae_FlowerGarden_RPGM.png" id="2_yfwtl"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://n22wev0aul81" path="res://scenes/level-4/npcs/adult7.tscn" id="11_hm1g7"]
 [ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="12_gfrws"]
 [ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="13_rahve"]
+[ext_resource type="AudioStream" uid="uid://f3xndutqpms1" path="res://sounds/bgm/4_wedding.mp3" id="14_yfwtl"]
 
 [sub_resource type="Animation" id="Animation_yfwtl"]
 length = 12.0
@@ -511,6 +512,11 @@ grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
 color = Color(0, 0, 0, 1)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_yfwtl")
+autoplay = true
+parameters/looping = true
 
 [editable path="y-sort/npcs/adult"]
 [editable path="y-sort/npcs/adult4"]

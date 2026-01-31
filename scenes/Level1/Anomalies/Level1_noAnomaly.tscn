@@ -1,7 +1,7 @@
-[gd_scene load_steps=30 format=4 uid="uid://b8us4b2nhr6lo"]
+[gd_scene load_steps=31 format=4 uid="uid://bxb1mxatkgu"]
 
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="1_g2h75"]
-[ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_qj1v5"]
+[ext_resource type="Script" path="res://00_Globals/level.gd" id="1_qj1v5"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="1_u3awl"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="2_wwpf4"]
 [ext_resource type="Script" uid="uid://ces4dmixr1m2y" path="res://scripts/Level 1/tables.gd" id="3_ejswk"]
@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://xky2dtaw4pnh" path="res://scenes/Level1/Teacher2.tscn" id="19_7ir5j"]
 [ext_resource type="PackedScene" uid="uid://dvbd3ryw5c6g4" path="res://scenes/Level1/Partner.tscn" id="20_7ir5j"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_8g8it"]
+[ext_resource type="AudioStream" uid="uid://csi8cchysij7y" path="res://sounds/bgm/1_classroom.mp3" id="22_f8mim"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wwpf4"]
 texture = ExtResource("1_g2h75")
@@ -1868,3 +1869,8 @@ size = 1
 position = Vector2(704, 529)
 side = 1
 size = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("22_f8mim")
+autoplay = true
+parameters/looping = true
