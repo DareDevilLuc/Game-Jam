@@ -1,6 +1,6 @@
-[gd_scene load_steps=148 format=4 uid="uid://bmeyf1hkmm15h"]
+[gd_scene load_steps=149 format=4 uid="uid://bmeyf1hkmm15h"]
 
-[ext_resource type="Script" uid="uid://c1lfajbi03n8l" path="res://00_Globals/level2.gd" id="1_3av0y"]
+[ext_resource type="Script" path="res://00_Globals/level2.gd" id="1_3av0y"]
 [ext_resource type="Texture2D" uid="uid://chojwe8xdnxby" path="res://assets/Level 2/background/Interiors_free_32x32.png" id="1_rsh3r"]
 [ext_resource type="Texture2D" uid="uid://bgalckullms7n" path="res://assets/Level 2/background/Room_Builder_free_32x32.png" id="2_3av0y"]
 [ext_resource type="Texture2D" uid="uid://cvjpjfymugq43" path="res://assets/Level 2/background/GrayFloorSlab.png" id="3_uxxqb"]
@@ -55,6 +55,7 @@
 [ext_resource type="Texture2D" uid="uid://b8ld1rl1bjj62" path="res://assets/Level 2/cuts/Scythe.atlastex" id="52_pgpyt"]
 [ext_resource type="Texture2D" uid="uid://71jjcnxxtw3v" path="res://assets/Level 2/cuts/Axe.atlastex" id="53_752f5"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="55_3av0y"]
+[ext_resource type="AudioStream" uid="uid://d0wa58tts160y" path="res://sounds/bgm/2_museum.mp3" id="56_uxxqb"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4038r"]
 texture = ExtResource("1_rsh3r")
@@ -6140,3 +6141,8 @@ target_transition_area = "LevelTransition2"
 [node name="LevelTransition2" parent="." instance=ExtResource("55_3av0y")]
 position = Vector2(1026, 568)
 side = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("56_uxxqb")
+autoplay = true
+parameters/looping = true

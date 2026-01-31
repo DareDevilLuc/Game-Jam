@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://co73wukwgd0q6"]
+[gd_scene load_steps=25 format=4 uid="uid://co73wukwgd0q6"]
 
 [ext_resource type="Script" uid="uid://be0r4m107l3nk" path="res://00_Globals/level4.gd" id="1_2n77p"]
 [ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_i8vuk"]
@@ -21,7 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="19_r3881"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="20_l7xkk"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_2n77p"]
-[ext_resource type="PackedScene" path="res://scenes/level-4/npcs/groom.tscn" id="21_8mb2f"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="21_8mb2f"]
+[ext_resource type="AudioStream" uid="uid://f3xndutqpms1" path="res://sounds/bgm/4_wedding.mp3" id="23_dldo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
@@ -307,3 +308,8 @@ target_transition_area = "LevelTransition2"
 [node name="LevelTransition2" parent="." instance=ExtResource("21_2n77p")]
 position = Vector2(992, 344)
 side = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_dldo3")
+autoplay = true
+parameters/looping = true
