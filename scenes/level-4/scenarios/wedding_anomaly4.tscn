@@ -1,6 +1,7 @@
-[gd_scene load_steps=22 format=4 uid="uid://bm1a5c4rgfj61"]
+[gd_scene load_steps=23 format=4 uid="uid://bm1a5c4rgfj61"]
 
 [ext_resource type="TileSet" uid="uid://brwq1rg8c7k88" path="res://scenes/level-4/modern_tileset.tres" id="1_emp8v"]
+[ext_resource type="Script" uid="uid://be0r4m107l3nk" path="res://00_Globals/level4.gd" id="1_mligx"]
 [ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="3_fwlwe"]
 [ext_resource type="PackedScene" uid="uid://cl5xk015g5wyq" path="res://scenes/level-4/furnitures/plant2.tscn" id="4_git6e"]
 [ext_resource type="PackedScene" uid="uid://vmto26g1whqt" path="res://scenes/level-4/furnitures/plant.tscn" id="5_57p1e"]
@@ -18,13 +19,14 @@
 [ext_resource type="PackedScene" uid="uid://bqlq380co4pg2" path="res://scenes/level-4/npcs/adult8.tscn" id="18_641d1"]
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="19_6i1jp"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="20_7lcti"]
-[ext_resource type="PackedScene" path="res://scenes/level-4/npcs/groom.tscn" id="20_khgmn"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="20_khgmn"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="20_mligx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]
 size = Vector2(53.875, 132.25)
 
 [node name="Wedding Level" type="Node2D"]
+script = ExtResource("1_mligx")
 
 [node name="TileMaps" type="Node2D" parent="."]
 y_sort_enabled = true

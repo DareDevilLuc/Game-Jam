@@ -22,7 +22,8 @@ const starter_levels : Array[ String ] = [
 	"res://scenes/Level1/Anomalies/Level1_noAnomaly.tscn",
 	"res://scenes/Level 2/Level2Scenes/Level2_Base.tscn",
 	"res://scenes/level 3/GameScenes/level_3.tscn",
-	"res://scenes/level-4/scenarios/wedding_level.tscn"
+	"res://scenes/level-4/scenarios/wedding_level.tscn",
+	"res://scenes/level-4/scenarios/wedding_cutscene.tscn"
 ]
 
 func _ready() -> void:
