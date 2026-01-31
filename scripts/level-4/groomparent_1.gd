@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
 var in_range: bool = false
+const dialogue_resource = preload("res://assets/level-4/dialogues/parent.dialogue")
+const custom_balloon_path = "res://scenes/level 3/dialogueBox/balloon.tscn"
 
 func _process(_delta) -> void:
 	if in_range == true and Input.is_action_just_pressed("interact"):
 		print("player interact")
-		DialogueManager.show_example_dialogue_balloon(load("res://assets/level-4/dialogues/parent.dialogue"), "inlaw_start")
+		DialogueManager.show_dialogue_balloon_scene(custom_balloon_path, dialogue_resource, "inlaw_start")
 		in_range = false;
 
 

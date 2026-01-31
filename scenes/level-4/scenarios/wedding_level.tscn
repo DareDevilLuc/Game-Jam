@@ -20,7 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://dp1maxo041qvs" path="res://scenes/level-4/npcs/child1.tscn" id="19_hlfix"]
 [ext_resource type="PackedScene" uid="uid://b1tqyslcqb7rc" path="res://scenes/level-4/npcs/child2.tscn" id="20_ny2t3"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_apd1r"]
-[ext_resource type="PackedScene" path="res://scenes/level-4/npcs/groom.tscn" id="21_fxgyf"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="21_fxgyf"]
 [ext_resource type="PackedScene" path="res://00_Globals/player_spawn4.tscn" id="22_p4sp"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wmp38"]

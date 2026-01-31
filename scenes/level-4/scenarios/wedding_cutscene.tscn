@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dplm7dob05618" path="res://scenes/level-4/npcs/adult5.tscn" id="9_j5uun"]
 [ext_resource type="PackedScene" uid="uid://br0tr8gtup6u" path="res://scenes/level-4/npcs/adult6.tscn" id="10_vlmq8"]
 [ext_resource type="PackedScene" uid="uid://n22wev0aul81" path="res://scenes/level-4/npcs/adult7.tscn" id="11_hm1g7"]
-[ext_resource type="PackedScene" path="res://scenes/level-4/npcs/groom.tscn" id="12_gfrws"]
+[ext_resource type="PackedScene" uid="uid://cr4nxvivayrxt" path="res://scenes/level-4/npcs/groom.tscn" id="12_gfrws"]
 [ext_resource type="PackedScene" uid="uid://sqph4yg55ifu" path="res://scenes/level-4/furnitures/flower2.tscn" id="13_rahve"]
 
 [sub_resource type="Animation" id="Animation_yfwtl"]
@@ -376,7 +376,6 @@ position = Vector2(30, 139)
 
 [node name="Player" parent="y-sort" instance=ExtResource("5_e5o27")]
 position = Vector2(515, 562)
-scale = Vector2(0.22, 0.22)
 in_cutscene = true
 
 [node name="Camera2D2" type="Camera2D" parent="y-sort/Player"]
@@ -504,7 +503,7 @@ grow_vertical = 0
 color = Color(0, 0, 0, 1)
 
 [node name="Fadeout" type="ColorRect" parent="CinematicBars"]
-modulate = Color(1, 1, 1, 0.12087953)
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

@@ -1,9 +1,10 @@
-[gd_scene load_steps=15 format=3 uid="uid://yb2tfot3u0mq"]
+[gd_scene load_steps=16 format=3 uid="uid://yb2tfot3u0mq"]
 
 [ext_resource type="Script" uid="uid://w32mwfbb2kub" path="res://scenes/level 3/dialogueBox/balloon.gd" id="1_36de5"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="Texture2D" uid="uid://dhrisn816eyeb" path="res://assets/level 3/dia-box-Sheet.png" id="2_u6umw"]
 [ext_resource type="Script" uid="uid://bb52rsfwhkxbn" path="res://addons/dialogue_manager/dialogue_responses_menu.gd" id="3_72ixx"]
+[ext_resource type="FontFile" uid="uid://dfc3lqdfvlxgh" path="res://assets/Minecraft.ttf" id="3_gi868"]
 [ext_resource type="Texture2D" uid="uid://tmwpwelqf8k6" path="res://assets/level 3/arrow-down-Sheet.png" id="4_gi868"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
@@ -227,6 +228,8 @@ unique_name_in_owner = true
 modulate = Color(1, 1, 1, 0.501961)
 layout_mode = 2
 mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("3_gi868")
+theme_override_font_sizes/normal_font_size = 22
 bbcode_enabled = true
 text = "Partner"
 fit_content = true
@@ -236,6 +239,8 @@ scroll_active = false
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_gi868")
+theme_override_font_sizes/normal_font_size = 23
 text = "Dialogue..."
 
 [node name="Control" type="Control" parent="Balloon/PanelContainer/MarginContainer2/MarginContainer/HBoxContainer"]
