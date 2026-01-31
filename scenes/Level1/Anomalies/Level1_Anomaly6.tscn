@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://c5l8tryimnwcj"]
+[gd_scene load_steps=29 format=4 uid="uid://c5l8tryimnwcj"]
 
 [ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_ol6b6"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_u5onf"]
@@ -13,7 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://do6x7hx0cr5cu" path="res://scenes/Level1/TableWithChairRight.tscn" id="11_e5jgr"]
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/Level1/ChairDown.tscn" id="12_lqiuj"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/Level1/ChairUp.tscn" id="13_b1lfo"]
-[ext_resource type="PackedScene" uid="uid://b4m84k71pu7m" path="res://scenes/Level1/door.tscn" id="14_7tlvf"]
 [ext_resource type="PackedScene" uid="uid://co6ymb8lqlumw" path="res://scenes/Level1/Classmate1.tscn" id="15_aghwm"]
 [ext_resource type="PackedScene" uid="uid://dt7vhsgcc0fk3" path="res://scenes/Level1/Classmate2.tscn" id="16_iqku7"]
 [ext_resource type="PackedScene" uid="uid://b1isrb51cjs18" path="res://scenes/Level1/Classmate3.tscn" id="17_xxi75"]
@@ -1826,12 +1825,6 @@ position = Vector2(144, 360)
 position = Vector2(239, 276)
 
 [node name="Doors" type="Node2D" parent="Furniture"]
-
-[node name="Door1" parent="Furniture/Doors" instance=ExtResource("14_7tlvf")]
-position = Vector2(48.000004, 448)
-
-[node name="Door2" parent="Furniture/Doors" instance=ExtResource("14_7tlvf")]
-position = Vector2(464, 448)
 
 [node name="NPCS" type="Node2D" parent="."]
 

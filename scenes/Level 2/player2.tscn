@@ -149,7 +149,7 @@ collision_mask = 2
 script = ExtResource("1_l3rmf")
 
 [node name="Camera2D2" type="Camera2D" parent="."]
-zoom = Vector2(3, 3)
+zoom = Vector2(6, 6)
 position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 script = ExtResource("2_pc2q4")

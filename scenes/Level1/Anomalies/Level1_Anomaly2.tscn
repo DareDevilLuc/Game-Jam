@@ -1760,38 +1760,8 @@ shape = SubResource("RectangleShape2D_d3jkd")
 position = Vector2(617, 307)
 texture = ExtResource("9_ad67v")
 
-[node name="DiffTables_01" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(112, 236)
-
-[node name="DiffTables_02" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(176, 236)
-
-[node name="DiffTables_03" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(16, 268)
-
-[node name="DiffTables_04" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(16, 299)
-
-[node name="DiffTables_05" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(16, 333)
-
-[node name="DiffTables_06" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(144, 316)
-
-[node name="DiffTables_07" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(176, 316)
-
-[node name="DiffTables_08" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(208, 316)
-
 [node name="DiffTables_09" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
 position = Vector2(327, 356)
-
-[node name="DiffTables_10" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(144, 236)
-
-[node name="DiffTables_11" parent="Furniture/Tables" instance=ExtResource("10_lu1pn")]
-position = Vector2(240, 236)
 
 [node name="Chairs" type="Node2D" parent="Furniture"]
 

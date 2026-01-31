@@ -1,5 +1,6 @@
-[gd_scene load_steps=46 format=4 uid="uid://uet7sjdtdlf"]
+[gd_scene load_steps=47 format=4 uid="uid://uet7sjdtdlf"]
 
+[ext_resource type="Script" uid="uid://ctgkg82y6m2ho" path="res://00_Globals/level3.gd" id="1_osvlc"]
 [ext_resource type="Texture2D" uid="uid://dvtxtxedtgeqf" path="res://assets/level 3/TX Tileset Grass.png" id="1_wnma6"]
 [ext_resource type="Texture2D" uid="uid://bjhkapl0n70py" path="res://assets/level 3/Tileset_32x32_3.png" id="2_fmejs"]
 [ext_resource type="Texture2D" uid="uid://m8j6k5syu8r7" path="res://assets/level 3/textures/RoomCarpet.atlastex" id="3_osvlc"]
@@ -325,6 +326,7 @@ physics_layer_0/collision_mask = 2
 sources/0 = SubResource("TileSetAtlasSource_gee14")
 
 [node name="Food" type="Node2D"]
+script = ExtResource("1_osvlc")
 
 [node name="Maps & Interactables" type="Node" parent="."]
 

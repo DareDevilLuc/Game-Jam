@@ -10,6 +10,7 @@ signal Player3Turn
 
 const REQUIRED_CORRECT : int = 4
 
+var is_game_over : bool = false
 var current_correct : int = 0
 var current_tilemap_bounds : Array[Vector2]
 var target_transition : String 
@@ -31,11 +32,31 @@ func _ready() -> void:
 	level_loaded.emit()
 
 func return_randomInt() -> int:
-	random = randi_range(0,5)
-	if random != 0:
-		isAnomaly = true
+	var is_even : bool
+	var check_even = randi()
+	if check_even % 2 == 0:
+		is_even = true
 	else:
+		is_even = false
+	if current_level_index == 0:
+		if is_even:
+			return 0
+		else:
+			random = randi_range(1,5)
+	elif current_level_index == 1:
+		if is_even:
+			return 0
+		else:
+			random = randi_range(1,20)
+	elif current_level_index == 2:
+		if is_even:
+			return 0
+		else:
+			random = randi_range(1, 10)
+	if is_even:
 		isAnomaly = false
+	else:
+		isAnomaly = true
 	return random
 
 func ChangeTileMapBounds( bounds: Array[Vector2] ) -> void:
@@ -46,8 +67,9 @@ func load_new_level(
 		level_path : String,
 		_target_transition : String,
 		_position_offset : Vector2
-) -> void:
-	print("Score:", current_correct)
+) -> void:	
+	if is_game_over:
+		return
 	
 	if current_correct == 4:
 		current_correct = 0
@@ -90,6 +112,13 @@ func load_next_level() -> void:
 		Player3Turn.emit()
 	elif current_level_index == 3:
 		Player4Turn.emit()
+	elif current_level_index == 4:
+		get_tree().change_scene_to_file( starter_levels[current_level_index] )
+		get_tree().process_frame
+		get_tree().paused = false
+		await SceneTransition.fade_in()
+		HealthHud.heart.visible = false
+		return
 	
 	await get_tree().process_frame
 	

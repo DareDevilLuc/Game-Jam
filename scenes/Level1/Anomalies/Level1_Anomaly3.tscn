@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://gqbnatabvfbl"]
+[gd_scene load_steps=25 format=4 uid="uid://gqbnatabvfbl"]
 
 [ext_resource type="Script" uid="uid://cj2e052ms7ej3" path="res://00_Globals/level.gd" id="1_bm6yk"]
 [ext_resource type="PackedScene" uid="uid://cgwaw8vqot0aq" path="res://scenes/Level1/Background.tscn" id="2_3gbwy"]
@@ -14,11 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://dg0xxat5vuutb" path="res://scenes/Level1/ChairDown.tscn" id="12_e7mje"]
 [ext_resource type="PackedScene" uid="uid://bcpncihsx7al8" path="res://scenes/Level1/ChairUp.tscn" id="13_lq0cm"]
 [ext_resource type="PackedScene" uid="uid://b4m84k71pu7m" path="res://scenes/Level1/door.tscn" id="14_f1a1j"]
-[ext_resource type="PackedScene" uid="uid://co6ymb8lqlumw" path="res://scenes/Level1/Classmate1.tscn" id="15_louhb"]
-[ext_resource type="PackedScene" uid="uid://dt7vhsgcc0fk3" path="res://scenes/Level1/Classmate2.tscn" id="16_ymupo"]
-[ext_resource type="PackedScene" uid="uid://b1isrb51cjs18" path="res://scenes/Level1/Classmate3.tscn" id="17_0t2cn"]
-[ext_resource type="PackedScene" uid="uid://y5byqsl4ntsl" path="res://scenes/Level1/Teacher1.tscn" id="18_2vtk3"]
-[ext_resource type="PackedScene" uid="uid://xky2dtaw4pnh" path="res://scenes/Level1/Teacher2.tscn" id="19_ojxhl"]
 [ext_resource type="PackedScene" uid="uid://dvbd3ryw5c6g4" path="res://scenes/Level1/Partner.tscn" id="20_iad0u"]
 [ext_resource type="PackedScene" uid="uid://dmssfm4dvb1iw" path="res://scenes/Level1/LevelTransition.tscn" id="21_oct1p"]
 
@@ -1837,22 +1832,7 @@ position = Vector2(464, 448)
 
 [node name="Classmates" type="Node2D" parent="NPCS"]
 
-[node name="Classmate1" parent="NPCS/Classmates" instance=ExtResource("15_louhb")]
-position = Vector2(327, 321)
-
-[node name="Classmate2" parent="NPCS/Classmates" instance=ExtResource("16_ymupo")]
-position = Vector2(49, 160)
-
-[node name="Classmate3" parent="NPCS/Classmates" instance=ExtResource("17_0t2cn")]
-position = Vector2(445, 304)
-
 [node name="Teachers" type="Node2D" parent="NPCS"]
-
-[node name="Teacher1" parent="NPCS/Teachers" instance=ExtResource("18_2vtk3")]
-position = Vector2(179, 139)
-
-[node name="Teacher2" parent="NPCS/Teachers" instance=ExtResource("19_ojxhl")]
-position = Vector2(615, 257)
 
 [node name="Partner" type="Node2D" parent="NPCS"]
 
