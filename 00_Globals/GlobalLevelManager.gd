@@ -38,6 +38,8 @@ func return_randomInt() -> int:
 		is_even = true
 	else:
 		is_even = false
+		
+		
 	if current_level_index == 0:
 		if is_even:
 			return 0
@@ -49,6 +51,11 @@ func return_randomInt() -> int:
 		else:
 			random = randi_range(1,20)
 	elif current_level_index == 2:
+		if is_even:
+			return 0
+		else:
+			random = randi_range(1, 23)
+	elif current_level_index == 3:
 		if is_even:
 			return 0
 		else:
